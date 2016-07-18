@@ -18,11 +18,17 @@
         .logo {
             font: 50px / 150px $logo;
             color: $blue2;
+            -webkit-text-shadow: 2px 1px 0 darken($blue2, 40%);
+            -moz-text-shadow: 2px 1px 0 darken($blue2, 40%);
+            text-shadow: 2px 1px 0 darken($blue2, 40%);
         }
         h2 {
             padding: 10px 0;
             font: 700 50px / 50px $font;
             color: $white;
+            -webkit-text-shadow: 2px 2px 0px darken($red, 10%);
+            -moz-text-shadow: 2px 2px 0px darken($red, 10%);
+            text-shadow: 2px 2px 0px darken($red, 10%);
         }
         p {
             padding: 10px 0;

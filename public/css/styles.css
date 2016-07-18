@@ -190,11 +190,17 @@ span {
     text-align: center; }
     #container #login-container .logo {
       font: 50px/150px "Grand Hotel", cursive;
-      color: #2C8C99; }
+      color: #2C8C99;
+      -webkit-text-shadow: 2px 1px 0 black;
+      -moz-text-shadow: 2px 1px 0 black;
+      text-shadow: 2px 1px 0 black; }
     #container #login-container h2 {
       padding: 10px 0;
       font: 700 50px/50px "Work Sans", sans-serif;
-      color: #fdf0d5; }
+      color: #fdf0d5;
+      -webkit-text-shadow: 2px 2px 0px #39111f;
+      -moz-text-shadow: 2px 2px 0px #39111f;
+      text-shadow: 2px 2px 0px #39111f; }
     #container #login-container p {
       padding: 10px 0;
       color: #fdf0d5; }
@@ -208,6 +214,37 @@ span {
       #container #login-container .login-button:hover {
         border: 2px solid #fdf0d5;
         color: #fdf0d5;
+        -webkit-transition: all 0.7s ease;
+        transition: all 0.7s ease; }
+
+#container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fdf0d5; }
+  #container #profile-container {
+    width: 60%;
+    height: 50%;
+    margin: 20% auto;
+    opacity: 1;
+    text-align: center; }
+    #container #profile-container p {
+      padding: 10px 0;
+      color: #333; }
+    #container #profile-container i {
+      color: #2C8C99; }
+    #container #profile-container .profile-submit-button {
+      background: #fdf0d5;
+      border: 2px solid #2C8C99;
+      border-radius: 70px;
+      padding: 5px 60px 8px;
+      font: 18px/20px "Work Sans", sans-serif;
+      color: #2C8C99; }
+      #container #profile-container .profile-submit-button:hover {
+        border: 2px solid #37b0c1;
+        color: #37b0c1;
         -webkit-transition: all 0.7s ease;
         transition: all 0.7s ease; }
 
