@@ -7,24 +7,32 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
+<form>
+  Interests<input></input>
 
-    <div ng-app="gentooApp">
+    Birthday<input></input>
 
-  		<form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
-  		Username    <br/><input type="text" ng-model="form.username">    <br/><br/>
-  		Password: <br/><input type="text" ng-model="form.password"> <br/><br/>
+      Anniversary<input></input>
 
-  			<!-- <button ng-click="save()" >Save</button> -->
-  			<input type="submit" ngClick="Submit" >
+      Photo  <input></input>
 
-  		</form>
+          Holidays<input></input>
+Favorite Color:
+        Color 2 (button):
+        <input name="color2" type="hidden" id="color_value" value="99cc00">
+        <button class="favColor jscolor {valueElement: 'color_value'}"></button>
 
-  	</div>
+    <input type="submit">
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular-resource.min.js"></script>
         <script src="https://use.fontawesome.com/680855e43e.js"></script>
+        <script src="/js/jscolor-2.0.4/jscolor.min.js"></script>
       <script src="js/admin.js"></script>
       <script src="js/app.js"></script>
       <script src="js/profile.js"> </script>
