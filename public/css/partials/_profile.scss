@@ -68,15 +68,16 @@
             text-shadow: 2px 1px 0 darken($red, 20%);
         }
         .logout-button {
-          position: absolute;
-          top: 33%;
-          right: 5%;
-          z-index: 3;
-          font: 700 12px / 22px $font;
-          color: $white;
-          text-transform: uppercase;
-          text-align: right;
+            position: absolute;
+            top: 33%;
+            right: 5%;
+            z-index: 3;
+            font: 700 12px / 22px $font;
+            color: $white;
+            text-transform: uppercase;
+            text-align: right;
         }
+
         .photo {
             width: 100%;
             height: 300px;
@@ -114,6 +115,45 @@
                 text-align: left;
             }
         }
+        .content-add-friend {
+          position: relative;
+          top: -120px;
+          left: 0;
+          text-align: center;
+            h1 {
+                color: $white;
+            }
+            .friend-button {
+                background: lighten($red, 5%);
+                border: 2px solid lighten($red, 5%);
+                border-radius: 200px;
+                margin: 0 auto;
+                margin-top: 20px;
+                padding: 25px 30px;
+                font-size: 16px;
+                color: darken($red, 15%);
+                &:hover {
+                    background: darken($red, 5%);
+                    border: 2px solid darken($red, 5%);
+                    color: darken($red, 15%);
+                    -webkit-transition: all 0.6s ease;
+                    transition: all 0.6s ease;
+                }
+            }
+        }
+        .content-details-remove {
+            position: relative;
+            top: -80px;
+            left: 0;
+            text-align: center;
+
+            span {
+                margin: 50px auto;
+                text-align: center;
+                font: 700 18px / 22px $font;
+                color: $black;
+            }
+        }
         .content-main {
             position: absolute;
             top: 14%;
@@ -133,12 +173,11 @@
                 color: $white;
             }
             .edit-profile {
-              margin-left: 20px;
-              font: 700 12px / 22px $font;
-              color: $white;
-              text-transform: uppercase;
+                margin-left: 20px;
+                font: 700 12px / 22px $font;
+                color: $white;
+                text-transform: uppercase;
             }
-
         }
         .content-details {
             padding: 10px;
@@ -162,51 +201,43 @@
             }
         }
         .lists {
-          height: 100px;
-          background: $red;
-
-          h1 {
-            padding: 10px 5% 10px 5%;
-            font: 700 18px / 22px $font;
-            color: darken($blue2, 20%);
-          }
-          i {
-            color: darken($blue2, 20%);
-          }
+            height: 100px;
+            background: $red;
+            h1 {
+                padding: 10px 5%;
+                font: 700 18px / 22px $font;
+                color: darken($blue2, 20%);
+            }
+            i {
+                color: darken($blue2, 20%);
+            }
         }
         .content-list {
-          width: 100%;
-          height: 40px;
-          margin: 20px 0;
-          background: $blue2;
-
-
-          i {
-            float: right;
-            color: darken($blue2, 20%);
-            padding-right: 20px;
-          }
-          ul {
-            height: 50px;
-            margin: 0;
-            padding: 5px 0 0 30px;
-            // background: darken($blue2, 10%);
-
-
-              li {
-                  font: 16px / 22px $font;
-                  color: $white;
-              }
-          }
+            width: 100%;
+            height: 40px;
+            margin: 20px 0;
+            background: $blue2;
+            i {
+                float: right;
+                color: darken($blue2, 20%);
+                padding-right: 20px;
+            }
+            ul {
+                height: 50px;
+                margin: 0;
+                padding: 5px 0 0 30px;
+                // background: darken($blue2, 10%);
+                li {
+                    font: 16px / 22px $font;
+                    color: $white;
+                }
+            }
         }
         .content-list-new {
-          width: 100%;
-          height: 40px;
-          margin: 60px 0;
-          background: $blue2;
-
-
-
+            width: 100%;
+            height: 40px;
+            margin: 60px 0;
+            background: $blue2;
         }
     }
 }
