@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title></title>
     <title>Project Name</title>
-    <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -14,60 +14,110 @@
 
 
     <div id="container">
-        <div id="profile-container">
-            <section class="content">
-                <span class="input input--hoshi">
-            <input class="input__field input__field--hoshi" type="text" id="input-5" />
-            <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
-              <span class="input__label-content input__label-content--hoshi">Photo</span>
-                </label>
-                </span>
-                <span class="input input--hoshi">
-              <input class="input__field input__field--hoshi" type="text" id="input-4" />
-              <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
-                <span class="input__label-content input__label-content--hoshi">Name</span>
-                </label>
-                </span>
-                <span class="input input--hoshi">
-              <input class="input__field input__field--hoshi" type="text" id="input-5" />
-              <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
-                <span class="input__label-content input__label-content--hoshi">Birthday</span>
-                </label>
-                </span>
-                <span class="input input--hoshi">
-              <input class="input__field input__field--hoshi" type="text" id="input-5" />
-              <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
-                <span class="input__label-content input__label-content--hoshi">Anniversaries/Important dates</span>
-                </label>
-                </span>
-                <span class="input input--hoshi">
-              <input class="input__field input__field--hoshi" type="text" id="input-5" />
-              <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
-                <span class="input__label-content input__label-content--hoshi">Important Holidays</span>
-                </label>
-                </span>
-                <span class="input input--hoshi">
-              <input class="input__field input__field--hoshi" type="text" id="input-5" />
-              <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
-                <span class="input__label-content input__label-content--hoshi">Interests</span>
-                </label>
-                </span>
+        <div id="profile-main-container">
 
-                <span class="input input--hoshi">
-              <input class="input__field input__field--hoshi" type="text" id="input-5" />
-              <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
-                <span class="input__label-content input__label-content--hoshi">Favorite colors</span>
-                </label>
+          <h1 class="logo">Gentoo</h1>
+          <span class="logout-button">Logout</span>
 
-                <input name="color2" type="hidden" id="color_value" value="99cc00">
-                <button class="favColor jscolor {valueElement: 'color_value'}"></button>
-                <input type="submit">
 
-                </span>
+          <section class="photo">
+          </section>
+
+            <section class="content content-main">
+                <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i> Nastassia Troyer</h1>
+                <h2 class="profile-birthday"><i class="fa fa-birthday-cake" aria-hidden="true"></i> 06/26/1991</h2>
+                <h2 class="profile-anniv-dates"><i class="fa fa-calendar" aria-hidden="true"></i> 05/25/1945</h2>
+                <h2 class="profile-holidays"><i class="fa fa-heart" aria-hidden="true"></i> Christmas</h2><br>
+                <span class="edit-profile">Edit Profile</span>
             </section>
-            <button class="profile-submit-button" type="submit" name="button">save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+
+            <section class="content content-details">
+            <span>Interests</span> <h2 class="profile-interests">sports, ballet, drawing, reading</h2>
+            <br>
+            <span>Favorite Colors</span> <h2 class="profile-colors">orange</h2>
+            </section>
+
+            <section class="lists content-list">
+              <h1>Wishlist for Christmas <i class="fa fa-plus" aria-hidden="true"></i></h1>
+                <ul>
+                  <li></li>
+                  <li></li>
+                </ul>
+            </section>
+
+            <section class="lists content-list-new">
+              <h1><i class="fa fa-plus" aria-hidden="true"></i> Add new list</h1>
+            </section>
+
+
+
         </div>
     </div>
+
+
+
+    <!-- <div id="container">
+        <div id="profile-container">
+            <section class="content">
+                <h1>Edit Profile</h1>
+                <span class="input input--kaede">
+              <input class="input__field input__field--kaede" type="file" id="input-3" />
+              <label class="input__label input__label--kaede" for="input-3">
+                <span class="input__label-content input__label-content--kaede">Upload Photo</span>
+                </label>
+                </span>
+                <span class="input input--hoshi">
+                    <input class="input__field input__field--hoshi" type="text" id="input-4" />
+                    <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+                      <span class="input__label-content input__label-content--hoshi">First Name</span>
+                </label>
+                </span>
+                <span class="input input--hoshi">
+                    <input class="input__field input__field--hoshi" type="text" id="input-5" />
+                    <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-5">
+                      <span class="input__label-content input__label-content--hoshi">Last Name</span>
+                </label>
+                </span>
+
+                // add date picker
+                <span class="input input--hoshi">
+                    <input class="input__field input__field--hoshi" type="text" id="input-6" />
+                    <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-6">
+                      <span class="input__label-content input__label-content--hoshi">Birthdate</span>
+                </label>
+                </span>
+
+                // add date picker
+                <span class="input input--hoshi">
+                    <input class="input__field input__field--hoshi" type="text" id="input-7" />
+                    <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-7">
+                      <span class="input__label-content input__label-content--hoshi">Anniversaries/Important Dates</span>
+                </label>
+                </span>
+
+                // add natural language form options
+                <span class="input input--hoshi">
+                    <input class="input__field input__field--hoshi" type="text" id="input-8" />
+                    <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-8">
+                      <span class="input__label-content input__label-content--hoshi">Important Holidays</span>
+                </label>
+                </span>
+                <span class="input input--hoshi">
+                    <input class="input__field input__field--hoshi" type="text" id="input-9" />
+                    <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="input-9">
+                      <span class="input__label-content input__label-content--hoshi">Interests</span>
+                </label>
+                </span>
+                <span class="input input--hoshi">
+                    <input class="input__field input__field--hoshi" type="text" id="input-9" />
+                    <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="input-9">
+                      <span class="input__label-content input__label-content--hoshi">Favorite Colors</span>
+                </label>
+                </span>
+                <button class="profile-submit-button" type="submit" name="button">Save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            </section>
+        </div>
+    </div> -->
 
 
     <!-- <div id="container">
@@ -80,19 +130,19 @@
             </p>
             <section class="content">
                 <span class="input input--hoshi">
-      					<input class="input__field input__field--hoshi" type="text" id="input-4" />
-      					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+      					<input class="input__field input__field--hoshi" type="text" id="input-1" />
+      					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
       						<span class="input__label-content input__label-content--hoshi">Email</span>
                 </label>
                 </span>
                 <span class="input input--hoshi">
-      					<input class="input__field input__field--hoshi" type="text" id="input-5" />
-      					<label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
+      					<input class="input__field input__field--hoshi" type="text" id="input-2" />
+      					<label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-2">
       						<span class="input__label-content input__label-content--hoshi">Password</span>
                 </label>
                 </span>
-            </section>
             <button class="login-button" type="submit" name="button">go! <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          </section>
         </div>
     </div> -->
 
@@ -102,6 +152,42 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular-resource.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script>
+        (function() {
+            // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+            if (!String.prototype.trim) {
+                (function() {
+                    // Make sure we trim BOM and NBSP
+                    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                    String.prototype.trim = function() {
+                        return this.replace(rtrim, '');
+                    };
+                })();
+            }
+
+            [].slice.call(document.querySelectorAll('input.input__field')).forEach(function(inputEl) {
+                // in case the input is already filled..
+                if (inputEl.value.trim() !== '') {
+                    classie.add(inputEl.parentNode, 'input--filled');
+                }
+
+                // events:
+                inputEl.addEventListener('focus', onInputFocus);
+                inputEl.addEventListener('blur', onInputBlur);
+            });
+
+            function onInputFocus(ev) {
+                classie.add(ev.target.parentNode, 'input--filled');
+            }
+
+            function onInputBlur(ev) {
+                if (ev.target.value.trim() === '') {
+                    classie.remove(ev.target.parentNode, 'input--filled');
+                }
+            }
+        })();
+    </script>
     <script src="js/admin.js"></script>
     <script src="js/app.js"></script>
 </body>

@@ -34,6 +34,10 @@
             padding: 10px 0;
             color: $white;
         }
+        span {
+        	font: 700 18px / 22px $font;
+        	color: darken($red, 8%);
+        }
         .login-button {
             background: $red;
             border: 2px solid darken($red, 10%);
