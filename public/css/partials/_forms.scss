@@ -85,7 +85,7 @@ span {
 }
 
 .input__field--hoshi {
-	padding: 36px 0.15em;
+	padding: 26px 0.15em;
 	width: 100%;
 	background: transparent;
 	color: $white;
@@ -104,6 +104,8 @@ span {
 
 .input__label-content--hoshi {
 	position: absolute;
+	padding: 10px 0 40px 0;
+
 }
 
 .input__label--hoshi::before,

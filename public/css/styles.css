@@ -93,7 +93,7 @@ span {
   overflow: hidden; }
 
 .input__field--hoshi {
-  padding: 36px 0.15em;
+  padding: 26px 0.15em;
   width: 100%;
   background: transparent;
   color: #fdf0d5; }
@@ -109,7 +109,8 @@ span {
   pointer-events: none; }
 
 .input__label-content--hoshi {
-  position: absolute; }
+  position: absolute;
+  padding: 10px 0 40px 0; }
 
 .input__label--hoshi::before,
 .input__label--hoshi::after {
