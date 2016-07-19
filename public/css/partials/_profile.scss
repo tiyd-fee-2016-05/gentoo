@@ -9,7 +9,7 @@
     background: $white;
     z-index: -2;
     // opacity: 0.6;
-    #profile-container {
+    #edit-profile-container {
         width: 70%;
         height: 50%;
         margin: 20% auto;
@@ -44,6 +44,7 @@
             padding: 5px 30% 8px;
             font: 700 18px / 20px $font;
             color: darken($red, 15%);
+            i {}
             &:hover {
                 background: darken($red, 5%);
                 border: 2px solid darken($red, 5%);
@@ -56,39 +57,67 @@
     #profile-main-container {
         height: 50%;
         margin: 0 auto;
+        .fa-align-left {
+            // menu icon
+            position: absolute;
+            top: 10px;
+            left: 8%;
+            z-index: 5;
+            opacity: 0.5;
+            color: $white;
+            &:hover {
+                opacity: 1;
+                -webkit-transition: all 0.7s ease;
+                transition: all 0.7s ease;
+            }
+        }
+        .fa-align-right {
+            // menu icon
+            position: absolute;
+            top: 10px;
+            right: 5%;
+            z-index: 5;
+            opacity: 0.5;
+            color: $white;
+            &:hover {
+                opacity: 1;
+                -webkit-transition: all 0.7s ease;
+                transition: all 0.7s ease;
+            }
+        }
         .logo {
             position: absolute;
             top: 0;
             right: 5%;
             z-index: 3;
             font: 50px / 150px $logo;
-            color: $red;
+            color: $blue2;
             -webkit-text-shadow: 2px 1px 0 darken($red, 20%);
             -moz-text-shadow: 2px 1px 0 darken($red, 20%);
             text-shadow: 2px 1px 0 darken($red, 20%);
         }
         .logout-button {
             position: absolute;
-            top: 33%;
-            right: 5%;
+            top: 11%;
+            right: 6%;
             z-index: 3;
             font: 700 12px / 22px $font;
             color: $white;
             text-transform: uppercase;
             text-align: right;
         }
-
         .photo {
             width: 100%;
-            height: 300px;
+            height: 120px;
             position: relative;
             top: 0;
             left: 0;
+            margin-bottom: 20px;
             overflow-y: hidden;
-            background: darken($blue2, 20%);
+            background: $red;
             background-image: url('../photo.jpg');
             background-position: bottom;
-            background-blend-mode: overlay;
+            background-blend-mode: multiply;
         }
         .content {
             width: 90%;
@@ -115,75 +144,70 @@
                 text-align: left;
             }
         }
-        .content-add-friend {
-          position: relative;
-          top: -120px;
-          left: 0;
-          text-align: center;
-            h1 {
-                color: $white;
-            }
-            .friend-button {
-                background: lighten($red, 5%);
-                border: 2px solid lighten($red, 5%);
-                border-radius: 200px;
-                margin: 0 auto;
-                margin-top: 20px;
-                padding: 25px 30px;
-                font-size: 16px;
-                color: darken($red, 15%);
-                &:hover {
-                    background: darken($red, 5%);
-                    border: 2px solid darken($red, 5%);
-                    color: darken($red, 15%);
-                    -webkit-transition: all 0.6s ease;
-                    transition: all 0.6s ease;
-                }
-            }
-        }
-        .content-details-remove {
-            position: relative;
-            top: -80px;
-            left: 0;
-            text-align: center;
-
-            span {
-                margin: 50px auto;
-                text-align: center;
-                font: 700 18px / 22px $font;
-                color: $black;
-            }
-        }
         .content-main {
-            position: absolute;
-            top: 14%;
+            position: relative;
+            top: 0;
             left: 0;
+            .user-photo {
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 10%;
+                right: 10%;
+                // margin-bottom: 20px;
+                overflow-y: hidden;
+                background: screen($blue2, 20%);
+                background-image: url('../photo.jpg');
+                background-position: center;
+                background-blend-mode: overlay;
+                border-radius: 120px;
+            }
             h1 {
+                position: absolute;
+                top: -65%;
+                left: 0;
                 margin: 0 0 20px 20px;
                 color: $white;
+                i {
+                    color: $blue2;
+                }
             }
+            .edit-profile {
+                position: absolute;
+                top: -45%;
+                left: 0;
+                margin: 5px 0 5px 50px;
+                font: 700 12px / 22px $font;
+                color: $white;
+                text-transform: uppercase;
+            }
+            //
+            //         .clip-text-maybe {
+            //             /* if we can clip, do it */
+            //             -webkit-text-fill-color: transparent;
+            //             -webkit-background-clip: text;
+            //             /* what will show through the text
+            //   ~ or ~
+            //  what will be the background of that element */
+            //             background-image: url('../photo.jpg');
+            //             /* fallback text color
+            //   ~ or ~
+            //  the actual color of text, so it better work on the background */
+            //             color: red;
+            //         }
             h2 {
                 margin-left: 20px;
-                color: $white;
+                color: $black;
                 font: 700 18px / 30px $font;
                 text-align: left;
             }
             span {
                 font: 18px / 22px $font;
-                color: $white;
-            }
-            .edit-profile {
-                margin-left: 20px;
-                font: 700 12px / 22px $font;
-                color: $white;
-                text-transform: uppercase;
+                color: $black;
             }
         }
         .content-details {
-            padding: 10px;
-            position: relative;
-            top: 5%;
-            left: 0;
+            margin-left: 10%;
             h1 {
                 color: $red;
                 margin-bottom: 20px;
@@ -201,43 +225,117 @@
             }
         }
         .lists {
-            height: 100px;
-            background: $red;
+
             h1 {
                 padding: 10px 5%;
                 font: 700 18px / 22px $font;
                 color: darken($blue2, 20%);
             }
-            i {
+            .add-list {
+                float: right;
                 color: darken($blue2, 20%);
             }
         }
         .content-list {
             width: 100%;
             height: 40px;
-            margin: 20px 0;
+            margin: 50px 0 150px 0;
             background: $blue2;
-            i {
-                float: right;
-                color: darken($blue2, 20%);
-                padding-right: 20px;
-            }
             ul {
-                height: 50px;
-                margin: 0;
-                padding: 5px 0 0 30px;
-                // background: darken($blue2, 10%);
+                width: 90%;
+                height: 120px;
+                margin: 0 5%;
+                white-space: nowrap;
+                overflow-y: hidden;
+                overflow-x: scroll;
+                // border: 2px solid red;
+
                 li {
-                    font: 16px / 22px $font;
-                    color: $white;
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    width: 140px;
+                        height: 100px;
+                        margin: 5px;
+                    background: $blue2;
+                    text-align: center;
+                    border-radius: 5px;
+                    &:hover {
+                      opacity: 0.8;
+                    }
+                    h1 {
+                        color: darken($blue2, 20%);
+                    }
+                    h2 {
+                      color: darken($blue2, 20%);
+                    }
+                    .fa-heart {
+                        color: darken($blue2, 20%);
+
+                    }
+                    .fa-plus {
+                      padding-top: 15%;
+                        color: darken($blue2, 20%);
+                    }
                 }
             }
         }
-        .content-list-new {
-            width: 100%;
-            height: 40px;
-            margin: 60px 0;
-            background: $blue2;
+        // .content-list-new {
+        //     position: relative;
+        //
+        //     width: 100%;
+        //     height: 40px;
+        //     margin: 150px 0;
+        //     background: $blue2;
+        // }
+        .content-add-friend {
+            position: relative;
+            top: -120px;
+            left: 0;
+            text-align: center;
+            .friend-photo {
+                width: 100%;
+                height: 300px;
+                position: relative;
+                top: 0;
+                left: 0;
+                overflow-y: hidden;
+                background: darken($blue2, 20%);
+                background-image: url('../photo.jpg');
+                background-position: bottom;
+                background-blend-mode: overlay;
+            }
+            h1 {
+                color: $white;
+            }
+            .friend-button {
+                background: lighten($red, 5%);
+                border: 2px solid lighten($red, 5%);
+                border-radius: 200px;
+                margin: 20px auto 0;
+                padding: 25px 30px;
+                font-size: 16px;
+                color: darken($red, 15%);
+                &:hover {
+                    background: darken($red, 5%);
+                    border: 2px solid darken($red, 5%);
+                    color: darken($red, 15%);
+                    -webkit-transition: all 0.6s ease;
+                    transition: all 0.6s ease;
+                }
+            }
+        }
+        .content-details-remove {
+            position: relative;
+            top: -80px;
+            left: 0;
+            text-align: center;
+            span {
+                margin: 50px auto;
+                text-align: center;
+                font: 700 18px / 22px $font;
+                color: $black;
+            }
         }
     }
 }

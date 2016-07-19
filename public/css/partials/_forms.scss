@@ -272,6 +272,95 @@
 		}
 	}
 }
+// Upload photo	.input--hoshi {
+.input--photo {
+	overflow: hidden;
+}
+.input__field--photo {
+	padding: 26px 0.15em;
+	width: 100%;
+	background: transparent;
+	color: $black;
+}
+.input__label--photo {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0 10px;
+	width: 100%;
+	height: calc(100% - 1em);
+	text-align: left;
+	pointer-events: none;
+}
+.input__label-content--photo {
+	position: absolute;
+	padding: 10px 0 40px;
+}
+.input__label--photo::after,
+.input__label--photo::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 10px);
+	border-bottom: 1px solid $blue2;
+}
+.input__label--photo::after {
+	margin-top: 2px;
+	border-bottom: 4px solid red;
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+.input__label--photo-color-4::after {
+	border-color: $red;
+}
+.input--filled .input__label--photo::after,
+.input__field--photo:focus + .input__label--photo::after {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.input--filled .input__label-content--photo,
+.input__field--photo:focus + .input__label--photo .input__label-content--photo {
+	-webkit-animation: anim-1 0.3s forwards;
+	animation: anim-1 0.3s forwards;
+}
+@-webkit-keyframes anim-1 {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(1em, 0, 0);
+		transform: translate3d(1em, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-1em, -40%, 0);
+		transform: translate3d(-1em, -40%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -40%, 0);
+		transform: translate3d(0, -40%, 0);
+	}
+}
+@keyframes anim-1 {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(1em, 0, 0);
+		transform: translate3d(1em, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-1em, -40%, 0);
+		transform: translate3d(-1em, -40%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -40%, 0);
+		transform: translate3d(0, -40%, 0);
+	}
+}
 // OLD
 .input--kaede {
 	display: block;

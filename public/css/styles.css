@@ -240,6 +240,86 @@ button:focus {
     opacity: 1;
     -webkit-transform: translate3d(0, -40%, 0);
     transform: translate3d(0, -40%, 0); } }
+.input--photo {
+  overflow: hidden; }
+
+.input__field--photo {
+  padding: 26px 0.15em;
+  width: 100%;
+  background: transparent;
+  color: #333; }
+
+.input__label--photo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 10px;
+  width: 100%;
+  height: calc(100% - 1em);
+  text-align: left;
+  pointer-events: none; }
+
+.input__label-content--photo {
+  position: absolute;
+  padding: 10px 0 40px; }
+
+.input__label--photo::after,
+.input__label--photo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 10px);
+  border-bottom: 1px solid #2C8C99; }
+
+.input__label--photo::after {
+  margin-top: 2px;
+  border-bottom: 4px solid red;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s; }
+
+.input__label--photo-color-4::after {
+  border-color: #611c35; }
+
+.input--filled .input__label--photo::after,
+.input__field--photo:focus + .input__label--photo::after {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.input--filled .input__label-content--photo,
+.input__field--photo:focus + .input__label--photo .input__label-content--photo {
+  -webkit-animation: anim-1 0.3s forwards;
+  animation: anim-1 0.3s forwards; }
+
+@-webkit-keyframes anim-1 {
+  50% {
+    opacity: 0;
+    -webkit-transform: translate3d(1em, 0, 0);
+    transform: translate3d(1em, 0, 0); }
+  51% {
+    opacity: 0;
+    -webkit-transform: translate3d(-1em, -40%, 0);
+    transform: translate3d(-1em, -40%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -40%, 0);
+    transform: translate3d(0, -40%, 0); } }
+@keyframes anim-1 {
+  50% {
+    opacity: 0;
+    -webkit-transform: translate3d(1em, 0, 0);
+    transform: translate3d(1em, 0, 0); }
+  51% {
+    opacity: 0;
+    -webkit-transform: translate3d(-1em, -40%, 0);
+    transform: translate3d(-1em, -40%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -40%, 0);
+    transform: translate3d(0, -40%, 0); } }
 .input--kaede {
   display: block;
   overflow: hidden;
@@ -355,28 +435,28 @@ button:focus {
   left: 0;
   background: #fdf0d5;
   z-index: -2; }
-  #container #profile-container {
+  #container #edit-profile-container {
     width: 70%;
     height: 50%;
     margin: 20% auto;
     opacity: 1;
     text-align: center; }
-    #container #profile-container h1 {
+    #container #edit-profile-container h1 {
       color: #611c35;
       margin-bottom: 20px; }
-    #container #profile-container h2 {
+    #container #edit-profile-container h2 {
       color: #611c35;
       font: 700 18px/22px "Work Sans", sans-serif;
       text-align: left; }
-    #container #profile-container p {
+    #container #edit-profile-container p {
       padding: 10px 0;
       color: #e84855; }
-    #container #profile-container i {
+    #container #edit-profile-container i {
       color: #2C8C99; }
-    #container #profile-container span {
+    #container #edit-profile-container span {
       font: 700 18px/22px "Work Sans", sans-serif;
       color: #1b565e; }
-    #container #profile-container .profile-submit-button {
+    #container #edit-profile-container .profile-submit-button {
       background: #752240;
       border: 2px solid #752240;
       border-radius: 10px;
@@ -384,7 +464,7 @@ button:focus {
       padding: 5px 30% 8px;
       font: 700 18px/20px "Work Sans", sans-serif;
       color: #260b15; }
-      #container #profile-container .profile-submit-button:hover {
+      #container #edit-profile-container .profile-submit-button:hover {
         background: #4d162a;
         border: 2px solid #4d162a;
         color: #260b15;
@@ -393,20 +473,42 @@ button:focus {
   #container #profile-main-container {
     height: 50%;
     margin: 0 auto; }
+    #container #profile-main-container .fa-align-left {
+      position: absolute;
+      top: 10px;
+      left: 8%;
+      z-index: 5;
+      opacity: 0.5;
+      color: #fdf0d5; }
+      #container #profile-main-container .fa-align-left:hover {
+        opacity: 1;
+        -webkit-transition: all 0.7s ease;
+        transition: all 0.7s ease; }
+    #container #profile-main-container .fa-align-right {
+      position: absolute;
+      top: 10px;
+      right: 5%;
+      z-index: 5;
+      opacity: 0.5;
+      color: #fdf0d5; }
+      #container #profile-main-container .fa-align-right:hover {
+        opacity: 1;
+        -webkit-transition: all 0.7s ease;
+        transition: all 0.7s ease; }
     #container #profile-main-container .logo {
       position: absolute;
       top: 0;
       right: 5%;
       z-index: 3;
       font: 50px/150px "Grand Hotel", cursive;
-      color: #611c35;
+      color: #2C8C99;
       -webkit-text-shadow: 2px 1px 0 #12050a;
       -moz-text-shadow: 2px 1px 0 #12050a;
       text-shadow: 2px 1px 0 #12050a; }
     #container #profile-main-container .logout-button {
       position: absolute;
-      top: 33%;
-      right: 5%;
+      top: 11%;
+      right: 6%;
       z-index: 3;
       font: 700 12px/22px "Work Sans", sans-serif;
       color: #fdf0d5;
@@ -414,15 +516,16 @@ button:focus {
       text-align: right; }
     #container #profile-main-container .photo {
       width: 100%;
-      height: 300px;
+      height: 120px;
       position: relative;
       top: 0;
       left: 0;
+      margin-bottom: 20px;
       overflow-y: hidden;
-      background: #15444a;
+      background: #611c35;
       background-image: url("../photo.jpg");
       background-position: bottom;
-      background-blend-mode: overlay; }
+      background-blend-mode: multiply; }
     #container #profile-main-container .content {
       width: 90%;
       margin: 0 auto;
@@ -441,19 +544,122 @@ button:focus {
         font: 700 16px/20px "Work Sans", sans-serif;
         text-transform: uppercase;
         text-align: left; }
+    #container #profile-main-container .content-main {
+      position: relative;
+      top: 0;
+      left: 0; }
+      #container #profile-main-container .content-main .user-photo {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        overflow-y: hidden;
+        background: screen(#2C8C99, 20%);
+        background-image: url("../photo.jpg");
+        background-position: center;
+        background-blend-mode: overlay;
+        border-radius: 120px; }
+      #container #profile-main-container .content-main h1 {
+        position: absolute;
+        top: -65%;
+        left: 0;
+        margin: 0 0 20px 20px;
+        color: #fdf0d5; }
+        #container #profile-main-container .content-main h1 i {
+          color: #2C8C99; }
+      #container #profile-main-container .content-main .edit-profile {
+        position: absolute;
+        top: -45%;
+        left: 0;
+        margin: 5px 0 5px 50px;
+        font: 700 12px/22px "Work Sans", sans-serif;
+        color: #fdf0d5;
+        text-transform: uppercase; }
+      #container #profile-main-container .content-main h2 {
+        margin-left: 20px;
+        color: #333;
+        font: 700 18px/30px "Work Sans", sans-serif;
+        text-align: left; }
+      #container #profile-main-container .content-main span {
+        font: 18px/22px "Work Sans", sans-serif;
+        color: #333; }
+    #container #profile-main-container .content-details {
+      margin-left: 10%; }
+      #container #profile-main-container .content-details h1 {
+        color: #611c35;
+        margin-bottom: 20px;
+        color: #333; }
+      #container #profile-main-container .content-details h2 {
+        color: #333;
+        font: 700 18px/30px "Work Sans", sans-serif;
+        text-align: left; }
+      #container #profile-main-container .content-details span {
+        display: inline-block;
+        font: 18px/22px "Work Sans", sans-serif;
+        color: #333; }
+    #container #profile-main-container .lists h1 {
+      padding: 10px 5%;
+      font: 700 18px/22px "Work Sans", sans-serif;
+      color: #15444a; }
+    #container #profile-main-container .lists .add-list {
+      float: right;
+      color: #15444a; }
+    #container #profile-main-container .content-list {
+      width: 100%;
+      height: 40px;
+      margin: 50px 0 150px 0;
+      background: #2C8C99; }
+      #container #profile-main-container .content-list ul {
+        width: 90%;
+        height: 120px;
+        margin: 0 5%;
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: scroll; }
+        #container #profile-main-container .content-list ul li {
+          display: inline-block;
+          vertical-align: middle;
+          width: 140px;
+          height: 100px;
+          margin: 5px;
+          background: #2C8C99;
+          text-align: center;
+          border-radius: 5px; }
+          #container #profile-main-container .content-list ul li:hover {
+            opacity: 0.8; }
+          #container #profile-main-container .content-list ul li h1 {
+            color: #15444a; }
+          #container #profile-main-container .content-list ul li h2 {
+            color: #15444a; }
+          #container #profile-main-container .content-list ul li .fa-heart {
+            color: #15444a; }
+          #container #profile-main-container .content-list ul li .fa-plus {
+            padding-top: 15%;
+            color: #15444a; }
     #container #profile-main-container .content-add-friend {
       position: relative;
       top: -120px;
       left: 0;
       text-align: center; }
+      #container #profile-main-container .content-add-friend .friend-photo {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        top: 0;
+        left: 0;
+        overflow-y: hidden;
+        background: #15444a;
+        background-image: url("../photo.jpg");
+        background-position: bottom;
+        background-blend-mode: overlay; }
       #container #profile-main-container .content-add-friend h1 {
         color: #fdf0d5; }
       #container #profile-main-container .content-add-friend .friend-button {
         background: #752240;
         border: 2px solid #752240;
         border-radius: 200px;
-        margin: 0 auto;
-        margin-top: 20px;
+        margin: 20px auto 0;
         padding: 25px 30px;
         font-size: 16px;
         color: #260b15; }
@@ -473,72 +679,5 @@ button:focus {
         text-align: center;
         font: 700 18px/22px "Work Sans", sans-serif;
         color: #333; }
-    #container #profile-main-container .content-main {
-      position: absolute;
-      top: 14%;
-      left: 0; }
-      #container #profile-main-container .content-main h1 {
-        margin: 0 0 20px 20px;
-        color: #fdf0d5; }
-      #container #profile-main-container .content-main h2 {
-        margin-left: 20px;
-        color: #fdf0d5;
-        font: 700 18px/30px "Work Sans", sans-serif;
-        text-align: left; }
-      #container #profile-main-container .content-main span {
-        font: 18px/22px "Work Sans", sans-serif;
-        color: #fdf0d5; }
-      #container #profile-main-container .content-main .edit-profile {
-        margin-left: 20px;
-        font: 700 12px/22px "Work Sans", sans-serif;
-        color: #fdf0d5;
-        text-transform: uppercase; }
-    #container #profile-main-container .content-details {
-      padding: 10px;
-      position: relative;
-      top: 5%;
-      left: 0; }
-      #container #profile-main-container .content-details h1 {
-        color: #611c35;
-        margin-bottom: 20px;
-        color: #333; }
-      #container #profile-main-container .content-details h2 {
-        color: #333;
-        font: 700 18px/30px "Work Sans", sans-serif;
-        text-align: left; }
-      #container #profile-main-container .content-details span {
-        display: inline-block;
-        font: 18px/22px "Work Sans", sans-serif;
-        color: #333; }
-    #container #profile-main-container .lists {
-      height: 100px;
-      background: #611c35; }
-      #container #profile-main-container .lists h1 {
-        padding: 10px 5%;
-        font: 700 18px/22px "Work Sans", sans-serif;
-        color: #15444a; }
-      #container #profile-main-container .lists i {
-        color: #15444a; }
-    #container #profile-main-container .content-list {
-      width: 100%;
-      height: 40px;
-      margin: 20px 0;
-      background: #2C8C99; }
-      #container #profile-main-container .content-list i {
-        float: right;
-        color: #15444a;
-        padding-right: 20px; }
-      #container #profile-main-container .content-list ul {
-        height: 50px;
-        margin: 0;
-        padding: 5px 0 0 30px; }
-        #container #profile-main-container .content-list ul li {
-          font: 16px/22px "Work Sans", sans-serif;
-          color: #fdf0d5; }
-    #container #profile-main-container .content-list-new {
-      width: 100%;
-      height: 40px;
-      margin: 60px 0;
-      background: #2C8C99; }
 
 /*# sourceMappingURL=styles.css.map */
