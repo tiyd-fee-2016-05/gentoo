@@ -1,0 +1,62 @@
+// Add media queries
+// Login screen
+#container1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $red;
+    background-image: url('../photo.jpg');
+    background-position: bottom;
+    background-blend-mode: multiply; //screen
+    // opacity: 0.6;
+    #login-container {
+        width: 70%;
+        height: 50%;
+        margin: 20% auto;
+        text-align: center;
+        // border: 2px solid black;
+        .logo {
+            font: 50px / 150px $logo;
+            color: $blue2;
+            -webkit-text-shadow: 2px 1px 0 darken($blue2, 40%);
+            -moz-text-shadow: 2px 1px 0 darken($blue2, 40%);
+            text-shadow: 2px 1px 0 darken($blue2, 40%);
+        }
+        h2 {
+            padding: 10px 0;
+            font: 700 50px / 50px $font;
+            color: $white;
+            -webkit-text-shadow: 2px 2px 0px darken($red, 10%);
+            -moz-text-shadow: 2px 2px 0px darken($red, 10%);
+            text-shadow: 2px 2px 0px darken($red, 10%);
+        }
+        p {
+            padding: 10px 0;
+            color: $white;
+        }
+        span {
+        	font: 700 18px / 22px $font;
+        	color: darken($blue2, 10%);
+        }
+        .login-button {
+            background: transparent;
+            border: 2px solid darken($blue2, 10%);
+            border-radius: 70px;
+            margin-top: 20px;
+            padding: 8px 30px 8px;
+            font: 700 18px / 20px $font;
+            color: darken($blue2, 10%);
+            i {
+              padding-left: 5px;
+            }
+            &:hover {
+                border: 2px solid $white;
+                color: $white;
+                -webkit-transition: all 0.7s ease;
+                transition: all 0.7s ease;
+            }
+        }
+    }
+}

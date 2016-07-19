@@ -1,0 +1,243 @@
+// Add media queries
+// Profile screen
+#container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $white;
+    z-index: -2;
+    // opacity: 0.6;
+    #profile-container {
+        width: 70%;
+        height: 50%;
+        margin: 20% auto;
+        opacity: 1;
+        text-align: center;
+        h1 {
+            color: $red;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: $red;
+            font: 700 18px / 22px $font;
+            text-align: left;
+        }
+        p {
+            padding: 10px 0;
+            color: $pink;
+        }
+        i {
+            color: $blue2;
+            // why doesn't this work!
+        }
+        span {
+            font: 700 18px / 22px $font;
+            color: darken($blue2, 15%);
+        }
+        .profile-submit-button {
+            background: lighten($red, 5%);
+            border: 2px solid lighten($red, 5%);
+            border-radius: 10px;
+            margin-top: 30px;
+            padding: 5px 30% 8px;
+            font: 700 18px / 20px $font;
+            color: darken($red, 15%);
+            &:hover {
+                background: darken($red, 5%);
+                border: 2px solid darken($red, 5%);
+                color: darken($red, 15%);
+                -webkit-transition: all 0.7s ease;
+                transition: all 0.7s ease;
+            }
+        }
+    }
+    #profile-main-container {
+        height: 50%;
+        margin: 0 auto;
+        .logo {
+            position: absolute;
+            top: 0;
+            right: 5%;
+            z-index: 3;
+            font: 50px / 150px $logo;
+            color: $red;
+            -webkit-text-shadow: 2px 1px 0 darken($red, 20%);
+            -moz-text-shadow: 2px 1px 0 darken($red, 20%);
+            text-shadow: 2px 1px 0 darken($red, 20%);
+        }
+        .logout-button {
+            position: absolute;
+            top: 33%;
+            right: 5%;
+            z-index: 3;
+            font: 700 12px / 22px $font;
+            color: $white;
+            text-transform: uppercase;
+            text-align: right;
+        }
+
+        .photo {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            top: 0;
+            left: 0;
+            overflow-y: hidden;
+            background: darken($blue2, 20%);
+            background-image: url('../photo.jpg');
+            background-position: bottom;
+            background-blend-mode: overlay;
+        }
+        .content {
+            width: 90%;
+            margin: 0 auto;
+            padding: 10px;
+            p {
+                padding: 10px 0;
+                color: $pink;
+            }
+            i {
+                color: $red;
+                // why doesn't this work!
+            }
+            .profile-holidays {
+                display: inline-block;
+            }
+            .profile-colors {
+                display: inline-block;
+            }
+            .profile-interests {
+                display: inline-block;
+                font: 700 16px / 20px $font;
+                text-transform: uppercase;
+                text-align: left;
+            }
+        }
+        .content-add-friend {
+          position: relative;
+          top: -120px;
+          left: 0;
+          text-align: center;
+            h1 {
+                color: $white;
+            }
+            .friend-button {
+                background: lighten($red, 5%);
+                border: 2px solid lighten($red, 5%);
+                border-radius: 200px;
+                margin: 0 auto;
+                margin-top: 20px;
+                padding: 25px 30px;
+                font-size: 16px;
+                color: darken($red, 15%);
+                &:hover {
+                    background: darken($red, 5%);
+                    border: 2px solid darken($red, 5%);
+                    color: darken($red, 15%);
+                    -webkit-transition: all 0.6s ease;
+                    transition: all 0.6s ease;
+                }
+            }
+        }
+        .content-details-remove {
+            position: relative;
+            top: -80px;
+            left: 0;
+            text-align: center;
+
+            span {
+                margin: 50px auto;
+                text-align: center;
+                font: 700 18px / 22px $font;
+                color: $black;
+            }
+        }
+        .content-main {
+            position: absolute;
+            top: 14%;
+            left: 0;
+            h1 {
+                margin: 0 0 20px 20px;
+                color: $white;
+            }
+            h2 {
+                margin-left: 20px;
+                color: $white;
+                font: 700 18px / 30px $font;
+                text-align: left;
+            }
+            span {
+                font: 18px / 22px $font;
+                color: $white;
+            }
+            .edit-profile {
+                margin-left: 20px;
+                font: 700 12px / 22px $font;
+                color: $white;
+                text-transform: uppercase;
+            }
+        }
+        .content-details {
+            padding: 10px;
+            position: relative;
+            top: 5%;
+            left: 0;
+            h1 {
+                color: $red;
+                margin-bottom: 20px;
+                color: $black;
+            }
+            h2 {
+                color: $black;
+                font: 700 18px / 30px $font;
+                text-align: left;
+            }
+            span {
+                display: inline-block;
+                font: 18px / 22px $font;
+                color: $black;
+            }
+        }
+        .lists {
+            height: 100px;
+            background: $red;
+            h1 {
+                padding: 10px 5%;
+                font: 700 18px / 22px $font;
+                color: darken($blue2, 20%);
+            }
+            i {
+                color: darken($blue2, 20%);
+            }
+        }
+        .content-list {
+            width: 100%;
+            height: 40px;
+            margin: 20px 0;
+            background: $blue2;
+            i {
+                float: right;
+                color: darken($blue2, 20%);
+                padding-right: 20px;
+            }
+            ul {
+                height: 50px;
+                margin: 0;
+                padding: 5px 0 0 30px;
+                // background: darken($blue2, 10%);
+                li {
+                    font: 16px / 22px $font;
+                    color: $white;
+                }
+            }
+        }
+        .content-list-new {
+            width: 100%;
+            height: 40px;
+            margin: 60px 0;
+            background: $blue2;
+        }
+    }
+}
