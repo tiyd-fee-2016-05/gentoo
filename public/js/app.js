@@ -1,44 +1,48 @@
-console.log("app.js connected");
->>>>>>> master
-var gentooApp = angular.module("gentooApp", ['ngRoute']);
+var gentooApp = angular.module("mainApp", ['ngRoute']);
+
+
 gentooApp.config(function($routeProvider) {
   $routeProvider
   //Consumer View Routes
-    .when('/login', {
-      templateUrl: 'templates/login.html',
-      // controller: 'ReportController'
-    })
-
     .when('/home', {
       templateUrl: 'templates/home.html',
       // controller: 'ReportController'
     })
-
-    .when('/edit-profile', {
-      templateUrl: 'templates/profile-edit.html',
-      // controller: 'ReportController'
-    })
-
-    .when('/friend-profile', {
+    .when('/add-friend', {
       templateUrl: 'templates/add-friend.html',
       // controller: 'ReportController'
     })
 
+    .when('/login', {
+      templateUrl: 'templates/login.html',
+      // controller: 'ReportbyDayController'
+      })
+
+    .when('/profile-edit', {
+      templateUrl: 'templates/profile-edit.html',
+      // controller: 'ReportbyDayController'
+      })
+
+      .when('/profile', {
+        templateUrl: 'templates/profile.html',
+        // controller: 'ReportController'
+        })
+
+        .when('/add-profile', {
+          templateUrl: 'templates/add-profile.html',
+          // controller: 'ReportController'
+          })
       .otherwise({
         redirectTo: "/home"
+
     });
 });
 
-var gentooApp = angular.module('gentooApp', []);
 gentooApp.controller('FormCtrl', function ($scope, $http) {
-  console.log("");
-
     $scope.submitForm = function() {
         console.log("posting data....");
         formData = $scope.form;
         console.log(formData);
-
-
         $http({
          url: 'http://7c3da702.ngrok.io/test',
          method: "POST",
@@ -49,26 +53,44 @@ gentooApp.controller('FormCtrl', function ($scope, $http) {
          }).error(function (data, status, headers, config) {
              $scope.status = status;
          });
-
     };
-
  });
 
-  $scope.submitForm = function() {
-      console.log("posting data....");
-      formData = $scope.form;
-      console.log(formData);
+ gentooApp.controller('ProfileCtrl', function ($scope, $http) {
+     $scope.addProfile = function() {
+         console.log("posting data....");
+         profileData = $scope.profile;
+         console.log(profileData);
+  $scope.message="message"
 
-      $http.post('http://7c3da702.ngrok.io/users/sign', {headers:{ 'sinovia@gentoo.com': 'password'}
-});
-};
-});
+         $http({
+          url: 'http://58a85897.ngrok.io/sinovia/profile',
+          method: "POST",
+          data: profileData,
+          headers: {'Authorization': 'sinovia'}
+      }).success(function (data, status, headers, config) {
+              $scope.persons = data;
+          }).error(function (data, status, headers, config) {
+              $scope.status = status;
+          });
 
-//       ")
-//                   $http.post(', {email: "sinovia@gentoo.com", password: "password" })
-//                      .success(function (response) {
-//                       callback(response);
-//                     });
-//
-// };
-// });
+     };
+
+  });
+
+  console.log("admin.js response");
+  gentooApp.controller('LoadCtrl', function ($scope, $http) {
+
+    $http({
+      method: 'GET',
+      url: 'http://58a85897.ngrok.io/sinovia/profile/',
+          headers: {'Authorization': 'sinovia'}
+    }).success(function successCallback(response) {
+            $scope.loadedprofile= response;
+              console.log($scope.loadedprofile.user.birthday.day)
+              console.log(response)
+      }, function errorCallback(response) {
+        // called asynchronously if an error occurs
+        // or server returns response with an error status.
+      });
+  });

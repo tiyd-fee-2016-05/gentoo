@@ -1,6 +1,6 @@
 <!-- Profile View -->
 <div id="container">
-    <div id="profile-main-container">
+    <div id="profile-main-container" ng-controller="LoadCtrl">
 
       <!-- opens notification menu, drops from top -->
         <i class="fa fa-align-left fa-2x" aria-hidden="true"></i>
@@ -20,23 +20,40 @@
 
 
         <section class="content content-main">
-            <h1 class="profile-name clip-text-maybe"><i class="fa fa-user" aria-hidden="true"></i> Nastassia Troyer</h1>
-            <h1 class="edit-profile">Edit Profile</h1>
+            <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i>
+Nastassia Troyer</h1>
 
-            <h2 class="profile-birthday"><i class="fa fa-birthday-cake" aria-hidden="true"></i> 06/26/1991</h2>
+               <!-- {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1> -->
+            <a href="#/profile-edit"><h1 class="edit-profile">Edit Profile</h1></a>
+
+            <h2 class="profile-birthday"><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</h2>
             <h2 class="profile-anniv-dates"><i class="fa fa-calendar" aria-hidden="true"></i> 05/25/1945</h2>
-            <h2 class="profile-holidays"><i class="fa fa-heart" aria-hidden="true"></i> Christmas</h2>
+        </section>
+
+        <section class="content content-details">
+            <span>Favorite Holidays</span>
+            <h2 class="profile-holidays">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}</h2>
         </section>
 
         <section class="content content-details">
             <span>Interests</span>
-            <h2 class="profile-interests">sports, ballet, drawing, reading</h2>
+            <h2 class="profile-interests">{{loadedprofile.user.holidays}}</h2>
         </section>
 
         <section class="content content-details">
             <span>Favorite Colors</span>
-            <h2 class="profile-colors">orange</h2>
+            <h2 class="profile-colors">{{loadedprofile.user.colors[0]}}</h2>
         </section>
+
+        <!-- <form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
+        Username    <br/><input type="text" ng-model="form.username">    <br/><br/>
+        Password: <br/><input type="text" ng-model="form.password"> <br/><br/>
+
+          <!-<button ng-click="save()" >Save</button> -->
+          <!-- <input type="submit" ngClick="Submit" >
+
+        </form> -->
+
 
         <section class="lists content-list">
             <h1>Wishlist for Christmas <i class="fa fa-plus add-list" aria-hidden="true"></i></h1>

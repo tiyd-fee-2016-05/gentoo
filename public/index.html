@@ -1,135 +1,62 @@
 <!DOCTYPE html>
-<html ng-app="gentooApp">
+<html>
 
 <head>
     <meta charset="utf-8">
-    <title></title>
-    <title>Project Name</title>
+    <title>Gentoo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
-<body>
-
-
-
-<!-- <ngview></ngview> -->
-
-
-<!-- Non-Friend Profile View -->
-<div id="container">
-    <div id="profile-main-container">
-
-        <h1 class="logo">Gentoo</h1>
-
-        <section class="friend-photo">
-        </section>
-
-        <section class="content content-add-friend">
-            <h1>Nastassia Troyer</h1>
-            <button class="friend-button" type="submit" name="button"><i class="fa fa-plus fa-4x" aria-hidden="true"></i></button>
-            <!-- Uncomment this & add display:block for when it's pressed! -->
-            <!-- <button class="pending-friend-button" type="submit" name="button">Pending</button> -->
-        </section>
-
-        <section class="content content-details-remove">
-          <!-- Delete this line once friend request has been made! -->
-            <span>Add user to your friends to view their profile!</span>
-        </section>
-    </div>
-</div>
+<body ng-app="mainApp">
+  <!-- <a href="#/login">Login</a>
+  <a href="#/profile">Profile</a>
+  <a href="#/edit-profile">Edit Profile </a>
+  <a href="#/add-friend">Add Friend </a>
+  <a href="#/add-profile">Add Profile </a> -->
 
 
+<!-- Change all headers from position: to fixed! -->
+
+  <div><ng-view></ng-view><div>
 
 
-
-
-<!-- Profile View -->
-<!-- <div id="container">
-    <div id="profile-main-container"> -->
-
-      <!-- opens notification menu, drops from top -->
-        <!-- <i class="fa fa-align-left fa-2x" aria-hidden="true"></i> -->
-        <!-- <i class="fa fa-align-right fa-2x" aria-hidden="true"></i> -->
-
-        <!-- <h1 class="logo">Gentoo</h1> -->
-        <!-- <span class="logout-button">Logout</span>
-        put logout in menu! -->
-<!--
-
-        <section class="photo">
-        </section>
-
-        <section class="user-photo">
-        </section>
-
-        <section class="content content-main">
-            <h1 class="profile-name clip-text-maybe"><i class="fa fa-user" aria-hidden="true"></i> Nastassia Troyer</h1>
-            <h1 class="edit-profile">Edit Profile</h1>
-
-            <h2 class="profile-birthday"><i class="fa fa-birthday-cake" aria-hidden="true"></i> 06/26/1991</h2>
-            <h2 class="profile-anniv-dates"><i class="fa fa-calendar" aria-hidden="true"></i> 05/25/1945</h2>
-            <h2 class="profile-holidays"><i class="fa fa-heart" aria-hidden="true"></i> Christmas</h2>
-        </section>
-
-        <section class="content content-details">
-            <span>Interests</span>
-            <h2 class="profile-interests">sports, ballet, drawing, reading</h2>
-        </section>
-
-        <section class="content content-details">
-            <span>Favorite Colors</span>
-            <h2 class="profile-colors">orange</h2>
-        </section>
-    </div> -->
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular-resource.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script>
-        (function() {
-            // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-            if (!String.prototype.trim) {
-                (function() {
-                    // Make sure we trim BOM and NBSP
-                    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-                    String.prototype.trim = function() {
-                        return this.replace(rtrim, '');
-                    };
-                })();
+<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular-resource.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/classie.js"></script>
+<script>
+    (function() {
+        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+        if (!String.prototype.trim) {
+            (function() {
+                // Make sure we trim BOM and NBSP
+                var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                String.prototype.trim = function() {
+                    return this.replace(rtrim, '');
+                };
+            })();
+        }
+        [].slice.call(document.querySelectorAll('input.input__field')).forEach(function(inputEl) {
+            // in case the input is already filled..
+            if (inputEl.value.trim() !== '') {
+                classie.add(inputEl.parentNode, 'input--filled');
             }
-
-            [].slice.call(document.querySelectorAll('input.input__field')).forEach(function(inputEl) {
-                // in case the input is already filled..
-                if (inputEl.value.trim() !== '') {
-                    classie.add(inputEl.parentNode, 'input--filled');
-                }
-
-                // events:
-                inputEl.addEventListener('focus', onInputFocus);
-                inputEl.addEventListener('blur', onInputBlur);
-            });
-
-            function onInputFocus(ev) {
-                classie.add(ev.target.parentNode, 'input--filled');
+            // events:
+            inputEl.addEventListener('focus', onInputFocus);
+            inputEl.addEventListener('blur', onInputBlur);
+        });
+        function onInputFocus(ev) {
+            classie.add(ev.target.parentNode, 'input--filled');
+        }
+        function onInputBlur(ev) {
+            if (ev.target.value.trim() === '') {
+                classie.remove(ev.target.parentNode, 'input--filled');
             }
-
-            function onInputBlur(ev) {
-                if (ev.target.value.trim() === '') {
-                    classie.remove(ev.target.parentNode, 'input--filled');
-                }
-            }
-        })();
-    </script>
-    <script src="js/admin.js"></script>
-    <script src="js/app.js"></script>
+        }
+    })();
+</script>
 </body>
-
 </html>
