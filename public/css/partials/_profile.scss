@@ -8,16 +8,63 @@
     left: 0;
     background: $white;
     z-index: -2;
-    // opacity: 0.6;
-    #edit-profile-container {
-        width: 70%;
-        height: 50%;
-        margin: 20% auto;
-        opacity: 1;
+
+
+    .save-profile {
+        position: absolute;
+        top: 75px;
+        right: 5%;
+        z-index: 5;
+        margin: 5px 0 5px 50px;
+        font: 700 14px / 22px $font;
+        color: $blue2;
+        text-transform: uppercase;
+        &:hover {
+            color: darken($blue2, 25%);
+            -webkit-transition: all 0.7s ease;
+            transition: all 0.7s ease;
+          }
+    }
+    .profile-submit-button {
+        background: lighten($blue2, 5%);
+        border: 2px solid lighten($blue2, 5%);
+        border-radius: 10px;
+        margin: auto;
+        padding: 5px 30% 8px;
+        font: 700 18px / 20px $font;
+        color: darken($blue2, 15%);
         text-align: center;
+        i {
+            color: darken($blue2, 15%);
+        }
+        &:hover {
+            background: darken($blue2, 5%);
+            border: 2px solid darken($blue2, 5%);
+            color: darken($blue2, 25%);
+            -webkit-transition: all 0.7s ease;
+            transition: all 0.7s ease;
+            i {
+                color: darken($blue2, 25%);
+                -webkit-transition: all 0.7s ease;
+                transition: all 0.7s ease;
+            }
+        }
+    }
+
+
+    #edit-profile-container {
+        height: 50%;
+        margin: 0 auto;
+        // text-align: center;
         h1 {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            margin: 0 0 20px 20px;
             color: $red;
-            margin-bottom: 20px;
+            i {
+                color: $blue2;
+            }
         }
         h2 {
             color: $red;
@@ -28,97 +75,15 @@
             padding: 10px 0;
             color: $pink;
         }
-        i {
-            color: $blue2;
-            // why doesn't this work!
-        }
-        span {
-            font: 700 18px / 22px $font;
-            color: darken($blue2, 15%);
-        }
-        .profile-submit-button {
-            background: lighten($red, 5%);
-            border: 2px solid lighten($red, 5%);
-            border-radius: 10px;
-            margin-top: 30px;
-            padding: 5px 30% 8px;
-            font: 700 18px / 20px $font;
-            color: darken($red, 15%);
-            i {}
-            &:hover {
-                background: darken($red, 5%);
-                border: 2px solid darken($red, 5%);
-                color: darken($red, 15%);
-                -webkit-transition: all 0.7s ease;
-                transition: all 0.7s ease;
-            }
-        }
     }
+    span {
+        font: 700 18px / 22px $font;
+        color: darken($blue2, 15%);
+    }
+
     #profile-main-container {
         height: 50%;
         margin: 0 auto;
-        .fa-align-left {
-            // menu icon
-            position: absolute;
-            top: 10px;
-            left: 8%;
-            z-index: 5;
-            opacity: 0.5;
-            color: $white;
-            &:hover {
-                opacity: 1;
-                -webkit-transition: all 0.7s ease;
-                transition: all 0.7s ease;
-            }
-        }
-        .fa-align-right {
-            // menu icon
-            position: absolute;
-            top: 10px;
-            right: 5%;
-            z-index: 5;
-            opacity: 0.5;
-            color: $white;
-            &:hover {
-                opacity: 1;
-                -webkit-transition: all 0.7s ease;
-                transition: all 0.7s ease;
-            }
-        }
-        .logo {
-            position: absolute;
-            top: -4%;
-            right: 5%;
-            z-index: 3;
-            font: 50px / 150px $logo;
-            color: $blue2;
-            -webkit-text-shadow: 2px 1px 0 darken($red, 20%);
-            -moz-text-shadow: 2px 1px 0 darken($red, 20%);
-            text-shadow: 2px 1px 0 darken($red, 20%);
-        }
-        .logout-button {
-            position: absolute;
-            top: 11%;
-            right: 6%;
-            z-index: 3;
-            font: 700 12px / 22px $font;
-            color: $white;
-            text-transform: uppercase;
-            text-align: right;
-        }
-        .photo {
-            width: 100%;
-            height: 130px;
-            position: relative;
-            top: 0;
-            left: 0;
-            margin-bottom: 20px;
-            overflow-y: hidden;
-            background: $red;
-            background-image: url('../photo.jpg');
-            background-position: bottom;
-            background-blend-mode: multiply;
-        }
         .content {
             width: 90%;
             margin: 0 auto;
@@ -162,25 +127,6 @@
                 background-blend-mode: overlay;
                 border-radius: 120px;
             }
-            h1 {
-                position: absolute;
-                top: -90%;
-                left: 0;
-                margin: 0 0 20px 20px;
-                color: $white;
-                i {
-                    color: $blue2;
-                }
-            }
-            .edit-profile {
-                position: absolute;
-                top: -65%;
-                left: 5px;
-                margin: 5px 0 5px 50px;
-                font: 700 12px / 22px $font;
-                color: $white;
-                text-transform: uppercase;
-            }
             //
             //         .clip-text-maybe {
             //             /* if we can clip, do it */
@@ -207,7 +153,10 @@
             }
         }
         .content-details {
-            margin-left: 10%;
+            position: relative;
+            top: 0;
+            left: 0;
+            margin-left: 8%;
             h1 {
                 color: $red;
                 margin-bottom: 20px;
@@ -225,8 +174,7 @@
             }
         }
         .lists {
-
-            h1 {
+            .list-name {
                 padding: 10px 5%;
                 font: 700 18px / 22px $font;
                 color: darken($blue2, 20%);
@@ -235,11 +183,16 @@
                 float: right;
                 color: darken($blue2, 20%);
             }
+            .friends-list {
+                padding: 10px 5%;
+                font: 700 18px / 22px $font;
+                color: darken($red, 20%);
+            }
         }
         .content-list {
             width: 100%;
             height: 40px;
-            margin: 50px 0 150px 0;
+            margin: 50px 0 150px;
             background: $blue2;
             ul {
                 width: 90%;
@@ -249,33 +202,71 @@
                 overflow-y: hidden;
                 overflow-x: scroll;
                 // border: 2px solid red;
-
                 li {
                     display: inline-block;
                     vertical-align: middle;
-
                     width: 140px;
-                        height: 100px;
-                        margin: 5px;
+                    height: 100px;
+                    margin: 5px;
                     background: $blue2;
                     text-align: center;
                     border-radius: 5px;
                     &:hover {
-                      opacity: 0.8;
+                        opacity: 0.8;
                     }
                     h1 {
                         color: darken($blue2, 20%);
                     }
                     h2 {
-                      color: darken($blue2, 20%);
+                        color: darken($blue2, 20%);
                     }
                     .fa-heart {
                         color: darken($blue2, 20%);
-
                     }
                     .fa-plus {
-                      padding-top: 15%;
+                        padding-top: 15%;
                         color: darken($blue2, 20%);
+                    }
+                }
+            }
+        }
+        .friend-list {
+            width: 100%;
+            height: 40px;
+            margin: 50px 0 150px;
+            background: $red;
+            ul {
+                width: 90%;
+                height: 120px;
+                margin: 0 5%;
+                white-space: nowrap;
+                overflow-y: hidden;
+                overflow-x: scroll;
+                // border: 2px solid red;
+                li {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 140px;
+                    height: 100px;
+                    margin: 5px;
+                    background: $red;
+                    text-align: center;
+                    border-radius: 5px;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                    h1 {
+                        color: darken($red, 20%);
+                    }
+                    h2 {
+                        color: darken($red, 20%);
+                    }
+                    .fa-heart {
+                        color: darken($red, 20%);
+                    }
+                    .fa-plus {
+                        padding-top: 15%;
+                        color: darken($red, 20%);
                     }
                 }
             }
@@ -288,65 +279,5 @@
         //     margin: 150px 0;
         //     background: $blue2;
         // }
-        .friend-photo {
-            width: 100%;
-            height: 300px;
-            position: relative;
-            top: 0;
-            left: 0;
-            overflow-y: hidden;
-            background: darken($blue2, 20%);
-            background-image: url('../photo.jpg');
-            background-position: right-center;
-            background-blend-mode: multiply;
-        }
-        .content-add-friend {
-            position: relative;
-            top: -120px;
-            left: 0;
-            text-align: center;
-
-            h1 {
-                color: $white;
-            }
-            .friend-button {
-                background: lighten($red, 5%);
-                border: 2px solid lighten($red, 5%);
-                border-radius: 200px;
-                margin: 20px auto 0;
-                padding: 25px 30px;
-                font-size: 16px;
-                color: darken($red, 15%);
-                &:hover {
-                    background: darken($red, 5%);
-                    border: 2px solid darken($red, 5%);
-                    color: darken($red, 15%);
-                    -webkit-transition: all 0.6s ease;
-                    transition: all 0.6s ease;
-                }
-            }
-            .pending-friend-button {
-                background: darken($red, 5%);
-                border: 2px solid darken($red, 5%);
-                border-radius: 200px;
-                margin: 20px auto 0;
-                padding: 45px 20px;
-                font: 700 16px / 22px $font;
-                color: darken($red, 10%);
-                text-transform: uppercase;
-            }
-        }
-        .content-details-remove {
-            position: relative;
-            top: -80px;
-            left: 0;
-            text-align: center;
-            span {
-                margin: 50px auto;
-                text-align: center;
-                font: 700 18px / 22px $font;
-                color: $black;
-            }
-        }
     }
 }

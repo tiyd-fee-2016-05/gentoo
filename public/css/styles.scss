@@ -36,8 +36,9 @@ button:focus {
 }
 
 
-
+@import "partials/header";
 @import "partials/forms";
 @import "partials/menu";
 @import "partials/login";
 @import "partials/profile";
+@import "partials/add-friend";

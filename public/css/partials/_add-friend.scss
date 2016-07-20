@@ -1,0 +1,77 @@
+.friend-photo {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    background: darken($blue2, 20%);
+    background-image: url('../photo.jpg');
+    background-position: right-center;
+    background-blend-mode: multiply;
+}
+
+h1 {
+  color: $red;
+}
+
+.friend-name {
+    position: relative;
+    top: -110px;
+    // left: 35%;
+    // margin: 0 0 20px 20px;
+    margin: auto;
+    font-size: 40px;
+    color: $white;
+    text-align: center;
+    z-index: 5;
+    i {
+        color: $blue2;
+    }
+}
+
+
+.content-add-friend {
+    position: relative;
+    top: -100px;
+    left: 0;
+    text-align: center;
+
+    .friend-button {
+        background: lighten($red, 5%);
+        border: 2px solid lighten($red, 5%);
+        border-radius: 200px;
+        margin: 20px auto 0;
+        padding: 28px 25px;
+        font-size: 14px;
+        color: darken($red, 15%);
+        &:hover {
+            background: darken($red, 5%);
+            border: 2px solid darken($red, 5%);
+            color: darken($red, 15%);
+            -webkit-transition: all 0.6s ease;
+            transition: all 0.6s ease;
+        }
+    }
+    .pending-friend-button {
+        background: darken($red, 5%);
+        border: 2px solid darken($red, 5%);
+        border-radius: 200px;
+        margin: 20px auto 0;
+        padding: 45px 20px;
+        font: 700 16px / 22px $font;
+        color: darken($red, 10%);
+        text-transform: uppercase;
+    }
+}
+.content-details-remove {
+    position: relative;
+    top: -20px;
+    left: 0;
+    margin: 50px;
+    text-align: center;
+    font: 700 18px / 22px $font;
+    color: $black;
+    text-align: center;
+
+}

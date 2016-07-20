@@ -2,15 +2,27 @@
 <div id="container">
     <div id="profile-main-container">
 
-        <h1 class="logo">Gentoo</h1>
+        <header>
+            <nav>
+                <!-- opens notification menu, drops from top -->
+                <!-- ng show for the menu -->
+                <span class="logout-button">Friend Requests</span>
 
-        <section class="friend-photo">
-        </section>
+                <span class="logout-button">Logout</span>
+            </nav>
+
+            <section class="friend-photo">
+            </section>
+
+            <i class="fa fa-align-left fa-2x" aria-hidden="true"></i>
+            <h1 class="logo">Gentoo</h1>
+            <h1 class="friend-name"> {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}Nastassia Troyer</h1>
+
+        </header>
+
 
         <section class="content content-add-friend">
-            <h1>Nastassia Troyer</h1>
-
-            <button ng-click="showme=true" ng-hide="showme" class="friend-button" type="submit" name="button"><i class="fa fa-plus fa-4x" aria-hidden="true"></i></button>
+            <button ng-click="showme=true" ng-hide="showme" class="friend-button" type="submit" name="button"><i class="fa fa-user-plus fa-4x" aria-hidden="true"></i></button>
 
             <button ng-click="showme=false" ng-show="showme" class="pending-friend-button" type="submit" name="button">Pending</button>
         </section>
@@ -18,7 +30,7 @@
         <section class="content content-details-remove">
             <span ng-hide="showme">Add user to your friends to view their profile!</span>
 
-            <span ng-show="showme">Friend added!</span>
+            <span ng-show="showme">Friend request sent!</span>
 
         </section>
     </div>

@@ -14,6 +14,76 @@ a {
 button:focus {
   outline: 0; }
 
+header .logout-button {
+  position: absolute;
+  top: 11%;
+  right: 6%;
+  z-index: 3;
+  font: 700 12px/22px "Work Sans", sans-serif;
+  color: #fdf0d5;
+  text-transform: uppercase;
+  text-align: right; }
+header .fa-align-left {
+  position: absolute;
+  top: 20px;
+  left: 8%;
+  z-index: 5;
+  opacity: 0.5;
+  color: #fdf0d5; }
+  header .fa-align-left:hover {
+    opacity: 1;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease; }
+header .fa-align-right {
+  position: absolute;
+  top: 10px;
+  right: 5%;
+  z-index: 5;
+  opacity: 0.5;
+  color: #fdf0d5; }
+  header .fa-align-right:hover {
+    opacity: 1;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease; }
+header .photo {
+  width: 100%;
+  height: 130px;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: 20px;
+  overflow-y: hidden;
+  background: #611c35;
+  background-image: url("../photo.jpg");
+  background-position: bottom;
+  background-blend-mode: multiply; }
+header .logo {
+  position: absolute;
+  top: -4%;
+  right: 5%;
+  z-index: 3;
+  font: 50px/150px "Grand Hotel", cursive;
+  color: #2C8C99;
+  -webkit-text-shadow: 2px 1px 0 #12050a;
+  -moz-text-shadow: 2px 1px 0 #12050a;
+  text-shadow: 2px 1px 0 #12050a; }
+header .profile-name {
+  position: absolute;
+  top: 80px;
+  left: 6%;
+  margin: 0 0 20px 20px;
+  color: #fdf0d5; }
+  header .profile-name i {
+    color: #2C8C99; }
+header .edit-profile {
+  position: absolute;
+  top: 94px;
+  left: 6%;
+  margin: 5px 0 5px 50px;
+  font: 700 12px/22px "Work Sans", sans-serif;
+  color: #fdf0d5;
+  text-transform: uppercase; }
+
 *,
 *:after,
 *:before {
@@ -435,15 +505,51 @@ button:focus {
   left: 0;
   background: #fdf0d5;
   z-index: -2; }
-  #container #edit-profile-container {
-    width: 70%;
-    height: 50%;
-    margin: 20% auto;
-    opacity: 1;
+  #container .save-profile {
+    position: absolute;
+    top: 75px;
+    right: 5%;
+    z-index: 5;
+    margin: 5px 0 5px 50px;
+    font: 700 14px/22px "Work Sans", sans-serif;
+    color: #2C8C99;
+    text-transform: uppercase; }
+    #container .save-profile:hover {
+      color: #103136;
+      -webkit-transition: all 0.7s ease;
+      transition: all 0.7s ease; }
+  #container .profile-submit-button {
+    background: #329ead;
+    border: 2px solid #329ead;
+    border-radius: 10px;
+    margin: auto;
+    padding: 5px 30% 8px;
+    font: 700 18px/20px "Work Sans", sans-serif;
+    color: #1b565e;
     text-align: center; }
+    #container .profile-submit-button i {
+      color: #1b565e; }
+    #container .profile-submit-button:hover {
+      background: #267a85;
+      border: 2px solid #267a85;
+      color: #103136;
+      -webkit-transition: all 0.7s ease;
+      transition: all 0.7s ease; }
+      #container .profile-submit-button:hover i {
+        color: #103136;
+        -webkit-transition: all 0.7s ease;
+        transition: all 0.7s ease; }
+  #container #edit-profile-container {
+    height: 50%;
+    margin: 0 auto; }
     #container #edit-profile-container h1 {
-      color: #611c35;
-      margin-bottom: 20px; }
+      position: absolute;
+      top: 10%;
+      left: 0;
+      margin: 0 0 20px 20px;
+      color: #611c35; }
+      #container #edit-profile-container h1 i {
+        color: #2C8C99; }
     #container #edit-profile-container h2 {
       color: #611c35;
       font: 700 18px/22px "Work Sans", sans-serif;
@@ -451,81 +557,12 @@ button:focus {
     #container #edit-profile-container p {
       padding: 10px 0;
       color: #e84855; }
-    #container #edit-profile-container i {
-      color: #2C8C99; }
-    #container #edit-profile-container span {
-      font: 700 18px/22px "Work Sans", sans-serif;
-      color: #1b565e; }
-    #container #edit-profile-container .profile-submit-button {
-      background: #752240;
-      border: 2px solid #752240;
-      border-radius: 10px;
-      margin-top: 30px;
-      padding: 5px 30% 8px;
-      font: 700 18px/20px "Work Sans", sans-serif;
-      color: #260b15; }
-      #container #edit-profile-container .profile-submit-button:hover {
-        background: #4d162a;
-        border: 2px solid #4d162a;
-        color: #260b15;
-        -webkit-transition: all 0.7s ease;
-        transition: all 0.7s ease; }
+  #container span {
+    font: 700 18px/22px "Work Sans", sans-serif;
+    color: #1b565e; }
   #container #profile-main-container {
     height: 50%;
     margin: 0 auto; }
-    #container #profile-main-container .fa-align-left {
-      position: absolute;
-      top: 10px;
-      left: 8%;
-      z-index: 5;
-      opacity: 0.5;
-      color: #fdf0d5; }
-      #container #profile-main-container .fa-align-left:hover {
-        opacity: 1;
-        -webkit-transition: all 0.7s ease;
-        transition: all 0.7s ease; }
-    #container #profile-main-container .fa-align-right {
-      position: absolute;
-      top: 10px;
-      right: 5%;
-      z-index: 5;
-      opacity: 0.5;
-      color: #fdf0d5; }
-      #container #profile-main-container .fa-align-right:hover {
-        opacity: 1;
-        -webkit-transition: all 0.7s ease;
-        transition: all 0.7s ease; }
-    #container #profile-main-container .logo {
-      position: absolute;
-      top: -4%;
-      right: 5%;
-      z-index: 3;
-      font: 50px/150px "Grand Hotel", cursive;
-      color: #2C8C99;
-      -webkit-text-shadow: 2px 1px 0 #12050a;
-      -moz-text-shadow: 2px 1px 0 #12050a;
-      text-shadow: 2px 1px 0 #12050a; }
-    #container #profile-main-container .logout-button {
-      position: absolute;
-      top: 11%;
-      right: 6%;
-      z-index: 3;
-      font: 700 12px/22px "Work Sans", sans-serif;
-      color: #fdf0d5;
-      text-transform: uppercase;
-      text-align: right; }
-    #container #profile-main-container .photo {
-      width: 100%;
-      height: 130px;
-      position: relative;
-      top: 0;
-      left: 0;
-      margin-bottom: 20px;
-      overflow-y: hidden;
-      background: #611c35;
-      background-image: url("../photo.jpg");
-      background-position: bottom;
-      background-blend-mode: multiply; }
     #container #profile-main-container .content {
       width: 90%;
       margin: 0 auto;
@@ -560,22 +597,6 @@ button:focus {
         background-position: center;
         background-blend-mode: overlay;
         border-radius: 120px; }
-      #container #profile-main-container .content-main h1 {
-        position: absolute;
-        top: -90%;
-        left: 0;
-        margin: 0 0 20px 20px;
-        color: #fdf0d5; }
-        #container #profile-main-container .content-main h1 i {
-          color: #2C8C99; }
-      #container #profile-main-container .content-main .edit-profile {
-        position: absolute;
-        top: -65%;
-        left: 5px;
-        margin: 5px 0 5px 50px;
-        font: 700 12px/22px "Work Sans", sans-serif;
-        color: #fdf0d5;
-        text-transform: uppercase; }
       #container #profile-main-container .content-main h2 {
         margin-left: 20px;
         color: #333;
@@ -585,7 +606,10 @@ button:focus {
         font: 18px/22px "Work Sans", sans-serif;
         color: #333; }
     #container #profile-main-container .content-details {
-      margin-left: 10%; }
+      position: relative;
+      top: 0;
+      left: 0;
+      margin-left: 8%; }
       #container #profile-main-container .content-details h1 {
         color: #611c35;
         margin-bottom: 20px;
@@ -598,17 +622,21 @@ button:focus {
         display: inline-block;
         font: 18px/22px "Work Sans", sans-serif;
         color: #333; }
-    #container #profile-main-container .lists h1 {
+    #container #profile-main-container .lists .list-name {
       padding: 10px 5%;
       font: 700 18px/22px "Work Sans", sans-serif;
       color: #15444a; }
     #container #profile-main-container .lists .add-list {
       float: right;
       color: #15444a; }
+    #container #profile-main-container .lists .friends-list {
+      padding: 10px 5%;
+      font: 700 18px/22px "Work Sans", sans-serif;
+      color: #12050a; }
     #container #profile-main-container .content-list {
       width: 100%;
       height: 40px;
-      margin: 50px 0 150px 0;
+      margin: 50px 0 150px;
       background: #2C8C99; }
       #container #profile-main-container .content-list ul {
         width: 90%;
@@ -637,56 +665,102 @@ button:focus {
           #container #profile-main-container .content-list ul li .fa-plus {
             padding-top: 15%;
             color: #15444a; }
-    #container #profile-main-container .friend-photo {
+    #container #profile-main-container .friend-list {
       width: 100%;
-      height: 300px;
-      position: relative;
-      top: 0;
-      left: 0;
-      overflow-y: hidden;
-      background: #15444a;
-      background-image: url("../photo.jpg");
-      background-position: right-center;
-      background-blend-mode: multiply; }
-    #container #profile-main-container .content-add-friend {
-      position: relative;
-      top: -120px;
-      left: 0;
-      text-align: center; }
-      #container #profile-main-container .content-add-friend h1 {
-        color: #fdf0d5; }
-      #container #profile-main-container .content-add-friend .friend-button {
-        background: #752240;
-        border: 2px solid #752240;
-        border-radius: 200px;
-        margin: 20px auto 0;
-        padding: 25px 30px;
-        font-size: 16px;
-        color: #260b15; }
-        #container #profile-main-container .content-add-friend .friend-button:hover {
-          background: #4d162a;
-          border: 2px solid #4d162a;
-          color: #260b15;
-          -webkit-transition: all 0.6s ease;
-          transition: all 0.6s ease; }
-      #container #profile-main-container .content-add-friend .pending-friend-button {
-        background: #4d162a;
-        border: 2px solid #4d162a;
-        border-radius: 200px;
-        margin: 20px auto 0;
-        padding: 45px 20px;
-        font: 700 16px/22px "Work Sans", sans-serif;
-        color: #39111f;
-        text-transform: uppercase; }
-    #container #profile-main-container .content-details-remove {
-      position: relative;
-      top: -80px;
-      left: 0;
-      text-align: center; }
-      #container #profile-main-container .content-details-remove span {
-        margin: 50px auto;
-        text-align: center;
-        font: 700 18px/22px "Work Sans", sans-serif;
-        color: #333; }
+      height: 40px;
+      margin: 50px 0 150px;
+      background: #611c35; }
+      #container #profile-main-container .friend-list ul {
+        width: 90%;
+        height: 120px;
+        margin: 0 5%;
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: scroll; }
+        #container #profile-main-container .friend-list ul li {
+          display: inline-block;
+          vertical-align: middle;
+          width: 140px;
+          height: 100px;
+          margin: 5px;
+          background: #611c35;
+          text-align: center;
+          border-radius: 5px; }
+          #container #profile-main-container .friend-list ul li:hover {
+            opacity: 0.8; }
+          #container #profile-main-container .friend-list ul li h1 {
+            color: #12050a; }
+          #container #profile-main-container .friend-list ul li h2 {
+            color: #12050a; }
+          #container #profile-main-container .friend-list ul li .fa-heart {
+            color: #12050a; }
+          #container #profile-main-container .friend-list ul li .fa-plus {
+            padding-top: 15%;
+            color: #12050a; }
+
+.friend-photo {
+  width: 100%;
+  height: 350px;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  background: #15444a;
+  background-image: url("../photo.jpg");
+  background-position: right-center;
+  background-blend-mode: multiply; }
+
+h1 {
+  color: #611c35; }
+
+.friend-name {
+  position: relative;
+  top: -110px;
+  margin: auto;
+  font-size: 40px;
+  color: #fdf0d5;
+  text-align: center;
+  z-index: 5; }
+  .friend-name i {
+    color: #2C8C99; }
+
+.content-add-friend {
+  position: relative;
+  top: -100px;
+  left: 0;
+  text-align: center; }
+  .content-add-friend .friend-button {
+    background: #752240;
+    border: 2px solid #752240;
+    border-radius: 200px;
+    margin: 20px auto 0;
+    padding: 28px 25px;
+    font-size: 14px;
+    color: #260b15; }
+    .content-add-friend .friend-button:hover {
+      background: #4d162a;
+      border: 2px solid #4d162a;
+      color: #260b15;
+      -webkit-transition: all 0.6s ease;
+      transition: all 0.6s ease; }
+  .content-add-friend .pending-friend-button {
+    background: #4d162a;
+    border: 2px solid #4d162a;
+    border-radius: 200px;
+    margin: 20px auto 0;
+    padding: 45px 20px;
+    font: 700 16px/22px "Work Sans", sans-serif;
+    color: #39111f;
+    text-transform: uppercase; }
+
+.content-details-remove {
+  position: relative;
+  top: -20px;
+  left: 0;
+  margin: 50px;
+  text-align: center;
+  font: 700 18px/22px "Work Sans", sans-serif;
+  color: #333;
+  text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */
