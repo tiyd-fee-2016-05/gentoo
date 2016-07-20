@@ -1,6 +1,6 @@
 <!-- Non-Friend Profile View -->
 <div id="container">
-    <div id="profile-main-container">
+    <div id="profile-main-container" ng-controller="AddFriendCtrl">
 
         <h1 class="logo">Gentoo</h1>
 
@@ -9,7 +9,7 @@
 
         <section class="content content-add-friend">
             <h1>Nastassia Troyer</h1>
-            <button class="friend-button" type="submit" name="button"><i class="fa fa-plus fa-4x" aria-hidden="true"></i></button>
+            <button class="friend-button" type="submit" name="button"ng><i class="fa fa-plus fa-4x" aria-hidden="true" ng-click="addFriend()"></i></button>
             <!-- Uncomment this & add display:block for when it's pressed! -->
             <!-- <button class="pending-friend-button" type="submit" name="button">Pending</button> -->
         </section>

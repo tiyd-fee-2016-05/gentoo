@@ -2,7 +2,7 @@
     <div id="container1">
         <div id="login-container">
 
-            <h1 class="logo">Gentoo</h1>
+            <a href="#/login"><h1 class="logo"> Gentoo</h1></a>
             <h2>Hello!</h2>
             <p>
                 Welcome to our explanation of stuff and things and more things alskdjflk jsdfkl;j
@@ -11,18 +11,18 @@
             <form ng-controller="FormCtrl" ng-submit="submitForm()">
             <section class="content">
                 <span class="input input--hoshi">
-      					<input class="input__field input__field--hoshi" type="text" id="input-1" />
+      					<input name="login_username" class="input__field input__field--hoshi userlogin" type="text" id="input-1" />
       					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
-      						<span class="input__label-content input__label-content--hoshi">Email</span>
+      						<span class="input__label-content input__label-content--hoshi">Username</span>
                 </label>
                 </span>
                 <span class="input input--hoshi">
       					<input class="input__field input__field--hoshi" type="text" id="input-2" />
       					<label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-2">
-      						<span class="input__label-content input__label-content--hoshi">Password</span>
+      						<span class="input__label-content input__label-content--hoshi userLogin">Password</span>
                 </label>
                 </span>
-            <a href="#/home"><button class="login-button" type="submit" name="button">go! <i class="fa fa-chevron-right" aria-hidden="true"></i></button></a>
+            <button class="login-button" type="submit" name="button">go! <i class="fa fa-chevron-right" aria-hidden="true"></i></button></a>
           </section>
         </form>
         </div>
