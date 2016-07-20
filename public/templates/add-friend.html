@@ -9,14 +9,17 @@
 
         <section class="content content-add-friend">
             <h1>Nastassia Troyer</h1>
-            <button class="friend-button" type="submit" name="button"><i class="fa fa-plus fa-4x" aria-hidden="true"></i></button>
-            <!-- Uncomment this & add display:block for when it's pressed! -->
-            <!-- <button class="pending-friend-button" type="submit" name="button">Pending</button> -->
+
+            <button ng-click="showme=true" ng-hide="showme" class="friend-button" type="submit" name="button"><i class="fa fa-plus fa-4x" aria-hidden="true"></i></button>
+
+            <button ng-click="showme=false" ng-show="showme" class="pending-friend-button" type="submit" name="button">Pending</button>
         </section>
 
         <section class="content content-details-remove">
-          <!-- Delete this line once friend request has been made! -->
-            <span>Add user to your friends to view their profile!</span>
+            <span ng-hide="showme">Add user to your friends to view their profile!</span>
+
+            <span ng-show="showme">Friend added!</span>
+
         </section>
     </div>
 </div>
