@@ -83,6 +83,10 @@ header .edit-profile {
   font: 700 12px/22px "Work Sans", sans-serif;
   color: #fdf0d5;
   text-transform: uppercase; }
+  header .edit-profile:hover {
+    color: #2C8C99;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease; }
 
 *,
 *:after,
@@ -505,61 +509,6 @@ header .edit-profile {
   left: 0;
   background: #fdf0d5;
   z-index: -2; }
-  #container .save-profile {
-    position: absolute;
-    top: 75px;
-    right: 5%;
-    z-index: 5;
-    margin: 5px 0 5px 50px;
-    font: 700 14px/22px "Work Sans", sans-serif;
-    color: #2C8C99;
-    text-transform: uppercase; }
-    #container .save-profile:hover {
-      color: #103136;
-      -webkit-transition: all 0.7s ease;
-      transition: all 0.7s ease; }
-  #container .profile-submit-button {
-    background: #329ead;
-    border: 2px solid #329ead;
-    border-radius: 10px;
-    margin: auto;
-    padding: 5px 30% 8px;
-    font: 700 18px/20px "Work Sans", sans-serif;
-    color: #1b565e;
-    text-align: center; }
-    #container .profile-submit-button i {
-      color: #1b565e; }
-    #container .profile-submit-button:hover {
-      background: #267a85;
-      border: 2px solid #267a85;
-      color: #103136;
-      -webkit-transition: all 0.7s ease;
-      transition: all 0.7s ease; }
-      #container .profile-submit-button:hover i {
-        color: #103136;
-        -webkit-transition: all 0.7s ease;
-        transition: all 0.7s ease; }
-  #container #edit-profile-container {
-    height: 50%;
-    margin: 0 auto; }
-    #container #edit-profile-container h1 {
-      position: absolute;
-      top: 10%;
-      left: 0;
-      margin: 0 0 20px 20px;
-      color: #611c35; }
-      #container #edit-profile-container h1 i {
-        color: #2C8C99; }
-    #container #edit-profile-container h2 {
-      color: #611c35;
-      font: 700 18px/22px "Work Sans", sans-serif;
-      text-align: left; }
-    #container #edit-profile-container p {
-      padding: 10px 0;
-      color: #e84855; }
-  #container span {
-    font: 700 18px/22px "Work Sans", sans-serif;
-    color: #1b565e; }
   #container #profile-main-container {
     height: 50%;
     margin: 0 auto; }
@@ -651,6 +600,7 @@ header .edit-profile {
           width: 140px;
           height: 100px;
           margin: 5px;
+          padding-top: 10px;
           background: #2C8C99;
           text-align: center;
           border-radius: 5px; }
@@ -697,6 +647,8 @@ header .edit-profile {
           #container #profile-main-container .friend-list ul li .fa-plus {
             padding-top: 15%;
             color: #12050a; }
+          #container #profile-main-container .friend-list ul li .fa-user {
+            color: #39111f; }
 
 .friend-photo {
   width: 100%;
@@ -762,5 +714,79 @@ h1 {
   font: 700 18px/22px "Work Sans", sans-serif;
   color: #333;
   text-align: center; }
+
+.profile-name span {
+  font-weight: 700; }
+
+.save-profile {
+  position: absolute;
+  top: 75px;
+  right: 5%;
+  z-index: 5;
+  margin: 5px 0 5px 50px;
+  font: 700 14px/22px "Work Sans", sans-serif;
+  color: #2C8C99;
+  text-transform: uppercase; }
+  .save-profile i {
+    font-size: 12px; }
+  .save-profile:hover {
+    color: #103136;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease; }
+
+.section-save-button {
+  margin: auto;
+  text-align: center; }
+  .section-save-button .profile-submit-button {
+    background: #2C8C99;
+    border: 2px solid #2C8C99;
+    border-radius: 10px;
+    margin: auto;
+    padding: 5px 20% 8px;
+    font: 700 18px/20px "Work Sans", sans-serif;
+    color: #1b565e;
+    text-transform: uppercase;
+    text-align: center; }
+    .section-save-button .profile-submit-button i {
+      font-size: 14px;
+      color: #1b565e; }
+    .section-save-button .profile-submit-button:hover {
+      background: #267a85;
+      border: 2px solid #267a85;
+      color: #103136;
+      -webkit-transition: all 0.7s ease;
+      transition: all 0.7s ease; }
+      .section-save-button .profile-submit-button:hover i {
+        color: #103136;
+        -webkit-transition: all 0.7s ease;
+        transition: all 0.7s ease; }
+
+.form-group {
+  width: 50%;
+  margin: 10px;
+  font: 18px/22px "Work Sans", sans-serif; }
+  .form-group .form-control {
+    display: inline-block;
+    width: 100%;
+    background: rgba(44, 140, 153, 0);
+    border: 0;
+    border-bottom: 3px solid #2C8C99;
+    font: 18px/22px "Work Sans", sans-serif;
+    color: #2C8C99; }
+    .form-group .form-control:focus {
+      outline: 0; }
+    .form-group .form-control #profile-name {
+      margin: 0 0 20px 20px;
+      color: #fdf0d5; }
+      .form-group .form-control #profile-name i {
+        color: #2C8C99; }
+
+#edit {
+  background: #666666; }
+  #edit li {
+    background: #666666; }
+  #edit i {
+    color: #39111f;
+    text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */

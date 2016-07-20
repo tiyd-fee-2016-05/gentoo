@@ -16,12 +16,11 @@
 
             <h1 class="logo">Gentoo</h1>
 
-            <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i>
-           {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
+            <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i> <span>Edit Profile:</span> {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
 
-            <a href="#/profile-edit"><h1 class="save-profile">Save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></h1></a>
+            <a href="#/profile-edit"><h1 class="save-profile" ng-click="vm.submit(vm.user)">Save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></h1></a>
 
-
+<!-- ng-click="vm.submit(vm.user)" will be something else -->
 
         </header>
 
@@ -34,23 +33,37 @@
 
         <section class="content content-main">
 
-            <h2 class="profile-birthday"><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</h2>
-            <h2 class="profile-anniv-dates"><i class="fa fa-calendar" aria-hidden="true"></i> 05/25/1945</h2>
-        </section>
+          <form>
+              <div class="form-group">
+                  <label for="profile-first-name"></label>
+                  <input type="text" class="form-control" id="profile-first-name" placeholder="{{loadedprofile.user.first_name}}"
+                  ng-model="vm.user.first_name">
+              </div>
+              <div class="form-group">
+                  <label for="profile-last-name"></label>
+                  <input type="text" class="form-control" id="profile-last-name" placeholder="{{loadedprofile.user.last_name}}" ng-model="vm.user.last_name">
+              </div>
+              <div class="form-group">
+                  <label for="email-address"></label>
+                  <input type="email" class="form-control" id="email-address" placeholder="{{loadedprofile.user.email}}"
+                  ng-model="vm.user.email">
+              </div>
+              <div class="form-group">
+                  <label for="user-password"></label>
+                  <input type="password" class="form-control" id="user-password" placeholder="Password" ng-model="vm.user.password">
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputFile">Upload a new photo</label>
+                  <input type="file" id="exampleInputFile" ng-model="vm.user.file">
+                  <!-- <p class="help-block">Example block-level help text here.</p> -->
+              </div>
+              <div class="form-group">
+                  <label for="profile-birthday"></label>
+                  <input type="text" class="form-control" id="profile-birthday" placeholder="Birthday: {{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}"
+                  ng-model="vm.user.birthdate">
+              </div>
 
-        <section class="content content-details">
-            <span>Favorite Holidays</span>
-            <h2 class="profile-holidays">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}</h2>
-        </section>
-
-        <section class="content content-details">
-            <span>Interests</span>
-            <h2 class="profile-interests">{{loadedprofile.user.holidays}}</h2>
-        </section>
-
-        <section class="content content-details">
-            <span>Favorite Colors</span>
-            <h2 class="profile-colors">{{loadedprofile.user.colors[0]}}</h2>
+          </form>
         </section>
 
         <!-- <form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
@@ -63,50 +76,54 @@
         </form> -->
 
 
-        <section class="lists content-list">
-            <h1 class="list-name">Wishlist for Christmas <i class="fa fa-minus add-list" aria-hidden="true"></i></h1>
+        <section id="edit" class="lists content-list edit">
+            <h1 class="list-name">Wishlist for Christmas <i class="fa fa-minus fa-lg add-list" aria-hidden="true"></i></h1>
             <ul>
                 <li>
                     <h1>Purple Socks</h1>
-                    <h2><i class="fa fa-times" aria-hidden="true"></i> Birthday</h2>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
+                    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
                 </li>
                 <li>
                     <h1>Blue Socks</h1>
-                    <h2><i class="fa fa-times" aria-hidden="true"></i> Birthday</h2>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
+                    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
                 </li>
                 <li>
                     <h1>Red Socks</h1>
-                    <h2><i class="fa fa-times" aria-hidden="true"></i> Birthday</h2>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
+                    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
                 </li>
                 <li>
                     <h1>Green Socks</h1>
-                    <h2><i class="fa fa-times" aria-hidden="true"></i> Birthday</h2>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
+                    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
                 </li>
                 <li>
                     <h1>Orange Socks</h1>
-                    <h2><i class="fa fa-times" aria-hidden="true"></i> Birthday</h2>
-                </li>
-                <li>
-                    <i class="fa fa-plus fa-3x" aria-hidden="true"></i>
-
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
+                    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
                 </li>
             </ul>
         </section>
 
-        <section class="lists friend-list">
+        <section id="edit" class="lists friend-list">
             <h1 class="friends-list">Friends</h1>
             <ul>
                 <li>
-                    <h2>user photo here</h2>
-                    <h1><i class="fa fa-times" aria-hidden="true"></i> Friend 3</h1>
+                    <!-- <h2>user photo here</h2> -->
+                    <h1>{{loadedprofile.user.first_name}}</h1> <h1>{{loadedprofile.user.last_name}}</h1>
+                    <i class="fa fa-user-times fa-2x" aria-hidden="true"></i>
                 </li>
                 <li>
-                    <h2>user photo here</h2>
-                    <h1><i class="fa fa-times" aria-hidden="true"></i> Friend 3</h1>
+                    <!-- <h2>user photo here</h2> -->
+                    <h1>{{loadedprofile.user.first_name}}</h1> <h1>{{loadedprofile.user.last_name}}</h1>
+                    <i class="fa fa-user-times fa-2x" aria-hidden="true"></i>
                 </li>
                 <li>
-                    <h2>user photo here</h2>
-                    <h1><i class="fa fa-times" aria-hidden="true"></i> Friend 3</h1>
+                    <!-- <h2>user photo here</h2> -->
+                    <h1>{{loadedprofile.user.first_name}}</h1> <h1>{{loadedprofile.user.last_name}}</h1>
+                    <i class="fa fa-user-times fa-2x" aria-hidden="true"></i>
                 </li>
 
 
@@ -115,93 +132,75 @@
 
         <!-- <section class="lists content-list-new">
             <h1><i class="fa fa-plus" aria-hidden="true"></i> Add new list</h1> -->
-
-        <button class="profile-submit-button" type="submit" name="button">Save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        <section class="section-save-button">
+            <button class="profile-submit-button" type="submit" name="button">Save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        </section>
 
 
     </div>
 
 
 
-    <!-- Profile View -->
-    <div id="container">
-        <div id="profile-main-container" ng-controller="LoadCtrl">
 
-            <header>
-                <section class="photo">
-                </section>
-
-                <i class="fa fa-align-left fa-2x" aria-hidden="true"></i>
-                <h1 class="logo">Gentoo</h1>
-                <h1 class="profile-name"><i class="fa fa-user-plus" aria-hidden="true"></i> Edit Profile</h1>
-
-            </header>
-
-
-            <section class="user-photo">
-            </section>
-
-
-            <section class="content content-main">
-
-
-                <span class="input input--photo">
+    <!-- /////////// -->
+<!--
+    <span class="input input--photo">
                 <input class="input__field input__field--photo" type="file" id="input-3" />
                 <label class="input__label input__label--photo input__label--photo-color-4" for="input-3">
                   <span class="input__label-content input__label-content--photo">Upload Photo</span>
-                </label>
-                </span>
-                <span class="input input--hoshi">
+    </label>
+    </span>
+    <span class="input input--hoshi">
                 <input class="input__field input__field--hoshi" type="text" id="input-4" />
                 <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
                   <span class="input__label-content input__label-content--hoshi">First Name</span>
-                </label>
-                </span>
-                <span class="input input--hoshi">
+    </label>
+    </span>
+    <span class="input input--hoshi">
                 <input class="input__field input__field--hoshi" type="text" id="input-5" />
                 <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-5">
                   <span class="input__label-content input__label-content--hoshi">Last Name</span>
-                </label>
-                </span>
+    </label>
+    </span> -->
 
-                <!-- // add date picker -->
-                <span class="input input--hoshi">
+    <!-- // add date picker -->
+    <!-- <span class="input input--hoshi">
                 <input class="input__field input__field--hoshi" type="text" id="input-6" />
                 <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-6">
                   <span class="input__label-content input__label-content--hoshi">Birthdate</span>
-                </label>
-                </span>
+    </label>
+    </span> -->
 
-                <!-- // add date picker -->
-                <span class="input input--hoshi">
+    <!-- // add date picker -->
+    <!-- <span class="input input--hoshi">
                 <input class="input__field input__field--hoshi" type="text" id="input-7" />
                 <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-7">
                   <span class="input__label-content input__label-content--hoshi">Anniversaries/Important Dates (up to 3)</span>
-                </label>
-                </span>
+    </label>
+    </span> -->
 
-                <!-- // add natural language form options -->
-                <span class="input input--hoshi">
+    <!-- // add natural language form options -->
+    <!-- <span class="input input--hoshi">
                 <input class="input__field input__field--hoshi" type="text" id="input-8" />
                 <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-8">
                   <span class="input__label-content input__label-content--hoshi">Important Holidays (up to 3)</span>
-                </label>
-                </span>
-                <span class="input input--hoshi">
+    </label>
+    </span>
+    <span class="input input--hoshi">
                 <input class="input__field input__field--hoshi" type="text" id="input-9" />
                 <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="input-9">
                   <span class="input__label-content input__label-content--hoshi">Interests</span>
-                </label>
-                </span>
-                <span class="input input--hoshi">
+    </label>
+    </span>
+    <span class="input input--hoshi">
                 <input class="input__field input__field--hoshi" type="text" id="input-9" />
                 <label class="input__label input__label--hoshi input__label--hoshi-color-3" for="input-9">
                   <span class="input__label-content input__label-content--hoshi">Favorite Colors</span>
-                </label>
-                </span>
-                <!-- <a href="#/home"> -->
+    </label>
+    </span> -->
+    <!-- <a href="#/home"> -->
 
-                <!-- </a> -->
-            </section>
-        </div>
-    </div>
+    <!-- </a> -->
+    <!-- </section> -->
+</div>
+</div>

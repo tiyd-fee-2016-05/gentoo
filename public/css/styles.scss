@@ -7,10 +7,10 @@ $font: 'Work Sans', sans-serif; //400,700
 
 // Colors
 $black: #333;
-$brown: #3a3335;
+$brown: #3a3335; // - not used
 $white: #fdf0d5;
-$pink: #e84855;
-$blue: #2e5077;
+$pink: #e84855; // - not used
+$blue: #2e5077; // - not used
 $blue2: #2C8C99;
 $red: #611c35;
 $teal: #42D9C8;
@@ -42,3 +42,4 @@ button:focus {
 @import "partials/login";
 @import "partials/profile";
 @import "partials/add-friend";
+@import "partials/edit-profile";

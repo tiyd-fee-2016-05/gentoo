@@ -9,78 +9,6 @@
     background: $white;
     z-index: -2;
 
-
-    .save-profile {
-        position: absolute;
-        top: 75px;
-        right: 5%;
-        z-index: 5;
-        margin: 5px 0 5px 50px;
-        font: 700 14px / 22px $font;
-        color: $blue2;
-        text-transform: uppercase;
-        &:hover {
-            color: darken($blue2, 25%);
-            -webkit-transition: all 0.7s ease;
-            transition: all 0.7s ease;
-          }
-    }
-    .profile-submit-button {
-        background: lighten($blue2, 5%);
-        border: 2px solid lighten($blue2, 5%);
-        border-radius: 10px;
-        margin: auto;
-        padding: 5px 30% 8px;
-        font: 700 18px / 20px $font;
-        color: darken($blue2, 15%);
-        text-align: center;
-        i {
-            color: darken($blue2, 15%);
-        }
-        &:hover {
-            background: darken($blue2, 5%);
-            border: 2px solid darken($blue2, 5%);
-            color: darken($blue2, 25%);
-            -webkit-transition: all 0.7s ease;
-            transition: all 0.7s ease;
-            i {
-                color: darken($blue2, 25%);
-                -webkit-transition: all 0.7s ease;
-                transition: all 0.7s ease;
-            }
-        }
-    }
-
-
-    #edit-profile-container {
-        height: 50%;
-        margin: 0 auto;
-        // text-align: center;
-        h1 {
-            position: absolute;
-            top: 10%;
-            left: 0;
-            margin: 0 0 20px 20px;
-            color: $red;
-            i {
-                color: $blue2;
-            }
-        }
-        h2 {
-            color: $red;
-            font: 700 18px / 22px $font;
-            text-align: left;
-        }
-        p {
-            padding: 10px 0;
-            color: $pink;
-        }
-    }
-    span {
-        font: 700 18px / 22px $font;
-        color: darken($blue2, 15%);
-    }
-
     #profile-main-container {
         height: 50%;
         margin: 0 auto;
@@ -208,6 +136,7 @@
                     width: 140px;
                     height: 100px;
                     margin: 5px;
+                    padding-top: 10px;
                     background: $blue2;
                     text-align: center;
                     border-radius: 5px;
@@ -267,6 +196,9 @@
                     .fa-plus {
                         padding-top: 15%;
                         color: darken($red, 20%);
+                    }
+                    .fa-user {
+                      color: darken($red, 10%);
                     }
                 }
             }

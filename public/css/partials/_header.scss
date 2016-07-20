@@ -79,5 +79,10 @@ header {
         font: 700 12px / 22px $font;
         color: $white;
         text-transform: uppercase;
+        &:hover {
+            color: $blue2;
+            -webkit-transition: all 0.7s ease;
+            transition: all 0.7s ease;
+          }
     }
 }

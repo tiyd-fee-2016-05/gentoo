@@ -44,7 +44,7 @@
 
         <section class="content content-details">
             <span>Interests</span>
-            <h2 class="profile-interests">{{loadedprofile.user.holidays}}</h2>
+            <h2 class="profile-interests">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}, {{loadedprofile.user.holidays[3]}}, {{loadedprofile.user.holidays[4]}}</h2>
         </section>
 
         <section class="content content-details">
@@ -96,16 +96,19 @@
             <h1 class="friends-list">Friends</h1>
             <ul>
                 <li>
-                    <h2>user photo here</h2>
-                    <h1><i class="fa fa-user" aria-hidden="true"></i> Friend 3</h1>
+                    <!-- <h2>user photo here</h2> -->
+                    <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                    <h1>{{loadedprofile.user.first_name}}</h1> <h1>{{loadedprofile.user.last_name}}</h1>
                 </li>
                 <li>
-                    <h2>user photo here</h2>
-                    <h1><i class="fa fa-user" aria-hidden="true"></i> Friend 3</h1>
+                    <!-- <h2>user photo here</h2> -->
+                    <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                    <h1>{{loadedprofile.user.first_name}}</h1> <h1>{{loadedprofile.user.last_name}}</h1>
                 </li>
                 <li>
-                    <h2>user photo here</h2>
-                    <h1><i class="fa fa-user" aria-hidden="true"></i> Friend 3</h1>
+                    <!-- <h2>user photo here</h2> -->
+                    <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                    <h1>{{loadedprofile.user.first_name}}</h1> <h1>{{loadedprofile.user.last_name}}</h1>
                 </li>
 
 
