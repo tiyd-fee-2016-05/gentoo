@@ -1,0 +1,14 @@
+// Friend View
+
+.accept {
+  color: $blue2;
+  &:hover {
+    color: darken($blue2, 10%);
+  }
+}
+.deny {
+  color: darken($red, 10%);
+  &:hover {
+    color: darken($red, 20%);
+  }
+}

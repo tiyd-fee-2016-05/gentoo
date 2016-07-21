@@ -1,0 +1,7 @@
+<h1>{{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}Nastassia Troyer has sent you a friend request!</h1>
+<button ng-click="showme=true" ng-hide="showme" class="accept">Accept</button>
+<button ng-click="showme=true" ng-hide="showme" class="deny">Deny</button>
+
+<h1 ng-show="showme">You and {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}Nastassia Troyer are now friends!</h1>
+
+<h1 ng-show="showme">You have denied a request from {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}Nastassia Troyer.</h1>
