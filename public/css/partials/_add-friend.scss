@@ -6,8 +6,9 @@
     left: 0;
     overflow-y: hidden;
     background: darken($blue2, 20%);
-    background-image: url('../photo.jpg');
-    background-position: right-center;
+    background-image: url('../images/profile-2.jpg');
+    background-position: center;
+    background-size: cover;
     background-blend-mode: multiply;
 }
 
@@ -17,7 +18,7 @@ h1 {
 
 .friend-name {
     position: relative;
-    top: -110px;
+    top: -300px;
     // left: 35%;
     // margin: 0 0 20px 20px;
     margin: auto;
@@ -33,7 +34,7 @@ h1 {
 
 .content-add-friend {
     position: relative;
-    top: -100px;
+    top: -300px;
     left: 0;
     text-align: center;
 
@@ -66,7 +67,7 @@ h1 {
 }
 .content-details-remove {
     position: relative;
-    top: -20px;
+    top: -250px;
     left: 0;
     margin: 50px;
     text-align: center;

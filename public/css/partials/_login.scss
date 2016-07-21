@@ -6,9 +6,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: $red;
-    background-image: url('../photo.jpg');
-    background-position: bottom;
+    background: darken($red, 5%);
+    background-image: url('../images/gift.jpg');
+    background-position: center;
     background-blend-mode: multiply; //screen
     // opacity: 0.6;
     #login-container {
