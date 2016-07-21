@@ -6,7 +6,7 @@ gentooApp.controller('FormCtrl', function ($scope, $http) {
         var username = $('.userlogin[name="login_username"]').val()
         $scope.username = $('.userlogin[name="login_username"]').val()
         $http({
-         url:  "http://58a85897.ngrok.io/" + username+ "/profile",
+         url:  url + username+ "/profile",
             // url:  "https://giftbox-tiy.herokuapp.com/" + username+ "/profile",
          method: "GET",
          headers: {'Authorization': username},
