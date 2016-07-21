@@ -8,6 +8,7 @@ gentooApp.controller('ProfileCtrl', function ($scope, $http) {
 
         $http({
          url: 'http://58a85897.ngrok.io/sinovia/profile',
+        //  url: 'https://giftbox-tiy.herokuapp.com/profile',
          method: "POST",
          data: profileData,
          headers: {'Authorization': 'sinovia'}

@@ -35,7 +35,7 @@
 
         <section class="content content-details">
             <span>Interests</span>
-            <h2 class="profile-interests">{{loadedprofile.user.holidays}}</h2>
+            <h2 class="profile-interests">{{loadedprofile.user.interests}}</h2>
         </section>
 
         <section class="content content-details">
@@ -78,11 +78,22 @@
             </ul>
         </section>
 
-        <section class="lists content-list">
+        <section class="lists content-list" ng-controller="FriendCtrl">
             <h1>Friends <a href="#/add-friend"><i class="fa fa-plus add-list" aria-hidden="true"></i></a></h1>
             <ul>
-                <li><h1>Purple Socks</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
+                <li><h1>{{loadedfriendlist.user.friends[0].first_name}}</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2></li>
+                    <li><h1>{{loadedfriendlist.user.friends[1].first_name}}</h1>
+                        <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2></li>
+
+            </ul>
+        </section>
+
+        <section class="lists content-list" ng-controller="AcceptFriendCtrl">
+            <h1>Friend Requests<a href="#/add-friend"><i class="fa fa-plus add-list" aria-hidden="true"></i></a></h1>
+            <ul>
+                <li><h1>{{loadedfriends.user.requested_friendships[0].first_name}}</h1>
+                    <h2><i ng-click="acceptFriend()" class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
 
             </ul>
         </section>

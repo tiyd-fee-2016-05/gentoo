@@ -7,8 +7,10 @@ gentooApp.controller('FormCtrl', function ($scope, $http) {
         $scope.username = $('.userlogin[name="login_username"]').val()
         $http({
          url:  "http://58a85897.ngrok.io/" + username+ "/profile",
+            // url:  "https://giftbox-tiy.herokuapp.com/" + username+ "/profile",
          method: "GET",
-         headers: {'Authorization': username}
+         headers: {'Authorization': username},
+         params: {formData}
      }).success(function (data, status, headers, config) {
        alert("You will now be redirected.");
        window.location = "#/home";

@@ -4,20 +4,21 @@
 
             <a href="#/login"><h1 class="logo"> Gentoo</h1></a>
             <h2>Hello!</h2>
-            <p>
-                Welcome to our explanation of stuff and things and more things alskdjflk jsdfkl;j
+            <p>Give with Love. <br> Shop with Confidence.<br><br>
+
+              Gentoo provides the information you need to give the perfect gift everytime.
             </p>
 
             <form ng-controller="FormCtrl" ng-submit="submitForm()">
             <section class="content">
                 <span class="input input--hoshi">
-      					<input name="login_username" class="input__field input__field--hoshi userlogin" type="text" id="input-1" />
+      					<input name="login_username" class="input__field input__field--hoshi userlogin" type="text" id="input-1" / ng-model="form.username">
       					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
       						<span class="input__label-content input__label-content--hoshi">Username</span>
                 </label>
                 </span>
                 <span class="input input--hoshi">
-      					<input class="input__field input__field--hoshi" type="text" id="input-2" />
+      					<input class="input__field input__field--hoshi" type="password" id="input-2" / ng-model="form.password">
       					<label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-2">
       						<span class="input__label-content input__label-content--hoshi userLogin">Password</span>
                 </label>

@@ -1,4 +1,6 @@
 var gentooApp = angular.module("mainApp", ['ngRoute']);
+var url = "http://58a85897.ngrok.io/";
+var username = $('.userlogin[name="login_username"]').val()
 gentooApp.config(function($routeProvider) {
   $routeProvider
   //Consumer View Routes
@@ -30,6 +32,11 @@ gentooApp.config(function($routeProvider) {
           templateUrl: 'templates/add-profile.html',
           // controller: 'ReportController'
           })
+
+          .when('/sign-up', {
+            templateUrl: 'templates/sign-up.html',
+            // controller: 'ReportController'
+            })
       .otherwise({
         redirectTo: "/home"
 
