@@ -62,10 +62,10 @@ header .photo {
   background-blend-mode: multiply; }
 header .logo {
   width: 20px;
+  height: 10px;
   position: relative;
-  top: -400px;
+  top: -410px;
   left: 80%;
-  z-index: 3;
   font: 50px/150px "Grand Hotel", cursive;
   color: #2C8C99;
   -webkit-text-shadow: 2px 1px 0 #12050a;
@@ -73,10 +73,10 @@ header .logo {
   text-shadow: 2px 1px 0 #12050a; }
 header .profile-logo {
   width: 20px;
+  height: 10px;
   position: relative;
-  top: -200px;
+  top: -210px;
   left: 80%;
-  z-index: 3;
   font: 50px/150px "Grand Hotel", cursive;
   color: #2C8C99;
   -webkit-text-shadow: 2px 1px 0 #12050a;
@@ -84,7 +84,7 @@ header .profile-logo {
   text-shadow: 2px 1px 0 #12050a; }
 header .profile-name {
   position: relative;
-  top: -250px;
+  top: -110px;
   left: 0;
   margin: 0 0 20px 5%;
   color: #fdf3df; }
@@ -92,7 +92,7 @@ header .profile-name {
     color: #2C8C99; }
 header .edit-profile {
   position: relative;
-  top: -275px;
+  top: -135px;
   left: 0;
   margin: 5px 5%;
   font: 700 12px/22px "Work Sans", sans-serif;
@@ -480,7 +480,6 @@ nav {
   overflow: hidden; }
   nav a {
     display: block;
-    z-index: 3;
     font: 700 12px/22px "Work Sans", sans-serif;
     color: #fdf3df;
     letter-spacing: 1px;
@@ -558,8 +557,7 @@ nav {
   height: 100%;
   position: relative;
   top: 0;
-  left: 0;
-  z-index: -2; }
+  left: 0; }
   #container #profile-main-container {
     height: 50%;
     margin: 0 auto; }
@@ -583,8 +581,9 @@ nav {
         text-align: left; }
     #container #profile-main-container .content-main {
       position: relative;
-      top: 0;
-      left: 0; }
+      top: -100px;
+      left: 0;
+      margin-left: 5%; }
       #container #profile-main-container .content-main .user-photo {
         width: 200px;
         height: 200px;
@@ -598,7 +597,6 @@ nav {
         background-blend-mode: overlay;
         border-radius: 120px; }
       #container #profile-main-container .content-main h2 {
-        margin-left: 20px;
         color: #333;
         font: 700 18px/30px "Work Sans", sans-serif;
         text-align: left; }
@@ -607,20 +605,20 @@ nav {
         color: #333; }
     #container #profile-main-container .content-details {
       position: relative;
-      top: 0;
+      top: -100px;
       left: 0;
-      margin-left: 8%; }
+      margin-left: 5%; }
       #container #profile-main-container .content-details h1 {
         color: #611c35;
         margin-bottom: 20px;
         color: #333; }
       #container #profile-main-container .content-details h2 {
         color: #333;
-        font: 700 18px/30px "Work Sans", sans-serif;
+        font: 700 18px/20px "Work Sans", sans-serif;
         text-align: left; }
       #container #profile-main-container .content-details span {
         display: inline-block;
-        font: 18px/22px "Work Sans", sans-serif;
+        font: 18px/20px "Work Sans", sans-serif;
         color: #333; }
     #container #profile-main-container .lists .list-name {
       padding: 10px 5%;
@@ -719,7 +717,7 @@ h1 {
 
 .friend-name {
   position: relative;
-  top: -300px;
+  top: -180px;
   margin: auto;
   font-size: 40px;
   color: #fdf3df;
@@ -730,7 +728,7 @@ h1 {
 
 .content-add-friend {
   position: relative;
-  top: -300px;
+  top: -160px;
   left: 0;
   text-align: center; }
   .content-add-friend .friend-button {
@@ -759,7 +757,7 @@ h1 {
 
 .content-details-remove {
   position: relative;
-  top: -250px;
+  top: -120px;
   left: 0;
   margin: 50px;
   text-align: center;

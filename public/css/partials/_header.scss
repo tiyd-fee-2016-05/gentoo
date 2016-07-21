@@ -58,10 +58,11 @@ header {
     }
     .logo {
         width: 20px;
+        height: 10px;
         position: relative;
-        top: -400px;
+        top: -410px;
         left: 80%;
-        z-index: 3;
+        // z-index: 3;
         font: 50px / 150px $logo;
         color: $blue2;
         -webkit-text-shadow: 2px 1px 0 darken($red, 20%);
@@ -70,10 +71,10 @@ header {
     }
     .profile-logo {
         width: 20px;
+        height: 10px;
         position: relative;
-        top: -200px;
+        top: -210px;
         left: 80%;
-        z-index: 3;
         font: 50px / 150px $logo;
         color: $blue2;
         -webkit-text-shadow: 2px 1px 0 darken($red, 20%);
@@ -82,7 +83,7 @@ header {
     }
     .profile-name {
         position: relative;
-        top: -250px;
+        top: -110px;
         left: 0;
         margin: 0 0 20px 5%;
         color: $white;
@@ -92,7 +93,7 @@ header {
     }
     .edit-profile {
         position: relative;
-        top: -275px;
+        top: -135px;
         left: 0;
         margin: 5px 5%;
         font: 700 12px / 22px $font;
