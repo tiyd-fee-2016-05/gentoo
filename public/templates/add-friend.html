@@ -3,21 +3,11 @@
     <div id="profile-main-container">
 
         <header>
-          <!-- opens notification menu, drops from top -->
-          <!-- ng show for the menu -->
+            <!-- opens notification menu, drops from top -->
+            <!-- ng show for the menu -->
             <nav>
-
-                <span class="left">Friend Requests (1)</span>
-                <!-- click on this will drop-down the requests and allow accept/deny -->
-                <h1>{{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}Nastassia Troyer has sent you a friend request!</h1>
-                <button ng-click="showme=true" ng-hide="showme" class="accept">Accept</button>
-                <button ng-click="showme=true" ng-hide="showme" class="deny">Deny</button>
-
-                <h1 ng-show="showme">You and {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}Nastassia Troyer are now friends!</h1>
-
-                <h1 ng-show="showme">You have denied a request from {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}Nastassia Troyer.</h1>
-
-                <span class="right">Logout</span>
+                <a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friend Requests (1)</a>
+                <a href="#/login"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a>
             </nav>
 
             <section class="friend-photo">

@@ -16,12 +16,23 @@ button:focus {
 
 header .fa-align-left {
   position: relative;
-  top: 0;
-  left: 0;
+  top: -320px;
+  left: 5%;
   z-index: 5;
   opacity: 0.5;
   color: #fdf3df; }
   header .fa-align-left:hover {
+    opacity: 1;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease; }
+header #home-menu-icon {
+  position: relative;
+  top: -120px;
+  left: 5%;
+  z-index: 5;
+  opacity: 0.5;
+  color: #fdf3df; }
+  header #home-menu-icon:hover {
     opacity: 1;
     -webkit-transition: all 0.7s ease;
     transition: all 0.7s ease; }
@@ -50,6 +61,7 @@ header .photo {
   background-size: cover;
   background-blend-mode: multiply; }
 header .logo {
+  width: 20px;
   position: relative;
   top: -400px;
   left: 80%;
@@ -59,19 +71,30 @@ header .logo {
   -webkit-text-shadow: 2px 1px 0 #12050a;
   -moz-text-shadow: 2px 1px 0 #12050a;
   text-shadow: 2px 1px 0 #12050a; }
+header .profile-logo {
+  width: 20px;
+  position: relative;
+  top: -200px;
+  left: 80%;
+  z-index: 3;
+  font: 50px/150px "Grand Hotel", cursive;
+  color: #2C8C99;
+  -webkit-text-shadow: 2px 1px 0 #12050a;
+  -moz-text-shadow: 2px 1px 0 #12050a;
+  text-shadow: 2px 1px 0 #12050a; }
 header .profile-name {
-  position: absolute;
-  top: 80px;
-  left: 6%;
-  margin: 0 0 20px 20px;
+  position: relative;
+  top: -250px;
+  left: 0;
+  margin: 0 0 20px 5%;
   color: #fdf3df; }
   header .profile-name i {
     color: #2C8C99; }
 header .edit-profile {
-  position: absolute;
-  top: 94px;
-  left: 6%;
-  margin: 5px 0 5px 50px;
+  position: relative;
+  top: -275px;
+  left: 0;
+  margin: 5px 5%;
   font: 700 12px/22px "Work Sans", sans-serif;
   color: #fdf3df;
   text-transform: uppercase; }
@@ -446,6 +469,7 @@ header .edit-profile {
 nav {
   width: 100%;
   height: 100px;
+  padding: 30px 5%;
   position: relative;
   top: 0;
   left: 0;
@@ -454,32 +478,18 @@ nav {
   -moz-box-shadow: inset 0 -37px 22px -38px #1a1a1a;
   box-shadow: inset 0 -37px 22px -38px #1a1a1a;
   overflow: hidden; }
-  nav span {
-    margin-top: 5%;
+  nav a {
+    display: block;
     z-index: 3;
     font: 700 12px/22px "Work Sans", sans-serif;
     color: #fdf3df;
     letter-spacing: 1px;
     text-transform: uppercase; }
-    nav span:hover {
+    nav a:hover {
+      color: #cb4b79;
       -webkit-transition: all 0.7s ease;
-      transition: all 0.7s ease; }
-  nav .left {
-    position: relative;
-    top: 10px;
-    left: 5%; }
-  nav .right {
-    position: relative;
-    top: 10px;
-    right: 0; }
-  nav .accept {
-    color: #2C8C99; }
-    nav .accept:hover {
-      color: #216871; }
-  nav .deny {
-    color: #39111f; }
-    nav .deny:hover {
-      color: #12050a; }
+      transition: all 0.7s ease;
+      cursor: pointer; }
 
 #container1 {
   width: 100%;
@@ -494,7 +504,7 @@ nav {
   #container1 #login-container {
     width: 70%;
     height: 50%;
-    margin: 20% auto;
+    margin: 15% auto;
     text-align: center; }
     #container1 #login-container .logo {
       font: 50px/150px "Grand Hotel", cursive;
@@ -506,9 +516,9 @@ nav {
       padding: 10px 0;
       font: 700 50px/50px "Work Sans", sans-serif;
       color: #fdf3df;
-      -webkit-text-shadow: 2px 2px 0px #39111f;
-      -moz-text-shadow: 2px 2px 0px #39111f;
-      text-shadow: 2px 2px 0px #39111f; }
+      -webkit-text-shadow: 2px 2px 0 #39111f;
+      -moz-text-shadow: 2px 2px 0 #39111f;
+      text-shadow: 2px 2px 0 #39111f; }
     #container1 #login-container p {
       padding: 10px 0;
       color: #fdf3df; }
@@ -519,22 +529,34 @@ nav {
       background: transparent;
       border: 2px solid #216871;
       border-radius: 70px;
-      margin-top: 20px;
-      padding: 8px 30px 8px;
+      margin: 20px 0;
+      padding: 5px 30px;
       font: 700 18px/20px "Work Sans", sans-serif;
       color: #216871; }
       #container1 #login-container .login-button i {
-        padding-left: 5px; }
-      #container1 #login-container .login-button:hover {
-        border: 2px solid #fdf3df;
-        color: #fdf3df;
-        -webkit-transition: all 0.7s ease;
-        transition: all 0.7s ease; }
+        padding-left: 5px;
+        font-size: 14px; }
+    #container1 #login-container .signup-button {
+      background: transparent;
+      border: 2px solid #27c1b0;
+      border-radius: 70px;
+      padding: 5px 20px;
+      font: 700 18px/20px "Work Sans", sans-serif;
+      color: #27c1b0; }
+      #container1 #login-container .signup-button i {
+        padding-left: 5px;
+        font-size: 14px; }
+    #container1 #login-container button:hover {
+      border: 2px solid #fdf3df;
+      color: #fdf3df;
+      -webkit-transition: all 0.7s ease;
+      transition: all 0.7s ease;
+      cursor: pointer; }
 
 #container {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   z-index: -2; }
