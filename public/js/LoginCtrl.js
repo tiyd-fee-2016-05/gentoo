@@ -1,10 +1,30 @@
 console.log("You've hacked into the Form Controller Mainframe");
-gentooApp.controller('FormCtrl', function ($scope, $http) {
+gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
     $scope.submitForm = function() {
         console.log("posting data....");
         formData = $scope.form;
         var username = $('.userlogin[name="login_username"]').val()
         $scope.username = $('.userlogin[name="login_username"]').val()
+
+        $http({
+         url:  "http://58a85897.ngrok.io/" + username+ "/friends",
+            // url:  "https://giftbox-tiy.herokuapp.com/" + username+ "/friends",
+         method: "GET",
+         headers: {'Authorization': username},
+         params: {formData}
+       }).success(function (data, status, headers, config) {
+       console.log("Here are your friends");
+       console.log(data);
+           $rootScope.loadedfriends= data;
+
+         }).error(function (data, status, headers, config) {
+             $scope.status = status;
+         });//End GET request
+
+
+
+
+
         $http({
          url:  "http://58a85897.ngrok.io/" + username+ "/profile",
             // url:  "https://giftbox-tiy.herokuapp.com/" + username+ "/profile",
@@ -13,9 +33,21 @@ gentooApp.controller('FormCtrl', function ($scope, $http) {
          params: {formData}
      }).success(function (data, status, headers, config) {
        alert("You will now be redirected.");
+       console.log(data);
+           $rootScope.loadedprofile= data;
        window.location = "#/home";
          }).error(function (data, status, headers, config) {
              $scope.status = status;
-         });
-    };
+         });//End GET request
+
+
+
+
+
+
+
+
+
+
+    };  //End Submit Form Function
  });
