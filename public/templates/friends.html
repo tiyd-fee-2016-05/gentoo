@@ -5,7 +5,7 @@
         <header>
             <!-- opens notification menu, drops from top -->
             <!-- ng show for the menu -->
-            <nav>
+            <nav ng-show="showmenu" ng-hide="showmenu">
                 <a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friend Requests (1)</a>
                 <a href="#/login"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a>
             </nav>
@@ -13,7 +13,7 @@
             <section class="photo">
             </section>
 
-            <i id="home-menu-icon" class="fa fa-align-left fa-2x" aria-hidden="true"></i>
+            <i id="home-menu-icon" class="fa fa-align-left fa-2x" aria-hidden="true" ng-click="showmenu=true" ng-click="showmenu=false"></i>
             <!-- <i class="fa fa-align-right fa-2x" aria-hidden="true"></i> -->
 
             <a href="#/login"><h1 class="profile-logo">Gentoo</h1></a>
