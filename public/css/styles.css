@@ -9,7 +9,20 @@ a {
   text-decoration: none;
   color: #611c35; }
   a:hover {
-    text-decoration: none; }
+    text-decoration: none;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    cursor: pointer; }
+
+button {
+  border-radius: 70px;
+  opacity: 0.8; }
+
+button:hover {
+  opacity: 1;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  cursor: pointer; }
 
 button:focus {
   outline: 0; }
@@ -44,9 +57,7 @@ header .fa-align-right {
   opacity: 0.5;
   color: #fdf3df; }
   header .fa-align-right:hover {
-    opacity: 1;
-    -webkit-transition: all 0.7s ease;
-    transition: all 0.7s ease; }
+    opacity: 1; }
 header .photo {
   width: 100%;
   height: 130px;
@@ -100,6 +111,18 @@ header .edit-profile {
   text-transform: uppercase; }
   header .edit-profile:hover {
     color: #2C8C99;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease; }
+header .unfriend {
+  position: relative;
+  top: -135px;
+  left: 0;
+  margin: 5px 5%;
+  font: 700 12px/22px "Work Sans", sans-serif;
+  color: #89274b;
+  text-transform: uppercase; }
+  header .unfriend:hover {
+    color: #611c35;
     -webkit-transition: all 0.7s ease;
     transition: all 0.7s ease; }
 
@@ -469,7 +492,7 @@ header .edit-profile {
 nav {
   width: 100%;
   height: 100px;
-  padding: 30px 5%;
+  padding: 20px 5%;
   position: relative;
   top: 0;
   left: 0;
@@ -485,10 +508,7 @@ nav {
     letter-spacing: 1px;
     text-transform: uppercase; }
     nav a:hover {
-      color: #cb4b79;
-      -webkit-transition: all 0.7s ease;
-      transition: all 0.7s ease;
-      cursor: pointer; }
+      color: #cb4b79; }
 
 #container1 {
   width: 100%;
@@ -547,10 +567,7 @@ nav {
         font-size: 14px; }
     #container1 #login-container button:hover {
       border: 2px solid #fdf3df;
-      color: #fdf3df;
-      -webkit-transition: all 0.7s ease;
-      transition: all 0.7s ease;
-      cursor: pointer; }
+      color: #fdf3df; }
 
 #container {
   width: 100%;
@@ -732,6 +749,7 @@ h1 {
   left: 0;
   text-align: center; }
   .content-add-friend .friend-button {
+    opacity: 1;
     background: #752240;
     border: 2px solid #752240;
     border-radius: 200px;
@@ -841,15 +859,26 @@ h1 {
 
 #friend-content {
   position: relative;
-  top: -100px;
+  top: -50px;
   left: 0;
   margin: 5%; }
+  #friend-content h1 {
+    margin-bottom: 10px;
+    font: 24px/22px "Work Sans", sans-serif;
+    color: #333; }
   #friend-content p {
-    margin-top: 15px;
     font-size: 16px; }
+  #friend-content .pAccept {
+    color: #2C8C99; }
+  #friend-content a {
+    font-size: 16px;
+    color: #121f2d; }
+    #friend-content a:hover {
+      color: #2C8C99; }
+  #friend-content .pDeny {
+    color: #611c35; }
   #friend-content button {
     background: transparent;
-    border-radius: 70px;
     margin: 20px 10px;
     padding: 4px 20px;
     font: 700 18px/20px "Work Sans", sans-serif;
@@ -866,5 +895,18 @@ h1 {
     #friend-content .deny:hover {
       border: 2px solid #39111f;
       color: #39111f; }
+  #friend-content ul {
+    margin-top: 10px; }
+    #friend-content ul li {
+      margin-top: 20px;
+      letter-spacing: 1px; }
+      #friend-content ul li h1 {
+        font: 700 24px/10px "Work Sans", sans-serif;
+        color: #2C8C99; }
+      #friend-content ul li p {
+        margin-left: 20px;
+        font: 14px/10px "Work Sans", sans-serif;
+        color: #666666;
+        text-transform: uppercase; }
 
 /*# sourceMappingURL=styles.css.map */

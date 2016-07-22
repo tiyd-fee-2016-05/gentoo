@@ -8,10 +8,6 @@ gentooApp.config(function($routeProvider) {
       templateUrl: 'templates/home.html',
       // controller: 'ReportController'
     })
-    .when('/add-friend', {
-      templateUrl: 'templates/add-friend.html',
-      // controller: 'ReportController'
-    })
 
     .when('/login', {
       templateUrl: 'templates/login.html',
@@ -26,6 +22,16 @@ gentooApp.config(function($routeProvider) {
       .when('/profile', {
         templateUrl: 'templates/profile.html',
         // controller: 'ReportController'
+        })
+
+        .when('/add-friend', {
+          templateUrl: 'templates/add-friend.html',
+          // controller: 'ReportController'
+        })
+
+        .when('/friend-profile', {
+          templateUrl: 'templates/friend-profile.html',
+          // controller: 'ReportController'
         })
 
         .when('/add-profile', {

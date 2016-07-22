@@ -29,7 +29,20 @@ a {
   color: $red;
   &:hover {
     text-decoration: none;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    cursor: pointer;
   }
+}
+button {
+  border-radius: 70px;
+  opacity: 0.8;
+}
+button:hover{
+  opacity: 1;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  cursor: pointer;
 }
 button:focus {
   outline: 0;
