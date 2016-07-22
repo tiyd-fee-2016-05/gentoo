@@ -13,10 +13,10 @@ gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
          headers: {'Authorization': username},
          params: {formData}
        }).success(function (data, status, headers, config) {
-       console.log("Here are your friends");
-       console.log(data);
            $rootScope.loadedfriends= data;
-
+           $rootScope.friendList= data.user.requested_friendships;
+          //  $rootscope.friendIndex = data[data.length - 1].index;
+console.log($rootScope.friendList[0].first_name)
          }).error(function (data, status, headers, config) {
              $scope.status = status;
          });//End GET request
@@ -33,7 +33,6 @@ gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
          params: {formData}
      }).success(function (data, status, headers, config) {
        alert("You will now be redirected.");
-       console.log(data);
            $rootScope.loadedprofile= data;
        window.location = "#/home";
          }).error(function (data, status, headers, config) {

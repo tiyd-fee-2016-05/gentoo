@@ -879,7 +879,7 @@ h1 {
     color: #611c35; }
   #friend-content button {
     background: transparent;
-    margin: 20px 10px;
+    margin: 10px 10px;
     padding: 4px 20px;
     font: 700 18px/20px "Work Sans", sans-serif;
     color: #216871; }
@@ -895,18 +895,27 @@ h1 {
     #friend-content .deny:hover {
       border: 2px solid #39111f;
       color: #39111f; }
+  #friend-content .uppercase {
+    margin-left: 20px;
+    font: 700 14px/10px "Work Sans", sans-serif;
+    color: #666666;
+    text-transform: uppercase; }
   #friend-content ul {
     margin-top: 10px; }
     #friend-content ul li {
-      margin-top: 20px;
+      margin-top: 10px;
       letter-spacing: 1px; }
       #friend-content ul li h1 {
         font: 700 24px/10px "Work Sans", sans-serif;
         color: #2C8C99; }
+      #friend-content ul li h2 {
+        font-weight: 700; }
       #friend-content ul li p {
         margin-left: 20px;
-        font: 14px/10px "Work Sans", sans-serif;
-        color: #666666;
-        text-transform: uppercase; }
+        font: 18px/12px "Work Sans", sans-serif; }
+      #friend-content ul li a {
+        margin-left: 20px;
+        font: 18px/12px "Work Sans", sans-serif;
+        color: #333; }
 
 /*# sourceMappingURL=styles.css.map */
