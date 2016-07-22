@@ -1,40 +1,43 @@
 // Friend View
 #friend-content {
+    position: relative;
+    top: -100px;
+    left: 0;
     margin: 5%;
-    // margin-left: 5%;
+
+    p {
+      margin-top: 15px;
+      font-size: 16px;
+    }
+
     button {
-      // position: absolute;
-      // top: -200px;
-      // left: 0;
-      // margin-left: 5%;
-      // styles do not work!
+        // position: absolute;
+        // top: -200px;
+        // left: 0;
+        // margin-left: 5%;
+        // styles do not work!
         background: transparent;
-        border: 2px solid darken($blue2, 10%);
         border-radius: 70px;
-        margin: 20px 0;
-        padding: 5px 30px;
+        margin: 20px 10px;
+        padding: 4px 20px;
         font: 700 18px / 20px $font;
         color: darken($blue2, 10%);
-        &:hover {
-
-        } 
+        &:hover {}
     }
     .accept {
+        border: 2px solid $blue2;
         color: $blue2;
         &:hover {
+            border: 2px solid darken($blue2, 10%);
             color: darken($blue2, 10%);
         }
     }
     .deny {
-        color: darken($red, 10%);
+        border: 2px solid $red;
+        color: $red;
         &:hover {
-            color: darken($red, 20%);
+            border: 2px solid darken($red, 10%);
+            color: darken($red, 10%);
         }
-    }
-    .undo {
-
-      &:hover {
-
-      }
     }
 }

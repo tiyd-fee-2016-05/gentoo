@@ -21,25 +21,13 @@
             <h1 class="profile-name">Search for friends | View all friends | View friend requests</h1>
 
             <section id="friend-content">
-
                 <h1>Nastassia Troyer has sent you a friend request!</h1>
-                <button ng-click="showaccept=true" ng-hide="showaccept" ng-hide="showdeny" class="accept">Accept</button>
-                <button ng-click="showdeny=true" ng-hide="showaccept" ng-hide="showdeny" class="deny">Deny</button>
+                <button ng-click="showaccept=true" ng-hide="showdeny" ng-hide="showaccept"  class="accept">accept</button>
+                <button ng-click="showdeny=true" ng-hide="showaccept" ng-hide="showdeny" class="deny">deny</button>
 
-                <h1 ng-show="showaccept">You and Nastassia Troyer are now friends!</h1>
+                <p ng-show="showaccept">You and Nastassia Troyer are now friends!</p>
 
-                <h1 ng-show="showdeny">You have denied a request from Nastassia Troyer.</h1>
-
-            </section>
-
-            <section id="friend-request-content">
-                <h1>Nastassia Troyer has sent you a friend request!</h1>
-                <button ng-click="showaccept=true" ng-hide="showaccept" ng-hide="showdeny" class="accept">Accept</button>
-                <button ng-click="showdeny=true" ng-hide="showaccept" ng-hide="showdeny" class="deny">Deny</button>
-
-                <h1 ng-show="showaccept">You and Nastassia Troyer are now friends!</h1>
-
-                <h1 ng-show="showdeny">You have denied a request from Nastassia Troyer.</h1>
+                <p ng-show="showdeny">You have denied a request from Nastassia Troyer.</p>
             </section>
 
             <section id="friend-request-content">

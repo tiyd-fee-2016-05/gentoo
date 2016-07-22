@@ -839,4 +839,32 @@ h1 {
     color: #39111f;
     text-align: center; }
 
+#friend-content {
+  position: relative;
+  top: -100px;
+  left: 0;
+  margin: 5%; }
+  #friend-content p {
+    margin-top: 15px;
+    font-size: 16px; }
+  #friend-content button {
+    background: transparent;
+    border-radius: 70px;
+    margin: 20px 10px;
+    padding: 4px 20px;
+    font: 700 18px/20px "Work Sans", sans-serif;
+    color: #216871; }
+  #friend-content .accept {
+    border: 2px solid #2C8C99;
+    color: #2C8C99; }
+    #friend-content .accept:hover {
+      border: 2px solid #216871;
+      color: #216871; }
+  #friend-content .deny {
+    border: 2px solid #611c35;
+    color: #611c35; }
+    #friend-content .deny:hover {
+      border: 2px solid #39111f;
+      color: #39111f; }
+
 /*# sourceMappingURL=styles.css.map */
