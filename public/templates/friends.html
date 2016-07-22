@@ -7,7 +7,6 @@
         <!-- ng show for the menu -->
         <nav ng-show="showmenu">
           <a href="#/home" class="animated bounceInLeft"><i class="fa fa-user" aria-hidden="true"></i> Your profile</a>
-          <a href="#/friends" class="animated bounceInLeft"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends (1)</a>
           <a href="#/login"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a>
         </nav>
 
@@ -19,6 +18,8 @@
 
         <h1 class="profile-logo">Gentoo</h1>
 
+        <h1 class="profile-name">Friends</h1>
+
         <section id="friend-content">
             <h1><i class="fa fa-search" aria-hidden="true"></i> Search for friends</h1>
             SEARCH BAR HERE
@@ -27,14 +28,32 @@
         <section id="friend-content">
             <h1><i class="fa fa-user-plus" aria-hidden="true"></i> Friend requests (2)</h1>
 
-            <h2>Nastassia Troyer has sent you a friend request!</h1>
-            <button ng-click="showaccept=true" ng-hide="showdeny" ng-hide="showaccept" class="accept">accept <i class="fa fa-plus" aria-hidden="true"></i></button>
-            <button ng-click="showdeny=true" ng-hide="showaccept" ng-hide="showdeny" class="deny">deny <i class="fa fa-times" aria-hidden="true"></i></button>
- 
-            <p ng-show="showaccept" class="pAccept">You and Nastassia Troyer are now friends!</p>
-            <a href="#/friend-profile" ng-show="showaccept" class="pAccept">View their profile</p>
+            <ul><!--ng-repeat, and link to their profile-->
+              <li>
+                <h2>Nastassia Troyer has sent you a friend request!</h2>
+                <button ng-click="showaccept=true" ng-hide="showdeny" ng-hide="showaccept" class="accept">accept <i class="fa fa-plus" aria-hidden="true"></i></button>
+                <button ng-click="showdeny=true" ng-hide="showaccept" ng-hide="showdeny" class="deny">deny <i class="fa fa-times" aria-hidden="true"></i></button>
 
-            <p ng-show="showdeny" class="pDeny">You have denied a request from Nastassia Troyer.</p>
+                <p ng-show="showaccept" class="pAccept">You and Nastassia Troyer are now friends!</p>
+                <a href="#/friend-profile" ng-show="showaccept" class="pAccept">View their profile</a>
+
+                <p ng-show="showdeny" class="pDeny">You have denied a request from Nastassia Troyer.</p>
+              </li>
+            </ul>
+
+            <ul><!--ng-repeat, and link to their profile-->
+              <li>
+                <h2>Nastassia Troyer has sent you a friend request!</h2>
+                <button ng-click="showaccept=true" ng-hide="showdeny" ng-hide="showaccept" class="accept">accept <i class="fa fa-plus" aria-hidden="true"></i></button>
+                <button ng-click="showdeny=true" ng-hide="showaccept" ng-hide="showdeny" class="deny">deny <i class="fa fa-times" aria-hidden="true"></i></button>
+
+                <p ng-show="showaccept" class="pAccept">You and Nastassia Troyer are now friends!</p>
+                <a href="#/friend-profile" ng-show="showaccept" class="pAccept" class="uppercase">View their profile</a>
+
+                <p ng-show="showdeny" class="pDeny">You have denied a request from Nastassia Troyer.</p>
+              </li>
+            </ul>
+
         </section>
 
         <section id="friend-content">
@@ -44,18 +63,15 @@
               <li><a href="#/friend-profile">
                 <h1><i class="fa fa-user" aria-hidden="true"></i>
                 Nastassia Troyer</h1>
-                <p>username</p></a>
+                <p class="uppercase">username</p></a>
               </li>
-
 
               <li><a href="#/friend-profile">
                 <h1><i class="fa fa-user" aria-hidden="true"></i>
                 Nastassia Troyer</h1>
-                <p>username</p></a>
+                <p class="uppercase">username</p></a>
               </li>
             </ul>
-
-
         </section>
 
         <section id="friend-request-content">

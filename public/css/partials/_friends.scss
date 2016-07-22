@@ -1,4 +1,11 @@
 // Friend View
+#left {
+
+}
+#right {
+
+}
+
 #friend-content {
     position: relative;
     top: -50px;
@@ -9,31 +16,30 @@
         font: 24px / 22px $font;
         color: $black;
     }
+
     p {
         font-size: 16px;
     }
     .pAccept {
-      color: $blue2;
-    }
-        a {
-          font-size: 16px;
-          color: darken($blue, 20%);
-          &:hover {
-            color: $blue2;
-          }
-        }
+        color: $blue2;
 
+    }
+    a {
+        font-size: 16px;
+        color: darken($blue, 20%);
+        &:hover {
+            color: $blue2;
+        }
+    }
     .pDeny {
         color: $red;
     }
-
     button {
         background: transparent;
-        margin: 20px 10px;
+        margin: 10px 10px;
         padding: 4px 20px;
         font: 700 18px / 20px $font;
         color: darken($blue2, 10%);
-
     }
     .accept {
         border: 2px solid $blue2;
@@ -51,22 +57,33 @@
             color: darken($red, 10%);
         }
     }
+    .uppercase {
+        margin-left: 20px;
+        font: 700 14px / 10px $font;
+        color: lighten($black, 20%);
+        text-transform: uppercase;
+    }
     ul {
-      margin-top: 10px;
-      li {
-        margin-top: 20px;
-        letter-spacing: 1px;
-
-        h1 {
-          font: 700 24px / 10px $font;
-          color: $blue2;
+        margin-top: 10px;
+        li {
+            margin-top: 10px;
+            letter-spacing: 1px;
+            h1 {
+                font: 700 24px / 10px $font;
+                color: $blue2;
+            }
+            h2 {
+              font-weight: 700;
+            }
+            p {
+                margin-left: 20px;
+                font: 18px / 12px $font;
+            }
+            a {
+                margin-left: 20px;
+                font: 18px / 12px $font;
+                color: $black;
+            }
         }
-        p {
-          margin-left: 20px;
-          font: 14px / 10px $font;
-          color: lighten($black, 20%);
-          text-transform: uppercase;
-        }
-      }
     }
 }
