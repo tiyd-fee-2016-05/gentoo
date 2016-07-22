@@ -1,5 +1,4 @@
 header {
-
     .fa-align-left {
         // menu icon
         position: relative;
@@ -101,7 +100,7 @@ header {
             color: $blue2;
             -webkit-transition: all 0.7s ease;
             transition: all 0.7s ease;
-          }
+        }
     }
     .unfriend {
         position: relative;
@@ -115,6 +114,6 @@ header {
             color: $red;
             -webkit-transition: all 0.7s ease;
             transition: all 0.7s ease;
-          }
+        }
     }
 }
