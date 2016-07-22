@@ -39,6 +39,7 @@ h1 {
     text-align: center;
 
     .friend-button {
+        opacity: 1;
         background: lighten($red, 5%);
         border: 2px solid lighten($red, 5%);
         border-radius: 200px;
