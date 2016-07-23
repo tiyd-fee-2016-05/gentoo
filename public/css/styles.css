@@ -5,6 +5,12 @@ body {
   font: 18px/22px "Work Sans", sans-serif;
   color: #333; }
 
+.red {
+  color: red; }
+
+.blue {
+  color: blue; }
+
 a {
   text-decoration: none;
   color: #611c35; }

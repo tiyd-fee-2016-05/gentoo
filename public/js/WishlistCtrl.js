@@ -1,22 +1,23 @@
-console.log("You've hacked into the Form Controller Mainframe");
 gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
+ var rootUrl= "http://6e62d5d1.ngrok.io/";
     $scope.submitForm = function() {
-        console.log("posting data....");
         formData = $scope.form;
-        var username = $('.userlogin[name="login_username"]').val()
-        $scope.username = $('.userlogin[name="login_username"]').val()
+        var username = $('.userlogin[name="login_username"]').val();
+        $rootScope.username = username
+        console.log(username);
+
+
 
         $http({
-         url:  "http://58a85897.ngrok.io/" + username+ "/friends",
-            // url:  "https://giftbox-tiy.herokuapp.com/" + username+ "/friends",
+            url:  rootUrl + username+ "/friends",
          method: "GET",
          headers: {'Authorization': username},
-         params: {formData}
+        //  params: {formData}
        }).success(function (data, status, headers, config) {
            $rootScope.loadedfriends= data;
+           $rootScope.friendList= data;
+           console.log($rootScope.loadedfriends);
            $rootScope.friendList= data.user.requested_friendships;
-          //  $rootscope.friendIndex = data[data.length - 1].index;
-console.log($rootScope.friendList[0].first_name)
          }).error(function (data, status, headers, config) {
              $scope.status = status;
          });//End GET request
@@ -26,8 +27,8 @@ console.log($rootScope.friendList[0].first_name)
 
 
         $http({
-         url:  "http://58a85897.ngrok.io/" + username+ "/profile",
-            // url:  "https://giftbox-tiy.herokuapp.com/" + username+ "/profile",
+        //  url:  "http://58a85897.ngrok.io/" + username+ "/profile",
+            url:  rootUrl+ username+ "/profile",
          method: "GET",
          headers: {'Authorization': username},
          params: {formData}

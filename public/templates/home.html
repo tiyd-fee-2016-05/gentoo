@@ -5,6 +5,8 @@
         <header>
 
 
+
+
           <div class="menu-espanso">
             <div id="menu" class="menu"></div>
             <span class="linee linea1"></span>
@@ -64,6 +66,9 @@
             <span>Favorite Colors</span>
             <h2 class="profile-colors">{{loadedprofile.user.colors[0]}}</h2>
         </section>
+
+        <div ng-class="class">{{class}}</div>
+          <button ng-click="changeClass()">Change Class</button>
 
         <!-- <form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
         Username    <br/><input type="text" ng-model="form.username">    <br/><br/>
