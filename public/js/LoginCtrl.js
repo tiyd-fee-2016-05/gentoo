@@ -25,7 +25,7 @@ gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
                 console.log("Number of Requests: " + $rootScope.friendDetails.user.requested_count);
          }).error(function (data, status, headers, config) {
              $scope.status = status;
-         });//End GET request
+         });//End GET request for friends
 
 
 
@@ -42,10 +42,23 @@ gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
        window.location = "#/home";
          }).error(function (data, status, headers, config) {
              $scope.status = status;
-         });//End GET request
+         });//End GET request for profile info
 
 
-
+         $http({
+             url:  rootUrl + "/" + username+ "/wishlists",
+          method: "GET",
+          headers: {'Authorization': username},
+         //  params: {formData}
+        }).success(function (data, status, headers, config) {
+                 console.log("Wishlist Info for " + username);
+                 console.log(data);
+                 $rootScope.wishlistArray = data.user
+                console.log("List of Lists");
+                 console.log($rootScope.wishlistArray);
+          }).error(function (data, status, headers, config) {
+              $scope.status = status;
+          });//End GET request for friends
 
 
 

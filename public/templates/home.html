@@ -58,69 +58,16 @@
         </form> -->
 
 
-        <section class="lists content-list">
-            <h1 class="list-name">Wishlist for Christmas <i class="fa fa-plus add-list" aria-hidden="true"></i></h1>
+        <section class="lists content-list" ng-repeat="list in wishlistArray">
+            <h1 class="list-name" >{{list.name}} <i class="fa fa-plus add-list" aria-hidden="true"></i></h1>
             <ul>
-                <li>
-                    <h1>Purple Socks</h1>
+                <li ng-repeat= "item in list.items">
+                    <h1>{{item.name}}</h1>
                     <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
-                </li>
-                <li>
-                    <h1>Blue Socks</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
-                </li>
-                <li>
-                    <h1>Red Socks</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
-                </li>
-                <li>
-                    <h1>Green Socks</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
-                </li>
-                <li>
-                    <h1>Orange Socks</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
-                </li>
-                <li>
-                    <i class="fa fa-plus fa-3x" aria-hidden="true"></i>
-
                 </li>
             </ul>
         </section>
-
-        <section class="lists friend-list">
-            <a href="#/friends"><h1 class="friends-list">Friends</h1></a>
-            <ul>
-                <li>
-                    <a href="#/add-friend">
-                        <!-- <h2>user photo here</h2> -->
-                        <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-                        <h1>{{loadedprofile.user.first_name}}</h1>
-                        <h1>{{loadedprofile.user.last_name}}</h1>
-                    </a>
-                </li>
-                <li>
-                    <a href="#/add-friend">
-                        <!-- <h2>user photo here</h2> -->
-                        <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-                        <h1>{{loadedprofile.user.first_name}}</h1>
-                        <h1>{{loadedprofile.user.last_name}}</h1>
-                    </a>
-                </li>
-                <li>
-                    <a href="#/add-friend">
-                        <!-- <h2>user photo here</h2> -->
-                        <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-                        <h1>{{loadedprofile.user.first_name}}</h1>
-                        <h1>{{loadedprofile.user.last_name}}</h1>
-                    </a>
-                </li>
-
-
-            </ul>
-        </section>
-
         <!-- <section class="lists content-list-new">
             <h1><i class="fa fa-plus" aria-hidden="true"></i> Add new list</h1> -->
-        </section>
+
     </div>
