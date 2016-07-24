@@ -16,10 +16,13 @@ gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
          headers: {'Authorization': username},
         //  params: {formData}
        }).success(function (data, status, headers, config) {
-           $rootScope.loadedfriends= data;
-           $rootScope.friendList= data;
-           console.log($rootScope.loadedfriends);
-           $rootScope.friendList= data.user.requested_friendships;
+                console.log("Friend Info for " + username);
+                console.log(data);
+         $rootScope.friendDetails = data
+        $rootScope.friendList = data.user.friends
+         $rootScope.friendRequests = data.user.requested_friendships
+                console.log("Friend Requests for " + username);
+                console.log("Number of Requests: " + $rootScope.friendDetails.user.requested_count);
          }).error(function (data, status, headers, config) {
              $scope.status = status;
          });//End GET request
@@ -36,7 +39,6 @@ gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
          params: {formData}
      }).success(function (data, status, headers, config) {
            $rootScope.loadedprofile= data;
-                  console.log($rootScope.loadedprofile);
        window.location = "#/home";
          }).error(function (data, status, headers, config) {
              $scope.status = status;
