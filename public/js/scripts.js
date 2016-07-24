@@ -1,3 +1,14 @@
+// var gentooApp = angular.module("mainApp", ['ngRoute']);
+
+gentooApp.directive('toolbarTip', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            $(element).toolbar(scope.$eval(attrs.toolbarTip));
+        }
+    };
+});
+
 // console.log("ProfileCtrl ready");
 // gentooApp.controller('MenuCtrl', function ($scope) {
 //

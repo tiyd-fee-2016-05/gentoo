@@ -1,76 +1,66 @@
 <!-- Friends View -->
-<!-- <div id="container"> -->
-
-    <div id="container" ng-controller="LoginCtrl" ng-controller="FriendCtrl">
+<div id="container" ng-controller="LoginCtrl">
 
     <header>
-        <!-- opens notification menu, drops from top -->
-        <!-- ng show for the menu -->
-        <nav ng-show="showmenu">
-          <a href="#/home" class="animated bounceInLeft"><i class="fa fa-user" aria-hidden="true"></i> Your profile</a>
-
-          <a href="#/login"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a>
-        </nav>
 
         <section class="photo">
         </section>
 
-        <i id="home-menu-icon" class="fa fa-align-left fa-2x" aria-hidden="true" ng-click="showmenu=true"></i>
-        <!-- <i class="fa fa-align-right fa-2x" aria-hidden="true"></i> -->
-
-        <h1 class="profile-logo">Gentoo</h1>
 
         <h1 class="profile-name">Friends</h1>
 
+        <nav>
+          <div class="btn-toolbar" toolbar-tip="{content: '#toolbar-options', position: 'bottom', style: 'primary', animation: 'flip'}" id="format-toolbar">
+              <i class="fa fa-align-right fa-2x" aria-hidden="true"></i>
+          </div>
+
+          <div id="toolbar-options">
+             <a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+             <a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+          </div><!-- some will have profile link! -->
+        </nav>
+
+        <a href="#/login"><h1 class="logo">Gentoo</h1></a>
+
+      </header>
+
         <section id="friend-content">
-            <h1><i class="fa fa-search" aria-hidden="true"></i> Search for friends</h1>
-            SEARCH BAR HERE
+            <h1><i class="fa fa-search" aria-hidden="true"></i> Search for friends</h1> SEARCH BAR HERE
         </section>
 
         <section id="friend-content">
-            <h1><i class="fa fa-user-plus" aria-hidden="true"></i> Friend requests {{loadedfriends.user.requested_count}}</h1>
+            <h1><i class="fa fa-user-plus" aria-hidden="true"></i> Friend requests {{friendDetails.user.requested_count}} </h1>
 
-            <ul ><!--ng-repeat, and link to their profile-->
-              <li ng-repeat="friends in friendList">
-                <h2>{{friendList[0].first_name}} has sent you a friend request!</h2>
-                <button ng-click="showaccept=true" ng-hide="showdeny" ng-hide="showaccept" class="accept">accept <i class="fa fa-plus" aria-hidden="true"></i></button>
-                <button ng-click="showdeny=true" ng-hide="showaccept" ng-hide="showdeny" class="deny">deny <i class="fa fa-times" aria-hidden="true"></i></button>
+            <ul>
+                <!--ng-repeat, and link to their profile-->
+                <li ng-repeat="friends in friendRequests">
+                    <h2>{{friends.first_name}} has sent you a friend request!</h2>
+                    <button ng-click="showaccept=true" ng-hide="showdeny" ng-hide="showaccept" class="accept">accept <i class="fa fa-plus" aria-hidden="true"></i></button>
+                    <button ng-click="showdeny=true" ng-hide="showaccept" ng-hide="showdeny" class="deny">deny <i class="fa fa-times" aria-hidden="true"></i></button>
 
-                <p ng-show="showaccept" class="pAccept" >You and {{friendList[0].first_name}} {{friendList[0].last_name}} are now friends!</p>
-                <a href="#/friend-profile" ng-show="showaccept" class="pAccept" class="uppercase">View their profile</a>
+                    <p ng-show="showaccept" class="pAccept">You and {{friends.first_name}} {{friends.last_name}} are now friends!</p>
+                    <a href="#/friend-profile" ng-show="showaccept" class="pAccept" class="uppercase">View their profile</a>
 
-                <p ng-show="showdeny" class="pDeny">You have denied a request from {{friendList[0].first_name}} {{friendList[0].last_name}} .</p>
-              </li>
+                    <p ng-show="showdeny" class="pDeny">You have denied a request from {{friends.first_name}} {{friends.last_name}} .</p>
+                </li>
             </ul>
         </section>
 
         <section id="friend-content">
             <h1><i class="fa fa-user" aria-hidden="true"></i> All friends</h1>
 
-            <ul><!--ng-repeat, and link to their profile-->
-              <li ng-repeat="friend in loadedfriends"><a href="#/friend-profile">
-                <h1><i class="fa fa-user" aria-hidden="true"></i>
-                Nastassia Troyer</h1>
-                <p class="uppercase">username</p></a>
-              </li>
-
-              <li><a href="#/friend-profile">
-                <h1><i class="fa fa-user" aria-hidden="true"></i>
-                Nastassia Troyer</h1>
-                <p class="uppercase">username</p></a>
-              </li>
+            <ul>
+                <!--ng-repeat, and link to their profile-->
+                <li ng-repeat="person in friendList">
+                    <a href="#/friend-profile">
+                        <h1><i class="fa fa-user" aria-hidden="true"></i>
+                {{person.first_name}} {{person.last_name}}</h1>
+                        <p class="uppercase">{{person.first_name}}</p>
+                    </a>
+                </li>
             </ul>
         </section>
 
         <section id="friend-request-content">
-
-
-
-
-
-
         </section>
-
-
 </div>
-<!-- </div> -->
