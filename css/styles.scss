@@ -21,14 +21,6 @@ body {
     font: 18px / 22px $font;
     color: $black;
 }
-.red{
-    color:red;
-}
-
-.blue{
-    color:blue;
-}
-
 
 a {
     text-decoration: none;
@@ -50,6 +42,9 @@ button:hover {
     // -webkit-transition: all 0.7s ease;
     // transition: all 0.7s ease;
     // cursor: pointer;
+}
+button:focus {
+    outline: 0;
 }
 // @keyframes create-ripple {
 //   0% {
@@ -88,9 +83,7 @@ button:hover {
 //     border: 3px solid rgba(0, 0, 0, 0.3);
 //   }
 // }
-button:focus {
-    outline: 0;
-}
+
 
 @import "partials/header";
 @import "partials/forms";
@@ -100,3 +93,4 @@ button:focus {
 @import "partials/add-friend";
 @import "partials/edit-profile";
 @import "partials/friends";
+@import "partials/mobile";

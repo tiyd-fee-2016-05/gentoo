@@ -3,25 +3,41 @@
     <div id="profile-main-container">
 
       <header>
-          <nav class="nav">
-            <div class="btn-toolbar" toolbar-tip="{content: '#toolbar-options', position: 'bottom', style: 'primary', animation: 'flip'}" id="format-toolbar">
-                <!-- <i class="fa fa-align-right fa-2x" aria-hidden="true"></i> -->
-                <h1 class="logo">Gentoo</h1>
+        <section class="friend-photo">
+        </section>
+
+
+        <nav ng-show="showmenu">
+            <a href="#/home" class="animated bounceInLeft"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+            <a href="#/login" class="animated bounceInLeft"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input class="searchBar animated
+    jello" type="search" ng-model="searchBox" placeholder="Search users">
+
+
+            <div id="friend-search" ng-if="searchBox">
+                <ul>
+                    <!--ng-repeat, and link to their profile-->
+                    <li ng-repeat="person in friendList | filter: searchBox">
+                        <a href="#/friend-profile">
+                            <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+                            <p class="uppercase">@{{person.username}}</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
-            <div id="toolbar-options">
-               <a href="#">profile <i class="fa fa-user" aria-hidden="true"></i></a>
-               <a href="#">friends <i class="fa fa-user-plus" aria-hidden="true"></i></a>
-               <a href="#">logout <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-          </nav>
+        </nav>
 
-            <section class="friend-photo">
-            </section>
+        <div class="nav">
+            <i ng-click="showmenu=true" class="fa fa-align-right" aria-hidden="true"></i>
 
-            <h1 class="friend-name"> {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}Nastassia Troyer</h1>
+            <h1 class="logo">Gentoo</h1>
+        </div>
 
-        </header>
+
+        <h1 class="friend-name"> {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}Nastassia Troyer</h1>
+      </header>
 
 
         <section class="content content-add-friend">

@@ -110,13 +110,52 @@
           background: $blue2;
           // border: 2px solid red;
           .list-header {
-            border-bottom: 2px solid darken($blue2, 10%);
+            border-bottom: 2px solid $white;
           }
             .list-name {
                 padding: 15px 5%;
                 font: 700 18px / 22px $font;
-                color: darken($blue2, 20%);
+                color: $white;
             }
+
+
+            //
+            // ul {
+            //     // margin-top: 10px;
+            //     li {
+            //         width: 40%;
+            //         margin-top: 10px;
+            //         padding: 0 20px;
+            //         background: $blue2;
+            //         border: 2px solid $blue2;
+            //         border-radius: 5px;
+            //         letter-spacing: 1px;
+            //         overflow: hidden;
+            //         h1 {
+            //             font: 700 24px / 10px $font;
+            //             color: $white;
+            //         }
+            //         p {
+            //             margin-left: 20px;
+            //             font: 18px / 12px $font;
+            //             color: darken($blue2, 10%)
+            //         }
+            //         a {
+            //             margin-left: 20px;
+            //             font: 18px / 12px $font;
+            //             color: $white;
+            //         }
+            //         &:hover {
+            //           background: lighten($blue2, 5%);
+            //           border: 2px solid lighten($blue2, 5%);
+            //           color: darken($blue2, 15%);
+            //           -webkit-transition: all 0.5s ease;
+            //           transition: all 0.5s ease;
+            //           cursor: pointer;
+            //         }
+            //     }
+
+
 
             ul {
                 width: 90%;
@@ -129,11 +168,12 @@
                     display: inline-block;
                     vertical-align: middle;
                     overflow: hidden;
-                    width: 200px;
+                    width: 250px;
                     height: 65px;
                     margin: 10px;
                     padding-top: 10px;
-                    background: $white;
+                    background: $blue2;
+                    border: 2px solid $blue2;
                     text-align: center;
                     border-radius: 5px;
                     opacity: 0.7;
@@ -141,18 +181,18 @@
                         opacity: 1;
                         -webkit-transition: all 0.3s ease;
                         transition: all 0.3s ease;
-                        -webkit-box-shadow: 2px 3px 0 darken($blue2, 20%);
-                        -moz-box-shadow: 2px 3px 0 darken($blue2, 20%);
-                        box-shadow: 2px 3px 0 darken($blue2, 20%);
                         cursor: pointer;
-
+                        background: lighten($blue2, 5%);
+                        border: 2px solid lighten($blue2, 5%);
+                        color: darken($blue2, 15%);
                     }
                     h1 {
                       font-weight: bold;
-                        color: darken($blue2, 30%);
+                      color: $white;
                     }
                     h2 {
-                        color: darken($blue2, 20%);
+                      font-weight: bold;
+                      color: darken($blue2, 10%);
                     }
                     .fa-heart {
                         color: darken($blue2, 20%);

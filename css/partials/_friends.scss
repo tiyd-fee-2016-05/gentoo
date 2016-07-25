@@ -1,16 +1,22 @@
 // Friend View
-#left {
-
-}
-#right {
-
-}
 
 #friend-content {
     position: relative;
     top: -50px;
     left: 0;
     margin: 5%;
+    input {
+      width: 40%;
+      padding: 5px 16px;
+      border: 2px solid $blue2;
+      border-radius: 5px;
+      font: 16px / 14px $font;
+
+      &:focus {
+        outline: 0;
+        // color: $blue2;
+      }
+    }
     h1 {
         margin-bottom: 10px;
         font: 24px / 22px $font;
@@ -48,7 +54,7 @@
             border: 2px solid darken($blue2, 10%);
             color: darken($blue2, 10%);
         }
-    } 
+    }
     .deny {
         border: 2px solid $red;
         color: $red;
@@ -60,29 +66,41 @@
     .uppercase {
         margin-left: 20px;
         font: 700 14px / 10px $font;
-        color: lighten($black, 20%);
+        // color: lighten($black, 20%);
         text-transform: uppercase;
     }
     ul {
-        margin-top: 10px;
+        // margin-top: 10px;
         li {
+            width: 40%;
             margin-top: 10px;
+            padding: 0 20px;
+            background: $blue2;
+            border: 2px solid $blue2;
+            border-radius: 5px;
             letter-spacing: 1px;
+            overflow: hidden;
             h1 {
                 font: 700 24px / 10px $font;
-                color: $blue2;
-            }
-            h2 {
-              font-weight: 700;
+                color: $white;
             }
             p {
                 margin-left: 20px;
                 font: 18px / 12px $font;
+                color: darken($blue2, 10%)
             }
             a {
                 margin-left: 20px;
                 font: 18px / 12px $font;
-                color: $black;
+                color: $white;
+            }
+            &:hover {
+              background: lighten($blue2, 5%);
+              border: 2px solid lighten($blue2, 5%);
+              color: darken($blue2, 15%);
+              -webkit-transition: all 0.5s ease;
+              transition: all 0.5s ease;
+              cursor: pointer;
             }
         }
     }

@@ -1,34 +1,49 @@
 <!-- Friends View -->
 <div id="container" ng-controller="LoginCtrl">
 
-    <header>
-
-            <section class="photo">
-            </section>
-
-            <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i> Friends</h1>
+  <header>
+    <section class="photo">
+    </section>
 
 
-            <nav>
-              <div class="btn-toolbar" toolbar-tip="{content: '#toolbar-options', position: 'bottom', style: 'primary', animation: 'flip'}" id="format-toolbar">
-                  <!-- <i class="fa fa-align-right fa-2x" aria-hidden="true"></i> -->
-                  <h1 class="logo">Gentoo</h1>
-              </div>
+    <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i>
+   {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
 
-              <div id="toolbar-options">
-                 <a href="#/home">profile <i class="fa fa-user-plus" aria-hidden="true"></i></a>
-                 <a href="#/login">logout <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-              </div>
-            </nav>
+    <a href="#/profile-edit"><h1 class="edit-profile">Edit Profile</h1></a>
 
-        </header>
+
+    <nav ng-show="showmenu">
+        <a href="#/home" class="animated bounceInLeft"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+        <a href="#/login" class="animated bounceInLeft"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a>
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input class="searchBar animated
+jello" type="search" ng-model="searchBox" placeholder="Search users">
+
+
+        <div id="friend-search" ng-if="searchBox">
+            <ul>
+                <!--ng-repeat, and link to their profile-->
+                <li ng-repeat="person in friendList | filter: searchBox">
+                    <a href="#/friend-profile">
+                        <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+                        <p class="uppercase">@{{person.username}}</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="nav">
+        <i ng-click="showmenu=true" class="fa fa-align-right" aria-hidden="true"></i>
+
+        <h1 class="logo">Gentoo</h1>
+    </div>
+  </header>
+
 
         <section id="friend-content">
-            <h1><i class="fa fa-search" aria-hidden="true"></i> Search for friends</h1> SEARCH BAR HERE
-        </section>
-
-        <section id="friend-content">
-            <h1><i class="fa fa-user-plus" aria-hidden="true"></i> Friend requests {{friendDetails.user.requested_count}} </h1>
+            <h1><i class="fa fa-user-plus" aria-hidden="true"></i> Friend requests ( {{friendDetails.user.requested_count}} ) </h1>
 
             <ul>
                 <!--ng-repeat, and link to their profile-->
@@ -45,16 +60,24 @@
             </ul>
         </section>
 
+
+        <section id="friend-content">
+            <h1><i class="fa fa-search" aria-hidden="true"></i> Search for friends</h1>
+
+            <input class="searchBar" type="search" ng-model="searchBox" placeholder="Enter first/last name or username">
+        </section>
+
+
+
         <section id="friend-content">
             <h1><i class="fa fa-user" aria-hidden="true"></i> All friends</h1>
 
             <ul>
                 <!--ng-repeat, and link to their profile-->
-                <li ng-repeat="person in friendList">
+                <li ng-repeat="person in friendList | filter: searchBox">
                     <a href="#/friend-profile">
-                        <h1><i class="fa fa-user" aria-hidden="true"></i>
-                {{person.first_name}} {{person.last_name}}</h1>
-                        <p class="uppercase">{{person.first_name}}</p>
+                        <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+                        <p class="uppercase">@{{person.username}}</p>
                     </a>
                 </li>
             </ul>
