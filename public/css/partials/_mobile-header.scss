@@ -2,6 +2,9 @@
     body {
         font: 20px / 24px $font;
     }
+    .friend-photo {
+        height: 300px;
+    }
     header {
         text-align: center;
         .nav {
@@ -85,11 +88,11 @@
             }
         }
         .photo {
-            height: 250px;
+            height: 220px;
         }
         .profile-name {
             position: relative;
-            top: -110px;
+            top: -100px;
             left: 0;
             margin: 20px 5%;
             font: 40px / 30px $font;
@@ -99,11 +102,11 @@
             }
         }
         .edit-profile {
-            top: -130px;
+            top: -120px;
             font: 700 20px / 30px $font;
         }
         .unfriend {
-            top: -130px;
+            top: -120px;
             font: 700 20px / 30px $font;
         }
     }
