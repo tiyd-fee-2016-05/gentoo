@@ -2,28 +2,45 @@
 <div id="container">
     <div id="profile-main-container" ng-controller="LoginCtrl">
 
-        <header>
 
+        <header>
             <section class="photo">
             </section>
 
-            <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i> <span>Edit Profile:</span> {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
+            <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i> <span>Edit Profile:</span> {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1
 
             <a href="#/home"><h1 class="save-profile" ng-click="vm.submit(vm.user)">Save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></h1></a>
 
 
-            <nav class="nav">
-              <div class="btn-toolbar" toolbar-tip="{content: '#toolbar-options', position: 'bottom', style: 'primary', animation: 'flip'}" id="format-toolbar">
-                  <!-- <i class="fa fa-align-right fa-2x" aria-hidden="true"></i> -->
-                  <h1 class="logo">Gentoo</h1>
-              </div>
+            <nav ng-show="showmenu">
+                <a href="#/friends" class="animated bounceInLeft"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a>
+                <a href="#/login" class="animated bounceInLeft"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a>
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input class="searchBar animated
+      jello" type="search" ng-model="searchBox" placeholder="Search users">
 
-              <div id="toolbar-options">
-                 <a href="#/friends">friends <i class="fa fa-user-plus" aria-hidden="true"></i></a>
-                 <a href="#/login">logout <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-              </div>
+
+                <div id="friend-search" ng-if="searchBox">
+                    <ul>
+                        <!--ng-repeat, and link to their profile-->
+                        <li ng-repeat="person in friendList | filter: searchBox">
+                            <a href="#/friend-profile">
+                                <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+                                <p class="uppercase">@{{person.username}}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </nav>
+
+            <div class="nav">
+                <i ng-click="showmenu=true" class="fa fa-align-right" aria-hidden="true"></i>
+
+                <h1 class="logo">Gentoo</h1>
+            </div>
         </header>
+
 
 
 
@@ -34,37 +51,34 @@
 
         <section class="content content-main">
 
-          <form>
-              <div class="form-group">
-                  <label for="profile-first-name"></label>
-                  <input type="text" class="form-control" id="profile-first-name" placeholder="{{loadedprofile.user.first_name}}"
-                  ng-model="vm.user.first_name">
-              </div>
-              <div class="form-group">
-                  <label for="profile-last-name"></label>
-                  <input type="text" class="form-control" id="profile-last-name" placeholder="{{loadedprofile.user.last_name}}" ng-model="vm.user.last_name">
-              </div>
-              <div class="form-group">
-                  <label for="email-address"></label>
-                  <input type="email" class="form-control" id="email-address" placeholder="{{loadedprofile.user.email}}"
-                  ng-model="vm.user.email">
-              </div>
-              <div class="form-group">
-                  <label for="user-password"></label>
-                  <input type="password" class="form-control" id="user-password" placeholder="Password" ng-model="vm.user.password">
-              </div>
-              <div class="form-group">
-                  <label for="exampleInputFile">Upload a new photo</label>
-                  <input type="file" id="exampleInputFile" ng-model="vm.user.file">
-                  <!-- <p class="help-block">Example block-level help text here.</p> -->
-              </div>
-              <div class="form-group">
-                  <label for="profile-birthday"></label>
-                  <input type="text" class="form-control" id="profile-birthday" placeholder="Birthday: {{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}"
-                  ng-model="vm.user.birthdate">
-              </div>
+            <form>
+                <div class="form-group">
+                    <label for="profile-first-name"></label>
+                    <input type="text" class="form-control" id="profile-first-name" placeholder="{{loadedprofile.user.first_name}}" ng-model="vm.user.first_name">
+                </div>
+                <div class="form-group">
+                    <label for="profile-last-name"></label>
+                    <input type="text" class="form-control" id="profile-last-name" placeholder="{{loadedprofile.user.last_name}}" ng-model="vm.user.last_name">
+                </div>
+                <div class="form-group">
+                    <label for="email-address"></label>
+                    <input type="email" class="form-control" id="email-address" placeholder="{{loadedprofile.user.email}}" ng-model="vm.user.email">
+                </div>
+                <div class="form-group">
+                    <label for="user-password"></label>
+                    <input type="password" class="form-control" id="user-password" placeholder="Password" ng-model="vm.user.password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">Upload a new photo</label>
+                    <input type="file" id="exampleInputFile" ng-model="vm.user.file">
+                    <!-- <p class="help-block">Example block-level help text here.</p> -->
+                </div>
+                <div class="form-group">
+                    <label for="profile-birthday"></label>
+                    <input type="text" class="form-control" id="profile-birthday" placeholder="Birthday: {{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}" ng-model="vm.user.birthdate">
+                </div>
 
-          </form>
+            </form>
         </section>
 
         <!-- <form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
@@ -76,76 +90,32 @@
 
         </form> -->
 
-        <section id="edit" class="lists content-list">
+
+        <h1 class="wishlists">Wishlists</h1>
+
+
+
+        <section id="edit" ng-repeat="list in wishlistArray">
+
+
             <div class="list-header">
-              <h1 class="list-name">Wishlist <i class="fa fa-times" aria-hidden="true"></i></h1>
-
+                <h1 class="list-name">{{list.name}}</h1>
+                  <h1 class="delete-list">delete wishlist <i class="fa fa-times fa-lg" aria-hidden="true"></i></h1>
             </div>
-
             <ul>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                    <i class="fa fa-times" aria-hidden="true"></i>
+                <li ng-repeat="item in list.items">
+                    <h1>{{item.name}}</h1>
+                    <h2>for: {{loadedprofile.user.holidays[0]}}</h2>
+                    <a href="#/list-item"><span class="edit">edit</span></a><span class="delete">delete</span>
                 </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                    <i class="fa fa-times" aria-hidden="true"></i>
-                </li>
-
             </ul>
         </section>
 
 
-        <!-- <section class="lists content-list-new">
-            <h1><i class="fa fa-plus" aria-hidden="true"></i> Add new list</h1> -->
         <section class="section-save-button">
-            <a href="#/home"><button class="profile-submit-button" type="submit" name="button">Save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></button></a>
+            <a href="#/home">
+                <button class="profile-submit-button" type="submit" name="button">Save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            </a>
         </section>
 
 
@@ -155,7 +125,7 @@
 
 
     <!-- /////////// -->
-<!--
+    <!--
     <span class="input input--photo">
                 <input class="input__field input__field--photo" type="file" id="input-3" />
                 <label class="input__label input__label--photo input__label--photo-color-4" for="input-3">

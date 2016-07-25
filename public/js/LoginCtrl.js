@@ -28,9 +28,6 @@ gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
          });//End GET request for friends
 
 
-
-
-
         $http({
         //  url:  "http://58a85897.ngrok.io/" + username+ "/profile",
             url:  rootUrl+ "/" + username+ "/profile",
