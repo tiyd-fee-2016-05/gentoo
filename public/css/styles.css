@@ -25,13 +25,12 @@ button:focus {
   outline: 0; }
 
 header .nav {
-  width: 20px;
-  height: 10px;
+  width: 110px;
+  height: 30px;
   position: absolute;
-  top: 40px;
-  right: 10%;
-  z-index: 5;
-  display: inline-block; }
+  top: 30px;
+  right: 8%;
+  z-index: 5; }
   header .nav .logo {
     font: 50px/50px "Grand Hotel", cursive;
     color: #2C8C99;
@@ -39,19 +38,23 @@ header .nav {
     -moz-text-shadow: 2px 1px 0 #12050a;
     text-shadow: 2px 1px 0 #12050a; }
   header .nav .fa-align-right {
+    position: relative;
+    top: 40px;
+    right: 20%;
     color: #fdf3df;
     opacity: 0.8; }
     header .nav .fa-align-right:hover {
       opacity: 1;
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
       cursor: pointer; }
 header nav {
   width: 35%;
   height: 50px;
   position: absolute;
   top: 40px;
-  left: 50%;
+  left: 45%;
+  margin: 0 auto;
   padding: 10px 0;
   z-index: 999;
   background: #2C8C99;
@@ -1224,27 +1227,89 @@ h1 {
   body {
     font: 20px/24px "Work Sans", sans-serif; }
 
-  header .nav {
-    width: 20px;
-    height: 10px;
-    position: absolute;
-    top: 40px;
-    right: 10%;
-    z-index: 5;
-    display: inline-block; }
-    header .nav .logo {
-      font: 50px/50px "Grand Hotel", cursive;
-      color: #2C8C99;
-      -webkit-text-shadow: 2px 1px 0 #12050a;
-      -moz-text-shadow: 2px 1px 0 #12050a;
-      text-shadow: 2px 1px 0 #12050a; }
-    header .nav .fa-align-right {
-      color: #fdf3df;
-      opacity: 0.8; }
-      header .nav .fa-align-right:hover {
-        opacity: 1;
-        -webkit-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-        cursor: pointer; } }
+  header {
+    text-align: center; }
+    header .nav {
+      width: 150px;
+      height: 40px;
+      display: inline-block; }
+      header .nav .logo {
+        position: relative;
+        top: -26px;
+        left: -100%;
+        margin: 0 auto;
+        font: 100px/80px "Grand Hotel", cursive;
+        text-align: center; }
+      header .nav .fa-align-right {
+        position: relative;
+        top: 10px;
+        left: 40%;
+        color: #fdf3df;
+        opacity: 0.8;
+        font-size: 30px; }
+        header .nav .fa-align-right:hover {
+          opacity: 1;
+          -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          cursor: pointer; }
+    header nav {
+      width: 70%;
+      height: 200px;
+      position: relative;
+      top: -160px;
+      left: 0;
+      margin: 0 auto;
+      padding: 20px;
+      border: 2px solid #2C8C99;
+      border-radius: 8px;
+      z-index: 10; }
+      header nav i {
+        margin-right: 10px; }
+      header nav .fa-search {
+        display: none; }
+      header nav a {
+        display: block;
+        font: 700 30px/55px "Work Sans", sans-serif; }
+      header nav input {
+        width: 100%;
+        margin: 10px 0;
+        padding: 6px 10px;
+        border: 2px solid #2C8C99;
+        border-radius: 10px;
+        font: 26px/26px "Work Sans", sans-serif; }
+      header nav ul {
+        margin-top: 10px; }
+        header nav ul li {
+          width: 100%;
+          margin-left: 0;
+          margin-top: 10px;
+          padding: 10px;
+          background: #37b0c1;
+          border: 2px solid #37b0c1;
+          border-radius: 8px; }
+          header nav ul li h1 {
+            font: 700 30px/30px "Work Sans", sans-serif; }
+          header nav ul li p {
+            margin-left: 16px;
+            font: 700 20px/20px "Work Sans", sans-serif; }
+          header nav ul li a {
+            font: 30px/30px "Work Sans", sans-serif; }
+    header .photo {
+      height: 250px; }
+    header .profile-name {
+      position: relative;
+      top: -120px;
+      left: 0;
+      margin: 20px 5%;
+      font: 50px/40px "Work Sans", sans-serif;
+      color: #fdf3df; }
+      header .profile-name i {
+        display: none; }
+    header .edit-profile {
+      top: -130px;
+      font: 700 30px/40px "Work Sans", sans-serif; }
+    header .unfriend {
+      top: -130px;
+      font: 700 30px/40px "Work Sans", sans-serif; } }
 
 /*# sourceMappingURL=styles.css.map */
