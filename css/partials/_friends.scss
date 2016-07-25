@@ -1,21 +1,19 @@
 // Friend View
-
 #friend-content {
     position: relative;
     top: -50px;
     left: 0;
     margin: 5%;
     input {
-      width: 40%;
-      padding: 5px 16px;
-      border: 2px solid $blue2;
-      border-radius: 5px;
-      font: 16px / 14px $font;
-
-      &:focus {
-        outline: 0;
-        // color: $blue2;
-      }
+        width: 40%;
+        padding: 5px 16px;
+        border: 2px solid $blue2;
+        border-radius: 5px;
+        font: 16px / 14px $font;
+        &:focus {
+            outline: 0;
+            // color: $blue2;
+        }
     }
     h1 {
         margin-bottom: 10px;
@@ -23,26 +21,29 @@
         color: $black;
     }
 
-    p {
-        font-size: 16px;
-    }
     .pAccept {
-        color: $blue2;
-
+        padding-bottom: 10px;
+        font: 18px / 18px $font;
+        color: $white;
+        letter-spacing: 0;
     }
     a {
-        font-size: 16px;
+      padding-bottom: 10px;
+      font-size: 16px;
         color: darken($blue, 20%);
         &:hover {
-            color: $blue2;
+            color: darken($blue, 20%);
         }
     }
     .pDeny {
+      padding-bottom: 10px;
+      font: 18px / 18px $font;
         color: $red;
+        letter-spacing: 0;
     }
     button {
         background: transparent;
-        margin: 10px 10px;
+        margin: 10px;
         padding: 4px 20px;
         font: 700 18px / 20px $font;
         color: darken($blue2, 10%);
@@ -51,16 +52,24 @@
         border: 2px solid $blue2;
         color: $blue2;
         &:hover {
+            background: darken($blue2, 10%);
             border: 2px solid darken($blue2, 10%);
-            color: darken($blue2, 10%);
+            color: $white;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            cursor: pointer;
         }
     }
     .deny {
         border: 2px solid $red;
         color: $red;
         &:hover {
+            background: darken($red, 10%);
             border: 2px solid darken($red, 10%);
-            color: darken($red, 10%);
+            color: $white;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            cursor: pointer;
         }
     }
     .uppercase {
@@ -71,7 +80,26 @@
     }
     ul {
         // margin-top: 10px;
-        li {
+        h2 {
+            padding: 10px;
+            color: $white;
+            letter-spacing: 0;
+        }
+        .friend-request {
+            width: 40%;
+            margin-top: 10px;
+            padding: 0 20px;
+            background: none;
+            border: 2px solid $blue2;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            overflow: hidden;
+            h2 {
+                font: 20px / 22px $font;
+                color: $black;
+            }
+        }
+        .friends-list {
             width: 40%;
             margin-top: 10px;
             padding: 0 20px;
@@ -86,8 +114,9 @@
             }
             p {
                 margin-left: 20px;
-                font: 18px / 12px $font;
-                color: darken($blue2, 10%)
+                font: 700 18px / 12px $font;
+                color: darken($blue2, 10%);
+                text-transform: uppercase;
             }
             a {
                 margin-left: 20px;
@@ -95,12 +124,12 @@
                 color: $white;
             }
             &:hover {
-              background: lighten($blue2, 5%);
-              border: 2px solid lighten($blue2, 5%);
-              color: darken($blue2, 15%);
-              -webkit-transition: all 0.5s ease;
-              transition: all 0.5s ease;
-              cursor: pointer;
+                background: lighten($blue2, 5%);
+                border: 2px solid lighten($blue2, 5%);
+                color: darken($blue2, 15%);
+                -webkit-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                cursor: pointer;
             }
         }
     }

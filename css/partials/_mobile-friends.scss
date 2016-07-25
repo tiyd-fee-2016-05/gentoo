@@ -1,0 +1,55 @@
+@media(max-width:767px) {
+
+  // Add friend profile
+  .friend-name {
+      top: -130px;
+  }
+  .content-details-remove {
+    width: 70%;
+  }
+
+
+
+
+    #friend-content {
+      margin: 8% 5%;
+      input {
+        width: 100%;
+        border-radius: 4px;
+      }
+      .accept {
+          background: lighten($blue2, 10%);
+          border: 2px solid lighten($blue2, 10%);
+          color: $white;
+          opacity: 1;
+      }
+      .deny {
+          background: lighten($red, 10%);
+          border: 2px solid lighten($red, 10%);
+          color: $white;
+          opacity: 1;
+      }
+        ul {
+            .friend-request {
+                width: 100%;
+                margin-top: 10px;
+                padding: 0 20px;
+                background: $blue2;
+                border: 2px solid $blue2;
+                border-radius: 5px;
+                letter-spacing: 1px;
+                overflow: hidden;
+                h2 {
+                  font: 700 22px / 24px $font;
+                  color: $white;
+                }
+            }
+
+            .friends-list {
+                width: 100%;
+                margin-top: 10px;
+                padding: 0 20px;
+            }
+        }
+    }
+}

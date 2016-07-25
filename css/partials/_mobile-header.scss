@@ -2,6 +2,9 @@
     body {
         font: 20px / 24px $font;
     }
+    .friend-photo {
+        height: 300px;
+    }
     header {
         text-align: center;
         .nav {
@@ -11,9 +14,9 @@
             .logo {
                 position: relative;
                 top: -26px;
-                left: -100%;
+                left: -80%;
                 margin: 0 auto;
-                font: 100px / 80px $logo;
+                font: 80px / 80px $logo;
                 text-align: center;
             }
             .fa-align-right {
@@ -22,7 +25,7 @@
                 left: 40%;
                 color: $white;
                 opacity: 0.8;
-                font-size: 30px;
+                font-size: 36px;
                 &:hover {
                     opacity: 1;
                     -webkit-transition: all 0.3s ease;
@@ -34,7 +37,7 @@
         nav {
             // menu that opens
             width: 70%;
-            height: 200px;
+            height: 300px;
             position: relative;
             top: -160px;
             left: 0;
@@ -58,7 +61,7 @@
                 margin: 10px 0;
                 padding: 6px 10px;
                 border: 2px solid $blue2;
-                border-radius: 10px;
+                border-radius: 5px;
                 font: 26px / 26px $font;
             }
             ul {
@@ -72,39 +75,39 @@
                     border: 2px solid lighten($blue2, 10%);
                     border-radius: 8px;
                     h1 {
-                        font: 700 30px / 30px $font;
+                        font: 700 20px / 20px $font;
                     }
                     p {
                         margin-left: 16px;
                         font: 700 20px / 20px $font;
                     }
                     a {
-                        font: 30px / 30px $font;
+                        font: 20px / 20px $font;
                     }
                 }
             }
         }
         .photo {
-            height: 250px;
+            height: 220px;
         }
         .profile-name {
             position: relative;
-            top: -120px;
+            top: -100px;
             left: 0;
             margin: 20px 5%;
-            font: 50px / 40px $font;
+            font: 40px / 30px $font;
             color: $white;
             i {
                 display: none;
             }
         }
         .edit-profile {
-            top: -130px;
-            font: 700 30px / 40px $font;
+            top: -120px;
+            font: 700 20px / 30px $font;
         }
         .unfriend {
-            top: -130px;
-            font: 700 30px / 40px $font;
+            top: -120px;
+            font: 700 20px / 30px $font;
         }
     }
 }

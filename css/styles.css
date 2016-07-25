@@ -1162,20 +1162,25 @@ h1 {
     margin-bottom: 10px;
     font: 24px/22px "Work Sans", sans-serif;
     color: #333; }
-  #friend-content p {
-    font-size: 16px; }
   #friend-content .pAccept {
-    color: #2C8C99; }
+    padding-bottom: 10px;
+    font: 18px/18px "Work Sans", sans-serif;
+    color: #fdf3df;
+    letter-spacing: 0; }
   #friend-content a {
+    padding-bottom: 10px;
     font-size: 16px;
     color: #121f2d; }
     #friend-content a:hover {
-      color: #2C8C99; }
+      color: #121f2d; }
   #friend-content .pDeny {
-    color: #611c35; }
+    padding-bottom: 10px;
+    font: 18px/18px "Work Sans", sans-serif;
+    color: #611c35;
+    letter-spacing: 0; }
   #friend-content button {
     background: transparent;
-    margin: 10px 10px;
+    margin: 10px;
     padding: 4px 20px;
     font: 700 18px/20px "Work Sans", sans-serif;
     color: #216871; }
@@ -1183,19 +1188,43 @@ h1 {
     border: 2px solid #2C8C99;
     color: #2C8C99; }
     #friend-content .accept:hover {
+      background: #216871;
       border: 2px solid #216871;
-      color: #216871; }
+      color: #fdf3df;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      cursor: pointer; }
   #friend-content .deny {
     border: 2px solid #611c35;
     color: #611c35; }
     #friend-content .deny:hover {
+      background: #39111f;
       border: 2px solid #39111f;
-      color: #39111f; }
+      color: #fdf3df;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      cursor: pointer; }
   #friend-content .uppercase {
     margin-left: 20px;
     font: 700 14px/10px "Work Sans", sans-serif;
     text-transform: uppercase; }
-  #friend-content ul li {
+  #friend-content ul h2 {
+    padding: 10px;
+    color: #fdf3df;
+    letter-spacing: 0; }
+  #friend-content ul .friend-request {
+    width: 40%;
+    margin-top: 10px;
+    padding: 0 20px;
+    background: none;
+    border: 2px solid #2C8C99;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    overflow: hidden; }
+    #friend-content ul .friend-request h2 {
+      font: 20px/22px "Work Sans", sans-serif;
+      color: #333; }
+  #friend-content ul .friends-list {
     width: 40%;
     margin-top: 10px;
     padding: 0 20px;
@@ -1204,18 +1233,19 @@ h1 {
     border-radius: 5px;
     letter-spacing: 1px;
     overflow: hidden; }
-    #friend-content ul li h1 {
+    #friend-content ul .friends-list h1 {
       font: 700 24px/10px "Work Sans", sans-serif;
       color: #fdf3df; }
-    #friend-content ul li p {
+    #friend-content ul .friends-list p {
       margin-left: 20px;
-      font: 18px/12px "Work Sans", sans-serif;
-      color: #216871; }
-    #friend-content ul li a {
+      font: 700 18px/12px "Work Sans", sans-serif;
+      color: #216871;
+      text-transform: uppercase; }
+    #friend-content ul .friends-list a {
       margin-left: 20px;
       font: 18px/12px "Work Sans", sans-serif;
       color: #fdf3df; }
-    #friend-content ul li:hover {
+    #friend-content ul .friends-list:hover {
       background: #329ead;
       border: 2px solid #329ead;
       color: #1b565e;
@@ -1227,6 +1257,9 @@ h1 {
   body {
     font: 20px/24px "Work Sans", sans-serif; }
 
+  .friend-photo {
+    height: 300px; }
+
   header {
     text-align: center; }
     header .nav {
@@ -1236,9 +1269,9 @@ h1 {
       header .nav .logo {
         position: relative;
         top: -26px;
-        left: -100%;
+        left: -80%;
         margin: 0 auto;
-        font: 100px/80px "Grand Hotel", cursive;
+        font: 80px/80px "Grand Hotel", cursive;
         text-align: center; }
       header .nav .fa-align-right {
         position: relative;
@@ -1246,7 +1279,7 @@ h1 {
         left: 40%;
         color: #fdf3df;
         opacity: 0.8;
-        font-size: 30px; }
+        font-size: 36px; }
         header .nav .fa-align-right:hover {
           opacity: 1;
           -webkit-transition: all 0.3s ease;
@@ -1254,7 +1287,7 @@ h1 {
           cursor: pointer; }
     header nav {
       width: 70%;
-      height: 200px;
+      height: 300px;
       position: relative;
       top: -160px;
       left: 0;
@@ -1275,7 +1308,7 @@ h1 {
         margin: 10px 0;
         padding: 6px 10px;
         border: 2px solid #2C8C99;
-        border-radius: 10px;
+        border-radius: 5px;
         font: 26px/26px "Work Sans", sans-serif; }
       header nav ul {
         margin-top: 10px; }
@@ -1288,28 +1321,66 @@ h1 {
           border: 2px solid #37b0c1;
           border-radius: 8px; }
           header nav ul li h1 {
-            font: 700 30px/30px "Work Sans", sans-serif; }
+            font: 700 20px/20px "Work Sans", sans-serif; }
           header nav ul li p {
             margin-left: 16px;
             font: 700 20px/20px "Work Sans", sans-serif; }
           header nav ul li a {
-            font: 30px/30px "Work Sans", sans-serif; }
+            font: 20px/20px "Work Sans", sans-serif; }
     header .photo {
-      height: 250px; }
+      height: 220px; }
     header .profile-name {
       position: relative;
-      top: -120px;
+      top: -100px;
       left: 0;
       margin: 20px 5%;
-      font: 50px/40px "Work Sans", sans-serif;
+      font: 40px/30px "Work Sans", sans-serif;
       color: #fdf3df; }
       header .profile-name i {
         display: none; }
     header .edit-profile {
-      top: -130px;
-      font: 700 30px/40px "Work Sans", sans-serif; }
+      top: -120px;
+      font: 700 20px/30px "Work Sans", sans-serif; }
     header .unfriend {
-      top: -130px;
-      font: 700 30px/40px "Work Sans", sans-serif; } }
+      top: -120px;
+      font: 700 20px/30px "Work Sans", sans-serif; } }
+@media (max-width: 767px) {
+  .friend-name {
+    top: -130px; }
+
+  .content-details-remove {
+    width: 70%; }
+
+  #friend-content {
+    margin: 8% 5%; }
+    #friend-content input {
+      width: 100%;
+      border-radius: 4px; }
+    #friend-content .accept {
+      background: #37b0c1;
+      border: 2px solid #37b0c1;
+      color: #fdf3df;
+      opacity: 1; }
+    #friend-content .deny {
+      background: #89274b;
+      border: 2px solid #89274b;
+      color: #fdf3df;
+      opacity: 1; }
+    #friend-content ul .friend-request {
+      width: 100%;
+      margin-top: 10px;
+      padding: 0 20px;
+      background: #2C8C99;
+      border: 2px solid #2C8C99;
+      border-radius: 5px;
+      letter-spacing: 1px;
+      overflow: hidden; }
+      #friend-content ul .friend-request h2 {
+        font: 700 22px/24px "Work Sans", sans-serif;
+        color: #fdf3df; }
+    #friend-content ul .friends-list {
+      width: 100%;
+      margin-top: 10px;
+      padding: 0 20px; } }
 
 /*# sourceMappingURL=styles.css.map */
