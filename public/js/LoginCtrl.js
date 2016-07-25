@@ -1,6 +1,6 @@
 gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
- var rootUrl= "http://6e62d5d1.ngrok.io/";
- // var rootUrl= "http://giftbox-tiy.herokuapp.com";
+ // var rootUrl= "http://6e62d5d1.ngrok.io/";
+ var rootUrl= "http://giftbox-tiy.herokuapp.com";
 
     $scope.submitForm = function() {
         formData = $scope.form;
