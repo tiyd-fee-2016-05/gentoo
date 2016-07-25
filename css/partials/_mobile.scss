@@ -1,39 +1,110 @@
-@media(max-width:767px){
-  body {
-    font: 20px / 24px $font;
-  }
-
-  header {
-      .nav {
-          width: 20px;
-          height: 10px;
-          position: absolute;
-          top: 40px;
-          right: 10%;
-          z-index: 5;
-          display: inline-block;
-          .logo {
-              font: 50px / 50px $logo;
-              color: $blue2;
-              -webkit-text-shadow: 2px 1px 0 darken($red, 20%);
-              -moz-text-shadow: 2px 1px 0 darken($red, 20%);
-              text-shadow: 2px 1px 0 darken($red, 20%);
-          }
-          .fa-align-right {
-              color: $white;
-              opacity: 0.8;
-              &:hover {
-                  opacity: 1;
-                  -webkit-transition: all 0.3s ease;
-                  transition: all 0.3s ease;
-                  cursor: pointer;
-              }
-          }
-      }
+@media(max-width:767px) {
+    body {
+        font: 20px / 24px $font;
     }
-    
-
-
-
-
+    header {
+        text-align: center;
+        .nav {
+            width: 150px;
+            height: 40px;
+            display: inline-block;
+            .logo {
+                position: relative;
+                top: -26px;
+                left: -100%;
+                margin: 0 auto;
+                font: 100px / 80px $logo;
+                text-align: center;
+            }
+            .fa-align-right {
+                position: relative;
+                top: 10px;
+                left: 40%;
+                color: $white;
+                opacity: 0.8;
+                font-size: 30px;
+                &:hover {
+                    opacity: 1;
+                    -webkit-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                }
+            }
+        }
+        nav {
+            // menu that opens
+            width: 70%;
+            height: 200px;
+            position: relative;
+            top: -160px;
+            left: 0;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid $blue2;
+            border-radius: 8px;
+            z-index: 10;
+            i {
+                margin-right: 10px;
+            }
+            .fa-search {
+                display: none;
+            }
+            a {
+                display: block;
+                font: 700 30px / 55px $font;
+            }
+            input {
+                width: 100%;
+                margin: 10px 0;
+                padding: 6px 10px;
+                border: 2px solid $blue2;
+                border-radius: 10px;
+                font: 26px / 26px $font;
+            }
+            ul {
+              margin-top: 10px;
+                li {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-top: 10px;
+                    padding: 10px;
+                    background: lighten($blue2, 10%);
+                    border: 2px solid lighten($blue2, 10%);
+                    border-radius: 8px;
+                    h1 {
+                        font: 700 30px / 30px $font;
+                    }
+                    p {
+                        margin-left: 16px;
+                        font: 700 20px / 20px $font;
+                    }
+                    a {
+                        font: 30px / 30px $font;
+                    }
+                }
+            }
+        }
+        .photo {
+            height: 250px;
+        }
+        .profile-name {
+            position: relative;
+            top: -120px;
+            left: 0;
+            margin: 20px 5%;
+            font: 50px / 40px $font;
+            color: $white;
+            i {
+                display: none;
+            }
+        }
+        .edit-profile {
+            top: -130px;
+            font: 700 30px / 40px $font;
+        }
+        .unfriend {
+            top: -130px;
+            font: 700 30px / 40px $font;
+        }
+    }
 }
