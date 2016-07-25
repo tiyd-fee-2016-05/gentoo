@@ -1236,9 +1236,9 @@ h1 {
       header .nav .logo {
         position: relative;
         top: -26px;
-        left: -100%;
+        left: -80%;
         margin: 0 auto;
-        font: 100px/80px "Grand Hotel", cursive;
+        font: 80px/80px "Grand Hotel", cursive;
         text-align: center; }
       header .nav .fa-align-right {
         position: relative;
@@ -1246,7 +1246,7 @@ h1 {
         left: 40%;
         color: #fdf3df;
         opacity: 0.8;
-        font-size: 30px; }
+        font-size: 36px; }
         header .nav .fa-align-right:hover {
           opacity: 1;
           -webkit-transition: all 0.3s ease;
@@ -1254,7 +1254,7 @@ h1 {
           cursor: pointer; }
     header nav {
       width: 70%;
-      height: 200px;
+      height: 300px;
       position: relative;
       top: -160px;
       left: 0;
@@ -1275,7 +1275,7 @@ h1 {
         margin: 10px 0;
         padding: 6px 10px;
         border: 2px solid #2C8C99;
-        border-radius: 10px;
+        border-radius: 5px;
         font: 26px/26px "Work Sans", sans-serif; }
       header nav ul {
         margin-top: 10px; }
@@ -1288,28 +1288,28 @@ h1 {
           border: 2px solid #37b0c1;
           border-radius: 8px; }
           header nav ul li h1 {
-            font: 700 30px/30px "Work Sans", sans-serif; }
+            font: 700 20px/20px "Work Sans", sans-serif; }
           header nav ul li p {
             margin-left: 16px;
             font: 700 20px/20px "Work Sans", sans-serif; }
           header nav ul li a {
-            font: 30px/30px "Work Sans", sans-serif; }
+            font: 20px/20px "Work Sans", sans-serif; }
     header .photo {
       height: 250px; }
     header .profile-name {
       position: relative;
-      top: -120px;
+      top: -110px;
       left: 0;
       margin: 20px 5%;
-      font: 50px/40px "Work Sans", sans-serif;
+      font: 40px/30px "Work Sans", sans-serif;
       color: #fdf3df; }
       header .profile-name i {
         display: none; }
     header .edit-profile {
       top: -130px;
-      font: 700 30px/40px "Work Sans", sans-serif; }
+      font: 700 20px/30px "Work Sans", sans-serif; }
     header .unfriend {
       top: -130px;
-      font: 700 30px/40px "Work Sans", sans-serif; } }
+      font: 700 20px/30px "Work Sans", sans-serif; } }
 
 /*# sourceMappingURL=styles.css.map */
