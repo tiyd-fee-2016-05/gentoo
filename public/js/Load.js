@@ -1,15 +1,8 @@
-gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
- var rootUrl= "http://6e62d5d1.ngrok.io/";
- // var rootUrl= "http://giftbox-tiy.herokuapp.com";
+gentooApp.controller('LoadCtrl', function ($rootScope, $scope, $http) {
+ // var rootUrl= "http://6e62d5d1.ngrok.io/";
+ var rootUrl= "http://giftbox-tiy.herokuapp.com";
 
-    $scope.submitForm = function() {
-        formData = $scope.form;
-        var username = $('.userlogin[name="login_username"]').val();
-        $rootScope.username = username
-        console.log(username);
-
-
-
+    $scope.generalLoad = function() {
         $http({
             url:  rootUrl + "/" + username+ "/friends",
          method: "GET",
@@ -32,6 +25,7 @@ gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
 
 
         $http({
+        //  url:  "http://58a85897.ngrok.io/" + username+ "/profile",
             url:  rootUrl+ "/" + username+ "/profile",
          method: "GET",
          headers: {'Authorization': username},

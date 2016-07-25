@@ -1,5 +1,5 @@
 gentooApp.controller('SignupCtrl', function ($scope, $http) {
-    $scope.submitForm = function() {
+    $scope.createNewUser = function() {
         console.log("posting data....");
         newUserData = $scope.newUser;
         var username = $('.usercreate[name="create_username"]').val()

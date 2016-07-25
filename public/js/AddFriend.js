@@ -2,10 +2,10 @@ gentooApp.controller('AddFriendCtrl', function ($scope, $http) {
     $scope.addFriend = function() {
       $http({
         method: 'POST',
-            url: 'http://58a85897.ngrok.io/sinovia/friends',
-                  //  url: 'https://giftbox-tiy.herokuapp.com/friends',
+            // url: 'http://58a85897.ngrok.io/sinovia/friends',
+                  //  url: 'https://giftbox-tiy.herokuapp.com/sinovia/friends',
             headers: {'Authorization': 'sinovia'},
-            params: {"requested_friend" : "nastassia"},
+            params: {"requested_friend" : "vega"},
       }).success(function successCallback(response) {
               // console.log(response);
 
@@ -21,8 +21,8 @@ gentooApp.controller('AcceptFriendCtrl', function ($scope, $http) {
     $scope.acceptFriend = function() {
       $http({
         method: 'POST',
-            url: 'http://58a85897.ngrok.io/sinovia/friends/accept',
-                  //  url: 'https://giftbox-tiy.herokuapp.com/friends/accept',
+            url: 'http://6e62d5d1.ngrok.io/sinovia/friends/accept',
+        //  url: 'https://giftbox-tiy.herokuapp.com/sinovia/friends/accept',
             headers: {'Authorization': 'sinovia'},
             params: {"accepted_friend" : "vega"},
       }).success(function successCallback(response) {

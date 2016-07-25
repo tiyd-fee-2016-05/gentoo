@@ -52,6 +52,13 @@
                 padding-left: 5px;
                 font-size: 14px;
             }
+            &:hover {
+              background: darken($blue2, 10%);
+              color: $white;
+              cursor: pointer;
+              -webkit-transition: all 0.7s ease;
+              transition: all 0.7s ease;
+            }
         }
         .signup-button {
             background: transparent;
@@ -64,11 +71,17 @@
                 padding-left: 5px;
                 font-size: 14px;
             }
+            &:hover {
+              background: darken($teal, 10%);
+              color: $white;
+              cursor: pointer;
+              -webkit-transition: all 0.7s ease;
+              transition: all 0.7s ease;
+            }
         }
-        button:hover {
-            border: 2px solid $white;
-            color: $white;
-
-        }
+        // button:hover {
+        //     border: 2px solid $white;
+        //     color: $white;
+        // }
     }
 }

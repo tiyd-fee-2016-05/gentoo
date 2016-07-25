@@ -1,6 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Grand+Hotel|Work+Sans:400,700';
 
-
 // Fonts
 $logo: 'Grand Hotel', cursive;
 $font: 'Work Sans', sans-serif; //400,700
@@ -16,42 +15,86 @@ $red: #611c35;
 $teal: #42D9C8;
 
 
-
 body {
-  background: $white;
-  -webkit-font-smoothing: antialiased;
-  font: 18px / 22px $font;
-  color: $black;
-
+    background: $white;
+    -webkit-font-smoothing: antialiased;
+    font: 18px / 22px $font;
+    color: $black;
 }
+.red{
+    color:red;
+}
+
+.blue{
+    color:blue;
+}
+
+
 a {
-  text-decoration: none;
-  color: $red;
-  &:hover {
     text-decoration: none;
-    -webkit-transition: all 0.7s ease;
-    transition: all 0.7s ease;
-    cursor: pointer;
-  }
+    color: $red;
+    &:hover {
+        text-decoration: none;
+        -webkit-transition: all 0.7s ease;
+        transition: all 0.7s ease;
+        cursor: pointer;
+    }
 }
 button {
-  border-radius: 70px;
-  opacity: 0.8;
+    border-radius: 70px;
+    opacity: 0.8;
 }
-button:hover{
-  opacity: 1;
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
-  cursor: pointer;
-}
-button:focus {
-  outline: 0;
-}
+button:hover {
+    opacity: 1;
 
+    // -webkit-transition: all 0.7s ease;
+    // transition: all 0.7s ease;
+    // cursor: pointer;
+}
+// @keyframes create-ripple {
+//   0% {
+//     opacity: 1;
+//     transform: scale(0);
+//   }
+//
+//   50% {
+//     opacity: 1;
+//   }
+//
+//   100% {
+//     opacity: 0;
+//     transform: scale(1);
+//   }
+// }
+// .ripple {
+//   z-index: -1;
+//   position: absolute;
+//   top: -30%;
+//   left: -30%;
+//   right: -30%;
+//   bottom: -30%;
+//   border-radius: 50%;
+//   background-color: rgba(0, 0, 0, 0.3);
+//   animation: create-ripple 0.3s cubic-bezier(0, 0, 0.3, 1) forwards;
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     top: -15%;
+//     left: -15%;
+//     right: -15%;
+//     bottom: -15%;
+//     border-radius: 50%;
+//     background-color: transparent;
+//     border: 3px solid rgba(0, 0, 0, 0.3);
+//   }
+// }
+button:focus {
+    outline: 0;
+}
 
 @import "partials/header";
 @import "partials/forms";
-@import "partials/menu";
+@import "partials/jquery.toolbar";
 @import "partials/login";
 @import "partials/profile";
 @import "partials/add-friend";

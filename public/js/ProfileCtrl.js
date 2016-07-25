@@ -20,4 +20,14 @@ gentooApp.controller('ProfileCtrl', function ($scope, $http) {
 
     };
 
+    $scope.class = "red";
+
+    $scope.changeClass = function(){
+        if ($scope.class === "red")
+            $scope.class = "blue";
+         else
+            $scope.class = "red";
+    };
+
+    
  });

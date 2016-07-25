@@ -3,18 +3,24 @@
     <div id="profile-main-container">
 
         <header>
+            <nav>
+              <div class="btn-toolbar" toolbar-tip="{content: '#toolbar-options', position: 'bottom', style: 'primary', animation: 'flip'}" id="format-toolbar">
+                  <i class="fa fa-align-right fa-2x" aria-hidden="true"></i>
+              </div>
 
-          <nav ng-show="showmenu">
-            <a href="#/friends" class="animated bounceInLeft"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a>
-            <a href="#/login"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a>
-          </nav>
+              <div id="toolbar-options">
+                 <a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                 <a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+              </div><!-- some will have profile link! -->
+
+
+              <a href="#/login"><h1 class="logo">Gentoo</h1></a>
+
+            </nav>
 
             <section class="friend-photo">
             </section>
 
-            <i class="fa fa-align-left fa-2x" aria-hidden="true" ng-click="showmenu=true"></i>
-
-            <a href="#/login"><h1 class="logo">Gentoo</h1></a>
             <h1 class="friend-name"> {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}Nastassia Troyer</h1>
 
         </header>

@@ -11,11 +11,9 @@
     background-size: cover;
     background-blend-mode: multiply;
 }
-
 h1 {
-  color: $red;
+    color: $red;
 }
-
 .friend-name {
     position: relative;
     top: -180px;
@@ -30,14 +28,11 @@ h1 {
         color: $blue2;
     }
 }
-
-
 .content-add-friend {
     position: relative;
     top: -160px;
     left: 0;
     text-align: center;
-
     .friend-button {
         opacity: 1;
         background: lighten($red, 5%);
@@ -75,5 +70,4 @@ h1 {
     font: 700 18px / 22px $font;
     color: $black;
     text-align: center;
-
 }
