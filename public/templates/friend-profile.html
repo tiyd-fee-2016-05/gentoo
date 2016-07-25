@@ -1,28 +1,30 @@
 <!-- Profile View -->
 <div id="container">
-    <div id="profile-main-container" ng-controller="LoadCtrl">
+    <div id="profile-main-container" ng-controller="LoginCtrl">
 
         <header>
-
             <section class="photo">
             </section>
+
 
             <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i>
            {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
 
-            <a href="#/add-friend"><h1 class="unfriend">UnFriend</h1></a>
+            <a href="#/profile-edit"><h1 class="unfriend">Unfriend</h1></a>
 
-            <nav>
+
+
+            <nav class="nav">
               <div class="btn-toolbar" toolbar-tip="{content: '#toolbar-options', position: 'bottom', style: 'primary', animation: 'flip'}" id="format-toolbar">
-                  <i class="fa fa-align-right fa-2x" aria-hidden="true"></i>
+                  <!-- <i class="fa fa-align-right fa-2x" aria-hidden="true"></i> -->
+                  <h1 class="logo">Gentoo</h1>
               </div>
 
               <div id="toolbar-options">
-                 <a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i></a>
-                 <a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-              </div><!-- some will have profile link! -->
-
-              <a href="#/login"><h1 class="logo">Gentoo</h1></a>
+                 <a href="#">profile <i class="fa fa-user" aria-hidden="true"></i></a>
+                 <a href="#">friends <i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                 <a href="#">logout <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
             </nav>
         </header>
 
@@ -62,27 +64,47 @@
 
 
         <section class="lists content-list">
-            <h1 class="list-name">Wishlist for Christmas <i class="fa fa-plus add-list" aria-hidden="true"></i></h1>
+            <div class="list-header">
+              <h1 class="list-name">Wishlist</h1>
+
+              <h1 class="add-list">add new wishlist <i class="fa fa-plus fa-lg" aria-hidden="true"></i></h1>
+            </div>
+
             <ul>
                 <li>
-                    <h1>Purple Socks</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
                 </li>
                 <li>
-                    <h1>Blue Socks</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
                 </li>
                 <li>
-                    <h1>Red Socks</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
                 </li>
                 <li>
-                    <h1>Green Socks</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
                 </li>
                 <li>
-                    <h1>Orange Socks</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
+                </li>
+                <li>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
+                </li>
+                <li>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
                 </li>
                 <li>
                     <i class="fa fa-plus fa-3x" aria-hidden="true"></i>
@@ -91,37 +113,88 @@
             </ul>
         </section>
 
-        <section class="lists friend-list">
+        <section class="lists content-list">
+            <div class="list-header">
+              <h1 class="list-name">Wishlist</h1>
+
+              <h1 class="add-list">add new wishlist <i class="fa fa-plus fa-lg" aria-hidden="true"></i></h1>
+            </div>
+
+            <ul>
+                <li>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
+                </li>
+                <li>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
+                </li>
+                <li>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
+                </li>
+                <li>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
+                </li>
+                <li>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
+                </li>
+                <li>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
+                </li>
+                <li>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
+                </li>
+                <li>
+                    <i class="fa fa-plus fa-3x" aria-hidden="true"></i>
+
+                </li>
+            </ul>
+        </section>
+
+
+
+
+        <!-- <section class="lists friend-list">
             <a href="#/friends"><h1 class="friends-list">Friends</h1></a>
             <ul>
                 <li>
-                    <a href="#/add-friend">
+                    <a href="#/add-friend">-->
                         <!-- <h2>user photo here</h2> -->
-                        <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                        <!-- <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                         <h1>{{loadedprofile.user.first_name}}</h1>
                         <h1>{{loadedprofile.user.last_name}}</h1>
                     </a>
                 </li>
                 <li>
-                    <a href="#/add-friend">
+                    <a href="#/add-friend"> -->
                         <!-- <h2>user photo here</h2> -->
-                        <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                        <!-- <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                         <h1>{{loadedprofile.user.first_name}}</h1>
                         <h1>{{loadedprofile.user.last_name}}</h1>
                     </a>
                 </li>
                 <li>
-                    <a href="#/add-friend">
+                    <a href="#/add-friend"> -->
                         <!-- <h2>user photo here</h2> -->
-                        <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                        <!-- <i class="fa fa-user fa-2x" aria-hidden="true"></i>
                         <h1>{{loadedprofile.user.first_name}}</h1>
                         <h1>{{loadedprofile.user.last_name}}</h1>
                     </a>
                 </li>
-
-
             </ul>
-        </section>
+        </section> -->
 
         <!-- <section class="lists content-list-new">
             <h1><i class="fa fa-plus" aria-hidden="true"></i> Add new list</h1> -->

@@ -3,13 +3,13 @@
       font-weight: 700;
     }
 }
+
 .save-profile {
-    position: absolute;
-    top: 75px;
-    right: 5%;
-    z-index: 5;
-    margin: 5px 0 5px 50px;
-    font: 700 14px / 22px $font;
+    position: relative;
+    top: -105px;
+    left: 0;
+    margin: 5px 5%;
+    font: 700 12px / 22px $font;
     color: $blue2;
     text-transform: uppercase;
     i {
@@ -25,29 +25,29 @@
     margin: 50px auto;
     text-align: center;
     .profile-submit-button {
-        background: $blue2;
-        border: 2px solid $blue2;
+        background: $red;
+        border: 2px solid $red;
         border-radius: 10px;
         margin: auto;
         padding: 5px 10% 8px;
         font: 700 18px / 20px $font;
-        color: darken($blue2, 15%);
+        color: darken($red, 15%);
         text-transform: uppercase;
         text-align: center;
         opacity: 1;
         i {
             font-size: 14px;
-            color: darken($blue2, 15%);
+            color: darken($red, 15%);
         }
         &:hover {
-            background: darken($blue2, 5%);
-            border: 2px solid darken($blue2, 5%);
-            color: darken($blue2, 25%);
+            background: darken($red, 5%);
+            border: 2px solid darken($red, 5%);
+            color: darken($red, 25%);
             -webkit-transition: all 0.7s ease;
             transition: all 0.7s ease;
             cursor: pointer;
             i {
-                color: darken($blue2, 25%);
+                color: darken($red, 25%);
                 -webkit-transition: all 0.7s ease;
                 transition: all 0.7s ease;
             }

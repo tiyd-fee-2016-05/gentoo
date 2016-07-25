@@ -30,27 +30,23 @@ button:hover {
 button:focus {
   outline: 0; }
 
+header .nav {
+  width: 20px;
+  height: 10px;
+  position: absolute;
+  top: 40px;
+  right: 10%;
+  z-index: 5; }
 header nav {
-  width: 50px;
-  height: -410px;
-  position: relative;
-  top: 0;
-  left: 80%; }
+  width: 20px;
+  height: 10px;
+  position: absolute;
+  top: 40px;
+  right: 12%; }
   header nav #toolbar-options {
     display: none; }
   header nav .logo {
-    font: 50px/150px "Grand Hotel", cursive;
-    color: #2C8C99;
-    -webkit-text-shadow: 2px 1px 0 #12050a;
-    -moz-text-shadow: 2px 1px 0 #12050a;
-    text-shadow: 2px 1px 0 #12050a; }
-  header nav .profile-logo {
-    width: 20px;
-    height: 10px;
-    position: relative;
-    top: -210px;
-    left: 80%;
-    font: 50px/150px "Grand Hotel", cursive;
+    font: 50px/50px "Grand Hotel", cursive;
     color: #2C8C99;
     -webkit-text-shadow: 2px 1px 0 #12050a;
     -moz-text-shadow: 2px 1px 0 #12050a;
@@ -90,11 +86,11 @@ header .edit-profile {
     transition: all 0.7s ease; }
 header .unfriend {
   position: relative;
-  top: -135px;
+  top: -105px;
   left: 0;
   margin: 5px 5%;
   font: 700 12px/22px "Work Sans", sans-serif;
-  color: #89274b;
+  color: #fdf3df;
   text-transform: uppercase; }
   header .unfriend:hover {
     color: #611c35;
@@ -471,12 +467,10 @@ header .unfriend {
 
 .btn-toolbar {
   /*main menu circle*/
-  background: #2C8C99;
-  width: 20px;
-  height: 20px;
+  width: 100px;
+  height: 50px;
   text-align: center;
-  padding: 15px;
-  border-radius: 50%;
+  border-radius: 5px;
   display: block;
   transition: none; }
 
@@ -485,23 +479,10 @@ header .unfriend {
   font-size: 20px; }
 
 .btn-toolbar:hover {
-  background: #2C8C99;
   cursor: pointer; }
 
 .btn-toolbar:hover > i {
   color: #333; }
-
-.btn-toolbar-primary {
-  background-color: #2C8C99; }
-
-.btn-toolbar-primary.pressed {
-  background-color: #42D9C8; }
-
-.btn-toolbar-primary:hover {
-  background-color: #42D9C8; }
-
-.btn-toolbar-primary > i {
-  color: #fdf0d5; }
 
 .tool-container {
   /*menu that opens*/
@@ -524,7 +505,7 @@ header .unfriend {
 .tool-item {
   height: 100%;
   display: block;
-  width: 20px;
+  width: 90px;
   height: 20px;
   text-align: center;
   padding: 10px;
@@ -702,7 +683,7 @@ header .unfriend {
     margin: 10% auto;
     text-align: center; }
     #container1 #login-container .logo {
-      font: 50px/150px "Grand Hotel", cursive;
+      font: 50px/120px "Grand Hotel", cursive;
       color: #2C8C99;
       -webkit-text-shadow: 2px 1px 0 black;
       -moz-text-shadow: 2px 1px 0 black;
@@ -761,7 +742,6 @@ header .unfriend {
   top: 0;
   left: 0; }
   #container #profile-main-container {
-    height: 50%;
     margin: 0 auto; }
     #container #profile-main-container .content {
       width: 90%;
@@ -778,11 +758,10 @@ header .unfriend {
         display: inline-block; }
       #container #profile-main-container .content .profile-interests {
         display: inline-block;
-        font: 700 16px/20px "Work Sans", sans-serif;
         text-align: left; }
     #container #profile-main-container .content-main {
       position: relative;
-      top: -100px;
+      top: -60px;
       left: 0;
       margin-left: 5%; }
       #container #profile-main-container .content-main .user-photo {
@@ -806,7 +785,7 @@ header .unfriend {
         color: #333; }
     #container #profile-main-container .content-details {
       position: relative;
-      top: -100px;
+      top: -50px;
       left: 0;
       margin-left: 5%; }
       #container #profile-main-container .content-details h1 {
@@ -821,10 +800,22 @@ header .unfriend {
         display: inline-block;
         font: 18px/20px "Work Sans", sans-serif;
         color: #333; }
+    #container #profile-main-container .add-list {
+      float: right;
+      padding: 15px 5%;
+      font: 700 18px/22px "Work Sans", sans-serif;
+      color: #15444a; }
+      #container #profile-main-container .add-list i {
+        padding-left: 10px; }
+      #container #profile-main-container .add-list:hover {
+        color: #216871;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        cursor: pointer; }
     #container #profile-main-container .lists {
       width: 100%;
-      height: 245px;
-      margin: 0 0 150px;
+      height: 210px;
+      margin: 0 0 40px;
       background: #2C8C99; }
       #container #profile-main-container .lists .list-header {
         border-bottom: 2px solid #216871; }
@@ -832,21 +823,9 @@ header .unfriend {
         padding: 15px 5%;
         font: 700 18px/22px "Work Sans", sans-serif;
         color: #15444a; }
-      #container #profile-main-container .lists .add-list {
-        float: right;
-        padding: 15px 5%;
-        font: 700 18px/22px "Work Sans", sans-serif;
-        color: #15444a; }
-        #container #profile-main-container .lists .add-list i {
-          padding-left: 10px; }
-        #container #profile-main-container .lists .add-list:hover {
-          color: #216871;
-          -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
-          cursor: pointer; }
       #container #profile-main-container .lists ul {
         width: 90%;
-        margin: 0 5%;
+        margin: 10px 5%;
         white-space: nowrap;
         overflow-y: hidden;
         overflow-x: scroll; }
@@ -898,18 +877,17 @@ h1 {
 
 .friend-name {
   position: relative;
-  top: -180px;
+  top: -150px;
   margin: auto;
   font-size: 40px;
   color: #fdf3df;
-  text-align: center;
-  z-index: 5; }
+  text-align: center; }
   .friend-name i {
     color: #2C8C99; }
 
 .content-add-friend {
   position: relative;
-  top: -160px;
+  top: -120px;
   left: 0;
   text-align: center; }
   .content-add-friend .friend-button {
@@ -935,11 +913,18 @@ h1 {
     padding: 45px 20px;
     font: 700 16px/22px "Work Sans", sans-serif;
     color: #39111f;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    opacity: 1; }
+    .content-add-friend .pending-friend-button:hover {
+      background: #611c35;
+      border: 2px solid #611c35;
+      color: #260b15;
+      -webkit-transition: all 0.6s ease;
+      transition: all 0.6s ease; }
 
 .content-details-remove {
   position: relative;
-  top: -120px;
+  top: -100px;
   left: 0;
   margin: 50px;
   text-align: center;
@@ -951,12 +936,11 @@ h1 {
   font-weight: 700; }
 
 .save-profile {
-  position: absolute;
-  top: 75px;
-  right: 5%;
-  z-index: 5;
-  margin: 5px 0 5px 50px;
-  font: 700 14px/22px "Work Sans", sans-serif;
+  position: relative;
+  top: -105px;
+  left: 0;
+  margin: 5px 5%;
+  font: 700 12px/22px "Work Sans", sans-serif;
   color: #2C8C99;
   text-transform: uppercase; }
   .save-profile i {
@@ -970,28 +954,28 @@ h1 {
   margin: 50px auto;
   text-align: center; }
   .section-save-button .profile-submit-button {
-    background: #2C8C99;
-    border: 2px solid #2C8C99;
+    background: #611c35;
+    border: 2px solid #611c35;
     border-radius: 10px;
     margin: auto;
     padding: 5px 10% 8px;
     font: 700 18px/20px "Work Sans", sans-serif;
-    color: #1b565e;
+    color: #260b15;
     text-transform: uppercase;
     text-align: center;
     opacity: 1; }
     .section-save-button .profile-submit-button i {
       font-size: 14px;
-      color: #1b565e; }
+      color: #260b15; }
     .section-save-button .profile-submit-button:hover {
-      background: #267a85;
-      border: 2px solid #267a85;
-      color: #103136;
+      background: #4d162a;
+      border: 2px solid #4d162a;
+      color: black;
       -webkit-transition: all 0.7s ease;
       transition: all 0.7s ease;
       cursor: pointer; }
       .section-save-button .profile-submit-button:hover i {
-        color: #103136;
+        color: black;
         -webkit-transition: all 0.7s ease;
         transition: all 0.7s ease; }
 

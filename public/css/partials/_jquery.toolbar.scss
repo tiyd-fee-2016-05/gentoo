@@ -6,12 +6,12 @@
 }
 
 .btn-toolbar { /*main menu circle*/
-  background: #2C8C99;
-  width: 20px;
-  height: 20px;
+  // background: #2C8C99;
+  width: 100px;
+  height: 50px;
   text-align: center;
-  padding: 15px;
-  border-radius: 50%;
+  // padding: 15px;
+  border-radius: 5px;
   display: block;
   transition: none;
 }
@@ -20,24 +20,24 @@
   font-size: 20px;
 }
 .btn-toolbar:hover {
-  background: #2C8C99;
+  // background: #2C8C99;
   cursor: pointer;
 }
 .btn-toolbar:hover > i {
   color: #333;
 }
-.btn-toolbar-primary {
-  background-color: #2C8C99;
-}
-.btn-toolbar-primary.pressed {
-  background-color: #42D9C8;
-}
-.btn-toolbar-primary:hover {
-  background-color: #42D9C8;
-}
-.btn-toolbar-primary > i {
-  color: #fdf0d5;
-}
+// .btn-toolbar-primary {
+//   background-color: #2C8C99;
+// }
+// .btn-toolbar-primary.pressed {
+//   background-color: #42D9C8;
+// }
+// .btn-toolbar-primary:hover {
+//   background-color: #42D9C8;
+// }
+// .btn-toolbar-primary > i {
+//   color: #fdf0d5;
+// }
 
 .tool-container { /*menu that opens*/
   background-color: #2C8C99;
@@ -59,7 +59,7 @@
 .tool-item {
   height: 100%;
   display: block;
-  width: 20px;
+  width: 90px;
   height: 20px;
   text-align: center;
   padding: 10px;

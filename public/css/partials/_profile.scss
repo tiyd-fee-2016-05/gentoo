@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     #profile-main-container {
-        height: 50%;
+        // height: 20%;
         margin: 0 auto;
         .content {
             width: 90%;
@@ -28,14 +28,12 @@
             }
             .profile-interests {
                 display: inline-block;
-                font: 700 16px / 20px $font;
-                // text-transform: uppercase;
                 text-align: left;
             }
         }
         .content-main {
             position: relative;
-            top: -100px;
+            top: -60px;
             left: 0;
             margin-left: 5%;
             .user-photo {
@@ -65,7 +63,7 @@
         }
         .content-details {
             position: relative;
-            top: -100px;
+            top: -50px;
             left: 0;
             margin-left: 5%;
             h1 {
@@ -84,10 +82,26 @@
                 color: $black;
             }
         }
+        .add-list {
+          float: right;
+          padding: 15px 5%;
+          font: 700 18px / 22px $font;
+          color: darken($blue2, 20%);
+
+          i {
+            padding-left: 10px;
+          }
+          &:hover {
+            color: darken($blue2, 10%);
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
+          }
+        }
         .lists {
           width: 100%;
-          height: 245px;
-          margin: 0 0 150px;
+          height: 210px;
+          margin: 0 0 40px; //changes the distance between lists
           background: $blue2;
           // border: 2px solid red;
           .list-header {
@@ -98,26 +112,10 @@
                 font: 700 18px / 22px $font;
                 color: darken($blue2, 20%);
             }
-            .add-list {
-              float: right;
-              padding: 15px 5%;
-              font: 700 18px / 22px $font;
-              color: darken($blue2, 20%);
 
-              i {
-                padding-left: 10px;
-              }
-              &:hover {
-                color: darken($blue2, 10%);
-                -webkit-transition: all 0.3s ease;
-                transition: all 0.3s ease;
-                cursor: pointer;
-              }
-            }
             ul {
                 width: 90%;
-                // height: 160px;
-                margin: 0 5%;
+                margin: 10px 5%;
                 white-space: nowrap;
                 overflow-y: hidden;
                 overflow-x: scroll;
@@ -160,57 +158,5 @@
                 }
             }
         }
-        // .friend-list {
-        //     width: 100%;
-        //     height: 40px;
-        //     margin: 50px 0 150px;
-        //     background: $red;
-        //     ul {
-        //         width: 90%;
-        //         height: 120px;
-        //         margin: 0 5%;
-        //         white-space: nowrap;
-        //         overflow-y: hidden;
-        //         overflow-x: scroll;
-        //         // border: 2px solid red;
-        //         li {
-        //             display: inline-block;
-        //             vertical-align: middle;
-        //             width: 140px;
-        //             height: 100px;
-        //             margin: 5px;
-        //             background: $red;
-        //             text-align: center;
-        //             border-radius: 5px;
-        //             &:hover {
-        //                 opacity: 0.8;
-        //             }
-        //             h1 {
-        //                 color: darken($red, 20%);
-        //             }
-        //             h2 {
-        //                 color: darken($red, 20%);
-        //             }
-        //             .fa-heart {
-        //                 color: darken($red, 20%);
-        //             }
-        //             .fa-plus {
-        //                 padding-top: 15%;
-        //                 color: darken($red, 20%);
-        //             }
-        //             .fa-user {
-        //               color: darken($red, 10%);
-        //             }
-        //         }
-        //     }
-        // }
-        // .content-list-new {
-        //     position: relative;
-        //
-        //     width: 100%;
-        //     height: 40px;
-        //     margin: 150px 0;
-        //     background: $blue2;
-        // }
     }
 }
