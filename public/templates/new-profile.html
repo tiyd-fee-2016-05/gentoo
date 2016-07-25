@@ -1,0 +1,47 @@
+<!-- Sign-Up Screen -->
+    <div id="container1">
+        <div id="login-container">
+
+            <a href="#/login"><h1 class="logo"> Gentoo</h1></a>
+            <h2>New Profile</h2>
+            <p>Give with Love. <br> Shop with Confidence.<br><br>
+
+              Gentoo provides the information you need to give the perfect gift everytime.
+            </p>
+
+            <form ng-controller="NewProfileCtrl" ng-submit="submitNewProfile()">
+                <section class="content">
+                    <span class="input input--hoshi">
+                  					<input name="login_username" class="input__field input__field--hoshi userlogin" type="text" id="input-1" / ng-model="form.birthday.dob_month">
+                  					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
+                  						<span class="input__label-content input__label-content--hoshi">Birthday Month</span>
+
+                    </label>
+                    </span><br>
+
+                    <span class="input input--hoshi">
+                            <input name="login_username" class="input__field input__field--hoshi userlogin" type="text" id="input-1" / ng-model="form.birthday.dob_day">
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
+                              <span class="input__label-content input__label-content--hoshi">Birthday Day</span>
+
+                    </label>
+                    </span><br>
+
+                    <span class="input input--hoshi">
+                            <input name="login_username" class="input__field input__field--hoshi userlogin" type="text" id="input-1" / ng-model="form.birthday.dob_year">
+                            <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
+                              <span class="input__label-content input__label-content--hoshi">Birthday Year</span>
+
+                    </label>
+                    </span><br>
+
+                    <input type="checkbox" ng-model="form.holidays.Christmas"> Christmas
+                    <input type="checkbox" ng-model="form.holidays.NewYears"> New Year's Eve
+                    <input type="checkbox" ng-model="form.holidays.Halloween"> Halloween
+                    <input type="checkbox" ng-model="form.holidays.Thanksgiving"> Thanksgiving<br>
+
+
+                      <button class="login-button" type="submit" name="button">send <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+
+          </div>
+        </div>
