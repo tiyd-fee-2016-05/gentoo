@@ -1,7 +1,7 @@
 gentooApp.controller('NewProfileCtrl', function ($rootScope, $scope, $http) {
  var rootUrl= "http://6e62d5d1.ngrok.io/";
  // var rootUrl= "http://giftbox-tiy.herokuapp.com";
- var username= "karolann";
+ var username= "sinovia";
 
     $scope.submitNewProfile = function() {
         ProfileData = $scope.form;

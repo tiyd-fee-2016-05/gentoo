@@ -1,6 +1,6 @@
 gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
- // var rootUrl= "http://6e62d5d1.ngrok.io/";
- var rootUrl= "http://giftbox-tiy.herokuapp.com";
+ var rootUrl= "http://6e62d5d1.ngrok.io/";
+ // var rootUrl= "http://giftbox-tiy.herokuapp.com";
 
     $scope.submitForm = function() {
         formData = $scope.form;
@@ -28,14 +28,22 @@ gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
          });//End GET request for friends
 
 
+
+
+
         $http({
-        //  url:  "http://58a85897.ngrok.io/" + username+ "/profile",
             url:  rootUrl+ "/" + username+ "/profile",
          method: "GET",
          headers: {'Authorization': username},
          params: {formData}
      }).success(function (data, status, headers, config) {
+       console.log("Profile Information for " + username);
+       console.log(data);
            $rootScope.loadedprofile= data;
+           $rootScope.holidayList = data.user.holidays
+           $rootScope.interestList = data.user.interests
+            $rootScope.colorList = data.user.colors
+
        window.location = "#/home";
          }).error(function (data, status, headers, config) {
              $scope.status = status;

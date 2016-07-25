@@ -81,19 +81,20 @@
         </section>
 
         <section class="content content-details">
-            <span>Favorite Holidays</span>
-            <h2 class="profile-holidays">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}</h2>
-        </section>
+              <span>Favorite Holidays</span>
+              <!-- <h2 class="profile-holidays">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}</h2> -->
+                <h2 class="profile-holidays" ng-repeat="holiday in holidayList">{{holiday}} </h2>
+          </section>
 
-        <section class="content content-details">
-            <span>Interests</span>
-            <h2 class="profile-interests">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}, {{loadedprofile.user.holidays[3]}}, {{loadedprofile.user.holidays[4]}}</h2>
-        </section>
+          <section class="content content-details">
+                  <span>Interests</span>
+                  <!-- <h2 class="profile-holidays">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}</h2> -->
+                    <h2 class="profile-holidays" ng-repeat="interest in interestList">{{interest}}  </h2>
 
-        <section class="content content-details">
-            <span>Favorite Colors</span>
-            <h2 class="profile-colors">{{loadedprofile.user.colors[0]}}</h2>
-        </section>
+                    <section class="content content-details">
+                         <span>Favorite Colors</span>
+                         <h2 class="profile-colors" ng-repeat="color in colorList ">{{color}}</h2>
+                     </section>
 
         <!-- <form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
         Username    <br/><input type="text" ng-model="form.username">    <br/><br/>
