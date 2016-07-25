@@ -1,0 +1,169 @@
+
+
+
+
+
+
+
+// .animate-enter {
+// 	-webkit-transition: 1s linear all; /* Chrome */
+// 	transition: 1s linear all;
+// 	opacity: 0;
+// }
+//
+// .animate-enter.animate-enter-active {
+// 	opacity: 1;
+// }
+//
+//
+//
+//
+//
+//
+//
+// .menu-espanso {
+//   background-color: transparent;
+//   position: fixed;
+// 	width: 340px;
+//   height:100%;
+//   top: 0;
+//   left: 0;
+//   overflow: hidden !important;
+//   z-index: 5;
+// }
+//
+// .menu,
+// .linee {
+//   cursor: pointer;
+// }
+//
+// .menu {
+//   margin: 15px 0 0 15px;
+//   height: 49px;
+//   width: 49px;
+//   border-radius: 50%;
+//   background-color: $blue2;
+//   border: none;
+//   transition: all 0.40s ease-out;
+// }
+//
+// .over {
+//   transform: scale(100);
+//   transition: all 0.350s ease-in;
+//   cursor: default;
+// }
+//
+// .linea1 {
+//   background: #fff;
+//   height: 2px;
+//   width: 15px;
+//   position: absolute;
+//   left: 33px;
+//   top: 33px;
+//   transition: all 0.3s;
+// }
+//
+// .linea2 {
+//   background: #fff;
+//   height: 2px;
+//   width: 15px;
+//   position: absolute;
+//   left: 33px;
+//   top: 38px;
+//   opacity: 1;
+//   transition: opacity 0.5s;
+// }
+//
+// .linea3 {
+//   background: #fff;
+//   height: 2px;
+//   width: 15px;
+//   position: absolute;
+//   left: 33px;
+//   top: 43px;
+// }
+//
+// .overL1 {
+//   animation: closetop 1s forwards;
+//   animation-direction: alternate;
+//   cursor: pointer;
+// }
+//
+// .overL2 {
+//   opacity: 0;
+//   transition: opacity 0.5s;
+//   cursor: pointer;
+// }
+//
+// .overL3 {
+//   animation: closebottom 1s forwards;
+//   animation-direction: alternate;
+//   cursor: pointer;
+// }
+//
+// @keyframes closetop {
+//   0% {
+//     transform: translateY(5px) rotate(0deg);
+//   }
+//   25% {
+//     transform: translateY(5px) rotate(0deg);
+//   }
+//   75% {
+//     transform: translateY(5px) rotate(-45deg);
+//   }
+//   100% {
+//     transform: translateY(5px) rotate(-45deg);
+//   }
+// }
+//
+// @keyframes closebottom {
+//   0% {
+//     transform: translateY(0px) rotate(0deg);
+//   }
+//   25% {
+//     transform: translateY(-5px) rotate(0deg);
+//   }
+//   75% {
+//     transform: translateY(-5px) rotate(45deg);
+//   }
+//   100% {
+//     transform: translateY(-5px) rotate(45deg);
+//   }
+// }
+//
+// .voci-menu {
+//   visibility: hidden;
+//   position: absolute;
+//   right: 50px;
+//   top: 160px;
+//   opacity: 0;
+//   transition: all 0.300s;
+//   transition-delay: 0s;
+// }
+//
+// .overvoci {
+//   visibility: visible;
+//   opacity: 1;
+//   transition: all 0.400s;
+//   transition-delay: 0.370s;
+// }
+//
+// .voci-menu ul {
+//   list-style-type: none;
+// }
+//
+// .voci-menu ul li {
+//   margin: 20px 0;
+// }
+//
+// .voci-menu ul li a { /*menu items*/
+//   float: right;
+//   text-decoration: none;
+//   color: transparent;
+//   background-color: $white;
+//   margin-top: 20px;
+// }
+//
+// .voci-menu ul li a:hover {
+//   opacity: 0.7;
+// }
