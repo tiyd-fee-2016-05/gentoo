@@ -48,6 +48,11 @@ gentooApp.config(function($routeProvider) {
             templateUrl: 'templates/sign-up.html',
             // controller: 'ReportController'
             })
+            .when('/list-item', {
+              templateUrl: 'templates/list-item.html',
+              // controller: 'ReportController'
+              })
+
       .otherwise({
         redirectTo: "/home"
 

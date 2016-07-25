@@ -82,6 +82,11 @@
                 color: $black;
             }
         }
+        .wishlists {
+          padding: 15px 5%;
+          font: 700 24px / 26px $font;
+          color: $red;
+        }
         .add-list {
           float: right;
           padding: 15px 5%;
@@ -100,8 +105,8 @@
         }
         .lists {
           width: 100%;
-          height: 210px;
-          margin: 0 0 40px; //changes the distance between lists
+          height: auto;
+          margin: 0 0 30px; //changes the distance between lists
           background: $blue2;
           // border: 2px solid red;
           .list-header {
@@ -123,9 +128,10 @@
                 li {
                     display: inline-block;
                     vertical-align: middle;
-                    width: 140px;
-                    height: 120px;
-                    margin: 5px;
+                    overflow: hidden;
+                    width: 200px;
+                    height: 65px;
+                    margin: 10px;
                     padding-top: 10px;
                     background: $white;
                     text-align: center;
@@ -152,7 +158,7 @@
                         color: darken($blue2, 20%);
                     }
                     .fa-plus {
-                        padding-top: 14%;
+                        // padding-top: 14%;
                         color: darken($blue2, 20%);
                     }
                 }

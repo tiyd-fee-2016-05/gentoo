@@ -78,9 +78,11 @@
 
         </form> -->
 
-          <h1 class="add-list">add new wishlist <i class="fa fa-plus fa-lg" aria-hidden="true"></i></h1>
+        <h1 class="wishlists">Wishlists</h1>
 
-        <section class="lists content-list">
+        <h1 class="add-list">add new wishlist <i class="fa fa-plus fa-lg" aria-hidden="true"></i></h1>
+
+        <!-- <section class="lists content-list">
             <div class="list-header">
               <h1 class="list-name">Wishlist</h1>
             </div>
@@ -89,27 +91,7 @@
                 <li>
                     <h1>Item Name</h1>
                     <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
+
                 </li>
                 <li>
                     <h1>Item Name</h1>
@@ -126,51 +108,19 @@
 
                 </li>
             </ul>
-        </section>
+        </section> -->
 
-        <section class="lists content-list">
-            <div class="list-header">
-              <h1 class="list-name">Wishlist</h1>
-            </div>
-
+        <section class="lists content-list" ng-repeat="list in wishlistArray">
+          <div class="list-header">
+            <h1 class="list-name">{{list.name}}</h1>
+          </div>
             <ul>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
+                <li ng-repeat= "item in list.items">
+                    <h1>{{item.name}}</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
                 </li>
                 <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                </li>
-                <li>
-                    <h1>Item Name</h1>
-                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
-                    <h2>Interests</h2>
-                </li>
-                <li>
-                    <i class="fa fa-plus fa-3x" aria-hidden="true"></i>
+                    <a href="#/list-item"><i class="fa fa-plus fa-3x" aria-hidden="true"></i></a>
 
                 </li>
             </ul>
