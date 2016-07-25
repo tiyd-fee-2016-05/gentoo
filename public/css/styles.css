@@ -5,12 +5,6 @@ body {
   font: 18px/22px "Work Sans", sans-serif;
   color: #333; }
 
-.red {
-  color: red; }
-
-.blue {
-  color: blue; }
-
 a {
   text-decoration: none;
   color: #611c35; }
@@ -1225,5 +1219,32 @@ h1 {
       -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease;
       cursor: pointer; }
+
+@media (max-width: 767px) {
+  body {
+    font: 20px/24px "Work Sans", sans-serif; }
+
+  header .nav {
+    width: 20px;
+    height: 10px;
+    position: absolute;
+    top: 40px;
+    right: 10%;
+    z-index: 5;
+    display: inline-block; }
+    header .nav .logo {
+      font: 50px/50px "Grand Hotel", cursive;
+      color: #2C8C99;
+      -webkit-text-shadow: 2px 1px 0 #12050a;
+      -moz-text-shadow: 2px 1px 0 #12050a;
+      text-shadow: 2px 1px 0 #12050a; }
+    header .nav .fa-align-right {
+      color: #fdf3df;
+      opacity: 0.8; }
+      header .nav .fa-align-right:hover {
+        opacity: 1;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        cursor: pointer; } }
 
 /*# sourceMappingURL=styles.css.map */

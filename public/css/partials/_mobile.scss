@@ -1,0 +1,39 @@
+@media(max-width:767px){
+  body {
+    font: 20px / 24px $font;
+  }
+
+  header {
+      .nav {
+          width: 20px;
+          height: 10px;
+          position: absolute;
+          top: 40px;
+          right: 10%;
+          z-index: 5;
+          display: inline-block;
+          .logo {
+              font: 50px / 50px $logo;
+              color: $blue2;
+              -webkit-text-shadow: 2px 1px 0 darken($red, 20%);
+              -moz-text-shadow: 2px 1px 0 darken($red, 20%);
+              text-shadow: 2px 1px 0 darken($red, 20%);
+          }
+          .fa-align-right {
+              color: $white;
+              opacity: 0.8;
+              &:hover {
+                  opacity: 1;
+                  -webkit-transition: all 0.3s ease;
+                  transition: all 0.3s ease;
+                  cursor: pointer;
+              }
+          }
+      }
+    }
+    
+
+
+
+
+}
