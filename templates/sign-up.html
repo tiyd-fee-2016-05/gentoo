@@ -1,0 +1,48 @@
+<!-- Sign-Up Screen -->
+    <div id="container1">
+        <div id="login-container">
+
+            <a href="#/login"><h1 class="logo"> Gentoo</h1></a>
+            <h2>Welcome!</h2>
+            <p>Give with Love. <br> Shop with Confidence.<br><br>
+
+              Gentoo provides the information you need to give the perfect gift everytime.
+            </p>
+
+            <form ng-controller="SignupCtrl" ng-submit="submitForm()">
+            <section class="content">
+                <span class="input input--hoshi">
+      					<input name="login_username" class="input__field input__field--hoshi userlogin" type="text" id="input-1" / ng-model="firstname.newUser">
+      					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
+      						<span class="input__label-content input__label-content--hoshi">First Name</span>
+                </label>
+                </span>
+                <span class="input input--hoshi">
+      					<input class="input__field input__field--hoshi" type="text" id="input-2" / ng-model="lastname.newUser">
+      					<label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-2">
+      						<span class="input__label-content input__label-content--hoshi userLogin">Last Name</span>
+                </label>
+                </span>
+                <span class="input input--hoshi">
+      					<input name="create_username" class="input__field input__field--hoshi usercreate" type="text" id="input-1" / ng-model="username.newUser">
+      					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
+      						<span class="input__label-content input__label-content--hoshi">Username</span>
+                </label>
+                </span>
+                <span class="input input--hoshi">
+      					<input name="login_username" class="input__field input__field--hoshi userlogin" type="email" id="input-1" / ng-model="email.newUser">
+      					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
+      						<span class="input__label-content input__label-content--hoshi">Email</span>
+                </label>
+                </span>
+                <span class="input input--hoshi">
+      					<input name="login_username" class="input__field input__field--hoshi userlogin" type="password" id="input-1" / ng-model="password.newUser">
+      					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
+      						<span class="input__label-content input__label-content--hoshi">Password</span>
+                </label>
+              </span><br>
+            <button class="login-button" type="submit" name="button">sign up <i class="fa fa-chevron-right" aria-hidden="true"></i></button></a>
+          </section>
+        </form>
+        </div>
+    </div>

@@ -1,0 +1,165 @@
+<!-- Profile View -->
+<div id="container">
+    <div id="profile-main-container" ng-controller="LoginCtrl">
+
+        <header>
+          <!-- <div class="menu-espanso">
+            <div id="menu" class="menu"></div>
+            <span class="linee linea1"></span>
+            <span class="linee linea2"></span>
+            <span class="linee linea3"></span>
+            <div class="voci-menu">
+              <ul>
+                <li><a href="#">Menu item</a></li>
+                <li><a href="#">Menu item</a></li>
+              </ul>
+            </div>
+          </div> -->
+
+          <!-- <nav ng-show="showmenu"> -->
+            <!-- <a href="#/friends" class="animated bounceInLeft"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a>
+            <a href="#/login"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a>
+          </nav> -->
+
+            <section class="photo">
+            </section>
+
+
+            <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i>
+           {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
+
+            <a href="#/profile-edit"><h1 class="edit-profile">Edit Profile</h1></a>
+
+
+            <nav class="nav">
+              <div class="btn-toolbar" toolbar-tip="{content: '#toolbar-options', position: 'bottom', style: 'primary', animation: 'flip'}" id="format-toolbar">
+                  <!-- <i class="fa fa-align-right fa-2x" aria-hidden="true"></i> -->
+                  <h1 class="logo">Gentoo</h1>
+              </div>
+
+              <div id="toolbar-options">
+                 <a href="#/friends">friends <i class="fa fa-user-plus" aria-hidden="true"></i></a>
+                 <a href="#/login">logout <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </nav>
+        </header>
+
+
+        <section class="user-photo">
+        </section>
+
+        <section class="content content-main">
+
+            <h2 class="profile-birthday"><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</h2>
+            <h2 class="profile-anniv-dates"><i class="fa fa-calendar" aria-hidden="true"></i> 05/25/1945</h2>
+        </section>
+
+        <section class="content content-details">
+            <span>Favorite Holidays</span>
+            <h2 class="profile-holidays">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}</h2>
+        </section>
+
+        <section class="content content-details">
+            <span>Interests</span>
+            <h2 class="profile-interests">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}, {{loadedprofile.user.holidays[3]}}, {{loadedprofile.user.holidays[4]}}</h2>
+        </section>
+
+        <section class="content content-details">
+            <span>Favorite Colors</span>
+            <h2 class="profile-colors">{{loadedprofile.user.colors[0]}}</h2>
+        </section>
+
+        <!-- <form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
+        Username    <br/><input type="text" ng-model="form.username">    <br/><br/>
+        Password: <br/><input type="text" ng-model="form.password"> <br/><br/>
+
+          <!-<button ng-click="save()" >Save</button> -->
+        <!-- <input type="submit" ngClick="Submit" >
+
+        </form> -->
+
+        <h1 class="wishlists">Wishlists</h1>
+
+        <h1 class="add-list">add new wishlist <i class="fa fa-plus fa-lg" aria-hidden="true"></i></h1>
+
+        <!-- <section class="lists content-list">
+            <div class="list-header">
+              <h1 class="list-name">Wishlist</h1>
+            </div>
+
+            <ul>
+                <li>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+
+                </li>
+                <li>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
+                </li>
+                <li>
+                    <h1>Item Name</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Holiday</h2>
+                    <h2>Interests</h2>
+                </li>
+                <li>
+                    <i class="fa fa-plus fa-3x" aria-hidden="true"></i>
+
+                </li>
+            </ul>
+        </section> -->
+
+        <section class="lists content-list" ng-repeat="list in wishlistArray">
+          <div class="list-header">
+            <h1 class="list-name">{{list.name}}</h1>
+          </div>
+            <ul>
+                <li ng-repeat= "item in list.items">
+                    <h1>{{item.name}}</h1>
+                    <h2><i class="fa fa-heart" aria-hidden="true"></i> Birthday</h2>
+                </li>
+                <li>
+                    <a href="#/list-item"><i class="fa fa-plus fa-3x" aria-hidden="true"></i></a>
+
+                </li>
+            </ul>
+        </section>
+
+
+
+
+        <!-- <section class="lists friend-list">
+            <a href="#/friends"><h1 class="friends-list">Friends</h1></a>
+            <ul>
+                <li>
+                    <a href="#/add-friend">-->
+                        <!-- <h2>user photo here</h2> -->
+                        <!-- <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                        <h1>{{loadedprofile.user.first_name}}</h1>
+                        <h1>{{loadedprofile.user.last_name}}</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="#/add-friend"> -->
+                        <!-- <h2>user photo here</h2> -->
+                        <!-- <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                        <h1>{{loadedprofile.user.first_name}}</h1>
+                        <h1>{{loadedprofile.user.last_name}}</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="#/add-friend"> -->
+                        <!-- <h2>user photo here</h2> -->
+                        <!-- <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                        <h1>{{loadedprofile.user.first_name}}</h1>
+                        <h1>{{loadedprofile.user.last_name}}</h1>
+                    </a>
+                </li>
+            </ul>
+        </section> -->
+
+        <!-- <section class="lists content-list-new">
+            <h1><i class="fa fa-plus" aria-hidden="true"></i> Add new list</h1> -->
+        </section>
+    </div>

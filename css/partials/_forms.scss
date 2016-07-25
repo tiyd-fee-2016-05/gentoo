@@ -1,0 +1,423 @@
+// Thank you codrops! Modified from:
+// http://tympanus.net/codrops/2015/01/08/inspiration-text-input-effects/
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.clearfix:after,
+.clearfix:before {
+	content: '';
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.content {
+	font-size: 150%;
+	padding-bottom: 20px;
+}
+.input {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	margin-top: 10px;
+	max-width: 350px;
+	width: calc(100% - 2em);
+	vertical-align: top;
+}
+.input__field {
+	position: relative;
+	display: block;
+	float: right;
+	padding: 0.8em;
+	width: 60%;
+	border: none;
+	border-radius: 0;
+	background: $white;
+	color: $white;
+	font: 18px / 22px $font;
+	letter-spacing: 1px;
+	-webkit-appearance: none;
+	/* for box shadows to show on iOS */
+}
+.input__field:focus {
+	outline: none;
+}
+.input__label {
+	display: inline-block;
+	float: right;
+	padding: 0 1em;
+	width: 40%;
+	font: 18px / 22px $font;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.input__label-content {
+	position: relative;
+	display: block;
+	padding: 1.6em 0;
+	width: 100%;
+}
+.graphic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+.icon {
+	color: #ddd;
+	font-size: 150%;
+}
+// Login Fields
+#login-container {
+	.input--hoshi {
+		overflow: hidden;
+	}
+	.input__field--hoshi {
+		padding: 26px 0.15em;
+		width: 100%;
+		background: transparent;
+		color: $white;
+	}
+	.input__label--hoshi {
+		// Email/Password
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 0 10px;
+		width: 100%;
+		height: calc(100% - 1em);
+		text-align: left;
+		pointer-events: none;
+	}
+	.input__label-content--hoshi {
+		position: absolute;
+		padding: 10px 0 40px;
+	}
+	.input__label--hoshi::after,
+	.input__label--hoshi::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 10px);
+		border-bottom: 1px solid $white;
+	}
+	.input__label--hoshi::after {
+		margin-top: 2px;
+		border-bottom: 4px solid red;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+		-webkit-transition: -webkit-transform 0.3s;
+		transition: transform 0.3s;
+	}
+	.input__label--hoshi-color-1::after {
+		border-color: $teal;
+	}
+	.input__label--hoshi-color-2::after {
+		border-color: $pink;
+	}
+	.input__label--hoshi-color-3::after {
+		border-color: $blue;
+	}
+	.input--filled .input__label--hoshi::after,
+	.input__field--hoshi:focus + .input__label--hoshi::after {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	.input--filled .input__label-content--hoshi,
+	.input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi {
+		-webkit-animation: anim-1 0.3s forwards;
+		animation: anim-1 0.3s forwards;
+	}
+	@-webkit-keyframes anim-1 {
+		50% {
+			opacity: 0;
+			-webkit-transform: translate3d(1em, 0, 0);
+			transform: translate3d(1em, 0, 0);
+		}
+		51% {
+			opacity: 0;
+			-webkit-transform: translate3d(-1em, -40%, 0);
+			transform: translate3d(-1em, -40%, 0);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: translate3d(0, -40%, 0);
+			transform: translate3d(0, -40%, 0);
+		}
+	}
+	@keyframes anim-1 {
+		50% {
+			opacity: 0;
+			-webkit-transform: translate3d(1em, 0, 0);
+			transform: translate3d(1em, 0, 0);
+		}
+		51% {
+			opacity: 0;
+			-webkit-transform: translate3d(-1em, -40%, 0);
+			transform: translate3d(-1em, -40%, 0);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: translate3d(0, -40%, 0);
+			transform: translate3d(0, -40%, 0);
+		}
+	}
+}
+// Profile Fields
+#profile-container {
+	.input--hoshi {
+		overflow: hidden;
+	}
+	.input__field--hoshi {
+		padding: 26px 0.15em;
+		width: 100%;
+		background: transparent;
+		color: $black;
+	}
+	.input__label--hoshi {
+		// Email/Password
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 0 10px;
+		width: 100%;
+		height: calc(100% - 1em);
+		text-align: left;
+		pointer-events: none;
+	}
+	.input__label-content--hoshi {
+		position: absolute;
+		padding: 10px 0 40px;
+	}
+	.input__label--hoshi::after,
+	.input__label--hoshi::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: calc(100% - 10px);
+		border-bottom: 1px solid $blue2;
+	}
+	.input__label--hoshi::after {
+		margin-top: 2px;
+		border-bottom: 4px solid red;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+		-webkit-transition: -webkit-transform 0.3s;
+		transition: transform 0.3s;
+	}
+	.input__label--hoshi-color-1::after {
+		border-color: $teal;
+	}
+	.input__label--hoshi-color-2::after {
+		border-color: $pink;
+	}
+	.input__label--hoshi-color-3::after {
+		border-color: $blue;
+	}
+	.input--filled .input__label--hoshi::after,
+	.input__field--hoshi:focus + .input__label--hoshi::after {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	.input--filled .input__label-content--hoshi,
+	.input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi {
+		-webkit-animation: anim-1 0.3s forwards;
+		animation: anim-1 0.3s forwards;
+	}
+	@-webkit-keyframes anim-1 {
+		50% {
+			opacity: 0;
+			-webkit-transform: translate3d(1em, 0, 0);
+			transform: translate3d(1em, 0, 0);
+		}
+		51% {
+			opacity: 0;
+			-webkit-transform: translate3d(-1em, -40%, 0);
+			transform: translate3d(-1em, -40%, 0);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: translate3d(0, -40%, 0);
+			transform: translate3d(0, -40%, 0);
+		}
+	}
+	@keyframes anim-1 {
+		50% {
+			opacity: 0;
+			-webkit-transform: translate3d(1em, 0, 0);
+			transform: translate3d(1em, 0, 0);
+		}
+		51% {
+			opacity: 0;
+			-webkit-transform: translate3d(-1em, -40%, 0);
+			transform: translate3d(-1em, -40%, 0);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: translate3d(0, -40%, 0);
+			transform: translate3d(0, -40%, 0);
+		}
+	}
+}
+// Upload photo	.input--hoshi {
+.input--photo {
+	overflow: hidden;
+}
+.input__field--photo {
+	padding: 26px 0.15em;
+	width: 100%;
+	background: transparent;
+	color: $black;
+}
+.input__label--photo {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0 10px;
+	width: 100%;
+	height: calc(100% - 1em);
+	text-align: left;
+	pointer-events: none;
+}
+.input__label-content--photo {
+	position: absolute;
+	padding: 10px 0 40px;
+}
+.input__label--photo::after,
+.input__label--photo::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 10px);
+	border-bottom: 1px solid $blue2;
+}
+.input__label--photo::after {
+	margin-top: 2px;
+	border-bottom: 4px solid red;
+	-webkit-transform: translate3d(-100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+.input__label--photo-color-4::after {
+	border-color: $red;
+}
+.input--filled .input__label--photo::after,
+.input__field--photo:focus + .input__label--photo::after {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.input--filled .input__label-content--photo,
+.input__field--photo:focus + .input__label--photo .input__label-content--photo {
+	-webkit-animation: anim-1 0.3s forwards;
+	animation: anim-1 0.3s forwards;
+}
+@-webkit-keyframes anim-1 {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(1em, 0, 0);
+		transform: translate3d(1em, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-1em, -40%, 0);
+		transform: translate3d(-1em, -40%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -40%, 0);
+		transform: translate3d(0, -40%, 0);
+	}
+}
+@keyframes anim-1 {
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(1em, 0, 0);
+		transform: translate3d(1em, 0, 0);
+	}
+	51% {
+		opacity: 0;
+		-webkit-transform: translate3d(-1em, -40%, 0);
+		transform: translate3d(-1em, -40%, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, -40%, 0);
+		transform: translate3d(0, -40%, 0);
+	}
+}
+// OLD
+.input--kaede {
+	display: block;
+	overflow: hidden;
+	margin: 30px auto 5px;
+	background: $blue2;
+	border: 2px solid $blue2;
+	border-radius: 5px;
+}
+.input__field--kaede {
+	position: absolute;
+	top: 0;
+	right: 100%;
+	width: 60%;
+	height: 100%;
+	background: lighten($blue2, 50%);
+	color: $black;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.input__label--kaede {
+	z-index: 10;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	cursor: text;
+	-webkit-transform-origin: 0 50%;
+	transform-origin: 0 50%;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.input__label-content--kaede {
+	padding: 10px 5px 10px 0;
+}
+.input--filled .input__field--kaede,
+.input__field--kaede:focus {
+	-webkit-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+	-webkit-transition-delay: 0.06s;
+	transition-delay: 0.06s;
+}
+.input--filled .input__label--kaede,
+.input__field--kaede:focus + .input__label--kaede {
+	-webkit-transform: translate3d(60%, 0, 0);
+	transform: translate3d(60%, 0, 0);
+	pointer-events: none;
+}
+@media screen and (max-width: 34em) {
+	.input--filled .input__label--kaede,
+	.input__field--kaede:focus + .input__label--kaede {
+		-webkit-transform: translate3d(65%, 0, 0) scale3d(0.65, 0.65, 1);
+		transform: translate3d(65%, 0, 0) scale3d(0.65, 0.65, 1);
+		pointer-events: none;
+	}
+}
