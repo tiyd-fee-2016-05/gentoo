@@ -12,49 +12,7 @@
         width: 70px;
         // height: 50px;
         position: fixed;
-        top: 56%;
-        right: 0;
-        background: $lightred;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        padding: 15px 0;
-        text-align: center;
-        i {
-            color: $white;
-        }
-        &:hover {
-            background: lighten($lightred, 10%);
-            transition: all 0.7s ease-out;
-            cursor: pointer;
-        }
-    }
-    #tab2 {
-        z-index: 999;
-        width: 70px;
-        // height: 50px;
-        position: fixed;
-        top: 66%;
-        right: 0;
-        background: $darkblue;
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        padding: 15px 0;
-        text-align: center;
-        i {
-            color: $white;
-        }
-        &:hover {
-            background: lighten($darkblue, 10%);
-            transition: all 0.7s ease-out;
-            cursor: pointer;
-        }
-    }
-    #tab3 {
-        z-index: 999;
-        width: 70px;
-        // height: 50px;
-        position: fixed;
-        top: 76%;
+        bottom: 28%;
         right: 0;
         background: darken($teal, 10%);
         border-top-left-radius: 5px;
@@ -70,13 +28,14 @@
             cursor: pointer;
         }
     }
-    #tab4 {
+    #tab2 {
         z-index: 999;
         width: 70px;
+        // height: 50px;
         position: fixed;
-        top: 86%;
+        bottom: 18%;
         right: 0;
-        background: darken($white, 5%);
+        background: $lightred;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
         padding: 15px 0;
@@ -84,75 +43,52 @@
         i {
             color: $white;
         }
+        &:hover {
+            background: lighten($lightred, 10%);
+            transition: all 0.7s ease-out;
+            cursor: pointer;
+        }
     }
-    // All info inside the tabs
-    #tab-menu {
+    #tab3 {
         z-index: 999;
-        width: 70%;
+        width: 70px;
         // height: 50px;
         position: fixed;
-        top: 120px;
-        // right: 0;
-        background: darken($lightred, 10%);
-        border-radius: 5px;
-        margin: 5%;
+        bottom: 8%;
+        right: 0;
+        background: $darkblue;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
         padding: 15px 0;
         text-align: center;
         i {
-            padding-left: 10px;
+            color: $white;
         }
-        a:hover {
-            color: $lightred;
-            transition: all 0.3s ease-out;
+        &:hover {
+            background: lighten($darkblue, 10%);
+            transition: all 0.7s ease-out;
+            cursor: pointer;
         }
     }
-    // Search bar
-    #tab-search {
+    #tab4 {
         z-index: 999;
-        width: 70%;
-        // height: 50px;
+        width: 70px;
         position: fixed;
-        top: 120px;
-        // right: 0;
-        background: darken($darkblue, 10%);
-        border-radius: 5px;
-        margin: 5%;
-        padding: 15px 0;
+        bottom: 2%;
+        right: 0;
+        background: darken($white, 10%);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        padding: 0;
         text-align: center;
-        input {
-            width: 50%;
-            border: 2px solid darken($darkblue, 10%);
-            border-radius: 5px;
-            margin-bottom: 20px;
-            padding: 5px;
-            font: 18px / 16px $menu;
-            &:focus {
-                outline: 0;
-            }
-        }
-        ul {
-            li {
-                margin: 5px 0;
-                h1 {
-                    padding: 0;
-                    color: $teal;
-                }
-                p {
-                    padding: 0 0 10px;
-                    color: $white;
-                    border-bottom: 2px solid $teal;
-                }
-                &:hover {
-                    h1 {
-                        color: lighten($darkblue, 10%);
-                    }
-                }
-            }
+        i {
+            color: $white;
         }
     }
+    // All info inside the tabs
     #tab-gift {
         z-index: 999;
-        width: 70%;
+        width: 90%;
         // height: 50px;
         position: fixed;
         top: 120px;
@@ -190,7 +126,8 @@
             }
         }
         li input[type="checkbox"] {
-            width: 20px;
+            width: 25px;
+            height: 18px;
         }
         .done-true {
             text-decoration: line-through;
@@ -215,6 +152,70 @@
         a:hover {
             color: lighten($teal, 20%);
             transition: all 0.3s ease-out;
+        }
+    }
+    #tab-menu {
+        z-index: 999;
+        width: 90%;
+        // height: 50px;
+        position: fixed;
+        top: 120px;
+        // right: 0;
+        background: darken($lightred, 10%);
+        border-radius: 5px;
+        margin: 5%;
+        padding: 15px 0;
+        text-align: center;
+        i {
+            padding-left: 10px;
+        }
+        a:hover {
+            color: $lightred;
+            transition: all 0.3s ease-out;
+        }
+    }
+    // Search bar
+    #tab-search {
+        z-index: 999;
+        width: 90%;
+        // height: 50px;
+        position: fixed;
+        top: 120px;
+        // right: 0;
+        background: darken($darkblue, 10%);
+        border-radius: 5px;
+        margin: 5%;
+        padding: 15px 0;
+        text-align: center;
+        input {
+            width: 80%;
+            border: 2px solid darken($darkblue, 10%);
+            border-radius: 5px;
+            margin: 20px 0;
+            padding: 5px;
+            font: 18px / 16px $menu;
+            &:focus {
+                outline: 0;
+            }
+        }
+        ul {
+            li {
+                margin: 5px 0;
+                h1 {
+                    padding: 0;
+                    color: $teal;
+                }
+                p {
+                    padding: 0 0 10px;
+                    color: $white;
+                    border-bottom: 2px solid $teal;
+                }
+                &:hover {
+                    h1 {
+                        color: lighten($darkblue, 10%);
+                    }
+                }
+            }
         }
     }
 }

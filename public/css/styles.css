@@ -37,9 +37,9 @@ button:focus {
     z-index: 999;
     width: 70px;
     position: fixed;
-    top: 56%;
+    bottom: 28%;
     right: 0;
-    background: #B6174B;
+    background: #27c1b0;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     padding: 15px 0;
@@ -47,16 +47,16 @@ button:focus {
     #menu #tab1 i {
       color: white; }
     #menu #tab1:hover {
-      background: #e31d5e;
+      background: #6ce2d4;
       transition: all 0.7s ease-out;
       cursor: pointer; }
   #menu #tab2 {
     z-index: 999;
     width: 70px;
     position: fixed;
-    top: 66%;
+    bottom: 18%;
     right: 0;
-    background: #2F4858;
+    background: #B6174B;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     padding: 15px 0;
@@ -64,16 +64,16 @@ button:focus {
     #menu #tab2 i {
       color: white; }
     #menu #tab2:hover {
-      background: #416379;
+      background: #e31d5e;
       transition: all 0.7s ease-out;
       cursor: pointer; }
   #menu #tab3 {
     z-index: 999;
     width: 70px;
     position: fixed;
-    top: 76%;
+    bottom: 8%;
     right: 0;
-    background: #27c1b0;
+    background: #2F4858;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     padding: 15px 0;
@@ -81,70 +81,25 @@ button:focus {
     #menu #tab3 i {
       color: white; }
     #menu #tab3:hover {
-      background: #6ce2d4;
+      background: #416379;
       transition: all 0.7s ease-out;
       cursor: pointer; }
   #menu #tab4 {
     z-index: 999;
     width: 70px;
     position: fixed;
-    top: 86%;
+    bottom: 2%;
     right: 0;
-    background: #fef6e7;
+    background: #fdeece;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    padding: 15px 0;
+    padding: 0;
     text-align: center; }
     #menu #tab4 i {
       color: white; }
-  #menu #tab-menu {
-    z-index: 999;
-    width: 70%;
-    position: fixed;
-    top: 120px;
-    background: #891138;
-    border-radius: 5px;
-    margin: 5%;
-    padding: 15px 0;
-    text-align: center; }
-    #menu #tab-menu i {
-      padding-left: 10px; }
-    #menu #tab-menu a:hover {
-      color: #B6174B;
-      transition: all 0.3s ease-out; }
-  #menu #tab-search {
-    z-index: 999;
-    width: 70%;
-    position: fixed;
-    top: 120px;
-    background: #1d2d37;
-    border-radius: 5px;
-    margin: 5%;
-    padding: 15px 0;
-    text-align: center; }
-    #menu #tab-search input {
-      width: 50%;
-      border: 2px solid #1d2d37;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      padding: 5px;
-      font: 18px/16px "Nunito", sans-serif; }
-      #menu #tab-search input:focus {
-        outline: 0; }
-    #menu #tab-search ul li {
-      margin: 5px 0; }
-      #menu #tab-search ul li h1 {
-        padding: 0;
-        color: #42D9C8; }
-      #menu #tab-search ul li p {
-        padding: 0 0 10px;
-        color: white;
-        border-bottom: 2px solid #42D9C8; }
-      #menu #tab-search ul li:hover h1 {
-        color: #416379; }
   #menu #tab-gift {
     z-index: 999;
-    width: 70%;
+    width: 90%;
     position: fixed;
     top: 120px;
     background: #27c1b0;
@@ -175,7 +130,8 @@ button:focus {
       #menu #tab-gift .add-item:focus {
         outline: 0; }
     #menu #tab-gift li input[type="checkbox"] {
-      width: 20px; }
+      width: 25px;
+      height: 18px; }
     #menu #tab-gift .done-true {
       text-decoration: line-through;
       color: #166c63;
@@ -195,6 +151,51 @@ button:focus {
     #menu #tab-gift a:hover {
       color: #97eae1;
       transition: all 0.3s ease-out; }
+  #menu #tab-menu {
+    z-index: 999;
+    width: 90%;
+    position: fixed;
+    top: 120px;
+    background: #891138;
+    border-radius: 5px;
+    margin: 5%;
+    padding: 15px 0;
+    text-align: center; }
+    #menu #tab-menu i {
+      padding-left: 10px; }
+    #menu #tab-menu a:hover {
+      color: #B6174B;
+      transition: all 0.3s ease-out; }
+  #menu #tab-search {
+    z-index: 999;
+    width: 90%;
+    position: fixed;
+    top: 120px;
+    background: #1d2d37;
+    border-radius: 5px;
+    margin: 5%;
+    padding: 15px 0;
+    text-align: center; }
+    #menu #tab-search input {
+      width: 80%;
+      border: 2px solid #1d2d37;
+      border-radius: 5px;
+      margin: 20px 0;
+      padding: 5px;
+      font: 18px/16px "Nunito", sans-serif; }
+      #menu #tab-search input:focus {
+        outline: 0; }
+    #menu #tab-search ul li {
+      margin: 5px 0; }
+      #menu #tab-search ul li h1 {
+        padding: 0;
+        color: #42D9C8; }
+      #menu #tab-search ul li p {
+        padding: 0 0 10px;
+        color: white;
+        border-bottom: 2px solid #42D9C8; }
+      #menu #tab-search ul li:hover h1 {
+        color: #416379; }
 
 header .nav {
   width: 110px;
@@ -1224,6 +1225,15 @@ h1 {
 
   .friend-photo {
     height: 300px; }
+
+  #menu #tab1 {
+    bottom: 39%; }
+  #menu #tab2 {
+    bottom: 25%; }
+  #menu #tab3 {
+    bottom: 11%; }
+  #menu #tab4 {
+    bottom: 0.5%; }
 
   header {
     text-align: center; }

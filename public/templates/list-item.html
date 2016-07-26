@@ -13,9 +13,11 @@
 
 
           <div id="menu" ng-controller="TabController">
-              <div ng-click="setTab(2)" id="tab1" ng-class="{ active: isSet(2) }"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
+              <div ng-click="setTab(3)" id="tab2" ng-class="{ active: isSet(2) }"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
 
-              <div ng-click="setTab(3)" id="tab2" ng-class="{ active: isSet(3) }"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
+              <div ng-click="setTab(4)" id="tab3" ng-class="{ active: isSet(3) }"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
+
+
 
               <div ng-click="setTab(1)" id="tab4" ng-class="{ active: isSet(1) }"><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
 
@@ -23,7 +25,8 @@
               <div ng-show="isSet(1)">
               </div>
 
-              <div ng-show="isSet(2)" id="tab-menu" class="animated bounceInRight">
+
+              <div ng-show="isSet(3)" id="tab-menu" class="animated bounceInRight">
                   <ul>
                       <li><a href="#/home"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
                       <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
@@ -32,7 +35,7 @@
                   </ul>
               </div>
 
-              <div ng-show="isSet(3)" id="tab-search" class="animated bounceInRight">
+              <div ng-show="isSet(4)" id="tab-search" class="animated bounceInRight">
                   <i class="fa fa-search fa-lg" aria-hidden="true"></i>
                   <input type="search" ng-model="searchBox" placeholder="search users">
 

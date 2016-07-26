@@ -22,6 +22,8 @@ gentooApp.controller('TabController', ['$scope', function($scope) {
 				done: false
 			}];
 
+console.log("Display all idea box items");
+
 			$scope.getTotalTodos = function() {
 				return $scope.todos.length;
 			};
@@ -32,12 +34,18 @@ gentooApp.controller('TabController', ['$scope', function($scope) {
 					done: false
 				});
 				$scope.formTodoText = '';
+				console.log("Add item to idea box");
 			};
+
+
 
 // Needs to clear selected items from list
 			$scope.clearCompleted = function() {
 				$scope.todos = _.filter($scope.todos, function(todo) {
+					console.log("Delete selected item from idea box");
+
 					return !todo.done;
+					console.log("Delete selected item from idea box");
 				});
 			};
 

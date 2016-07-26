@@ -1,28 +1,30 @@
-gentooApp.controller('LoginCtrl', ['$scope', '$http', '$location', 'User', function($scope, $http, $location, User) {
+gentooApp.controller('RegisterCtrl', ['$scope', '$http', '$location', 'User', function($scope, $http, $location, User) {
     if (User.isLoggedIn()) {
         $location.path("/");
     }
+
+    $scope.user = { email: "", password: "", passwordConfirmation: "" };
     var rootUrl= "http://6e62d5d1.ngrok.io/";
     // var rootUrl= "http://giftbox-tiy.herokuapp.com";
 
 
-    $scope.loginUser = function() {
+    $scope.register = function() {
       console.log("Submitted");
         $http({
             method: "POST",
-            url:    rootUrl + "/login",
+            url:    rootUrl + "/register",
             data: {
-                email:    "sinovia@gentoo.com",
+                email:    "testboop@gentoo.com",
                 password: "password",
+                first_name:" $Test",
+                last_name: "$Beep",
+                username: "$beep",
+                passwordConfirmation: "$password",
             }
         }).then(function(response) {
             // TODO: store and respect expiration time??
             User.logIn(response.data.token);
             console.log(response.data.token);
-
-            User.loggedInUser(response.data.username);
-            console.log(response.data.username);
-
         }, function() {
             alert("Something went wrong!");
         })
