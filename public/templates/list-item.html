@@ -3,19 +3,6 @@
     <div id="profile-main-container" ng-controller="LoginCtrl">
 
       <header>
-          <!-- <div class="menu-espanso">
-          <div id="menu" class="menu"></div>
-          <span class="linee linea1"></span>
-          <span class="linee linea2"></span>
-          <span class="linee linea3"></span>
-          <div class="voci-menu">
-            <ul>
-              <li><a href="#">Menu item</a></li>
-              <li><a href="#">Menu item</a></li>
-            </ul>
-          </div>
-        </div> -->
-
           <section class="photo">
           </section>
 
@@ -25,36 +12,62 @@
           <a href="#/home"><h1 class="save-profile" ng-click="vm.submit(vm.user)">Save item <i class="fa fa-chevron-right" aria-hidden="true"></i></h1></a>
 
 
-          <nav ng-show="showmenu">
-              <a href="#/friends" class="animated bounceInLeft"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a>
-              <a href="#/login" class="animated bounceInLeft"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a>
-              <i class="fa fa-search" aria-hidden="true"></i>
-              <input class="searchBar animated
-jello" type="search" ng-model="searchBox" placeholder="Search users">
+          <div id="menu" ng-controller="TabController">
+              <div ng-click="setTab(2)" id="tab1" ng-class="{ active: isSet(2) }"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
+
+              <div ng-click="setTab(3)" id="tab2" ng-class="{ active: isSet(3) }"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
+
+              <div ng-click="setTab(4)" id="tab3" ng-class="{ active: isSet(4) }"><i class="fa fa-gift fa-lg" aria-hidden="true"></i></div>
+
+              <div ng-click="setTab(1)" id="tab4" ng-class="{ active: isSet(1) }"><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
 
 
-              <div id="friend-search" ng-if="searchBox">
+              <div ng-show="isSet(1)">
+              </div>
+
+              <div ng-show="isSet(2)" id="tab-menu" class="animated bounceInRight">
                   <ul>
-                      <!--ng-repeat, and link to their profile-->
-                      <li ng-repeat="person in friendList | filter: searchBox">
-                          <a href="#/friend-profile">
-                              <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
-                              <p class="uppercase">@{{person.username}}</p>
-                          </a>
+                      <li><a href="#/home"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+                      <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
+                      <li><a href="#/login"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a></li>
+                      <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i> Invite</a></li>
+                  </ul>
+              </div>
+
+              <div ng-show="isSet(3)" id="tab-search" class="animated bounceInRight">
+                  <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                  <input type="search" ng-model="searchBox" placeholder="search users">
+
+                  <div id="friend-search" ng-if="searchBox">
+                      <ul>
+                          <li ng-repeat="person in friendList | filter: searchBox">
+                              <a href="#/friend-profile">
+                                  <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+                                  <p class="uppercase">@{{person.username}}</p>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+
+              <div ng-show="isSet(4)" id="tab-gift" class="animated bounceInRight">
+                  <ul>
+                      <li>
+                          <input type="text" placeholder="add gift idea here" ng-model="formTodoText" ng-model-instant />
+                          <button ng-click="addTodo()" class="add-item"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
+                      </li>
+
+                      <li ng-repeat="todo in todos">
+                          <input type="checkbox" ng-model="todo.done" />
+                          <span class="done-{{todo.done}}">{{todo.text}}</span>
+                      </li>
+
+                      <li>
+                          <button ng-click="clearCompleted()" class="clear-items">clear selected items</button>
                       </li>
                   </ul>
               </div>
-          </nav>
-
-
-          <div class="nav">
-              <i ng-click="showmenu=true" class="fa fa-align-right" aria-hidden="true"></i>
-
-              <h1 class="logo">Gentoo</h1>
           </div>
-
-
-
       </header>
 
 

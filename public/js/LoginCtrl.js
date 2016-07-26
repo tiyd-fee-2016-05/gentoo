@@ -10,6 +10,23 @@ gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
 
 
 
+      //   $http({
+      //       url:  rootUrl + "/users",
+      //    method: "GET",
+      //    headers: {'Authorization': username},
+      //   //  params: {formData}
+      //  }).success(function (data, status, headers, config) {
+      //           console.log("Info for " + username);
+      //           console.log(data);
+      //    $rootScope.userDetails = data
+      //    $rootScope.usersList = data.user.username
+       //
+      //    }).error(function (data, status, headers, config) {
+      //        $scope.status = status;
+      //    });//End GET request for all users
+
+
+
         $http({
             url:  rootUrl + "/" + username+ "/friends",
          method: "GET",
