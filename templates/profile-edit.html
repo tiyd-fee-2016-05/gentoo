@@ -11,33 +11,41 @@
 
             <a href="#/home"><h1 class="save-profile" ng-click="vm.submit(vm.user)">Save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></h1></a>
 
+            <div id="menu" ng-controller="TabController">
+                <div ng-click="setTab(2)" id="tab1" ng-class="{ active: isSet(2) }"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
 
-            <nav ng-show="showmenu">
-                <a href="#/friends" class="animated bounceInLeft"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a>
-                <a href="#/login" class="animated bounceInLeft"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a>
-                <i class="fa fa-search" aria-hidden="true"></i>
-                <input class="searchBar animated
-      jello" type="search" ng-model="searchBox" placeholder="Search users">
+                <div ng-click="setTab(3)" id="tab2" ng-class="{ active: isSet(3) }"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
+
+                <div ng-click="setTab(1)" id="tab4" ng-class="{ active: isSet(1) }"><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
 
 
-                <div id="friend-search" ng-if="searchBox">
+                <div ng-show="isSet(1)">
+                </div>
+
+                <div ng-show="isSet(2)" id="tab-menu" class="animated bounceInRight">
                     <ul>
-                        <!--ng-repeat, and link to their profile-->
-                        <li ng-repeat="person in friendList | filter: searchBox">
-                            <a href="#/friend-profile">
-                                <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
-                                <p class="uppercase">@{{person.username}}</p>
-                            </a>
-                        </li>
+                        <li><a href="#/home"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+                        <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
+                        <li><a href="#/login"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a></li>
+                        <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i> Invite</a></li>
                     </ul>
                 </div>
 
-            </nav>
+                <div ng-show="isSet(3)" id="tab-search" class="animated bounceInRight">
+                    <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                    <input type="search" ng-model="searchBox" placeholder="search users">
 
-            <div class="nav">
-                <i ng-click="showmenu=true" class="fa fa-align-right" aria-hidden="true"></i>
-
-                <h1 class="logo">Gentoo</h1>
+                    <div id="friend-search" ng-if="searchBox">
+                        <ul>
+                            <li ng-repeat="person in friendList | filter: searchBox">
+                                <a href="#/friend-profile">
+                                    <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+                                    <p class="uppercase">@{{person.username}}</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </header>
 

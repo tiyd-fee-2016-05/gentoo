@@ -37,7 +37,7 @@ button:focus {
     z-index: 999;
     width: 70px;
     position: fixed;
-    top: 60%;
+    top: 56%;
     right: 0;
     background: #B6174B;
     border-top-left-radius: 5px;
@@ -54,7 +54,7 @@ button:focus {
     z-index: 999;
     width: 70px;
     position: fixed;
-    top: 72%;
+    top: 66%;
     right: 0;
     background: #2F4858;
     border-top-left-radius: 5px;
@@ -69,9 +69,9 @@ button:focus {
       cursor: pointer; }
   #menu #tab3 {
     z-index: 999;
-    width: 80px;
+    width: 70px;
     position: fixed;
-    top: 74%;
+    top: 76%;
     right: 0;
     background: #27c1b0;
     border-top-left-radius: 5px;
@@ -86,7 +86,7 @@ button:focus {
       cursor: pointer; }
   #menu #tab4 {
     z-index: 999;
-    width: 90px;
+    width: 70px;
     position: fixed;
     top: 86%;
     right: 0;
