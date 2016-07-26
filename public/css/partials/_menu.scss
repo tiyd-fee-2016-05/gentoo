@@ -12,7 +12,7 @@
         width: 70px;
         // height: 50px;
         position: fixed;
-        top: 60%;
+        top: 56%;
         right: 0;
         background: $lightred;
         border-top-left-radius: 5px;
@@ -33,7 +33,7 @@
         width: 70px;
         // height: 50px;
         position: fixed;
-        top: 72%;
+        top: 66%;
         right: 0;
         background: $darkblue;
         border-top-left-radius: 5px;
@@ -51,10 +51,10 @@
     }
     #tab3 {
         z-index: 999;
-        width: 80px;
+        width: 70px;
         // height: 50px;
         position: fixed;
-        top: 74%;
+        top: 76%;
         right: 0;
         background: darken($teal, 10%);
         border-top-left-radius: 5px;
@@ -72,7 +72,7 @@
     }
     #tab4 {
         z-index: 999;
-        width: 90px;
+        width: 70px;
         position: fixed;
         top: 86%;
         right: 0;
