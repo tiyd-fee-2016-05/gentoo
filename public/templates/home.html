@@ -21,12 +21,12 @@
 
 
             <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i>
-           {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
+           {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}Nastassia Troyer</h1>
 
             <a href="#/profile-edit"><h1 class="edit-profile">Edit Profile</h1></a>
 
 
-            <nav ng-show="showmenu">
+            <nav class="animated bounceInRight" ng-show="showmenu">
                 <a href="#/friends" class="animated bounceInLeft"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a>
                 <a href="#/login" class="animated bounceInLeft"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a>
                 <i class="fa fa-search" aria-hidden="true"></i>
@@ -37,7 +37,7 @@
                 <div id="friend-search" ng-if="searchBox">
                     <ul>
                         <!--ng-repeat, and link to their profile-->
-                        <li ng-repeat="person in friendList | filter: searchBox">
+                        <li class="animated bounceInLeft" ng-repeat="person in friendList | filter: searchBox">
                             <a href="#/friend-profile">
                                 <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
                                 <p class="uppercase">@{{person.username}}</p>
@@ -81,20 +81,19 @@
         </section>
 
         <section class="content content-details">
-              <span>Favorite Holidays</span>
-              <!-- <h2 class="profile-holidays">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}</h2> -->
-                <h2 class="profile-holidays" ng-repeat="holiday in holidayList">{{holiday}} </h2>
-          </section>
+            <span>Favorite Holidays</span>
+            <h2 class="profile-holidays">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}</h2>
+        </section>
 
-          <section class="content content-details">
-                  <span>Interests</span>
-                  <!-- <h2 class="profile-holidays">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}</h2> -->
-                    <h2 class="profile-holidays" ng-repeat="interest in interestList">{{interest}}  </h2>
+        <section class="content content-details">
+            <span>Interests</span>
+            <h2 class="profile-interests">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}, {{loadedprofile.user.holidays[3]}}, {{loadedprofile.user.holidays[4]}}</h2>
+        </section>
 
-                    <section class="content content-details">
-                         <span>Favorite Colors</span>
-                         <h2 class="profile-colors" ng-repeat="color in colorList ">{{color}}</h2>
-                     </section>
+        <section class="content content-details">
+            <span>Favorite Colors</span>
+            <h2 class="profile-colors">{{loadedprofile.user.colors[0]}}</h2>
+        </section>
 
         <!-- <form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
         Username    <br/><input type="text" ng-model="form.username">    <br/><br/>

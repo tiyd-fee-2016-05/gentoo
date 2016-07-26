@@ -3,7 +3,7 @@ gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
  // var rootUrl= "http://giftbox-tiy.herokuapp.com";
 
     $scope.submitForm = function() {
-        formData = $scope.form;
+
         var username = $('.userlogin[name="login_username"]').val();
         $rootScope.username = username
         console.log(username);

@@ -1,26 +1,26 @@
-gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
- // var rootUrl= "http://6e62d5d1.ngrok.io/";
- var rootUrl= "http://giftbox-tiy.herokuapp.com";
-
-    $scope.signIn = function() {
-        formData = $scope.form;
-        var username = $('.userlogin[name="login_username"]').val();
-
-          var password = $('.userpassword[name="login_password"]').val();
-
-
-        $rootScope.username = username
-        console.log(username);
-
-          $http({
-              url:  rootUrl + "/" + "auth"+ "/sign_in",
-           method: "POST",
-           params: {formData}
-         }).success(function (data, status, headers, config) {
-                console.log("It happened!");
-           }).error(function (data, status, headers, config) {
-               $scope.status = status;
-           });//End Authorization Post
+// gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
+//  // var rootUrl= "http://6e62d5d1.ngrok.io/";
+//  var rootUrl= "http://giftbox-tiy.herokuapp.com";
+//
+//     $scope.signIn = function() {
+//         formData = $scope.form;
+//         var username = $('.userlogin[name="login_username"]').val();
+//
+//           var password = $('.userpassword[name="login_password"]').val();
+//
+//
+//         $rootScope.username = username
+//         console.log(username);
+//
+//           $http({
+//               url:  rootUrl + "/" + "auth"+ "/sign_in",
+//            method: "POST",
+//            params: {formData}
+//          }).success(function (data, status, headers, config) {
+//                 console.log("It happened!");
+//            }).error(function (data, status, headers, config) {
+//                $scope.status = status;
+//            });//End Authorization Post
 
       //   $http({
       //       url:  rootUrl + "/" + username+ "/friends",
@@ -83,5 +83,5 @@ gentooApp.controller('LoginCtrl', function ($rootScope, $scope, $http) {
 
 
 
-    };  //End Submit Form Function
- });
+ //    };  //End Submit Form Function
+ // });
