@@ -28,7 +28,7 @@ gentooApp.controller('LoginCtrl', ['$scope', '$rootScope','$http', '$location', 
         })
     }
 
-    $scope.logout = function() {
+    $rootScope.logout = function() {
         User.logOut()
     }
 }])
