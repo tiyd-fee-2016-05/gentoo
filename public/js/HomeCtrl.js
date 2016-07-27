@@ -6,8 +6,8 @@ gentooApp.controller('HomeController', ['$rootScope', '$scope', '$http', '$locat
         $location.path("/sign_up");
     }
 
-    var rootUrl= "http://6e62d5d1.ngrok.io/";
-    // var rootUrl= "http://giftbox-tiy.herokuapp.com";
+    // var rootUrl= "http://6e62d5d1.ngrok.io/";
+    var rootUrl= "http://giftbox-tiy.herokuapp.com/";
 
 console.log($scope.userToken);
 console.log($rootScope.username);
