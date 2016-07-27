@@ -22,11 +22,11 @@
             </div>
 
 
-            <div ng-show="isSet(3)" id="tab-menu" class="animated bounceInRight">
+            <div ng-show="isSet(3)" id="tab-menu" class="animated bounceInRight" ng-controller="LoginCtrl">>
                 <ul>
                     <li><a href="#/home"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
                     <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
-                    <li ng-click="User.logout()"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</li>
+                      <li ng-click="logout()"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</li>
                     <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i> Invite</a></li>
                 </ul>
             </div>
@@ -80,10 +80,8 @@
         <ul>
             <!--ng-repeat, and link to their profile-->
             <li class="friends-list" ng-repeat="person in friendList">
-                <a href="#/">
                     <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
                     <p class="uppercase">{{person.username}}</p>
-                </a>
             </li>
         </ul>
     </section>

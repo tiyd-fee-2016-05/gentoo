@@ -19,6 +19,7 @@
         margin-bottom: 10px;
         font: 24px / 22px $font;
         color: $black;
+
     }
 
     .pAccept {
@@ -28,7 +29,7 @@
         letter-spacing: 0;
     }
     a {
-      padding-bottom: 10px;
+
       font-size: 16px;
         color: darken($blue, 20%);
         &:hover {
@@ -77,6 +78,8 @@
         font: 700 14px / 10px $font;
         // color: lighten($black, 20%);
         text-transform: uppercase;
+          padding-bottom: 10px;
+
     }
     ul {
         // margin-top: 10px;
@@ -111,6 +114,7 @@
             h1 {
                 font: 700 24px / 10px $font;
                 color: $white;
+                padding-top: 10px;
             }
             p {
                 margin-left: 20px;

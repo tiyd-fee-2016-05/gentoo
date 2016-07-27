@@ -50,3 +50,17 @@ console.log("Display all idea box items");
 			};
 
 	}]);
+
+	// tabCtrl.js
+	gentooApp.controller('TabController2', ['$scope', function($scope) {
+		$scope.tab = 1;
+
+		$scope.setTab = function(newTab) {
+			$scope.tab = newTab;
+		};
+
+		$scope.isSet = function(tabNum) {
+			return $scope.tab === tabNum;
+		};
+
+	}]);

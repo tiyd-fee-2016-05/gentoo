@@ -12,8 +12,8 @@ gentooApp.controller('LoginCtrl', ['$scope', '$rootScope','$http', '$location', 
             method: "POST",
             url:    rootUrl + "login",
             data: {
-                email:    "sinovia@gentoo.com",
-                password: "password",
+                email:    $('.userlogin[name="login_username"]').val(),
+                password: $('.userpassword[name="login_password"]').val(),
             }
         }).then(function(response) {
             // TODO: store and respect expiration time??

@@ -58,6 +58,11 @@ gentooApp.config(function($routeProvider) {
               // controller: 'ReportController'
               })
 
+              .when('/new-profile', {
+                templateUrl: 'templates/new-profile.html',
+                // controller: 'ReportController'
+                })
+
       .otherwise({
         redirectTo: "/login"
 
