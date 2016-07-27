@@ -1,13 +1,13 @@
 <!-- Profile View -->
 <div id="container">
-    <div id="profile-main-container" ng-controller="LoginCtrl">
+    <div id="profile-main-container" ng-controller="HomeController">
 
         <header>
             <section class="photo">
             </section>
 
             <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i>
-           {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}Nastassia Troyer</h1>
+           {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
 
             <a href="#/profile-edit"><h1 class="edit-profile">Edit Profile</h1></a>
 
@@ -73,17 +73,17 @@
 
         <section class="content content-details">
             <span>Favorite Holidays</span>
-            <h2 class="profile-holidays">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}</h2>
+            <h2 class="profile-holidays" ng-repeat="holiday in holidayList">  |&nbsp; {{holiday}}  &nbsp;</h2>
         </section>
 
         <section class="content content-details">
             <span>Interests</span>
-            <h2 class="profile-interests">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}, {{loadedprofile.user.holidays[3]}}, {{loadedprofile.user.holidays[4]}}</h2>
+            <h2 class="profile-interests" ng-repeat="interest in interestList">{{interest}}</h2>
         </section>
 
         <section class="content content-details">
             <span>Favorite Colors</span>
-            <h2 class="profile-colors">{{loadedprofile.user.colors[0]}}</h2>
+            <h2 class="profile-colors" ng-repeat="color in colorList">|&nbsp; {{color}}  &nbsp;</h2>
         </section>
 
         <!-- <form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
