@@ -22,6 +22,7 @@ var userToken = $scope.userToken
            $rootScope.friendDetails = data
           $rootScope.friendList = data.user.friends
            $rootScope.friendRequests = data.user.requested_friendships
+           $rootScope.usernameOffriendRequests = data.user.requested_friendships
                   console.log("Friend Requests for " + username);
                   console.log("Number of Requests: " + $rootScope.friendDetails.user.requested_count);
            }).error(function (data, status, headers, config) {

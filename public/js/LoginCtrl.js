@@ -23,6 +23,8 @@ gentooApp.controller('LoginCtrl', ['$scope', '$rootScope','$http', '$location', 
       $rootScope.username= response.data.username
       $rootScope.token = response.data.token
 
+          $location.path("/home");
+
         }, function() {
             alert("Something went wrong!");
         })

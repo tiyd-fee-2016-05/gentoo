@@ -59,7 +59,7 @@ gentooApp.config(function($routeProvider) {
               })
 
       .otherwise({
-        redirectTo: "/home"
+        redirectTo: "/login"
 
     });
 });
