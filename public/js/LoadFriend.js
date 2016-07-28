@@ -7,7 +7,9 @@ console.log($scope.friendtoLoad);
   var usersearch = $scope.friendtoLoad
 
 
-
+  $(document).ready(function(){
+      $(this).scrollTop(0);
+  });
 
     // var rootUrl = "https://6e62d5d1.ngrok.io/";
     var rootUrl= "https://giftbox-tiy.herokuapp.com/";
