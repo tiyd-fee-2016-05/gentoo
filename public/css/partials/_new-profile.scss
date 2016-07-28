@@ -1,32 +1,16 @@
-@import 'https://fonts.googleapis.com/css?family=Grand+Hotel|Work+Sans:400,700';
-@import 'https://fonts.googleapis.com/css?family=Nunito';
-
-$logo: 'Grand Hotel', cursive;
-$font: 'Nunito', sans-serif;
-$body: 'Work Sans', sans-serif;
-
-$black: #333;
-$white: lighten(#fdf0d5, 10%);
-$pink: #e84855;
-$lightred: #B6174B;
-$red: #611c35;
-$darkblue: #2F4858;
-$blue: #2e5077;
-$blue2: #2C8C99;
-$teal: #42D9C8;
-
-body {
+// New profile / Sign up
+#new-profile-container {
 	margin: 6% 5% 10% 5%;
-	font: 24px / 36px $font;
+	font: 24px / 36px $menu;
 	color: $white;
 	letter-spacing: 1px;
 	-webkit-font-smoothing: antialiased;
-}
+
 
 button {
 	margin-top: 20px;
 	opacity: 0.8;
-	font: 16px / 20px $font;
+	font: 16px / 20px $menu;
 	color: $white;
 	&:focus {
 		outline: 0;
@@ -52,19 +36,19 @@ a {
 	text-align: center;
 	margin: 10px 50px;
 	line-height: 30px;
+  color: $white;
 }
 
 p {
 	// "step # of 4"
 	margin: 20px 20px 5px 10px;
 	opacity: 0.5;
-	font: 16px / 20px $font;
+	font: 16px / 20px $menu;
 	text-align: right;
 }
 
 #tab {
 	display: inline-block;
-	width: 70px;
 	border-radius: 10px;
 	margin: 20px 3px 30px 3px;
 	padding: 20px;
@@ -85,14 +69,14 @@ p {
 	h1 {
 		display: inline-block;
 		margin: 0;
-		font: 50px / 50px $font;
+		font: 50px / 50px $menu;
 	  color: lighten($white, 10%);
 	}
 	p {
 		margin: 0 0 0 110px;
 		opacity: 1;
 		text-align: left;
-		font: 20px / 24px $body;
+		font: 20px / 24px $font;
 	  color: lighten($white, 10%);
 		letter-spacing: 0;
 	}
@@ -174,14 +158,14 @@ p {
 	border-radius: 5px;
 	padding: 15px 0;
 	text-align: center;
-	font: 40px / 75px $font;
+	font: 40px / 75px $menu;
 	input {
 		width: 40%;
 		border: 2px solid $red;
 		border-radius: 5px;
 		margin: 5px;
 		padding: 8px 20px;
-		font: 20px / 16px $font;
+		font: 20px / 16px $menu;
 		text-align: left;
 		&:focus {
 			outline: 0;
@@ -229,7 +213,7 @@ p {
 		border-radius: 5px;
 		margin: 5px;
 		padding: 8px 20px;
-		font: 20px / 16px $font;
+		font: 20px / 16px $menu;
 		text-align: left;
 		&:focus {
 			outline: 0;
@@ -263,7 +247,7 @@ p {
 		border-radius: 5px;
 		margin: 5px;
 		padding: 8px 5px;
-		font: 14px / 16px $font;
+		font: 14px / 16px $menu;
 		text-align: center;
 		&:focus {
 			outline: 0;
@@ -330,7 +314,7 @@ p {
 		border-radius: 5px;
 		margin-bottom: 20px;
 		padding: 8px 15px 5px 15px;
-		font: 18px / 16px $font;
+		font: 18px / 16px $menu;
 		&:focus {
 			outline: 0;
 		}
@@ -395,7 +379,7 @@ p {
 		border-radius: 5px;
 		margin-bottom: 20px;
 		padding: 5px 0 5px 15px;
-		font: 18px / 16px $font;
+		font: 18px / 16px $menu;
 		&:focus {
 			outline: 0;
 		}
@@ -446,14 +430,14 @@ p {
 		border: 2px solid darken($darkblue, 10%);
 		border-radius: 5px;
 		padding: 5px;
-		font: 18px / 16px $font;
+		font: 18px / 16px $menu;
 		&:focus {
 			outline: 0;
 		}
 	}
 	h6 {
 		margin: 20px 10px 10px 10px;
-		font: 16px / 20px $font;
+		font: 16px / 20px $menu;
 	}
 	a:hover {
 		color: $teal;
@@ -494,4 +478,5 @@ p {
 		cursor: pointer;
 	}
  }
+}
 }
