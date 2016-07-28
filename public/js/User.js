@@ -2,7 +2,7 @@ gentooApp.service('User', ['$location', function($location) {
     var storage = localStorage;
 
     return {
-        getToken:   function() { return storage.getItem("user-token"   ); },
+        getToken:   function() { return storage.getItem("user-token"); },
         isLoggedIn: function() { storage.getItem("user-token") ? true : false; },
 
         logIn: function(t) {
@@ -15,9 +15,5 @@ gentooApp.service('User', ['$location', function($location) {
             $location.path("/login");
         },
 
-        loggedInUser: function() {
-          storage.setItem("loggedInUser", l);
-          $location.path("/");
-        }
     }
 }])
