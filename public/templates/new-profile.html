@@ -74,15 +74,15 @@
 				<ul>
 					<li>
 						<h1 class="header"><label for "bd_month">When is your birthday?</label></h1>
-						<input type="text" id="bd_month" name="bd_month" placeholder="MONTH" maxlength="2" required autofocus>
-						<input type="text" id="bd_day" placeholder="DAY" maxlength="2">
-						<input type="text" id="bd_year" placeholder="YEAR" maxlength="4">
+						<input type="number" id="bd_month" name="bd_month" placeholder="MONTH" maxlength="2" required autofocus>
+						<input type="number" id="bd_day" placeholder="DAY" maxlength="2">
+						<input type="number" id="bd_year" placeholder="YEAR" maxlength="4">
 					</li>
 					<li>
 						<h1 class="header"><label for "sp_month">Do you have a special date or anniversary you'd like others to know?</label></h1>
-						<input type="text" id="sp_month" placeholder="MONTH" maxlength="2">
-						<input type="text" id="sp_day" placeholder="DAY" maxlength="2">
-						<input type="text" id="sp_year" placeholder="YEAR" maxlength="4">
+						<input type="number" id="sp_month" placeholder="MONTH" maxlength="2">
+						<input type="number" id="sp_day" placeholder="DAY" maxlength="2">
+						<input type="number" id="sp_year" placeholder="YEAR" maxlength="4">
 					</li>
 				</ul>
 
@@ -131,20 +131,27 @@
 					</li>
 					<li>
 						<input type="checkbox" id="h9" name="cc" />
-						<label for="h9">Easter</label>
+						<label for="h9">Ramadan</label>
 					</li>
 					<li>
 						<input type="checkbox" id="h10" name="cc" />
-						<label for="h10">Father's Day</label>
+						<label for="h10">Easter</label>
 					</li>
 					<li>
 						<input type="checkbox" id="h11" name="cc" />
-						<label for="h11">4th of July</label>
+						<label for="h11">Father's Day</label>
 					</li>
 					<li>
-						<label for="h12"></label>
-						<input type="text" id="h12" name="cc" placeholder="enter your own holiday" />
-
+						<input type="checkbox" id="h12" name="cc" />
+						<label for="h12">4th of July</label>
+					</li>
+					<li>
+						<input type="checkbox" id="h13" name="cc" />
+						<label for="h13">Hanukkah</label>
+					</li>
+					<li>
+						<label for="h14">or add your own:</label>
+						<input type="text" id="h14" name="cc" placeholder="example: my cat's birthday" />
 					</li>
 				</ul>
 				<p><i class="fa fa-check" aria-hidden="true"></i> step 2 of 5 <button type="submit" ng-click="setTab(4)">next: interests</button></p>
@@ -303,7 +310,7 @@
 					</li>
 					<li>
 						<h1 class="header">Any other favorites to add?</h1>
-						<input type="text" id="fav_restaurant" placeholder="" autocomplete="on">
+						<input type="text" id="fav_extra" placeholder="example: sports team" autocomplete="on">
 					</li>
 				</ul>
 
