@@ -1,7 +1,5 @@
 @import "https://fonts.googleapis.com/css?family=Grand+Hotel|Work+Sans:400,700";
 @import "https://fonts.googleapis.com/css?family=Nunito";
-@import "https://fonts.googleapis.com/css?family=Grand+Hotel|Work+Sans:400,700";
-@import "https://fonts.googleapis.com/css?family=Nunito";
 body {
   background: white;
   -webkit-font-smoothing: antialiased;
@@ -970,6 +968,377 @@ h1 {
   color: #333;
   text-align: center; }
 
+#new-profile-container {
+  margin: 6% 5% 10% 5%;
+  font: 24px/36px "Nunito", sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased; }
+  #new-profile-container button {
+    margin-top: 20px;
+    opacity: 0.8;
+    font: 16px/20px "Nunito", sans-serif;
+    color: white; }
+    #new-profile-container button:focus {
+      outline: 0; }
+  #new-profile-container a {
+    color: white;
+    text-decoration: none; }
+  #new-profile-container .logo {
+    margin: 5%;
+    font: 60px/70px "Grand Hotel", cursive;
+    color: #2C8C99;
+    text-align: center;
+    -webkit-text-shadow: 2px 1px 0 #12050a;
+    -moz-text-shadow: 2px 1px 0 #12050a;
+    text-shadow: 2px 1px 0 #12050a; }
+  #new-profile-container .header {
+    text-align: center;
+    margin: 10px 50px;
+    line-height: 30px;
+    color: white; }
+  #new-profile-container p {
+    margin: 20px 20px 5px 10px;
+    opacity: 0.5;
+    font: 16px/20px "Nunito", sans-serif;
+    text-align: right; }
+  #new-profile-container #tab {
+    display: inline-block;
+    border-radius: 10px;
+    margin: 20px 3px 30px 3px;
+    padding: 20px;
+    text-align: center; }
+  #new-profile-container .tab1 {
+    width: 75%;
+    border-radius: 5px;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+    background: #1d2d37;
+    text-align: left; }
+    #new-profile-container .tab1 i {
+      width: 100px;
+      color: white; }
+    #new-profile-container .tab1 h1 {
+      display: inline-block;
+      margin: 0;
+      font: 50px/50px "Nunito", sans-serif;
+      color: white; }
+    #new-profile-container .tab1 p {
+      margin: 0 0 0 110px;
+      opacity: 1;
+      text-align: left;
+      font: 20px/24px "Work Sans", sans-serif;
+      color: white;
+      letter-spacing: 0; }
+    #new-profile-container .tab1 span {
+      font-weight: 700; }
+    #new-profile-container .tab1:hover {
+      background: #263a47;
+      transition: all 0.5s ease-out;
+      cursor: pointer; }
+  #new-profile-container .tab2 {
+    background: #2C8C99; }
+    #new-profile-container .tab2 i {
+      color: white; }
+    #new-profile-container .tab2:hover {
+      background: #37b0c1;
+      transition: all 0.7s ease-out;
+      cursor: pointer; }
+  #new-profile-container .tab3 {
+    background: #982c53; }
+    #new-profile-container .tab3 i {
+      color: white; }
+    #new-profile-container .tab3:hover {
+      background: #b83565;
+      transition: all 0.7s ease-out;
+      cursor: pointer; }
+  #new-profile-container .tab4 {
+    background: #42D9C8; }
+    #new-profile-container .tab4 i {
+      color: white; }
+    #new-profile-container .tab4:hover {
+      background: #6ce2d4;
+      transition: all 0.7s ease-out;
+      cursor: pointer; }
+  #new-profile-container .tab5 {
+    background: #e84855; }
+    #new-profile-container .tab5 i {
+      color: white; }
+    #new-profile-container .tab5:hover {
+      background: #ee757f;
+      transition: all 0.7s ease-out;
+      cursor: pointer; }
+  #new-profile-container .tab6 {
+    background: #2F4858; }
+    #new-profile-container .tab6 i {
+      color: white; }
+    #new-profile-container .tab6:hover {
+      background: #416379;
+      transition: all 0.7s ease-out;
+      cursor: pointer; }
+  #new-profile-container #tab-login {
+    width: 100%;
+    background: #611c35;
+    border-radius: 5px;
+    padding: 15px 0;
+    text-align: center;
+    font: 40px/75px "Nunito", sans-serif; }
+    #new-profile-container #tab-login input {
+      width: 40%;
+      border: 2px solid #611c35;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 8px 20px;
+      font: 20px/16px "Nunito", sans-serif;
+      text-align: left; }
+      #new-profile-container #tab-login input:focus {
+        outline: 0; }
+    #new-profile-container #tab-login button {
+      background: #2e5077;
+      border: 2px solid #2e5077;
+      border-radius: 5px;
+      margin-left: 5px;
+      opacity: 1; }
+      #new-profile-container #tab-login button:hover {
+        opacity: 1;
+        background: #203752;
+        border: 2px solid #203752;
+        transition: all 0.5s ease-out;
+        cursor: pointer; }
+    #new-profile-container #tab-login .login-button {
+      background: black;
+      border: 2px solid black;
+      border-radius: 5px;
+      opacity: 0.8; }
+      #new-profile-container #tab-login .login-button:hover {
+        opacity: 1;
+        background: #260b15;
+        border: 2px solid #260b15;
+        transition: all 0.5s ease-out;
+        cursor: pointer; }
+  #new-profile-container #tab-signup {
+    width: 100%;
+    background: #27c1b0;
+    border-radius: 5px;
+    padding: 15px 0;
+    text-align: center; }
+    #new-profile-container #tab-signup input {
+      width: 35%;
+      border: 2px solid #27c1b0;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 8px 20px;
+      font: 20px/16px "Nunito", sans-serif;
+      text-align: left; }
+      #new-profile-container #tab-signup input:focus {
+        outline: 0; }
+    #new-profile-container #tab-signup button {
+      background: #0d423c;
+      border: 2px solid #0d423c;
+      border-radius: 5px;
+      margin-left: 5px;
+      opacity: 0.8; }
+      #new-profile-container #tab-signup button:hover {
+        opacity: 1;
+        background: #051715;
+        border: 2px solid #051715;
+        transition: all 0.5s ease-out;
+        cursor: pointer; }
+  #new-profile-container #tab-dates {
+    width: 100%;
+    background: #2C8C99;
+    border-radius: 5px;
+    padding: 15px 0;
+    text-align: center; }
+    #new-profile-container #tab-dates input {
+      width: 70px;
+      border: 2px solid #2C8C99;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 8px 5px;
+      font: 14px/16px "Nunito", sans-serif;
+      text-align: center; }
+      #new-profile-container #tab-dates input:focus {
+        outline: 0; }
+    #new-profile-container #tab-dates button {
+      background: #216871;
+      border: 2px solid #216871;
+      border-radius: 5px;
+      margin-left: 5px; }
+      #new-profile-container #tab-dates button:hover {
+        opacity: 1;
+        transition: all 0.5s ease-out;
+        cursor: pointer; }
+  #new-profile-container #tab-holidays {
+    width: 100%;
+    background: #611c35;
+    border-radius: 5px;
+    padding: 15px 0;
+    color: white;
+    text-align: left; }
+    #new-profile-container #tab-holidays ul {
+      margin: 10px; }
+    #new-profile-container #tab-holidays li {
+      display: inline-block; }
+    #new-profile-container #tab-holidays li input[type="checkbox"] {
+      display: none; }
+    #new-profile-container #tab-holidays li input[type="checkbox"] + label {
+      display: inline-block;
+      background: #411324;
+      border: 2px solid #411324;
+      border-radius: 5px;
+      margin: 3px 0;
+      padding: 0 10px;
+      cursor: pointer; }
+    #new-profile-container #tab-holidays li input[type="checkbox"]:checked + label {
+      background: #260b15;
+      border: 2px solid #260b15;
+      color: #4d162a;
+      transition: all 0.3s ease-out; }
+    #new-profile-container #tab-holidays button {
+      background: #12050a;
+      border: 2px solid #12050a;
+      border-radius: 5px;
+      margin-left: 5px; }
+      #new-profile-container #tab-holidays button:hover {
+        opacity: 1;
+        transition: all 0.5s ease-out;
+        cursor: pointer; }
+    #new-profile-container #tab-holidays input {
+      width: 100%;
+      border: 2px solid #611c35;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      padding: 8px 15px 5px 15px;
+      font: 18px/16px "Nunito", sans-serif; }
+      #new-profile-container #tab-holidays input:focus {
+        outline: 0; }
+  #new-profile-container #tab-interests {
+    width: 100%;
+    background: #23ac9c;
+    border-radius: 5px;
+    padding: 15px 0;
+    color: white;
+    text-align: left; }
+    #new-profile-container #tab-interests ul {
+      margin: 10px; }
+    #new-profile-container #tab-interests li {
+      display: inline-block; }
+    #new-profile-container #tab-interests li input[type="checkbox"] {
+      display: none; }
+    #new-profile-container #tab-interests li input[type="checkbox"] + label {
+      display: inline-block;
+      background: #1d8e81;
+      border: 2px solid #1d8e81;
+      border-radius: 5px;
+      margin: 3px 0;
+      padding: 0 10px;
+      cursor: pointer; }
+    #new-profile-container #tab-interests li input[type="checkbox"]:checked + label {
+      background: #11574f;
+      border: 2px solid #11574f;
+      color: #1e9789;
+      transition: all 0.3s ease-out; }
+    #new-profile-container #tab-interests button {
+      background: #197d72;
+      border: 2px solid #197d72;
+      border-radius: 5px;
+      margin-left: 5px; }
+      #new-profile-container #tab-interests button:hover {
+        opacity: 1;
+        transition: all 0.5s ease-out;
+        cursor: pointer; }
+  #new-profile-container #tab-favorites {
+    width: 100%;
+    background: #e84855;
+    border-radius: 5px;
+    padding: 15px 0;
+    color: white;
+    text-align: center; }
+    #new-profile-container #tab-favorites input {
+      width: 50%;
+      border: 2px solid #e84855;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      padding: 5px 0 5px 15px;
+      font: 18px/16px "Nunito", sans-serif; }
+      #new-profile-container #tab-favorites input:focus {
+        outline: 0; }
+    #new-profile-container #tab-favorites li {
+      display: inline-block; }
+    #new-profile-container #tab-favorites li input[type="radio"] {
+      display: none; }
+    #new-profile-container #tab-favorites li input[type="radio"] + label {
+      display: inline-block;
+      background: #e53140;
+      border: 2px solid #e53140;
+      border-radius: 5px;
+      margin: 3px 0;
+      padding: 0 10px;
+      cursor: pointer; }
+    #new-profile-container #tab-favorites li input[type="radio"]:checked + label {
+      background: #ca1928;
+      border: 2px solid #ca1928;
+      color: white;
+      transition: all 0.3s ease-out; }
+    #new-profile-container #tab-favorites button {
+      background: #e11c2c;
+      border: 2px solid #e11c2c;
+      border-radius: 5px;
+      margin-left: 5px; }
+      #new-profile-container #tab-favorites button:hover {
+        opacity: 1;
+        transition: all 0.5s ease-out;
+        cursor: pointer; }
+  #new-profile-container #tab-search {
+    width: 100%;
+    background: #1d2d37;
+    border-radius: 5px;
+    padding: 15px 0;
+    text-align: center; }
+    #new-profile-container #tab-search input {
+      width: 50%;
+      border: 2px solid #1d2d37;
+      border-radius: 5px;
+      padding: 5px;
+      font: 18px/16px "Nunito", sans-serif; }
+      #new-profile-container #tab-search input:focus {
+        outline: 0; }
+    #new-profile-container #tab-search h6 {
+      margin: 20px 10px 10px 10px;
+      font: 16px/20px "Nunito", sans-serif; }
+    #new-profile-container #tab-search a:hover {
+      color: #42D9C8;
+      transition: all 0.3s ease-out; }
+    #new-profile-container #tab-search button {
+      background: #0b1216;
+      border: 2px solid #0b1216;
+      border-radius: 5px;
+      margin-left: 5px; }
+      #new-profile-container #tab-search button:hover {
+        opacity: 1;
+        transition: all 0.5s ease-out;
+        cursor: pointer; }
+  #new-profile-container #bottom-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    background: white; }
+    #new-profile-container #bottom-button .skip-steps {
+      position: fixed;
+      bottom: 3%;
+      left: 5%;
+      background: #2F4858;
+      border: 2px solid #2F4858;
+      border-radius: 5px; }
+      #new-profile-container #bottom-button .skip-steps:hover {
+        background: #2F4858;
+        opacity: 1;
+        transition: all 0.7s ease-out;
+        cursor: pointer; }
+
 .profile-name span {
   font-weight: 700; }
 
@@ -1360,395 +1729,5 @@ h1 {
       width: 100%;
       margin-top: 10px;
       padding: 0 20px; } }
-body {
-  margin: 6% 5% 10% 5%;
-  font: 24px/36px "Nunito", sans-serif;
-  color: white;
-  letter-spacing: 1px;
-  -webkit-font-smoothing: antialiased; }
-
-button {
-  margin-top: 20px;
-  opacity: 0.8;
-  font: 16px/20px "Nunito", sans-serif;
-  color: white; }
-  button:focus {
-    outline: 0; }
-
-a {
-  color: white;
-  text-decoration: none; }
-
-.logo {
-  margin: 5%;
-  font: 60px/70px "Grand Hotel", cursive;
-  color: #2C8C99;
-  text-align: center;
-  -webkit-text-shadow: 2px 1px 0 #12050a;
-  -moz-text-shadow: 2px 1px 0 #12050a;
-  text-shadow: 2px 1px 0 #12050a; }
-
-.header {
-  text-align: center;
-  margin: 10px 50px;
-  line-height: 30px; }
-
-p {
-  margin: 20px 20px 5px 10px;
-  opacity: 0.5;
-  font: 16px/20px "Nunito", sans-serif;
-  text-align: right; }
-
-#tab {
-  display: inline-block;
-  width: 70px;
-  border-radius: 10px;
-  margin: 20px 3px 30px 3px;
-  padding: 20px;
-  text-align: center; }
-
-.tab1 {
-  width: 75%;
-  border-radius: 5px;
-  margin: 20px 0 20px 0;
-  padding: 20px;
-  background: #1d2d37;
-  text-align: left; }
-  .tab1 i {
-    width: 100px;
-    color: white; }
-  .tab1 h1 {
-    display: inline-block;
-    margin: 0;
-    font: 50px/50px "Nunito", sans-serif;
-    color: white; }
-  .tab1 p {
-    margin: 0 0 0 110px;
-    opacity: 1;
-    text-align: left;
-    font: 20px/24px "Work Sans", sans-serif;
-    color: white;
-    letter-spacing: 0; }
-  .tab1 span {
-    font-weight: 700; }
-  .tab1:hover {
-    background: #263a47;
-    transition: all 0.5s ease-out;
-    cursor: pointer; }
-
-.tab2 {
-  background: #2C8C99; }
-  .tab2 i {
-    color: white; }
-  .tab2:hover {
-    background: #37b0c1;
-    transition: all 0.7s ease-out;
-    cursor: pointer; }
-
-.tab3 {
-  background: #982c53; }
-  .tab3 i {
-    color: white; }
-  .tab3:hover {
-    background: #b83565;
-    transition: all 0.7s ease-out;
-    cursor: pointer; }
-
-.tab4 {
-  background: #42D9C8; }
-  .tab4 i {
-    color: white; }
-  .tab4:hover {
-    background: #6ce2d4;
-    transition: all 0.7s ease-out;
-    cursor: pointer; }
-
-.tab5 {
-  background: #e84855; }
-  .tab5 i {
-    color: white; }
-  .tab5:hover {
-    background: #ee757f;
-    transition: all 0.7s ease-out;
-    cursor: pointer; }
-
-.tab6 {
-  background: #2F4858; }
-  .tab6 i {
-    color: white; }
-  .tab6:hover {
-    background: #416379;
-    transition: all 0.7s ease-out;
-    cursor: pointer; }
-
-#tab-login {
-  width: 100%;
-  background: #611c35;
-  border-radius: 5px;
-  padding: 15px 0;
-  text-align: center;
-  font: 40px/75px "Nunito", sans-serif; }
-  #tab-login input {
-    width: 40%;
-    border: 2px solid #611c35;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 8px 20px;
-    font: 20px/16px "Nunito", sans-serif;
-    text-align: left; }
-    #tab-login input:focus {
-      outline: 0; }
-  #tab-login button {
-    background: #2e5077;
-    border: 2px solid #2e5077;
-    border-radius: 5px;
-    margin-left: 5px;
-    opacity: 1; }
-    #tab-login button:hover {
-      opacity: 1;
-      background: #203752;
-      border: 2px solid #203752;
-      transition: all 0.5s ease-out;
-      cursor: pointer; }
-  #tab-login .login-button {
-    background: black;
-    border: 2px solid black;
-    border-radius: 5px;
-    opacity: 0.8; }
-    #tab-login .login-button:hover {
-      opacity: 1;
-      background: #260b15;
-      border: 2px solid #260b15;
-      transition: all 0.5s ease-out;
-      cursor: pointer; }
-
-#tab-signup {
-  width: 100%;
-  background: #27c1b0;
-  border-radius: 5px;
-  padding: 15px 0;
-  text-align: center; }
-  #tab-signup input {
-    width: 35%;
-    border: 2px solid #27c1b0;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 8px 20px;
-    font: 20px/16px "Nunito", sans-serif;
-    text-align: left; }
-    #tab-signup input:focus {
-      outline: 0; }
-  #tab-signup button {
-    background: #0d423c;
-    border: 2px solid #0d423c;
-    border-radius: 5px;
-    margin-left: 5px;
-    opacity: 0.8; }
-    #tab-signup button:hover {
-      opacity: 1;
-      background: #051715;
-      border: 2px solid #051715;
-      transition: all 0.5s ease-out;
-      cursor: pointer; }
-
-#tab-dates {
-  width: 100%;
-  background: #2C8C99;
-  border-radius: 5px;
-  padding: 15px 0;
-  text-align: center; }
-  #tab-dates input {
-    width: 70px;
-    border: 2px solid #2C8C99;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 8px 5px;
-    font: 14px/16px "Nunito", sans-serif;
-    text-align: center; }
-    #tab-dates input:focus {
-      outline: 0; }
-  #tab-dates button {
-    background: #216871;
-    border: 2px solid #216871;
-    border-radius: 5px;
-    margin-left: 5px; }
-    #tab-dates button:hover {
-      opacity: 1;
-      transition: all 0.5s ease-out;
-      cursor: pointer; }
-
-#tab-holidays {
-  width: 100%;
-  background: #611c35;
-  border-radius: 5px;
-  padding: 15px 0;
-  color: white;
-  text-align: left; }
-  #tab-holidays ul {
-    margin: 10px; }
-  #tab-holidays li {
-    display: inline-block; }
-  #tab-holidays li input[type="checkbox"] {
-    display: none; }
-  #tab-holidays li input[type="checkbox"] + label {
-    display: inline-block;
-    background: #411324;
-    border: 2px solid #411324;
-    border-radius: 5px;
-    margin: 3px 0;
-    padding: 0 10px;
-    cursor: pointer; }
-  #tab-holidays li input[type="checkbox"]:checked + label {
-    background: #260b15;
-    border: 2px solid #260b15;
-    color: #4d162a;
-    transition: all 0.3s ease-out; }
-  #tab-holidays button {
-    background: #12050a;
-    border: 2px solid #12050a;
-    border-radius: 5px;
-    margin-left: 5px; }
-    #tab-holidays button:hover {
-      opacity: 1;
-      transition: all 0.5s ease-out;
-      cursor: pointer; }
-  #tab-holidays input {
-    width: 100%;
-    border: 2px solid #611c35;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    padding: 8px 15px 5px 15px;
-    font: 18px/16px "Nunito", sans-serif; }
-    #tab-holidays input:focus {
-      outline: 0; }
-
-#tab-interests {
-  width: 100%;
-  background: #23ac9c;
-  border-radius: 5px;
-  padding: 15px 0;
-  color: white;
-  text-align: left; }
-  #tab-interests ul {
-    margin: 10px; }
-  #tab-interests li {
-    display: inline-block; }
-  #tab-interests li input[type="checkbox"] {
-    display: none; }
-  #tab-interests li input[type="checkbox"] + label {
-    display: inline-block;
-    background: #1d8e81;
-    border: 2px solid #1d8e81;
-    border-radius: 5px;
-    margin: 3px 0;
-    padding: 0 10px;
-    cursor: pointer; }
-  #tab-interests li input[type="checkbox"]:checked + label {
-    background: #11574f;
-    border: 2px solid #11574f;
-    color: #1e9789;
-    transition: all 0.3s ease-out; }
-  #tab-interests button {
-    background: #197d72;
-    border: 2px solid #197d72;
-    border-radius: 5px;
-    margin-left: 5px; }
-    #tab-interests button:hover {
-      opacity: 1;
-      transition: all 0.5s ease-out;
-      cursor: pointer; }
-
-#tab-favorites {
-  width: 100%;
-  background: #e84855;
-  border-radius: 5px;
-  padding: 15px 0;
-  color: white;
-  text-align: center; }
-  #tab-favorites input {
-    width: 50%;
-    border: 2px solid #e84855;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    padding: 5px 0 5px 15px;
-    font: 18px/16px "Nunito", sans-serif; }
-    #tab-favorites input:focus {
-      outline: 0; }
-  #tab-favorites li {
-    display: inline-block; }
-  #tab-favorites li input[type="radio"] {
-    display: none; }
-  #tab-favorites li input[type="radio"] + label {
-    display: inline-block;
-    background: #e53140;
-    border: 2px solid #e53140;
-    border-radius: 5px;
-    margin: 3px 0;
-    padding: 0 10px;
-    cursor: pointer; }
-  #tab-favorites li input[type="radio"]:checked + label {
-    background: #ca1928;
-    border: 2px solid #ca1928;
-    color: white;
-    transition: all 0.3s ease-out; }
-  #tab-favorites button {
-    background: #e11c2c;
-    border: 2px solid #e11c2c;
-    border-radius: 5px;
-    margin-left: 5px; }
-    #tab-favorites button:hover {
-      opacity: 1;
-      transition: all 0.5s ease-out;
-      cursor: pointer; }
-
-#tab-search {
-  width: 100%;
-  background: #1d2d37;
-  border-radius: 5px;
-  padding: 15px 0;
-  text-align: center; }
-  #tab-search input {
-    width: 50%;
-    border: 2px solid #1d2d37;
-    border-radius: 5px;
-    padding: 5px;
-    font: 18px/16px "Nunito", sans-serif; }
-    #tab-search input:focus {
-      outline: 0; }
-  #tab-search h6 {
-    margin: 20px 10px 10px 10px;
-    font: 16px/20px "Nunito", sans-serif; }
-  #tab-search a:hover {
-    color: #42D9C8;
-    transition: all 0.3s ease-out; }
-  #tab-search button {
-    background: #0b1216;
-    border: 2px solid #0b1216;
-    border-radius: 5px;
-    margin-left: 5px; }
-    #tab-search button:hover {
-      opacity: 1;
-      transition: all 0.5s ease-out;
-      cursor: pointer; }
-
-#bottom-button {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 8%;
-  background: white; }
-  #bottom-button .skip-steps {
-    position: fixed;
-    bottom: 3%;
-    left: 5%;
-    background: #2F4858;
-    border: 2px solid #2F4858;
-    border-radius: 5px; }
-    #bottom-button .skip-steps:hover {
-      background: #2F4858;
-      opacity: 1;
-      transition: all 0.7s ease-out;
-      cursor: pointer; }
 
 /*# sourceMappingURL=styles.css.map */

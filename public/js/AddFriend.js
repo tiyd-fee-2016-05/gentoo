@@ -7,7 +7,7 @@ gentooApp.controller('RequestFriendCtrl', function ($rootScope, $scope, $http, $
   }
 
   // var rootUrl= "http://6e62d5d1.ngrok.io/";
-  var rootUrl= "http://giftbox-tiy.herokuapp.com/";
+  var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
   var username = $rootScope.username
   var userToken = $scope.userToken
@@ -55,7 +55,7 @@ gentooApp.controller('AcceptFriendCtrl', function ($rootScope, $scope, $http, $l
             headers: {'Authorization': userToken},
             params: {"accepted_friend" : clickedfriend},
       }).success(function successCallback(response) {
-        $location.path("/friends");
+          $location.path("/friends");;
 
 
         }, function errorCallback(response) {
