@@ -37,7 +37,7 @@
 
                 <div id="friend-search" ng-if="searchBox">
                     <ul>
-                        <li ng-repeat="person in friendList | filter: searchBox">
+                        <li ng-repeat="person in friendList | filter: searchBox" ng-click="findFriend(person.username)">
                             <a href="#/friend-profile">
                                 <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
                                 <p class="uppercase">@{{person.username}}</p>

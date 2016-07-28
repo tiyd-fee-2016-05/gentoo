@@ -9,8 +9,8 @@ console.log($scope.friendtoLoad);
 
 
 
-    var rootUrl = "https://6e62d5d1.ngrok.io/";
-    // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+    // var rootUrl = "https://6e62d5d1.ngrok.io/";
+    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
     console.log($scope.userToken);
     var userToken = $scope.userToken
