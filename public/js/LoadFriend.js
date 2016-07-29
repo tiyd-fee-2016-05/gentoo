@@ -55,6 +55,23 @@ console.log($scope.friendtoLoad);
                 $scope.status = status;
             });//End GET request for friends
 
+            $http({
+                      url:  rootUrl +usersearch + "/ideabox",
+                   method: "GET",
+                   headers: {'Authorization': userToken},
+                   data: {
+                       username: usersearch
+                     }
+                  }).success(function (data, status, headers, config) {
+                           console.log("Idea Box Info for " + usersearch);
+                           console.log(data);
+                          //  $rootScope.IdeaBoxArray = data.user
+                          // console.log("List of Lists");
+                          //  console.log($rootScope.wishlistArray);
+                    }).error(function (data, status, headers, config) {
+                        $scope.status = status;
+                    });//End GET request for friends
+
 
 
 

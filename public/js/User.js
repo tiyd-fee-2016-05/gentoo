@@ -12,6 +12,7 @@ gentooApp.service('User', ['$location', function($location) {
 
         logOut: function() {
             storage.removeItem("user-token");
+            storage.removeItem("friendtovisit");
             $location.path("/login");
         },
 
