@@ -1,6 +1,4 @@
-var gentooApp = angular.module("mainApp", ['ngRoute']);
-var url = "http://58a85897.ngrok.io/";
-var username = $('.userlogin[name="login_username"]').val()
+var gentooApp = angular.module("mainApp", ['ngRoute', 'firebase']);
 gentooApp.config(function($routeProvider) {
   $routeProvider
   //Consumer View Routes

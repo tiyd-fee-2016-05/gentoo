@@ -1,4 +1,4 @@
-gentooApp.controller('FriendController', ['$rootScope', '$scope', '$http', '$location', 'User', function($rootScope, $scope, $http, $location, User) {
+gentooApp.controller('FriendController', ['$rootScope', '$scope', '$http', '$location','Friend', 'User', function($rootScope, $scope, $http, $location,GetFriend, User) {
     $scope.userToken = User.getToken();
     $scope.domain = window.location.href;
 
@@ -6,7 +6,7 @@ gentooApp.controller('FriendController', ['$rootScope', '$scope', '$http', '$loc
         $location.path("/sign_up");
     }
     // var rootUrl= "http://6e62d5d1.ngrok.io/";
-    var rootUrl= "http://giftbox-tiy.herokuapp.com/";
+    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
 console.log($scope.userToken);
 var username = $rootScope.username
@@ -29,7 +29,17 @@ var userToken = $scope.userToken
                $scope.status = status;
            });//End GET request for friends
 
+$scope.findFriend = function(clickedperson) {
+  console.log("Find this friend");
+  console.log(clickedperson);
 
+  $scope.searchedFriend = GetFriend.rememberFriend(clickedperson);
+
+
+
+
+
+}
 
 
 

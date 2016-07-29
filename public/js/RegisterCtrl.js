@@ -4,8 +4,8 @@ gentooApp.controller('RegisterCtrl', ['$scope', '$http', '$location', 'User', fu
     }
 
     $scope.user = { email: "", password: "", passwordConfirmation: "" };
-    var rootUrl= "http://6e62d5d1.ngrok.io/";
-    // var rootUrl= "http://giftbox-tiy.herokuapp.com";
+    // var rootUrl= "https://6e62d5d1.ngrok.io/";
+    var rootUrl= "https://giftbox-tiy.herokuapp.com";
 
 
     $scope.register = function() {
