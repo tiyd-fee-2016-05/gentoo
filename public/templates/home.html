@@ -21,14 +21,10 @@
 
                 <div ng-click="setTab(4)" id="tab3" ng-class="{ active: isSet(3) }"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
 
-
-
                 <div ng-click="setTab(1)" id="tab4" ng-class="{ active: isSet(1) }"><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
-
 
                 <div ng-show="isSet(1)">
                 </div>
-
 
                 <div ng-show="isSet(3)" id="tab-menu" class="animated bounceInRight" ng-controller="LoginCtrl">
                     <ul>
@@ -58,30 +54,73 @@
         </header>
 
 
-
         <section class="user-photo">
         </section>
 
-        <section class="content content-main">
+
+        <div class="info dates">
+        		<h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
+        		<ul class="info-answer">
+        			<li>{{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</li>
+        		</ul>
+        		<!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
+        	</div>
+
+        	<div class="info holidays">
+        		<h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
+        		<ul class="info-answer">
+        			<li ng-repeat="holiday in holidayList">
+        				<input type="checkbox" id="h1" name="cc" />
+        				<label for="h1">{{holiday}}</label>
+        			</li>
+        		</ul>
+        		<!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
+        	</div>
+
+        	<div class="info interests">
+        		<h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
+        		<ul class="info-answer">
+        			<li ng-repeat="interest in interestList">
+        				<input type="checkbox" id="i1" name="cc" />
+        				<label for="i1">{{interest}}</label>
+        			</li>
+        		</ul>
+        		<!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
+        	</div>
+
+        	<div class="info favorites">
+        		<h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
+        		<ul class="info-answer">
+        			<li ng-repeat="color in colorList">
+        				<input type="checkbox" id="f1" name="cc" />
+        				<label for="f1">{{color}}</label>
+        			</li>
+        		</ul>
+        		<!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
+        	</div>
+
+
+<!-- old code -->
+        <!-- <section class="content content-main">
 
             <h2 class="profile-birthday"><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</h2>
-            <h2 class="profile-anniv-dates"><i class="fa fa-calendar" aria-hidden="true"></i> 05/25/1945</h2>
+
         </section>
 
         <section class="content content-details">
             <span>Favorite Holidays</span>
             <h2 class="profile-holidays" ng-repeat="holiday in holidayList">  |&nbsp; {{holiday}}  &nbsp;</h2>
-        </section>
+        </section> -->
 
-        <section class="content content-details">
+        <!-- <section class="content content-details">
             <span>Interests</span>
             <h2 class="profile-interests" ng-repeat="interest in interestList">|&nbsp; {{interest}}  &nbsp;</h2>
-        </section>
+        </section> -->
 
-        <section class="content content-details">
+        <!-- <section class="content content-details">
             <span>Favorite Colors</span>
             <h2 class="profile-colors" ng-repeat="color in colorList">|&nbsp; {{color}}  &nbsp;</h2>
-        </section>
+        </section> -->
 
         <!-- <form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
         Username    <br/><input type="text" ng-model="form.username">    <br/><br/>
