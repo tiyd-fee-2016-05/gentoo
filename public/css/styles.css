@@ -197,6 +197,235 @@ button:focus {
       #menu #tab-search ul li:hover h1 {
         color: #416379; }
 
+.wishlists {
+  padding: 15px 5%;
+  font: 700 24px/26px "Work Sans", sans-serif;
+  color: #611c35; }
+
+.add-list {
+  float: right;
+  padding: 15px 5%;
+  font: 700 18px/22px "Nunito", sans-serif;
+  color: #15444a; }
+  .add-list i {
+    padding-left: 10px; }
+  .add-list:hover {
+    color: #216871;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer; }
+
+.lists {
+  width: 100%;
+  height: auto;
+  margin: 0 0 30px;
+  background: #2C8C99; }
+  .lists .list-header {
+    border-bottom: 2px solid white; }
+  .lists .list-name {
+    padding: 15px 5%;
+    font: 700 18px/22px "Work Sans", sans-serif;
+    color: white; }
+  .lists ul {
+    width: 90%;
+    margin: 10px 5%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll; }
+    .lists ul li {
+      display: inline-block;
+      vertical-align: middle;
+      overflow: hidden;
+      width: 250px;
+      height: 65px;
+      margin: 10px;
+      padding-top: 10px;
+      background: #2C8C99;
+      border: 2px solid #2C8C99;
+      text-align: center;
+      border-radius: 5px;
+      opacity: 0.7; }
+      .lists ul li:hover {
+        opacity: 1;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        background: #329ead;
+        border: 2px solid #329ead;
+        color: #1b565e; }
+      .lists ul li h1 {
+        font-weight: bold;
+        color: white; }
+      .lists ul li h2 {
+        font-weight: bold;
+        color: #216871; }
+      .lists ul li .fa-heart {
+        color: #15444a; }
+      .lists ul li .fa-plus {
+        color: #15444a; }
+
+#wishlist-modal-container {
+  z-index: 999;
+  margin: 6% 5% 10%;
+  font: 24px/36px "Nunito", sans-serif;
+  color: white;
+  letter-spacing: 1px; }
+  #wishlist-modal-container a {
+    color: white;
+    text-decoration: none; }
+
+#tab-wishlist {
+  z-index: 999;
+  margin: 6% 5% 10%;
+  font: 24px/36px "Nunito", sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  width: 90%;
+  background: #27c1b0;
+  border-radius: 5px;
+  padding: 15px 0;
+  text-align: center;
+  font: 40px/75px "Nunito", sans-serif; }
+  #tab-wishlist p {
+    margin: 20px 20px 5px 10px;
+    opacity: 0.7;
+    font: 16px/20px "Nunito", sans-serif;
+    text-align: right;
+    color: white; }
+  #tab-wishlist .header {
+    text-align: center;
+    margin: 10px 50px;
+    font: 30px/30px "Nunito", sans-serif;
+    color: white; }
+  #tab-wishlist input {
+    width: 70%;
+    border: 2px solid #27c1b0;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 8px 20px;
+    font: 20px/16px "Nunito", sans-serif;
+    text-align: left; }
+    #tab-wishlist input:focus {
+      outline: 0; }
+  #tab-wishlist button {
+    background: #1a8176;
+    border: 2px solid #1a8176;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 5px;
+    opacity: 1;
+    font: 16px/20px "Nunito", sans-serif;
+    color: white; }
+    #tab-wishlist button:focus {
+      outline: 0; }
+    #tab-wishlist button:hover {
+      opacity: 1;
+      background: #166c63;
+      border: 2px solid #166c63;
+      transition: all 0.5s ease-out;
+      cursor: pointer; }
+
+#inner {
+  margin: 8%; }
+  #inner p {
+    margin: 20px 20px 5px 10px;
+    font: 20px/30px "Nunito", sans-serif;
+    color: white;
+    opacity: 1;
+    text-align: center; }
+  #inner:hover {
+    cursor: pointer; }
+
+#tab-inner {
+  z-index: 999;
+  width: 100%;
+  background: #42D9C8;
+  padding: 15px 0;
+  font: 24px/36px "Nunito", sans-serif;
+  color: white;
+  letter-spacing: 1px; }
+  #tab-inner p {
+    margin: 20px 20px 5px 10px;
+    opacity: 0.7;
+    font: 16px/20px "Nunito", sans-serif;
+    text-align: right;
+    color: white; }
+  #tab-inner input {
+    width: 70%;
+    border: 2px solid #42D9C8;
+    border-radius: 5px;
+    padding: 8px 20px;
+    font: 20px/16px "Nunito", sans-serif;
+    text-align: left; }
+    #tab-inner input:focus {
+      outline: 0; }
+  #tab-inner button {
+    background: #23ac9c;
+    border: 2px solid #23ac9c;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 5px;
+    opacity: 1;
+    font: 16px/20px "Nunito", sans-serif;
+    color: white; }
+    #tab-inner button:focus {
+      outline: 0; }
+    #tab-inner button:hover {
+      opacity: 1;
+      background: #27c1b0;
+      border: 2px solid #27c1b0;
+      transition: all 0.5s ease-out;
+      cursor: pointer; }
+
+#tab-wishlist-item {
+  z-index: 999;
+  width: 90%;
+  background: #2C8C99;
+  border-radius: 5px;
+  margin: 6% 5% 10%;
+  padding: 15px 0;
+  font: 40px/75px "Nunito", sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center; }
+  #tab-wishlist-item p {
+    margin: 20px 20px 5px 10px;
+    opacity: 0.7;
+    font: 16px/20px "Nunito", sans-serif;
+    text-align: right;
+    color: white; }
+  #tab-wishlist-item .header {
+    text-align: center;
+    margin: 10px 50px;
+    font: 30px/30px "Nunito", sans-serif;
+    color: white; }
+  #tab-wishlist-item input {
+    width: 70%;
+    border: 2px solid #2C8C99;
+    border-radius: 5px;
+    padding: 8px 20px;
+    font: 20px/16px "Nunito", sans-serif;
+    text-align: left; }
+    #tab-wishlist-item input:focus {
+      outline: 0; }
+  #tab-wishlist-item button {
+    background: #216871;
+    border: 2px solid #216871;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 5px;
+    opacity: 1;
+    font: 16px/20px "Nunito", sans-serif;
+    color: white; }
+    #tab-wishlist-item button:focus {
+      outline: 0; }
+    #tab-wishlist-item button:hover {
+      opacity: 1;
+      background: #15444a;
+      border: 2px solid #15444a;
+      transition: all 0.5s ease-out;
+      cursor: pointer; }
+
 header .nav {
   width: 110px;
   height: 30px;
@@ -830,70 +1059,6 @@ header .unfriend {
         display: inline-block;
         font: 18px/20px "Work Sans", sans-serif;
         color: #333; }
-    #container #profile-main-container .wishlists {
-      padding: 15px 5%;
-      font: 700 24px/26px "Work Sans", sans-serif;
-      color: #611c35; }
-    #container #profile-main-container .add-list {
-      float: right;
-      padding: 15px 5%;
-      font: 700 18px/22px "Work Sans", sans-serif;
-      color: #15444a; }
-      #container #profile-main-container .add-list i {
-        padding-left: 10px; }
-      #container #profile-main-container .add-list:hover {
-        color: #216871;
-        -webkit-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-        cursor: pointer; }
-    #container #profile-main-container .lists {
-      width: 100%;
-      height: auto;
-      margin: 0 0 30px;
-      background: #2C8C99; }
-      #container #profile-main-container .lists .list-header {
-        border-bottom: 2px solid white; }
-      #container #profile-main-container .lists .list-name {
-        padding: 15px 5%;
-        font: 700 18px/22px "Work Sans", sans-serif;
-        color: white; }
-      #container #profile-main-container .lists ul {
-        width: 90%;
-        margin: 10px 5%;
-        white-space: nowrap;
-        overflow-y: hidden;
-        overflow-x: scroll; }
-        #container #profile-main-container .lists ul li {
-          display: inline-block;
-          vertical-align: middle;
-          overflow: hidden;
-          width: 250px;
-          height: 65px;
-          margin: 10px;
-          padding-top: 10px;
-          background: #2C8C99;
-          border: 2px solid #2C8C99;
-          text-align: center;
-          border-radius: 5px;
-          opacity: 0.7; }
-          #container #profile-main-container .lists ul li:hover {
-            opacity: 1;
-            -webkit-transition: all 0.3s ease;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            background: #329ead;
-            border: 2px solid #329ead;
-            color: #1b565e; }
-          #container #profile-main-container .lists ul li h1 {
-            font-weight: bold;
-            color: white; }
-          #container #profile-main-container .lists ul li h2 {
-            font-weight: bold;
-            color: #216871; }
-          #container #profile-main-container .lists ul li .fa-heart {
-            color: #15444a; }
-          #container #profile-main-container .lists ul li .fa-plus {
-            color: #15444a; }
 
 .friend-photo {
   width: 100%;
@@ -1005,7 +1170,7 @@ h1 {
   #new-profile-container #tab {
     display: inline-block;
     border-radius: 10px;
-    margin: 20px 3px 30px 3px;
+    margin: 20px 5px 30px 5px;
     padding: 20px;
     text-align: center; }
   #new-profile-container .tab1 {
@@ -1084,7 +1249,7 @@ h1 {
     text-align: center;
     font: 40px/75px "Nunito", sans-serif; }
     #new-profile-container #tab-login input {
-      width: 40%;
+      width: 50%;
       border: 2px solid #611c35;
       border-radius: 5px;
       margin: 5px;
@@ -1123,7 +1288,7 @@ h1 {
     padding: 15px 0;
     text-align: center; }
     #new-profile-container #tab-signup input {
-      width: 35%;
+      width: 50%;
       border: 2px solid #27c1b0;
       border-radius: 5px;
       margin: 5px;
@@ -1184,16 +1349,17 @@ h1 {
       display: none; }
     #new-profile-container #tab-holidays li input[type="checkbox"] + label {
       display: inline-block;
-      background: #411324;
-      border: 2px solid #411324;
+      background: #39111f;
+      border: 2px solid #39111f;
+      color: #89274b;
       border-radius: 5px;
       margin: 3px 0;
       padding: 0 10px;
       cursor: pointer; }
     #new-profile-container #tab-holidays li input[type="checkbox"]:checked + label {
-      background: #260b15;
-      border: 2px solid #260b15;
-      color: #4d162a;
+      background: #4d162a;
+      border: 2px solid #4d162a;
+      color: white;
       transition: all 0.3s ease-out; }
     #new-profile-container #tab-holidays button {
       background: #12050a;
@@ -1208,7 +1374,7 @@ h1 {
       width: 100%;
       border: 2px solid #611c35;
       border-radius: 5px;
-      margin-bottom: 20px;
+      margin-bottom: 0;
       padding: 8px 15px 5px 15px;
       font: 18px/16px "Nunito", sans-serif; }
       #new-profile-container #tab-holidays input:focus {
@@ -1228,16 +1394,17 @@ h1 {
       display: none; }
     #new-profile-container #tab-interests li input[type="checkbox"] + label {
       display: inline-block;
-      background: #1d8e81;
-      border: 2px solid #1d8e81;
+      background: #166c63;
+      border: 2px solid #166c63;
+      color: #42D9C8;
       border-radius: 5px;
       margin: 3px 0;
       padding: 0 10px;
       cursor: pointer; }
     #new-profile-container #tab-interests li input[type="checkbox"]:checked + label {
-      background: #11574f;
-      border: 2px solid #11574f;
-      color: #1e9789;
+      background: #1d8e81;
+      border: 2px solid #1d8e81;
+      color: white;
       transition: all 0.3s ease-out; }
     #new-profile-container #tab-interests button {
       background: #197d72;
@@ -1256,7 +1423,7 @@ h1 {
     color: white;
     text-align: center; }
     #new-profile-container #tab-favorites input {
-      width: 50%;
+      width: 70%;
       border: 2px solid #e84855;
       border-radius: 5px;
       margin-bottom: 20px;

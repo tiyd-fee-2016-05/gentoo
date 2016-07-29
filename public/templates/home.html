@@ -86,6 +86,162 @@
             <h2 class="profile-colors" ng-repeat="color in colorList">|&nbsp; {{color}}  &nbsp;</h2>
         </section>
 
+        <!-- Wishlist tab-modal -->
+          <div ng-show="isSet(wishlist)" id="tab-wishlist">
+              <h1 class="header">Add new wishlist:</h1>
+              <!--make this changeable-->
+              <form>
+                  <ul>
+                      <li>
+                          <input type="text" id="wishlist_title" placeholder="wishlist name" autocomplete="on" autofocus required>
+                      </li>
+                  </ul>
+
+                  <p><i class="fa fa-check" aria-hidden="true"></i>
+                      <button type="submit" ng-click="">save list</button>
+                  </p>
+
+                  <div id="inner" class="" ng-click="showme=true">
+                      <p>would you like to start adding items to this list?</p>
+                  </div>
+                  <div ng-show="showme" id="tab-inner">
+                      <ul>
+                          <li>
+                              <input type="text" id="item_title" placeholder="item name" autocomplete="on" required>
+                          </li>
+                          <li>
+                              <input type="text" id="item_desc" placeholder="description" autocomplete="on">
+                          </li>
+                          <li>
+                              <input type="text" id="item_holiday" placeholder="what holiday is this for?" autocomplete="on">
+                          </li>
+                          <li>
+                              <input type="text" id="item_desc" placeholder="tag a few interests" autocomplete="on">
+                          </li>
+                          <!-- 				<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
+                      </ul>
+                      <p><i class="fa fa-check" aria-hidden="true"></i>
+                          <button type="submit" ng-click="">save list & list item</button>
+                      </p>
+              </div>
+            </form>
+          </div>
+
+          <!-- Wishlist add-item modal tab -->
+          <div ng-show="isSet(wishlist-item)" id="tab-wishlist-item">
+              <h1 class="header">Add new item to (wishlist):</h1>
+              <!--make this changeable-->
+              <form>
+                  <ul>
+                      <li>
+                          <input type="text" id="item_title" placeholder="item name" autocomplete="on" autofocus required>
+                      </li>
+                      <li>
+                          <input type="text" id="item_desc" placeholder="description" autocomplete="on">
+                      </li>
+                      <li>
+                          <input type="text" id="item_holiday" placeholder="what holiday is this for?" autocomplete="on">
+                      </li>
+                      <li>
+                          <input type="text" id="item_desc" placeholder="tag a few interests" autocomplete="on">
+                      </li>
+                      <!-- 			<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
+                  </ul>
+
+                  <p><i class="fa fa-check" aria-hidden="true"></i>
+                      <button type="submit" ng-click="">save item</button>
+                  </p>
+              </form>
+            </div>
+          </div>
+          <!-- Wishlist tab-modal -->
+                   <div ng-show="isSet(wishlist)" id="tab-wishlist">
+                       <h1 class="header">Add new wishlist:</h1>
+                       <!--make this changeable-->
+                       <form>
+                           <ul>
+                               <li>
+                                   <input type="text" id="wishlist_title" placeholder="wishlist name" autocomplete="on" autofocus required>
+                               </li>
+                           </ul>
+
+                           <p><i class="fa fa-check" aria-hidden="true"></i>
+                               <button type="submit" ng-click="">save list</button>
+                           </p>
+
+                           <div id="inner" class="" ng-click="showme=true">
+                               <p>would you like to start adding items to this list?</p>
+                           </div>
+                           <div ng-show="showme" id="tab-inner">
+                               <ul>
+                                   <li>
+                                       <input type="text" id="item_title" placeholder="item name" autocomplete="on" required>
+                                   </li>
+                                   <li>
+                                       <input type="text" id="item_desc" placeholder="description" autocomplete="on">
+                                   </li>
+                                   <li>
+                                       <input type="text" id="item_holiday" placeholder="what holiday is this for?" autocomplete="on">
+                                   </li>
+                                   <li>
+                                       <input type="text" id="item_desc" placeholder="tag a few interests" autocomplete="on">
+                                   </li>
+                                   <!-- 				<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
+                               </ul>
+                               <p><i class="fa fa-check" aria-hidden="true"></i>
+                                   <button type="submit" ng-click="">save list & list item</button>
+                               </p>
+                       </div>
+                     </form>
+                   </div>
+
+                   <!-- Wishlist add-item modal tab -->
+                   <div ng-show="isSet(wishlist-item)" id="tab-wishlist-item">
+                       <h1 class="header">Add new item to (wishlist):</h1>
+                       <!--make this changeable-->
+                       <form>
+                           <ul>
+                               <li>
+                                   <input type="text" id="item_title" placeholder="item name" autocomplete="on" autofocus required>
+                               </li>
+                               <li>
+                                   <input type="text" id="item_desc" placeholder="description" autocomplete="on">
+                               </li>
+                               <li>
+                                   <input type="text" id="item_holiday" placeholder="what holiday is this for?" autocomplete="on">
+                               </li>
+                               <li>
+                                   <input type="text" id="item_desc" placeholder="tag a few interests" autocomplete="on">
+                               </li>
+                               <!-- 			<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
+                           </ul>
+
+                           <p><i class="fa fa-check" aria-hidden="true"></i>
+                               <button type="submit" ng-click="">save item</button>
+                           </p>
+                       </form>
+                     </div>
+                   </div>
+
+            <h1 class="wishlists">Wishlists</h1>
+
+            <h1 class="add-list" ng-click="setTab(wishlist)" class="" ng-class="{ active: isSet(wishlist) }">add new wishlist <i class="fa fa-plus fa-lg" aria-hidden="true"></i></h1>
+
+            <section class="lists content-list" ng-repeat="list in wishlistArray">
+                <div class="list-header">
+                    <h1 class="list-name">{{list.name}}</h1>
+                </div>
+                <ul>
+                    <li ng-click="setTab(wishlist-item)" class="" ng-class="{ active: isSet(wishlist-item) }"><i class="fa fa-plus fa-3x" aria-hidden="true"></i>
+                    </li>
+                    <li ng-repeat="item in list.items">
+                        <h1>{{item.name}}</h1>
+                        <h2>click to view details</h2>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
         <!-- <form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
         Username    <br/><input type="text" ng-model="form.username">    <br/><br/>
         Password: <br/><input type="text" ng-model="form.password"> <br/><br/>
@@ -95,25 +251,6 @@
 
         </form> -->
 
-        <h1 class="wishlists">Wishlists</h1>
-
-        <h1 class="add-list">add new wishlist <i class="fa fa-plus fa-lg" aria-hidden="true"></i></h1>
-
-        <section class="lists content-list" ng-repeat="list in wishlistArray">
-            <div class="list-header">
-                <h1 class="list-name">{{list.name}}</h1>
-            </div>
-            <ul>
-                <li ng-repeat="item in list.items">
-                    <h1>{{item.name}}</h1>
-                    <h2>for: {{loadedprofile.user.holidays[0]}}</h2>
-                </li>
-                <li>
-                    <a href="#/list-item"><i class="fa fa-plus fa-3x" aria-hidden="true"></i></a>
-
-                </li>
-            </ul>
-        </section>
 
 
 

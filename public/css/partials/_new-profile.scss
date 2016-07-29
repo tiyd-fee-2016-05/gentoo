@@ -50,7 +50,7 @@ p {
 #tab {
 	display: inline-block;
 	border-radius: 10px;
-	margin: 20px 3px 30px 3px;
+	margin: 20px 5px 30px 5px;
 	padding: 20px;
 	text-align: center;
 }
@@ -160,7 +160,7 @@ p {
 	text-align: center;
 	font: 40px / 75px $menu;
 	input {
-		width: 40%;
+		width: 50%;
 		border: 2px solid $red;
 		border-radius: 5px;
 		margin: 5px;
@@ -198,7 +198,6 @@ p {
 		cursor: pointer;
 	}
  }
-
 }
 
 #tab-signup {
@@ -208,7 +207,7 @@ p {
 	padding: 15px 0;
 	text-align: center;
 	input {
-		width: 35%;
+		width: 50%;
 		border: 2px solid darken($teal, 10%);
 		border-radius: 5px;
 		margin: 5px;
@@ -284,17 +283,18 @@ p {
 	}
 	li input[type="checkbox"] + label {
 	  display: inline-block;
-		background: darken($red, 8%);
-		border: 2px solid darken($red, 8%);
+		background: darken($red, 10%);
+		border: 2px solid darken($red, 10%);
+		color: lighten($red, 10%);
 		border-radius: 5px;
 		margin: 3px 0;
 		padding: 0 10px;
 		cursor: pointer;
 	}
 	li input[type="checkbox"]:checked + label {
-		background: darken($red, 15%);
-		border: 2px solid darken($red, 15%);
-		color: darken($red, 5%);
+		background: darken($red, 5%);
+		border: 2px solid darken($red, 5%);
+		color: $white;
 		transition: all 0.3s ease-out;
 	}
 	button {
@@ -312,7 +312,7 @@ p {
 		width: 100%;
 		border: 2px solid $red;
 		border-radius: 5px;
-		margin-bottom: 20px;
+		margin-bottom: 0;
 		padding: 8px 15px 5px 15px;
 		font: 18px / 16px $menu;
 		&:focus {
@@ -339,20 +339,21 @@ p {
 		display: none;
 	}
 	li input[type="checkbox"] + label {
-	  display: inline-block;
-		background: darken($teal, 22%);
-		border: 2px solid darken($teal, 22%);
-		border-radius: 5px;
-		margin: 3px 0;
-		padding: 0 10px;
-		cursor: pointer;
-	}
-	li input[type="checkbox"]:checked + label {
-		background: darken($teal, 35%);
-		border: 2px solid darken($teal, 35%);
-		color: darken($teal, 20%);
-		transition: all 0.3s ease-out;
-	}
+		  display: inline-block;
+			background: darken($teal, 30%);
+			border: 2px solid darken($teal, 30%);
+			color: $teal;
+			border-radius: 5px;
+			margin: 3px 0;
+			padding: 0 10px;
+			cursor: pointer;
+		}
+		li input[type="checkbox"]:checked + label {
+			background: darken($teal, 22%);
+			border: 2px solid darken($teal, 22%);
+			color: $white;
+			transition: all 0.3s ease-out;
+		}
 	button {
 	background: darken($teal, 26%);
 	border: 2px solid darken($teal, 26%);
@@ -374,7 +375,7 @@ p {
 	color: $white;
 	text-align: center;
 	input {
-		width: 50%;
+		width: 70%;
 		border: 2px solid $pink;
 		border-radius: 5px;
 		margin-bottom: 20px;
