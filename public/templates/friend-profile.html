@@ -75,24 +75,24 @@
 
         <section class="content content-main">
 
-            <h2 class="profile-birthday"><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</h2>
-            <h2 class="profile-anniv-dates"><i class="fa fa-calendar" aria-hidden="true"></i> 05/25/1945</h2>
-        </section>
+                  <h2 class="profile-birthday"><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</h2>
+                  <h2 class="profile-anniv-dates"><i class="fa fa-calendar" aria-hidden="true"></i> 05/25/1945</h2>
+              </section>
 
-        <section class="content content-details">
-            <span>Favorite Holidays</span>
-            <h2 class="profile-holidays">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}</h2>
-        </section>
+              <section class="content content-details">
+                  <span>Favorite Holidays</span>
+                  <h2 class="profile-holidays" ng-repeat="holiday in holidayList">  |&nbsp; {{holiday}}  &nbsp;</h2>
+              </section>
 
-        <section class="content content-details">
-            <span>Interests</span>
-            <h2 class="profile-interests">{{loadedprofile.user.holidays[0]}}, {{loadedprofile.user.holidays[1]}}, {{loadedprofile.user.holidays[2]}}, {{loadedprofile.user.holidays[3]}}, {{loadedprofile.user.holidays[4]}}</h2>
-        </section>
+              <section class="content content-details">
+                  <span>Interests</span>
+                  <h2 class="profile-interests" ng-repeat="interest in interestList">|&nbsp; {{interest}}  &nbsp;</h2>
+              </section>
 
-        <section class="content content-details">
-            <span>Favorite Colors</span>
-            <h2 class="profile-colors">{{loadedprofile.user.colors[0]}}</h2>
-        </section>
+              <section class="content content-details">
+                  <span>Favorite Colors</span>
+                  <h2 class="profile-colors" ng-repeat="color in colorList">|&nbsp; {{color}}  &nbsp;</h2>
+              </section>
 
         <!-- <form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
         Username    <br/><input type="text" ng-model="form.username">    <br/><br/>
