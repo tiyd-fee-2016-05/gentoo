@@ -95,7 +95,7 @@
             <div id="wishlist-container">
 
                 <!-- Wishlist tab-modal -->
-                <div ng-show="isSet(wishlist)" id="tab-wishlist">
+                <div ng-show="isSet(4)" id="tab-wishlist">
                     <h1 class="header">Add new wishlist:</h1>
                     <!--make this changeable-->
                     <form>
@@ -136,7 +136,7 @@
                 </div>
 
                 <!-- Wishlist add-item modal tab -->
-                <div ng-show="isSet(wishlist-item)" id="tab-wishlist-item">
+                <div ng-show="isSet(2)" id="tab-wishlist-item">
                     <h1 class="header">Add new item to (wishlist):</h1>
                     <!--make this changeable-->
                     <form>
@@ -162,7 +162,7 @@
                     </form>
                 </div>
 
-                <div ng-show="isSet(wishlist-details)" id="tab-wishlist-details">
+                <div ng-show="isSet(3)" id="tab-wishlist-details">
                     <h1 class="header">(item name here):</h1>
                     <!--make this changeable-->
                     <form>
@@ -181,26 +181,28 @@
                 </div>
             </div>
 
+            <div class="isSet(1)">
+            </div>
 
-            <h1 class="wishlists">Wishlists</h1>
+            <h1 class="wishlists" ng-click="setTab(1)">Wishlists</h1>
 
-            <h1 class="add-list" ng-click="setTab(wishlist)" class="" ng-class="{ active: isSet(wishlist) }">add new wishlist <i class="fa fa-plus fa-lg" aria-hidden="true"></i></h1>
+            <h1 class="add-list" ng-click="setTab(4)" class="" ng-class="{ active: isSet(1) }">add new wishlist <i class="fa fa-plus fa-lg" aria-hidden="true"></i></h1>
 
             <section class="lists content-list" ng-repeat="list in wishlistArray">
                 <div class="list-header">
                     <h1 class="list-name">{{list.name}}</h1>
                 </div>
                 <ul>
-                    <li ng-click="setTab(wishlist-item)" class="" ng-class="{ active: isSet(wishlist-item) }"><i class="fa fa-plus fa-3x" aria-hidden="true"></i>
+                    <li ng-click="setTab(2)" class="" ng-class="{ active: isSet(2) }"><i class="fa fa-plus fa-3x" aria-hidden="true"></i>
                     </li>
-                    <li ng-repeat="item in list.items" ng-click="setTab(wishlist-details)" ng-class="{ active: isSet(wishlist-details) }">
+                    <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
                         <h1>{{item.name}}</h1>
                         <h2>click to view details</h2>
                     </li>
                 </ul>
             </section>
         </div>
-        
+
         <!-- <section class="lists friend-list">
             <a href="#/friends"><h1 class="friends-list">Friends</h1></a>
             <ul>
