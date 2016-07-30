@@ -1,4 +1,4 @@
-gentooApp.controller('LoginCtrl', ['$scope', '$rootScope','$http', '$location', 'User', function($scope, $rootScope, $http, $location, User) {
+gentooApp.controller('newWishlistCtrl', ['$scope', '$rootScope','$http', '$location', 'User', function($scope, $rootScope, $http, $location, User) {
     // if (User.isLoggedIn()) {
     //     $location.path("/");
     // }

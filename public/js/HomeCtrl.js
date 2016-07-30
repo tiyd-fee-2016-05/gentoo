@@ -6,8 +6,8 @@ gentooApp.controller('HomeController', ['$rootScope', '$scope', '$http', '$locat
         $location.path("/sign_up");
     }
 
-    // var rootUrl= "https://6e62d5d1.ngrok.io/";
-    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+    var rootUrl= "https://6e62d5d1.ngrok.io/";
+    // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
 console.log($scope.userToken);
 console.log($rootScope.username);
@@ -47,6 +47,34 @@ var userToken = $scope.userToken
                 $scope.status = status;
             });//End GET request for friends
 
+            $scope.AddList = function() {
+var newListData = $scope.newItem;
+
+              $http({
+                method: 'POST',
+                    url:  rootUrl + "wishlists",
+                    headers: {'Authorization': userToken},
+                    data: {
+                    name: $("#wishlist_title").val(),
+                  description:$("#item_desc").val(),
+                          holiday:$("#item_holiday").val(),
+                          interest:$("#item_interests").val(),
+
+                }
+              }).success(function successCallback(response) {
+
+                }, function errorCallback(response) {
+                  // called asynchronously if an error occurs
+                  // or server returns response with an error status.
+                });
+
+
+
+
+
+
+
+        };
 
 
 
