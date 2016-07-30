@@ -6,6 +6,9 @@
 	letter-spacing: 1px;
 	-webkit-font-smoothing: antialiased;
 
+.upper-padding {
+	padding: 100px 0 60px 0;
+}
 
 button {
 	margin-top: 20px;
@@ -50,32 +53,26 @@ p {
 #tab {
 	display: inline-block;
 	border-radius: 10px;
-	margin: 20px 5px 30px 5px;
+	margin: 0 5px 30px 5px;
 	padding: 20px;
 	text-align: center;
 }
 
-.tab1 {//main sign up
-	width: 75%;
-	border-radius: 5px;
-	margin: 20px 0 20px 0;
+.welcome-info {//main sign up
+	width: 100%;
+	margin: 20px 0;
 	padding: 20px;
-	background: darken($darkblue, 10%);
-	text-align: left;
-	i {
-		width: 100px;
-		color: $white;
-	}
+	text-align: center;
 	h1 {
 		display: inline-block;
 		margin: 0;
-		font: 50px / 50px $menu;
+		font: 40px / 40px $menu;
 	  color: lighten($white, 10%);
 	}
 	p {
-		margin: 0 0 0 110px;
+		// margin: 0 0 0 110px;
+		text-align: center;
 		opacity: 1;
-		text-align: left;
 		font: 20px / 24px $font;
 	  color: lighten($white, 10%);
 		letter-spacing: 0;
@@ -84,11 +81,6 @@ p {
 		font-weight: 700;
 	}
 
-	&:hover {
-		background: darken($darkblue, 5%);
-		transition: all 0.5s ease-out;
-		cursor: pointer;
-	}
 }
 
 .tab2 {//secondary tabs
@@ -156,11 +148,11 @@ p {
 	width: 100%;
 	background: $red;
 	border-radius: 5px;
-	padding: 15px 0;
+	padding: 30px 0 15px 0;
 	text-align: center;
 	font: 40px / 75px $menu;
 	input {
-		width: 50%;
+		width: 80%;
 		border: 2px solid $red;
 		border-radius: 5px;
 		margin: 5px;
@@ -241,7 +233,7 @@ p {
 	padding: 15px 0;
 	text-align: center;
 	input {
-		width: 70px;
+		width: 90px;
 		border: 2px solid $blue2;
 		border-radius: 5px;
 		margin: 5px;
@@ -455,6 +447,28 @@ p {
 		cursor: pointer;
 	}
  }
+ ul {
+		 li {
+				 margin: 5px 0;
+				 h1 {
+					 	 margin: 0;
+						 padding: 0;
+						 color: $teal;
+				 }
+				 p {
+						 margin: 0;
+						 padding: 0 0 10px 0;
+						 color: $white;
+						 border-bottom: 2px solid $teal;
+						 text-align: center;
+				 }
+				 &:hover {
+						 h1 {
+								 color: lighten($darkblue, 10%);
+						 }
+				 }
+		 }
+ }
  }
 
 #bottom-button {
@@ -462,8 +476,8 @@ p {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 8%;
-	background: $white;
+	height: 5%;
+	// background: $white;
 
 .skip-steps {
 	position: fixed;

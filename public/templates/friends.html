@@ -70,7 +70,7 @@
     <section id="friend-content">
         <h1><i class="fa fa-search" aria-hidden="true"></i> Search for friends</h1>
 
-        <input class="searchBar" type="search" ng-model="searchBox" placeholder="Enter first/last name or username">
+        <input class="searchBar" type="search" ng-model="searchBox" placeholder="enter first/last name or username">
     </section>
 
 
@@ -79,9 +79,9 @@
 
         <ul>
             <!--ng-repeat, and link to their profile-->
-            <a href="#/friend-profile"><li class="friends-list" ng-repeat="person in friendList" ng-click="findFriend(person.username)">
+            <a href="#/friend-profile"><li class="friends-list" ng-repeat="person in friendList  | filter: searchBox" ng-click="findFriend(person.username)">
                     <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
-                    <p class="uppercase">{{person.username}}</p>
+                    <p class="uppercase">@{{person.username}}</p>
             </li></a>
         </ul>
     </section>

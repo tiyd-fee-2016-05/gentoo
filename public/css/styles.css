@@ -976,7 +976,7 @@ header .unfriend {
     pointer-events: none; } }
 #container1 {
   width: 100%;
-  height: 100%;
+  height: 1350px;
   position: absolute;
   top: 0;
   left: 0;
@@ -1544,6 +1544,8 @@ h1 {
   color: white;
   letter-spacing: 1px;
   -webkit-font-smoothing: antialiased; }
+  #new-profile-container .upper-padding {
+    padding: 100px 0 60px 0; }
   #new-profile-container button {
     margin-top: 20px;
     opacity: 0.8;
@@ -1575,37 +1577,27 @@ h1 {
   #new-profile-container #tab {
     display: inline-block;
     border-radius: 10px;
-    margin: 20px 5px 30px 5px;
+    margin: 0 5px 30px 5px;
     padding: 20px;
     text-align: center; }
-  #new-profile-container .tab1 {
-    width: 75%;
-    border-radius: 5px;
-    margin: 20px 0 20px 0;
+  #new-profile-container .welcome-info {
+    width: 100%;
+    margin: 20px 0;
     padding: 20px;
-    background: #1d2d37;
-    text-align: left; }
-    #new-profile-container .tab1 i {
-      width: 100px;
-      color: white; }
-    #new-profile-container .tab1 h1 {
+    text-align: center; }
+    #new-profile-container .welcome-info h1 {
       display: inline-block;
       margin: 0;
-      font: 50px/50px "Nunito", sans-serif;
+      font: 40px/40px "Nunito", sans-serif;
       color: white; }
-    #new-profile-container .tab1 p {
-      margin: 0 0 0 110px;
+    #new-profile-container .welcome-info p {
+      text-align: center;
       opacity: 1;
-      text-align: left;
       font: 20px/24px "Work Sans", sans-serif;
       color: white;
       letter-spacing: 0; }
-    #new-profile-container .tab1 span {
+    #new-profile-container .welcome-info span {
       font-weight: 700; }
-    #new-profile-container .tab1:hover {
-      background: #263a47;
-      transition: all 0.5s ease-out;
-      cursor: pointer; }
   #new-profile-container .tab2 {
     background: #2C8C99; }
     #new-profile-container .tab2 i {
@@ -1650,11 +1642,11 @@ h1 {
     width: 100%;
     background: #611c35;
     border-radius: 5px;
-    padding: 15px 0;
+    padding: 30px 0 15px 0;
     text-align: center;
     font: 40px/75px "Nunito", sans-serif; }
     #new-profile-container #tab-login input {
-      width: 50%;
+      width: 80%;
       border: 2px solid #611c35;
       border-radius: 5px;
       margin: 5px;
@@ -1721,7 +1713,7 @@ h1 {
     padding: 15px 0;
     text-align: center; }
     #new-profile-container #tab-dates input {
-      width: 70px;
+      width: 90px;
       border: 2px solid #2C8C99;
       border-radius: 5px;
       margin: 5px;
@@ -1891,13 +1883,26 @@ h1 {
         opacity: 1;
         transition: all 0.5s ease-out;
         cursor: pointer; }
+    #new-profile-container #tab-search ul li {
+      margin: 5px 0; }
+      #new-profile-container #tab-search ul li h1 {
+        margin: 0;
+        padding: 0;
+        color: #42D9C8; }
+      #new-profile-container #tab-search ul li p {
+        margin: 0;
+        padding: 0 0 10px 0;
+        color: white;
+        border-bottom: 2px solid #42D9C8;
+        text-align: center; }
+      #new-profile-container #tab-search ul li:hover h1 {
+        color: #416379; }
   #new-profile-container #bottom-button {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 8%;
-    background: white; }
+    height: 5%; }
     #new-profile-container #bottom-button .skip-steps {
       position: fixed;
       bottom: 3%;
@@ -2187,10 +2192,10 @@ h1 {
       display: inline-block; }
       header .nav .logo {
         position: relative;
-        top: -26px;
-        left: -80%;
+        top: -10px;
+        left: -20%;
         margin: 0 auto;
-        font: 80px/80px "Grand Hotel", cursive;
+        font: 70px/80px "Grand Hotel", cursive;
         text-align: center; }
       header .nav .fa-align-right {
         position: relative;

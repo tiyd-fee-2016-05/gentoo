@@ -27,12 +27,21 @@
             display: inline-block;
             .logo {
                 position: relative;
-                top: -26px;
-                left: -80%;
+                top: -10px;
+                left: -20%;
                 margin: 0 auto;
-                font: 80px / 80px $logo;
+                font: 70px / 80px $logo;
                 text-align: center;
             }
+            // .logo {
+            //   margin: 5%;
+            // 	font: 60px / 70px $logo;
+            //   color: $blue2;
+            // 	text-align: center;
+            //   -webkit-text-shadow: 2px 1px 0 darken($red, 20%);
+            //   -moz-text-shadow: 2px 1px 0 darken($red, 20%);
+            //   text-shadow: 2px 1px 0 darken($red, 20%);
+            // }
             .fa-align-right {
                 position: relative;
                 top: 10px;
