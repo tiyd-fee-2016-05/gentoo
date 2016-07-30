@@ -9,9 +9,6 @@
             <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i>
            {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
 
-            <a href="#/profile-edit"><h1 class="edit-profile">Edit Profile</h1></a>
-
-
             <div class="nav">
                 <h1 class="logo">Gentoo</h1>
             </div>
@@ -28,7 +25,7 @@
 
                 <div ng-show="isSet(3)" id="tab-menu" class="animated bounceInRight" ng-controller="LoginCtrl">
                     <ul>
-                        <li><a href="#/home"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+                        <li><a href="#/profile-edit"><i class="fa fa-user-times" aria-hidden="true"></i> Edit Profile</a></li>
                         <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
                         <li ng-click="logout()"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</li>
                         <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i> Invite</a></li>

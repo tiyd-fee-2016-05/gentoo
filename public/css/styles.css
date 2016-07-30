@@ -1498,33 +1498,34 @@ h1 {
   text-align: center; }
   .content-add-friend .friend-button {
     opacity: 1;
-    background: #752240;
-    border: 2px solid #752240;
+    background: #891138;
+    border: 2px solid #891138;
     border-radius: 200px;
     margin: 20px auto 0;
     padding: 28px 25px;
-    font-size: 14px;
-    color: #260b15; }
+    font-size: 14px; }
+    .content-add-friend .friend-button .fa-user-plus {
+      color: white; }
     .content-add-friend .friend-button:hover {
-      background: #4d162a;
-      border: 2px solid #4d162a;
-      color: #260b15;
+      background: #720e2f;
+      border: 2px solid #720e2f;
+      color: #B6174B;
       -webkit-transition: all 0.6s ease;
       transition: all 0.6s ease; }
   .content-add-friend .pending-friend-button {
-    background: #4d162a;
-    border: 2px solid #4d162a;
+    background: #B6174B;
+    border: 2px solid #B6174B;
     border-radius: 200px;
     margin: 20px auto 0;
     padding: 45px 20px;
-    font: 700 16px/22px "Work Sans", sans-serif;
-    color: #39111f;
+    font: 700 16px/22px "Nunito", sans-serif;
+    color: #720e2f;
     text-transform: uppercase;
     opacity: 1; }
     .content-add-friend .pending-friend-button:hover {
-      background: #611c35;
-      border: 2px solid #611c35;
-      color: #260b15;
+      background: #9b1440;
+      border: 2px solid #9b1440;
+      color: #5b0c26;
       -webkit-transition: all 0.6s ease;
       transition: all 0.6s ease; }
 
@@ -1534,7 +1535,7 @@ h1 {
   left: 0;
   margin: 50px;
   text-align: center;
-  font: 700 18px/22px "Work Sans", sans-serif;
+  font: 700 24px/28px "Work Sans", sans-serif;
   color: #333;
   text-align: center; }
 
@@ -2176,11 +2177,11 @@ h1 {
     height: 300px; }
 
   #menu #tab1 {
-    bottom: 39%; }
+    bottom: 24%; }
   #menu #tab2 {
-    bottom: 25%; }
+    bottom: 15%; }
   #menu #tab3 {
-    bottom: 11%; }
+    bottom: 6%; }
   #menu #tab4 {
     bottom: 0.5%; }
 
