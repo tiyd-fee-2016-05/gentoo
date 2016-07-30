@@ -49,7 +49,7 @@
         </div>
     </header>
 
-    <section id="friend-content" ng-controller="AcceptFriendCtrl">
+    <section id="friend-content" ng-controller="FriendRequestCtrl">
         <h1><i class="fa fa-user-plus" aria-hidden="true"></i> Friend requests ( {{friendDetails.user.requested_count}} ) </h1>
 
         <ul>
@@ -57,7 +57,8 @@
             <li class="friend-request" ng-repeat="requestingfriend in friendRequests">
                 <h2>{{requestingfriend.first_name}} {{requestingfriend.last_name}} has sent you a friend request!</h2>
                 <button ng-click="showaccept=true; acceptFriend(requestingfriend.username)" ng-hide="showdeny" ng-hide="showaccept" class="accept">accept <i class="fa fa-plus" aria-hidden="true"></i></button>
-               <button ng-click="showdeny=true" ng-hide="showaccept" ng-hide="showdeny" class="deny">deny <i class="fa fa-times" aria-hidden="true"></i></button>
+
+               <button ng-click="showdeny=true; ; denyFriend(requestingfriend.username)" ng-hide="showaccept" ng-hide="showdeny" class="deny">deny <i class="fa fa-times" aria-hidden="true"></i></button>
 
                 <p ng-show="showaccept" class="Accept">You and {{requestingfriend.first_name}} {{requestingfriend.last_name}} are now friends!</p>
                 <a href="#/friend-profile" ng-show="showaccept" class="Accept" class="uppercase" ng-click="findFriend(requestingfriend.username)">View their profile</a>
