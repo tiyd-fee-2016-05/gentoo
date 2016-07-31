@@ -75,48 +75,48 @@
         <div class="info dates">
             <h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
             <ul class="info-answer">
-              <li>{{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</li>
+                <li>{{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</li>
             </ul>
             <!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
-          </div>
+        </div>
 
-          <div class="info holidays">
+        <div class="info holidays">
             <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
             <ul class="info-answer">
-              <li ng-repeat="holiday in holidayList">
-                <input type="checkbox" id="h1" name="cc" />
-                <label for="h1">{{holiday}}</label>
-              </li>
+                <li ng-repeat="holiday in holidayList">
+                    <input type="checkbox" id="h1" name="cc" />
+                    <label for="h1">{{holiday}}</label>
+                </li>
             </ul>
             <!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
-          </div>
+        </div>
 
-          <div class="info interests">
+        <div class="info interests">
             <h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
             <ul class="info-answer">
-              <li ng-repeat="interest in interestList">
-                <input type="checkbox" id="i1" name="cc" />
-                <label for="i1">{{interest}}</label>
-              </li>
+                <li ng-repeat="interest in interestList">
+                    <input type="checkbox" id="i1" name="cc" />
+                    <label for="i1">{{interest}}</label>
+                </li>
             </ul>
             <!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
-          </div>
+        </div>
 
-          <div class="info favorites">
+        <div class="info favorites">
             <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
             <ul class="info-answer">
-              <li ng-repeat="color in colorList">
-                <input type="checkbox" id="f1" name="cc" />
-                <label for="f1">{{color}}</label>
-              </li>
+                <li ng-repeat="color in colorList">
+                    <input type="checkbox" id="f1" name="cc" />
+                    <label for="f1">{{color}}</label>
+                </li>
             </ul>
             <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
-          </div>
+        </div>
 
 
 
 
-<!--
+        <!--
         <section class="content content-main">
 
                   <h2 class="profile-birthday"><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</h2>
@@ -147,27 +147,53 @@
 
         </form> -->
 
-        <h1 class="wishlists">Wishlists</h1>
+        <div ng-controller="TabController2">
+            <div ng-show="isSet(3)" id="tab-wishlist-details">
+                <h1 class="header">(item name here):</h1>
+                <!--make this changeable-->
+                <form>
+                    <ul>
+                        <li>
+                            <h1><span class="item-header">Description:</span> description here</h1></li>
+                        <li>
+                            <h1><span class="item-header">Holidays:</span> holidays here</h1></li>
+                        <li>
+                            <h1><span class="item-header">Interests:</span> interests here</h1></li>
+                    </ul>
 
-        <h1 class="add-list">add new wishlist <i class="fa fa-plus fa-lg" aria-hidden="true"></i></h1>
-
-        <section class="lists content-list" ng-repeat="list in wishlistArray">
-            <div class="list-header">
-                <h1 class="list-name">{{list.name}}</h1>
+                    <p>
+                        <button type="submit" ng-click=""><i class="fa fa-times" aria-hidden="true"></i></button>
+                    </p>
             </div>
-            <ul>
-                <li ng-repeat="item in list.items">
-                    <h1>{{item.name}}</h1>
-                    <h2>for: {{loadedprofile.user.holidays[0]}}</h2>
-                </li>
-                <li>
-                    <a href="#/list-item"><i class="fa fa-plus fa-3x" aria-hidden="true"></i></a>
-
-                </li>
-            </ul>
-        </section>
 
 
+            <div class="isSet(1)">
+            </div>
 
-        </section>
+            <h1 class="wishlists" ng-click="setTab(1)">Wishlists</h1>
+
+            <section class="lists" ng-class-odd="'lightblue'" ng-class-even="'darkblue'" ng-repeat="list in wishlistArray">
+                <h1 class="list-name">{{list.name}}</h1>
+                <ul>
+                    <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+                        <!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+                        <h1 class="info-answer">{{item.name}}</h1>
+                        <h2>click to view details</h2>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- <section class="lists darkblue" ng-repeat="list in wishlistArray">
+                <h1 class="list-name">{{list.name}}</h1>
+                <ul>
+                    <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">-->
+                        <!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+                        <!--<h1 class="info-answer">{{item.name}}</h1>
+                        <h2>click to view details</h2>
+                    </li>
+                </ul>
+            </section> -->
+        </div>
     </div>
+</div>
+</div>

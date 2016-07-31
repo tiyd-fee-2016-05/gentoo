@@ -9,7 +9,7 @@
 
             <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i> <span>Edit Profile:</span> {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1
 
-            <a href="#/home"><h1 class="save-profile" ng-click="vm.submit(vm.user)">Save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></h1></a>
+            <a href="#/home"><h1 class="save-profile" ng-click="vm.submit(vm.user)">save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></h1></a>
 
             <div id="menu" ng-controller="TabController">
                 <div ng-click="setTab(3)" id="tab2" ng-class="{ active: isSet(2) }"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
@@ -55,87 +55,87 @@
 
         <!-- <section class="content content-main"> -->
 
-            <form>
-              <div class="info dates">
-              		<h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
-              		<ul class="info-answer">
-              			<li>
-              				<input type="number" id="e-bd1" name="cc" maxlength="2" placeholder="{{loadedprofile.user.birthday.dob_month}}" /> /
-              				<input type="number" id="e-bd2" name="cc" maxlength="2" placeholder="{{loadedprofile.user.birthday.dob_day}}" /> /
-              				<input type="number" id="e-bd3" name="cc" maxlength="4" placeholder="{{loadedprofile.user.birthday.dob_year}}" />
-              		</ul>
-              		<!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
-              	</div>
+        <form>
+            <div class="info dates">
+                <h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
+                <ul class="info-answer">
+                    <li>
+                        <input type="number" id="e-bd1" name="cc" maxlength="2" placeholder="{{loadedprofile.user.birthday.dob_month}}" /> /
+                        <input type="number" id="e-bd2" name="cc" maxlength="2" placeholder="{{loadedprofile.user.birthday.dob_day}}" /> /
+                        <input type="number" id="e-bd3" name="cc" maxlength="4" placeholder="{{loadedprofile.user.birthday.dob_year}}" />
+                </ul>
+                <!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
+            </div>
 
-              	<div class="info holidays">
-              		<h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
-              		<ul class="info-answer">
-              			<li>
-              				<input type="checkbox" id="e-h1" name="cc" />
-              				<label for="e-h1">Valentine's Day <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="e-h2" name="cc" />
-              				<label for="e-h2">Christmas <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="e-h4" name="cc" />
-              				<label for="e-h4">New Year's Eve <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              		</ul>
-              		<!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
-              	</div>
+            <div class="info holidays">
+                <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
+                <ul class="info-answer">
+                    <li>
+                        <input type="checkbox" id="e-h1" name="cc" />
+                        <label for="e-h1">Valentine's Day <i class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="e-h2" name="cc" />
+                        <label for="e-h2">Christmas <i class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="e-h4" name="cc" />
+                        <label for="e-h4">New Year's Eve <i class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                </ul>
+                <!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
+            </div>
 
-              	<div class="info interests">
-              		<h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
-              		<ul class="info-answer">
-              			<li>
-              				<input type="checkbox" id="h1" name="cc" />
-              				<label for="h1">Design <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="h2" name="cc" />
-              				<label for="i2">Computers <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="h3" name="cc" />
-              				<label for="h3">Cats <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="h4" name="cc" />
-              				<label for="h4">Running <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              		</ul>
-              		<!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
-              	</div>
+            <div class="info interests">
+                <h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
+                <ul class="info-answer">
+                    <li>
+                        <input type="checkbox" id="h1" name="cc" />
+                        <label for="h1">Design <i class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="h2" name="cc" />
+                        <label for="i2">Computers <i class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="h3" name="cc" />
+                        <label for="h3">Cats <i class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="h4" name="cc" />
+                        <label for="h4">Running <i class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                </ul>
+                <!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
+            </div>
 
-              	<div class="info favorites">
-              		<h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
-              				<ul class="info-answer">
-              			<li>
-              				<input type="checkbox" id="e-f1" name="cc" />
-              				<label for="e-f1">Blue <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="e-f2" name="cc" />
-              				<label for="e-f2">Cats <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="e-f3" name="cc" />
-              				<label for="e-f3">Qdoba <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="e-f4" name="cc" />
-              				<label for="e-f4">Reading <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              		</ul>
-              		<!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
-              	</div>
-              </form>
+            <div class="info favorites">
+                <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
+                <ul class="info-answer">
+                    <li>
+                        <input type="checkbox" id="e-f1" name="cc" />
+                        <label for="e-f1">Blue <i class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="e-f2" name="cc" />
+                        <label for="e-f2">Cats <i class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="e-f3" name="cc" />
+                        <label for="e-f3">Qdoba <i class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="e-f4" name="cc" />
+                        <label for="e-f4">Reading <i class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                </ul>
+                <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
+            </div>
+        </form>
 
 
 
-              <!--
+        <!--
                 <div class="form-group">
                     <label for="profile-first-name"></label>
                     <input type="text" class="form-control" id="profile-first-name" placeholder="{{loadedprofile.user.first_name}}" ng-model="vm.user.first_name">
@@ -156,7 +156,7 @@
                     <label for="exampleInputFile">Upload a new photo</label>
                     <input type="file" id="exampleInputFile" ng-model="vm.user.file">
                     <!-- <p class="help-block">Example block-level help text here.</p> -->
-                <!--</div>
+        <!--</div>
                 <div class="form-group">
                     <label for="profile-birthday"></label>
                     <input type="text" class="form-control" id="profile-birthday" placeholder="Birthday: {{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}" ng-model="vm.user.birthdate">
@@ -175,16 +175,15 @@
         </form> -->
 
 
+
+        <!-- old code for wishists -->
+        <!--
         <h1 class="wishlists">Wishlists</h1>
-
-
-
         <section id="edit" ng-repeat="list in wishlistArray">
-
 
             <div class="list-header">
                 <h1 class="list-name">{{list.name}}</h1>
-                  <h1 class="delete-list">delete wishlist <i class="fa fa-times fa-lg" aria-hidden="true"></i></h1>
+                <h1 class="delete-list">delete wishlist <i class="fa fa-times fa-lg" aria-hidden="true"></i></h1>
             </div>
             <ul>
                 <li ng-repeat="item in list.items">
@@ -193,16 +192,75 @@
                     <a href="#/list-item"><span class="edit">edit</span></a><span class="delete">delete</span>
                 </li>
             </ul>
-        </section>
+        </section> -->
 
 
-        <section class="section-save-button">
-            <a href="#/home">
-                <button class="profile-submit-button" type="submit" name="button">Save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-            </a>
-        </section>
 
+        <div ng-controller="TabController2">
+            <h1 class="wishlists" ng-click="setTab(1)">Wishlists</h1>
 
+            <section class="lists" ng-class-odd="'lightblue'" ng-class-even="'darkblue'" ng-repeat="list in wishlistArray">
+                <span class="delete-list">delete wishlist</span>
+                <h1 class="list-name">{{list.name}} <span class="edit-list">edit name</span></h1>
+                <ul>
+                    <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+                        <h1 class="info-answer">{{item.name}}</h1>
+                        <h2><span class="edit">edit</span></a><span class="delete">delete</span></h2>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- <section class="lists darkblue">
+                <span class="delete-list">delete wishlist</span>
+                <h1 class="list-name">Wishlist name <span class="edit-list">edit name</span></h1>
+                <ul>
+                    <li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+                        <!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+                      <!--  <h1 class="info-answer">Item name</h1>
+                        <h2><span class="edit">edit</span></a><span class="delete">delete</span></h2>
+                    </li>
+                    <li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+                        <!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+                      <!--  <h1 class="info-answer">Item name</h1>
+                        <h2><span class="edit">edit</span></a><span class="delete">delete</span></h2>
+                    </li>
+                    <li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+                        <!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+                      <!--  <h1 class="info-answer">Item name</h1>
+                        <h2><span class="edit">edit</span></a><span class="delete">delete</span></h2>
+                    </li>
+                </ul>
+            </section> -->
+
+            <!-- <section class="lists lightblue">
+                <span class="delete-list">delete wishlist</span>
+                <h1 class="list-name">Wishlist name <span class="edit-list">edit name</span></h1>
+                <ul>
+                    <li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+                        <!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+                        <!--<h1 class="info-answer">Item name</h1>
+                        <h2><span class="edit">edit</span></a><span class="delete">delete</span></h2>
+                    </li>
+                    <li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+                        <!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+                        <!--<h1 class="info-answer">Item name</h1>
+                        <h2><span class="edit">edit</span></a><span class="delete">delete</span></h2>
+                    </li>
+                    <li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+                        <!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+                        <!--<h1 class="info-answer">Item name</h1>
+                        <h2><span class="edit">edit</span></a><span class="delete">delete</span></h2>
+                    </li>
+                </ul>
+            </section> -->
+
+            <section class="section-save-button">
+                <a href="#/home">
+                    <button class="profile-submit-button" type="submit" name="button">save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                </a>
+            </section>
+        </div>
     </div>
+</div>
 </div>
 </div>

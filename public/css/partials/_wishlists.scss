@@ -1,84 +1,225 @@
 .wishlists {
+    background: $darkblue;
+    // border-top-left-radius: 5px;
+    // border-top-right-radius: 5px;
+    margin-top: 10px;
     padding: 15px 5%;
-    font: 700 24px / 26px $font;
-    color: $red;
+    font: 700 24px / 26px $menu;
+    color: $white;
+    border-bottom: 2px solid $white;
 }
 .add-list {
     float: right;
-    padding: 15px 5%;
+    padding: 25px 5% 0 0;
     font: 700 18px / 22px $menu;
-    color: darken($blue2, 20%);
+    color: $teal;
+    opacity: 0.6;
     i {
-        padding-left: 10px;
+        padding-left: 5px;
     }
     &:hover {
-        color: darken($blue2, 10%);
+        opacity: 1;
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease;
         cursor: pointer;
     }
 }
+.lightblue {
+    background: lighten($darkblue, 3%);
+    .fa-plus:hover {
+        background: $darkblue;
+        border: 2px solid $darkblue;
+        cursor: pointer;
+        opacity: 1;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    li {
+        background: darken($darkblue, 5%);
+        border: 2px solid darken($darkblue, 5%);
+        &:hover {
+            background: $darkblue;
+            border: 2px solid $darkblue;
+        }
+    }
+}
+.darkblue {
+    background: $darkblue;
+    .fa-plus:hover {
+        background: darken($darkblue, 2%);
+        border: 2px solid darken($darkblue, 2%);
+        cursor: pointer;
+        opacity: 1;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    li {
+        background: darken($darkblue, 5%);
+        border: 2px solid darken($darkblue, 5%);
+        &:hover {
+            background: darken($darkblue, 2%);
+            border: 2px solid darken($darkblue, 2%);
+            opacity: 1;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+    }
+}
 .lists {
     width: 100%;
     height: auto;
-    margin: 0 0 30px; //changes the distance between lists
-    background: $blue2;
     // border: 2px solid red;
-    .list-header {
-        border-bottom: 2px solid $white;
-    }
     .list-name {
-        padding: 15px 5%;
-        font: 700 18px / 22px $font;
+        padding: 15px 5% 0;
+        font: 700 18px / 20px $menu;
         color: $white;
     }
     ul {
         width: 90%;
-        margin: 10px 5%;
+        margin: 0 4%;
+        padding-bottom: 5px;
         white-space: nowrap;
         overflow-y: hidden;
         overflow-x: scroll;
         // border: 2px solid red;
+        .fa-plus {
+            display: inline-block;
+            vertical-align: middle;
+            overflow: hidden;
+            width: 70px;
+            height: 75px;
+            margin: 10px 5px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            opacity: 0.7;
+            background: darken($darkblue, 5%);
+            border: 2px solid darken($darkblue, 5%);
+            color: $teal;
+        }
         li {
             display: inline-block;
             vertical-align: middle;
             overflow: hidden;
             width: 250px;
-            height: 65px;
-            margin: 10px;
+            height: 75px;
+            margin: 10px 5px;
             padding-top: 10px;
-            background: $blue2;
-            border: 2px solid $blue2;
             text-align: center;
             border-radius: 5px;
-            opacity: 0.7;
+            opacity: 0.9;
             &:hover {
                 opacity: 1;
                 -webkit-transition: all 0.3s ease;
                 transition: all 0.3s ease;
                 cursor: pointer;
-                background: lighten($blue2, 5%);
-                border: 2px solid lighten($blue2, 5%);
-                color: darken($blue2, 15%);
             }
             h1 {
-                font-weight: bold;
-                color: $white;
+                font: 700 20px / 30px $menu;
+                color: $teal;
             }
             h2 {
-                font-weight: bold;
-                color: darken($blue2, 10%);
-            }
-            .fa-heart {
-                color: darken($blue2, 20%);
-            }
-            .fa-plus {
-                // padding-top: 14%;
-                color: darken($blue2, 20%);
+                font: 700 16px / 20px $menu;
+                color: $white;
+                opacity: 0.6;
             }
         }
     }
 }
+.info-header {
+    background: $white;
+    border-radius: 5px;
+    opacity: 0.7;
+    padding: 10px;
+    font: 20px / 20px $menu;
+    color: $black;
+    text-transform: uppercase;
+}
+.info-answer {
+    // all profile section "answers" are formatted here
+    font: 18px / 20px $menu;
+}
+// .wishlists {
+//     padding: 15px 5%;
+//     font: 700 24px / 26px $font;
+//     color: $red;
+// }
+// .add-list {
+//     float: right;
+//     padding: 15px 5%;
+//     font: 700 18px / 22px $menu;
+//     color: darken($blue2, 20%);
+//     i {
+//         padding-left: 10px;
+//     }
+//     &:hover {
+//         color: darken($blue2, 10%);
+//         -webkit-transition: all 0.3s ease;
+//         transition: all 0.3s ease;
+//         cursor: pointer;
+//     }
+// }
+// .lists {
+//     width: 100%;
+//     height: auto;
+//     margin: 0 0 30px; //changes the distance between lists
+//     background: $blue2;
+//     border: 2px solid red;
+//     .list-header {
+//         border-bottom: 2px solid $white;
+//     }
+//     .list-name {
+//         padding: 15px 5%;
+//         font: 700 18px / 22px $font;
+//         color: $white;
+//     }
+//     ul {
+//         width: 90%;
+//         margin: 10px 5%;
+//         white-space: nowrap;
+//         overflow-y: hidden;
+//         overflow-x: scroll;
+//         // border: 2px solid red;
+//         li {
+//             display: inline-block;
+//             vertical-align: middle;
+//             overflow: hidden;
+//             width: 250px;
+//             height: 65px;
+//             margin: 10px;
+//             padding-top: 10px;
+//             background: $blue2;
+//             border: 2px solid $blue2;
+//             text-align: center;
+//             border-radius: 5px;
+//             opacity: 0.7;
+//             &:hover {
+//                 opacity: 1;
+//                 -webkit-transition: all 0.3s ease;
+//                 transition: all 0.3s ease;
+//                 cursor: pointer;
+//                 background: lighten($blue2, 5%);
+//                 border: 2px solid lighten($blue2, 5%);
+//                 color: darken($blue2, 15%);
+//             }
+//             h1 {
+//                 font-weight: bold;
+//                 color: $white;
+//             }
+//             h2 {
+//                 font-weight: bold;
+//                 color: darken($blue2, 10%);
+//             }
+//             .fa-heart {
+//                 color: darken($blue2, 20%);
+//             }
+//             .fa-plus {
+//                 // padding-top: 14%;
+//                 color: darken($blue2, 20%);
+//             }
+//         }
+//     }
+// }
 // Modal styling
 #wishlist-modal-container {
     z-index: 999;
@@ -273,58 +414,58 @@
     }
 }
 #tab-wishlist-details {
-  z-index: 999;
-  width: 90%;
-	background: $blue2;
-	border-radius: 5px;
-  margin: 6% 5% 10%;
-  padding: 15px 0;
-	text-align: center;
-	font: 40px / 75px $font;
-	.header {
-		text-align: center;
-		margin: 10px 50px;
-		font: 30px / 30px $font;
-		color: $white;
-	}
-	.item-header {
-		// Item's fields
-		text-align: center;
-		font: 26px / 30px $font;
-		color: darken($blue2, 20%);
-	}
-	h1 {
-		text-align: center;
-		margin: 20px 50px;
-		font: 26px / 30px $menu;
-		color: $white;
-	}
-	input {
-		width: 70%;
-		border: 2px solid $blue2;
-		border-radius: 5px;
-		padding: 8px 20px;
-		font: 20px / 16px $font;
-		text-align: left;
-		&:focus {
-			outline: 0;
-		}
-	}
-	button {
-    background: darken($blue2, 10%);
-    border: 2px solid darken($blue2, 10%);
+    z-index: 999;
+    width: 90%;
+    background: $blue2;
     border-radius: 5px;
-    margin-top: 20px;
-    margin-left: 5px;
-    opacity: 1;
-    font: 16px / 20px $menu;
-    color: $white;
-		&:hover {
-			opacity: 1;
-			background: darken($blue2, 20%);
-			border: 2px solid darken($blue2, 20%);
-			transition: all 0.5s ease-out;
-			cursor: pointer;
-		}
-	}
+    margin: 6% 5% 10%;
+    padding: 15px 0;
+    text-align: center;
+    font: 40px / 75px $font;
+    .header {
+        text-align: center;
+        margin: 10px 50px;
+        font: 30px / 30px $font;
+        color: $white;
+    }
+    .item-header {
+        // Item's fields
+        text-align: center;
+        font: 26px / 30px $font;
+        color: darken($blue2, 20%);
+    }
+    h1 {
+        text-align: center;
+        margin: 20px 50px;
+        font: 26px / 30px $menu;
+        color: $white;
+    }
+    input {
+        width: 70%;
+        border: 2px solid $blue2;
+        border-radius: 5px;
+        padding: 8px 20px;
+        font: 20px / 16px $font;
+        text-align: left;
+        &:focus {
+            outline: 0;
+        }
+    }
+    button {
+        background: darken($blue2, 10%);
+        border: 2px solid darken($blue2, 10%);
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-left: 5px;
+        opacity: 1;
+        font: 16px / 20px $menu;
+        color: $white;
+        &:hover {
+            opacity: 1;
+            background: darken($blue2, 20%);
+            border: 2px solid darken($blue2, 20%);
+            transition: all 0.5s ease-out;
+            cursor: pointer;
+        }
+    }
 }
