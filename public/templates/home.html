@@ -71,7 +71,7 @@
         		<ul class="info-answer">
         			<li ng-repeat="holiday in holidayList">
         				<input type="checkbox" id="h1" name="cc" />
-        				<label for="h1">{{holiday}}</label>
+        				<label for="h1">{{holiday.name}}</label>
         			</li>
         		</ul>
         		<!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
@@ -82,7 +82,7 @@
         		<ul class="info-answer">
         			<li ng-repeat="interest in interestList">
         				<input type="checkbox" id="i1" name="cc" />
-        				<label for="i1">{{interest}}</label>
+        				<label for="i1">{{interest.name}}</label>
         			</li>
         		</ul>
         		<!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
@@ -163,12 +163,12 @@
                                     <input type="text" id="item_holiday" placeholder="what holiday is this for?" autocomplete="on">
                                 </li>
                                 <li>
-                                    <input type="text" id="item_desc" placeholder="tag a few interests" autocomplete="on">
+                                    <input type="text" id="item_interests" placeholder="tag a few interests" autocomplete="on">
                                 </li>
                                 <!-- 				<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
                             </ul>
                             <p><i class="fa fa-check" aria-hidden="true"></i>
-                                <button type="submit" ng-click="">save list & list item</button>
+                                <button type="submit" ng-click="AddList()">save list & list item</button>
                             </p>
                         </div>
                     </form>

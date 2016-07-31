@@ -22,8 +22,6 @@ gentooApp.controller('TabController', ['$scope', function($scope) {
 				done: false
 			}];
 
-console.log("Display all idea box items");
-
 			$scope.getTotalTodos = function() {
 				return $scope.todos.length;
 			};
@@ -34,7 +32,7 @@ console.log("Display all idea box items");
 					done: false
 				});
 				$scope.formTodoText = '';
-				console.log("Add item to idea box");
+				
 			};
 
 

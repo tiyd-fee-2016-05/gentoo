@@ -1,13 +1,13 @@
 <!-- Profile View -->
 <div id="container">
-    <div id="profile-main-container" ng-controller="LoginCtrl">
+    <div id="profile-main-container" ng-controller="EditController">
 
 
         <header>
             <section class="photo">
             </section>
 
-            <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i> <span>Edit Profile:</span> {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1
+            <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i> <span>Edit Profile:</span> {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
 
             <a href="#/home"><h1 class="save-profile" ng-click="vm.submit(vm.user)">Save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></h1></a>
 
@@ -56,32 +56,39 @@
         <!-- <section class="content content-main"> -->
 
             <form>
-              <div class="info dates">
+              <!-- <div class="info dates">
+              		<h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
+              		<ul class="info-answer">
+            	<li>{{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</li>
+
+              		</ul>
+              		<!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
+              	<!-- </div> -->
+                <div class="info dates">
               		<h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
               		<ul class="info-answer">
               			<li>
-              				<input type="number" id="e-bd1" name="cc" maxlength="2" placeholder="{{loadedprofile.user.birthday.dob_month}}" /> /
-              				<input type="number" id="e-bd2" name="cc" maxlength="2" placeholder="{{loadedprofile.user.birthday.dob_day}}" /> /
-              				<input type="number" id="e-bd3" name="cc" maxlength="4" placeholder="{{loadedprofile.user.birthday.dob_year}}" />
+              				<input type="number" id="e-bd1" name="cc" maxlength="2" placeholder={{loadedprofile.user.birthday.dob_month}} /> /
+              				<input type="number" id="e-bd2" name="cc" maxlength="2" placeholder={{loadedprofile.user.birthday.dob_day}} /> /
+              				<input type="number" id="e-bd3" name="cc" maxlength="4" placeholder={{loadedprofile.user.birthday.dob_year}} />
               		</ul>
               		<!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
               	</div>
 
+
+
+
+
+                <!-- <input type="number" id="e-bd1" name="cc" maxlength="2" placeholder={{loadedprofile.user.birthday.dob_month}} /> /
+                <input type="number" id="e-bd2" name="cc" maxlength="2" placeholder={{loadedprofile.user.birthday.dob_day}} /> /
+                <input type="number" id="e-bd3" name="cc" maxlength="4" placeholder={{loadedprofile.user.birthday.dob_year}} /> -->
               	<div class="info holidays">
               		<h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
               		<ul class="info-answer">
-              			<li>
-              				<input type="checkbox" id="e-h1" name="cc" />
-              				<label for="e-h1">Valentine's Day <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="e-h2" name="cc" />
-              				<label for="e-h2">Christmas <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="e-h4" name="cc" />
-              				<label for="e-h4">New Year's Eve <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
+                    <li ng-repeat="holiday in holidayList">
+                    				<input type="checkbox" id="e-h2" name="cc" />
+                    				<label for="e-h2">{{holiday.name}} <i ng-click="holidayList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+                    			</li>
               		</ul>
               		<!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
               	</div>
@@ -89,22 +96,10 @@
               	<div class="info interests">
               		<h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
               		<ul class="info-answer">
-              			<li>
-              				<input type="checkbox" id="h1" name="cc" />
-              				<label for="h1">Design <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="h2" name="cc" />
-              				<label for="i2">Computers <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="h3" name="cc" />
-              				<label for="h3">Cats <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="h4" name="cc" />
-              				<label for="h4">Running <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
+                  <li ng-repeat="interest in interestList">
+				<input type="checkbox" id="h1" name="cc" />
+				<label for="h1">{{interest.name}} <i ng-click="deleteInterest(interest.id); interestList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+			</li>
               		</ul>
               		<!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
               	</div>
@@ -112,23 +107,11 @@
               	<div class="info favorites">
               		<h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
               				<ul class="info-answer">
-              			<li>
-              				<input type="checkbox" id="e-f1" name="cc" />
-              				<label for="e-f1">Blue <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="e-f2" name="cc" />
-              				<label for="e-f2">Cats <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="e-f3" name="cc" />
-              				<label for="e-f3">Qdoba <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              			<li>
-              				<input type="checkbox" id="e-f4" name="cc" />
-              				<label for="e-f4">Reading <i class="fa fa-times" aria-hidden="true"></i></label>
-              			</li>
-              		</ul>
+                    <li ng-repeat="favorite in favoriteList">
+				                  <input type="checkbox" id="e-f1" name="cc" />
+				                      <label for="e-f1">{{favorite.name}} <i ng-click="colorList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+			                         </li>
+              		      </ul>
               		<!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
               	</div>
               </form>
@@ -155,7 +138,7 @@
                 <div class="form-group">
                     <label for="exampleInputFile">Upload a new photo</label>
                     <input type="file" id="exampleInputFile" ng-model="vm.user.file">
-                    <!-- <p class="help-block">Example block-level help text here.</p> -->
+                    <! <p class="help-block">Example block-level help text here.</p> -->
                 <!--</div>
                 <div class="form-group">
                     <label for="profile-birthday"></label>
@@ -184,13 +167,13 @@
 
             <div class="list-header">
                 <h1 class="list-name">{{list.name}}</h1>
-                  <h1 class="delete-list">delete wishlist <i class="fa fa-times fa-lg" aria-hidden="true"></i></h1>
+                  <h1 class="delete-list">delete wishlist <i ng-click="wishlistArray.splice($index,1)"class="fa fa-times fa-lg" aria-hidden="true"></i></h1>
             </div>
             <ul>
                 <li ng-repeat="item in list.items">
                     <h1>{{item.name}}</h1>
-                    <h2>for: {{loadedprofile.user.holidays[0]}}</h2>
-                    <a href="#/list-item"><span class="edit">edit</span></a><span class="delete">delete</span>
+                    <!-- <h2>for: {{loadedprofile.user.holidays[0]}}</h2> -->
+                    <a href="#/list-item"><span class="edit">edit</span></a><span class="delete" ng-click="list.items.splice($index,1)">delete</span>
                 </li>
             </ul>
         </section>

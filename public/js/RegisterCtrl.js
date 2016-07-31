@@ -1,16 +1,13 @@
 gentooApp.controller('RegisterCtrl', ['$rootScope', '$scope', '$http', '$location', 'User', function($rootScope, $scope, $http, $location, User) {
     $scope.userToken = User.getToken();
 
-    // var rootUrl= "https://6e62d5d1.ngrok.io/";
-    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
-
-console.log($scope.userToken);
+    var rootUrl= "https://6e62d5d1.ngrok.io/";
+    // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 var username = $rootScope.username
 var userToken = $scope.userToken
 
 
     $scope.register = function() {
-      console.log("Submitted");
         $http({
             method: "POST",
             url:    rootUrl + "/register",
@@ -25,14 +22,12 @@ var userToken = $scope.userToken
             }
         }).then(function(response) {
             User.logIn(response.data.token);
-            console.log(response.data.token);
         }, function() {
             alert("Something went wrong!");
         })
     }
 
     $scope.registerDates = function() {
-      console.log("Submitted dates");
 var birthday = {
         dob_month:  $("#bd_month").val(),
         dob_day: $("#bd_day").val(),
@@ -63,8 +58,6 @@ $http({
     }
 
     $scope.registerHolidays = function() {
-      console.log("Submitted holidays");
-      console.log($scope.registerData.holidays);
 
 $http({
           url:  rootUrl + "profile",
@@ -80,7 +73,6 @@ $http({
     }
 
     $scope.registerInterests = function() {
-      console.log("Submitted Interests");
       // console.log($scope.registerData.interests);
 
     $http({
@@ -97,8 +89,6 @@ $http({
     }
 
     $scope.registerFavorites = function() {
-      console.log("Submitted favorites");
-  console.log($scope.registerData.season);
 
   var favorites = {
     colors: $("#fav_color").val(),
@@ -125,8 +115,6 @@ $http({
 
     var email = $("#inviteEmail").val();
 
-
-console.log(email);
     $http({
           url:  rootUrl + "invitation",
        method: "POST",
