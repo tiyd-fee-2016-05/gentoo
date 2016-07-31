@@ -87,7 +87,7 @@
               		<ul class="info-answer">
                     <li ng-repeat="holiday in holidayList">
                     				<input type="checkbox" id="e-h2" name="cc" />
-                    				<label for="e-h2">{{holiday.name}} <i ng-click="holidayList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+                    				<label for="e-h2">{{holiday.name}} <i ng-click="deleteHoliday(holiday.id); holidayList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
                     			</li>
               		</ul>
               		<!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->

@@ -149,14 +149,9 @@ var newListData = $scope.newItem;
                   // called asynchronously if an error occurs
                   // or server returns response with an error status.
                 });
-
-
-
-
-
-
-
         };
+
+
         $scope.deleteInterest = function(id){
           console.log("This is the id of this thing "+id);
           $http({
@@ -164,11 +159,6 @@ var newListData = $scope.newItem;
                 url:  rootUrl + "profile/interests/" + id,
                 headers: {'Authorization': userToken},
                 data: {
-                name: $("#wishlist_title").val(),
-              description:$("#item_desc").val(),
-                      holiday:$("#item_holiday").val(),
-                      interest:$("#item_interests").val(),
-
             }
           }).success(function successCallback(response) {
 
@@ -178,6 +168,36 @@ var newListData = $scope.newItem;
             });
         };
 
+        $scope.deleteHoliday = function(id){
+          console.log("This is the id of this thing "+id);
+          $http({
+            method: 'DELETE',
+                url:  rootUrl + "profile/holidays/" + id,
+                headers: {'Authorization': userToken},
+                data: {
+            }
+          }).success(function successCallback(response) {
 
+            }, function errorCallback(response) {
+              // called asynchronously if an error occurs
+              // or server returns response with an error status.
+            });
+        };
+
+        $scope.deleteFavorite = function(id){
+          console.log("This is the id of this thing "+id);
+          $http({
+            method: 'DELETE',
+                url:  rootUrl + "profile/holidays/" + id,
+                headers: {'Authorization': userToken},
+                data: {
+            }
+          }).success(function successCallback(response) {
+
+            }, function errorCallback(response) {
+              // called asynchronously if an error occurs
+              // or server returns response with an error status.
+            });
+        };
 
 }]);
