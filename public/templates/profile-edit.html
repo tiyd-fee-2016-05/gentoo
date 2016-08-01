@@ -36,7 +36,7 @@
                     <ul>
                         <li><a href="#/home"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
                         <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
-                        <li><a href="#/login"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a></li>
+                        <li><a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a></li>
                         <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i> Invite</a></li>
                     </ul>
                 </div>
@@ -73,6 +73,17 @@
                 <!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
             </div>
 
+            <div class="info favorites">
+                <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
+                <ul class="info-answer">
+                    <li ng-repeat="favorite in favoriteList">
+                        <input type="checkbox" id="e-f1" name="cc" />
+                        <label for="e-f1">{{favorite.name}} <i ng-click="colorList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                </ul>
+                <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
+            </div>
+
             <div class="info holidays">
                 <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
                 <ul class="info-answer">
@@ -93,17 +104,6 @@
                     </li>
                 </ul>
                 <!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
-            </div>
-
-            <div class="info favorites">
-                <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
-                <ul class="info-answer">
-                    <li ng-repeat="favorite in favoriteList">
-                        <input type="checkbox" id="e-f1" name="cc" />
-                        <label for="e-f1">{{favorite.name}} <i ng-click="colorList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
-                    </li>
-                </ul>
-                <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
             </div>
             </form>
 

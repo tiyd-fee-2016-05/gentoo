@@ -164,8 +164,10 @@ button:focus {
     #menu #tab-menu i {
       padding-left: 10px; }
     #menu #tab-menu a:hover {
-      color: #B6174B;
-      transition: all 0.3s ease-out; }
+      background: #9f1442;
+      border-radius: 5px;
+      transition: all 0.3s ease-out;
+      cursor: pointer; }
   #menu #tab-search {
     z-index: 999;
     width: 90%;

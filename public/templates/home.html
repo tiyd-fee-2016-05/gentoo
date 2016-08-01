@@ -7,10 +7,10 @@
             </section>
 
             <h1 class="profile-name animated slideInLeft"><i class="fa fa-user" aria-hidden="true"></i>
-           {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}Nastassia Troyer</h1>
+           {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
 
             <div class="nav">
-                <h1 class="logo animated slideInRight">Gentoo</h1>
+                <h1 class="logo">Gentoo</h1>
             </div>
 
             <div id="menu" ng-controller="TabController">
@@ -27,7 +27,7 @@
                     <ul>
                         <li><a href="#/profile-edit"><i class="fa fa-user-times" aria-hidden="true"></i> Edit Profile</a></li>
                         <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
-                        <li ng-click="logout()"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</li>
+                        <li ng-click="logout()"><a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a></li>
                         <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i> Invite</a></li>
                     </ul>
                 </div>
@@ -54,12 +54,23 @@
         <section class="user-photo">
         </section>
 
-        <div class="info dates animated slideInRight">
+        <div class="info dates animated slideInLeft">
             <h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
             <ul class="info-answer">
                 <li>{{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</li>
             </ul>
             <!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
+        </div>
+
+        <div class="info favorites animated slideInRight">
+            <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
+            <ul class="info-answer">
+                <li ng-repeat="color in colorList">
+                    <input type="checkbox" id="f1" name="cc" />
+                    <label for="f1">{{color}}</label>
+                </li>
+            </ul>
+            <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
         </div>
 
         <div class="info holidays animated slideInRight">
@@ -73,7 +84,7 @@
             <!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
         </div>
 
-        <div class="info interests animated slideInRight">
+        <div class="info interests animated slideInLeft">
             <h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
             <ul class="info-answer">
                 <li ng-repeat="interest in interestList">
@@ -84,16 +95,6 @@
             <!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
         </div>
 
-        <div class="info favorites animated slideInRight">
-            <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
-            <ul class="info-answer">
-                <li ng-repeat="color in colorList">
-                    <input type="checkbox" id="f1" name="cc" />
-                    <label for="f1">{{color}}</label>
-                </li>
-            </ul>
-            <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
-        </div>
 
         <!-- old code -->
         <!-- <section class="content content-main">
@@ -167,7 +168,7 @@
                         </div>
                     </form>
                 </div>
-                        
+
             <!-- Wishlist add-item modal tab -->
             <div ng-show="isSet(2)" id="tab-wishlist-item">
                 <h1 class="header">Add new item to (wishlist):</h1>
