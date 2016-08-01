@@ -3,7 +3,7 @@
 <div id="new-profile-container" ng-app="gentooApp" ng-controller="TabController2">
 
 
-<h1 class="logo upper-padding">Gentoo</h1>
+<a href="#/home"><h1 class="logo upper-padding">Gentoo</h1></a>
 
 	<!-- 	Sign up tabs -->
 	<div ng-click="setTab(1)" id="tab" class="tab2" ng-class="{ active: isSet(1) }"><i class="fa fa-clock-o fa-2x" aria-hidden="true"></i></div>
@@ -21,7 +21,7 @@
 	<form>
 		<!--form begins-->
 		<!-- 	Dates tab -->
-		<div ng-show="isSet(1)" id="tab-dates">
+		<div ng-show="isSet(1)" id="tab-dates" class="animated slideInDown">
 			<ul>
 				<li>
 					<h1 class="header"><label for "bd_month">When is your birthday?</label></h1>
@@ -35,7 +35,7 @@
 
 
 			<p><i class="fa fa-check" aria-hidden="true"></i> step 1 of 5
-				<button type="submit" ng-click="setTab(3)">next: holidays</button>
+				<button type="submit" ng-click="setTab(2)">next: holidays</button>
 			</p>
 		</div>
 
@@ -102,7 +102,7 @@
 				</li>
 			</ul>
 			<p><i class="fa fa-check" aria-hidden="true"></i> step 2 of 5
-				<button type="submit" ng-click="setTab(4)">next: interests</button>
+				<button type="submit" ng-click="setTab(3)">next: interests</button>
 			</p>
 		</div>
 
@@ -229,7 +229,7 @@
 				</li>
 			</ul>
 			<p><i class="fa fa-check" aria-hidden="true"></i> step 3 of 5
-				<button type="submit" ng-click="setTab(5)">next: favorites</button>
+				<button type="submit" ng-click="setTab(4)">next: favorites</button>
 			</p>
 		</div>
 
@@ -268,7 +268,7 @@
 			<!-- Progress bar here -->
 
 			<p><i class="fa fa-check" aria-hidden="true"></i> step 4 of 5
-				<button type="submit" ng-click="setTab(6)">next: find friends</button>
+				<button type="submit" ng-click="setTab(5)">next: find friends</button>
 			</p>
 		</div>
 	</form>

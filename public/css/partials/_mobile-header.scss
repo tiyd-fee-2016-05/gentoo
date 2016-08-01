@@ -28,9 +28,9 @@
             .logo {
                 position: relative;
                 top: -10px;
-                left: -20%;
+                left: -10%;
                 margin: 0 auto;
-                font: 70px / 80px $logo;
+                font: 60px / 80px $logo;
                 text-align: center;
             }
             // .logo {
@@ -42,20 +42,6 @@
             //   -moz-text-shadow: 2px 1px 0 darken($red, 20%);
             //   text-shadow: 2px 1px 0 darken($red, 20%);
             // }
-            .fa-align-right {
-                position: relative;
-                top: 10px;
-                left: 40%;
-                color: $white;
-                opacity: 0.8;
-                font-size: 36px;
-                &:hover {
-                    opacity: 1;
-                    -webkit-transition: all 0.3s ease;
-                    transition: all 0.3s ease;
-                    cursor: pointer;
-                }
-            }
         }
         nav {
             // menu that opens

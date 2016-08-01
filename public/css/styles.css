@@ -533,7 +533,7 @@ header .nav {
   height: 30px;
   position: absolute;
   top: 30px;
-  right: 8%;
+  right: 5%;
   z-index: 5; }
   header .nav .logo {
     font: 50px/50px "Grand Hotel", cursive;
@@ -541,17 +541,6 @@ header .nav {
     -webkit-text-shadow: 2px 1px 0 #12050a;
     -moz-text-shadow: 2px 1px 0 #12050a;
     text-shadow: 2px 1px 0 #12050a; }
-  header .nav .fa-align-right {
-    position: relative;
-    top: 40px;
-    right: 20%;
-    color: white;
-    opacity: 0.8; }
-    header .nav .fa-align-right:hover {
-      opacity: 1;
-      -webkit-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-      cursor: pointer; }
 header nav {
   width: 35%;
   height: 50px;
@@ -637,9 +626,10 @@ header .profile-name {
   top: -80px;
   left: 0;
   margin: 0 0 20px 5%;
+  font: 700 20px/26px "Work Sans", sans-serif;
   color: white; }
   header .profile-name i {
-    color: #2C8C99; }
+    color: #42D9C8; }
 header .edit-profile {
   position: relative;
   top: -105px;
@@ -1755,7 +1745,7 @@ h1 {
     text-align: center;
     font: 40px/75px "Nunito", sans-serif; }
     #new-profile-container #tab-login input {
-      width: 80%;
+      width: 70%;
       border: 2px solid #611c35;
       border-radius: 5px;
       margin: 5px;
@@ -1794,7 +1784,7 @@ h1 {
     padding: 15px 0;
     text-align: center; }
     #new-profile-container #tab-signup input {
-      width: 50%;
+      width: 60%;
       border: 2px solid #27c1b0;
       border-radius: 5px;
       margin: 5px;
@@ -2025,28 +2015,27 @@ h1 {
         transition: all 0.7s ease-out;
         cursor: pointer; }
 
-.profile-name span {
-  font-weight: 700; }
-
-.save-profile {
+.edit-profile-name {
   position: relative;
-  top: -115px;
+  top: -100px;
   left: 0;
-  width: 150px;
-  margin: 20px auto;
-  padding: 0;
-  font: 700 18px/26px "Work Sans", sans-serif;
-  background: #611c35;
+  margin: 0 0 20px 5%;
+  font: 20px/30px "Work Sans", sans-serif;
+  color: white; }
+  .edit-profile-name span {
+    font-weight: 700; }
+
+input {
+  display: inline-block;
+  width: 20%;
   border: 2px solid #611c35;
   border-radius: 5px;
-  color: white; }
-  .save-profile i {
-    font-size: 12px; }
-  .save-profile:hover {
-    background: #4d162a;
-    border: 2px solid #4d162a;
-    transition: all 0.3s ease-out;
-    cursor: pointer; }
+  margin: 5px;
+  padding: 8px;
+  font: 20px/16px "Nunito", sans-serif;
+  text-align: left; }
+  input:focus {
+    outline: 0; }
 
 .edit {
   margin: 5px;
@@ -2129,23 +2118,20 @@ h1 {
   margin: 50px auto;
   text-align: center; }
   .section-save-button .profile-submit-button {
-    background: #611c35;
-    border: 2px solid #611c35;
-    border-radius: 10px;
-    margin: auto;
-    padding: 5px 10% 8px;
-    font: 700 18px/20px "Work Sans", sans-serif;
-    color: white;
-    text-align: center;
-    opacity: 1; }
+    width: 150px;
+    margin: 10px auto;
+    padding: 5px;
+    font: 700 18px/26px "Work Sans", sans-serif;
+    background: #2F4858;
+    border: 2px solid #2F4858;
+    border-radius: 5px;
+    color: white; }
     .section-save-button .profile-submit-button i {
-      font-size: 14px;
-      color: white; }
+      font-size: 12px; }
     .section-save-button .profile-submit-button:hover {
-      background: #4d162a;
-      border: 2px solid #4d162a;
-      -webkit-transition: all 0.7s ease;
-      transition: all 0.7s ease;
+      background: #263a47;
+      border: 2px solid #263a47;
+      transition: all 0.3s ease-out;
       cursor: pointer; }
 
 .form-group {
@@ -2302,22 +2288,10 @@ h1 {
       header .nav .logo {
         position: relative;
         top: -10px;
-        left: -20%;
+        left: -10%;
         margin: 0 auto;
-        font: 70px/80px "Grand Hotel", cursive;
+        font: 60px/80px "Grand Hotel", cursive;
         text-align: center; }
-      header .nav .fa-align-right {
-        position: relative;
-        top: 10px;
-        left: 40%;
-        color: white;
-        opacity: 0.8;
-        font-size: 36px; }
-        header .nav .fa-align-right:hover {
-          opacity: 1;
-          -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
-          cursor: pointer; }
     header nav {
       width: 70%;
       height: 300px;

@@ -1,29 +1,26 @@
-.profile-name {
+.edit-profile-name {
+    position: relative;
+    top: -100px;
+    left: 0;
+    margin: 0 0 20px 5%;
+    font: 20px / 30px $font;
+    color: $white;
     span {
         font-weight: 700;
     }
 }
-.save-profile {
-    position: relative;
-    top: -115px;
-    left: 0;
-    width: 150px;
-    margin: 20px auto;
-    padding: 0;
-    font: 700 18px / 26px $font;
-    background: $red;
-    border: 2px solid $red;
-    border-radius: 5px;
-    color: $white;
-    i {
-        font-size: 12px;
-    }
-    &:hover {
-      background: darken($red, 5%);
-  	  border: 2px solid darken($red, 5%);
-  		transition: all 0.3s ease-out;
-  		cursor: pointer;
-    }
+input {
+  display: inline-block;
+  width: 20%;
+  border: 2px solid $red;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 8px;
+  font: 20px / 16px $menu;
+  text-align: left;
+  &:focus {
+    outline: 0;
+  }
 }
 .edit {
 	margin: 5px;
@@ -114,27 +111,24 @@
     margin: 50px auto;
     text-align: center;
     .profile-submit-button {
-        background: $red;
-        border: 2px solid $red;
-        border-radius: 10px;
-        margin: auto;
-        padding: 5px 10% 8px;
-        font: 700 18px / 20px $font;
-        color: $white;
-        text-align: center;
-        opacity: 1;
-        i {
-            font-size: 14px;
-            color: $white;
-        }
-        &:hover {
-            background: darken($red, 5%);
-            border: 2px solid darken($red, 5%);
-            -webkit-transition: all 0.7s ease;
-            transition: all 0.7s ease;
-            cursor: pointer;
-        }
-    }
+      width: 150px;
+      margin: 10px auto;
+      padding: 5px;
+      font: 700 18px / 26px $font;
+      background: $darkblue;
+      border: 2px solid $darkblue;
+      border-radius: 5px;
+      color: $white;
+      i {
+        font-size: 12px;
+      }
+      &:hover {
+        background: darken($darkblue, 5%);
+    	  border: 2px solid darken($darkblue, 5%);
+    		transition: all 0.3s ease-out;
+    		cursor: pointer;
+      }
+  }
 }
 .form-group {
     width: 50%;
