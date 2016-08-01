@@ -3,7 +3,7 @@ gentooApp.controller('HomeController', ['$rootScope', '$scope', '$http', '$locat
     $scope.domain = window.location.href;
 
     if (!$scope.userToken) {
-        $location.path("/sign_up");
+        $location.path("#/login");
     }
 
     // var rootUrl= "https://6e62d5d1.ngrok.io/";
@@ -114,9 +114,8 @@ var newListData = $scope.newItem;
 gentooApp.controller('EditController', ['$rootScope', '$scope', '$http', '$location', 'User', function($rootScope, $scope, $http, $location, User) {
     $scope.userToken = User.getToken();
     $scope.domain = window.location.href;
-
     if (!$scope.userToken) {
-        $location.path("/sign_up");
+        $location.path("#/login");
     }
 
     // var rootUrl= "https://6e62d5d1.ngrok.io/";

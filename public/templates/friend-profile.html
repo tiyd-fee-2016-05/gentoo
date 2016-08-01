@@ -1,4 +1,4 @@
-<!-- Profile View -->
+ <!-- Profile View -->
 <div id="container">
     <div id="profile-main-container" ng-controller="LoadFriendController">
 
@@ -14,7 +14,7 @@
             </div>
 
             <div id="menu" ng-controller="TabController">
-                <div ng-click="setTab(2)" id="tab1" ng-class="{ active: isSet(4) }"><i class="fa fa-gift fa-lg animated slideInRight" aria-hidden="true"></i></div>
+                <div ng-click="setTab(2); FindTodos(loadedfriend.user.username)" id="tab1" ng-class="{ active: isSet(4) }"><i class="fa fa-gift fa-lg animated slideInRight" aria-hidden="true"></i></div>
 
                 <div ng-click="setTab(3)" id="tab2" ng-class="{ active: isSet(2) }"><i class="fa fa-bars fa-lg animated slideInRight" aria-hidden="true"></i></div>
 
@@ -26,11 +26,11 @@
                 <div ng-show="isSet(1)">
                 </div>
 
-                <div ng-show="isSet(2)" id="tab-gift" class="animated bounceInRight">
+                <div ng-show="isSet(2)" id="tab-gift" class="animated bounceInRight" >
                     <ul>
                         <li>
-                            <input type="text" placeholder="add gift idea here" ng-model="formTodoText" ng-model-instant />
-                            <button ng-click="addTodo()" class="add-item"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
+                            <input id="ideaboxText" type="text" placeholder="add gift idea here" ng-model="formTodoText" ng-model-instant />
+                            <button ng-click="addTodo()" class="add-item"><i ng-click="AddIdea()" class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
                         </li>
 
                         <li ng-repeat="todo in todos">
@@ -46,7 +46,7 @@
 
                 <div ng-show="isSet(3)" id="tab-menu" class="animated bounceInRight" ng-controller="LoginCtrl">
                  <ul>
-                     <li><a href="#/add-friend"><i class="fa fa-user-times" aria-hidden="true"></i> Unfriend</a></li>
+                     <ling-click="findFriend(person.username)"><a href="#/add-friend"><i class="fa fa-user-times" aria-hidden="true"></i> Unfriend</a></li>
                      <li><a href="#/home"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
                      <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
                      <li ng-click="logout()"><a href=""><i class="fa fa-arrow-right" aria-hidden="true"></a></i> Logout</li>

@@ -3,7 +3,7 @@ gentooApp.controller('FriendController', ['$rootScope', '$scope', '$http', '$loc
     $scope.domain = window.location.href;
 
     if (!$scope.userToken) {
-        $location.path("/sign_up");
+        $location.path("#/login");
     }
     // var rootUrl= "https://6e62d5d1.ngrok.io/";
     var rootUrl= "https://giftbox-tiy.herokuapp.com/";

@@ -1,10 +1,13 @@
 gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '$location', 'User', 'Friend', function($rootScope, $scope, $http, $location, User, Friend) {
     $scope.userToken = User.getToken();
     $scope.friendtoLoad = Friend.getFriend();
+    if (!$scope.userToken) {
+        $location.path("#/login");
+    }
 
 
   var usersearch = $scope.friendtoLoad
-  console.log("You are searching for " + $scope.friendtoLoad);
+  console.log(usersearch);
 
 
   $(document).ready(function(){
@@ -16,21 +19,18 @@ gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '
 
 
     var userToken = $scope.userToken
-
+    if (!$scope.userToken) {
+        $location.path("#/login");
+    }
     $http({
         url: rootUrl + usersearch + "/profile",
         method: "GET",
         headers: {
             'Authorization': userToken
         },
-        data: {
-            username: usersearch
-        }
     }).success(function(data, status, headers, config) {
 
         $rootScope.loadedfriend= data;
-        console.log("Information about your friend");
-        console.log(data);
         $rootScope.friendholidayList = data.user.holidays
         $rootScope.friendinterestList = data.user.interests
          $rootScope.friendfavoriteList = data.user.favorites
@@ -55,18 +55,16 @@ gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '
                 $scope.status = status;
             });//End GET request for friends
 
-            $http({
-                      url:  rootUrl +usersearch + "/ideabox",
-                   method: "GET",
-                   headers: {'Authorization': userToken},
-                   data: {
-                       username: usersearch
-                     }
-                  }).success(function (data, status, headers, config) {
-                    }).error(function (data, status, headers, config) {
-                        $scope.status = status;
-                    });//End GET request for friends
+            $scope.findFriend = function(clickedperson) {
 
+
+              $scope.searchedFriend = GetFriend.rememberFriend(clickedperson);
+
+
+
+
+
+            }
 
 $scope.getItem = function(selectedItem) {
   $scope.clickedItem = selectedItem

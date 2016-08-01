@@ -181,6 +181,9 @@
                             <li>
                                 <input type="text" id="item_interests" placeholder="tag a few interests" autocomplete="on">
                             </li>
+
+
+
                             <!-- 				<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
                         </ul>
                         <p><i class="fa fa-check" aria-hidden="true"></i>
@@ -192,7 +195,7 @@
 
             <!-- Wishlist add-item modal tab -->
             <div ng-show="isSet(2)" id="tab-wishlist-item">
-                <h1 class="header">Add new item to {{clickedhomeList.name}}:</h1>
+                <h1 class="header">Add new item to {{clickedhomeList.name}} list:</h1>
                 <!--make this changeable-->
                 <form>
                     <ul>
@@ -204,14 +207,12 @@
                         </li>
                         <li>
                             <!-- <input type="text" id="item_holiday" placeholder="what holiday is this for?" autocomplete="on"> -->
-                            <select>
-                              <option>What holiday is this for?</option>
-                              <option ng-repeat="holiday in holidayList" id="item_holiday" value="">{{holiday.name}}</option>
-                            </select>
                         </li>
                         <li>
                             <input type="text" id="item_desc" placeholder="tag a few interests" autocomplete="on">
                         </li>
+
+                        
                         <!-- 			<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
                     </ul>
 
@@ -235,7 +236,7 @@
                   </ul>
 
                     <p>
-                        <button type="submit" ng-click="AddList()"><i class="fa fa-times" aria-hidden="true"></i></button>
+                        <button type="submit" ng-click=""><i class="fa fa-times" aria-hidden="true"></i></button>
                     </p>
             </div>
 

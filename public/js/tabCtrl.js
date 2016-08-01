@@ -1,5 +1,11 @@
 // angular.module('gentooApp', [])
-gentooApp.controller('TabController', ['$scope', function($scope) {
+gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$location', 'User', 'Friend', function($rootScope, $scope, $http, $location, User, Friend) {
+	  $scope.userToken = User.getToken();
+		    var userToken = $scope.userToken
+				  var usersearch = $scope.friendtoLoad
+					if (!$scope.userToken) {
+							$location.path("#/login");
+					}
 		$scope.tab = 1;
 
 		$scope.setTab = function(newTab) {
@@ -11,16 +17,47 @@ gentooApp.controller('TabController', ['$scope', function($scope) {
 		};
 
 // Add list items
-			$scope.todos = [{
-				text: 'List item 1',
-				done: false
-			}, {
-				text: 'List item 2',
-				done: false
-			}, {
-				text: 'List item 3',
-				done: false
-			}];
+			$scope.FindTodos = function(){
+				console.log(usersearch);
+				// var rootUrl= "https://6e62d5d1.ngrok.io/";
+				var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+				$http({
+									url:  rootUrl + usersearch+ "/profile/ideabox",
+							 method: "GET",
+							 headers: {'Authorization': userToken},
+							}).success(function (data, status, headers, config) {
+						console.log(data);
+								$scope.todos= data.ideabox
+
+
+
+								console.log(data);
+								}).error(function (data, status, headers, config) {
+										$scope.status = status;
+								});
+			}
+
+			$scope.AddIdea = function(){
+				// var rootUrl= "https://6e62d5d1.ngrok.io/";
+				var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+				console.log("You had an idea!");
+				$http({
+									url:  rootUrl + usersearch+ "/profile/ideabox",
+							 method: "POST",
+							 headers: {'Authorization': userToken},
+							 data: {text: $('#ideaboxText').val(),  }
+							}).success(function (data, status, headers, config) {
+						console.log(data);
+								$scope.todos= data.ideabox
+
+
+
+								console.log(data);
+								}).error(function (data, status, headers, config) {
+										$scope.status = status;
+								});
+			}
+
 
 			$scope.getTotalTodos = function() {
 				return $scope.todos.length;
@@ -32,7 +69,7 @@ gentooApp.controller('TabController', ['$scope', function($scope) {
 					done: false
 				});
 				$scope.formTodoText = '';
-				
+
 			};
 
 
