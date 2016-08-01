@@ -109,7 +109,7 @@
               				<ul class="info-answer">
                     <li ng-repeat="favorite in favoriteList">
 				                  <input type="checkbox" id="e-f1" name="cc" />
-				                      <label for="e-f1">{{favorite.name}} <i ng-click="colorList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+				                      <label for="e-f1">{{favorite.name}} <i ng-click="Favorite(favorite.id); favoriteList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
 			                         </li>
               		      </ul>
               		<!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
@@ -167,13 +167,13 @@
 
             <div class="list-header">
                 <h1 class="list-name">{{list.name}}</h1>
-                  <h1 class="delete-list">delete wishlist <i ng-click="wishlistArray.splice($index,1)"class="fa fa-times fa-lg" aria-hidden="true"></i></h1>
+                  <h1 ng-click="deleteWishlist(list.id); wishlistArray.splice($index,1)" class="delete-list">delete wishlist <i class="fa fa-times fa-lg" aria-hidden="true"></i></h1>
             </div>
             <ul>
                 <li ng-repeat="item in list.items">
                     <h1>{{item.name}}</h1>
                     <!-- <h2>for: {{loadedprofile.user.holidays[0]}}</h2> -->
-                    <a href="#/list-item"><span class="edit">edit</span></a><span class="delete" ng-click="list.items.splice($index,1)">delete</span>
+                    <a href="#/list-item"><span class="edit">edit</span></a><span class="delete" ng-click="deleteWishlistItem(list.id, item.id); list.items.splice($index,1)">delete</span>
                 </li>
             </ul>
         </section>
