@@ -8,6 +8,7 @@ var userToken = $scope.userToken
 
 
     $scope.register = function() {
+      console.log("Register User");
         $http({
             method: "POST",
             url:    rootUrl + "/register",

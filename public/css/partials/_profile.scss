@@ -42,7 +42,6 @@
                 position: absolute;
                 top: 10%;
                 right: 10%;
-                // margin-bottom: 20px;
                 overflow-y: hidden;
                 background: screen($blue2, 20%);
                 background-image: url('../photo.jpg');
@@ -162,18 +161,7 @@
 	}
 	#e-bd3 {
 		width: 45px;
-	}
-	// button {
-	// background: darken($blue2, 10%);
-	// border: 2px solid darken($blue2, 10%);
-	// border-radius: 5px;
-	// margin-left: 5px;
-	// &:hover {
-	// 	opacity: 1;
-	// 	transition: all 0.5s ease-out;
-	// 	cursor: pointer;
-	// }
-	// }
+  }
 }
 
 .holidays {
@@ -183,18 +171,6 @@
 		background: darken($red, 5%);
 		border: 2px solid darken($red, 5%);
 	}
-
-	// button {
-	// background: darken($red, 20%);
-	// border: 2px solid darken($red, 20%);
-	// border-radius: 5px;
-	// margin-left: 5px;
-	// &:hover {
-	// 	opacity: 1;
-	// 	transition: all 0.5s ease-out;
-	// 	cursor: pointer;
-	// }
-	// }
 }
 
 .interests {
@@ -204,18 +180,6 @@
 		background: darken($teal, 10%);
 		border: 2px solid darken($teal, 10%);
 	}
-
-	// button {
-	// background: darken($teal, 26%);
-	// border: 2px solid darken($teal, 26%);
-	// border-radius: 5px;
-	// margin-left: 5px;
-	// &:hover {
-	// 	opacity: 1;
-	// 	transition: all 0.5s ease-out;
-	// 	cursor: pointer;
-	// }
-	// }
 }
 
 .favorites {
@@ -225,16 +189,4 @@
 		background: darken($pink, 5%);
 		border: 2px solid darken($pink, 5%);
 	}
-
-	// button {
-	// background: darken($pink, 10%);
-	// border: 2px solid darken($pink, 10%);
-	// border-radius: 5px;
-	// margin-left: 5px;
-	// &:hover {
-	// 	opacity: 1;
-	// 	transition: all 0.5s ease-out;
-	// 	cursor: pointer;
-	// }
-	// }
 }

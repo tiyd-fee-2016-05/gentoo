@@ -1,15 +1,33 @@
 <!-- Login Screen -->
 <div id="container1">
-    <div id="login-container">
+    <!-- <div id="login-container"> -->
 
-        <a href="#/home"><h1 class="logo">Gentoo</h1></a>
-        <h2>Hello!</h2>
-        <!-- <p>
-                Gentoo, the gift matchmaker.
-            </p> -->
+      <div id="new-profile-container" ng-app="gentooApp" ng-controller="TabController2">
+
+      	<!-- 	Login information -->
+      	<h1 class="logo upper-padding">Gentoo</h1>
 
         <form ng-controller="LoginCtrl" ng-submit="loginUser()">
-            <section class="content">
+      	<div id="tab-login" class="animated slideInDown">
+      		<h1 class="header">Hello!</h1>
+      		<ul>
+      			<li>
+      				<input class="userlogin" type="text" id="login_username" name="login_username" ng-model="form.username" placeholder="email" autocomplete="on" autofocus required>
+      			</li>
+      			<li>
+      				<input class="userpassword" type="password" id="login_password" name="login_password" ng-model="form.password" placeholder="password" autocomplete="on" required>
+      			</li>
+      		</ul>
+      		<p>
+      			<button type="submit" class="login-button" name="button">login</button> or
+      			<a href="#/sign-up"><button type="submit" name="button">sign up</button></a></p>
+      	</div>
+      </form>
+
+
+
+        <!-- <form ng-controller="LoginCtrl" ng-submit="loginUser()"> -->
+            <!-- <section class="content">
                 <span class="input input--hoshi">
               					<input name="login_username" class="input__field input__field--hoshi userlogin" type="text" id="input-1" / ng-model="form.username">
               					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
@@ -21,17 +39,17 @@
               					<label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-2">
               						<span class="input__label-content input__label-content--hoshi userLogin">Password</span>
                 </label>
-              </span><br>
-                <!-- <a href="#/home"> -->
-                    <button class="login-button" type="submit" name="button">login <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-                <!-- </a> -->
+              </span><br>-->
+                <!-- <a href="#/home">
+                    <!--<button class="login-button" type="submit" name="button">login <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                </a>
                 <br>
 
-                <a href="#/new-profile">
+                <a href="#/sign-up">
                     <p>New user?</p>
                     <button class="signup-button" type="submit" name="button">sign up <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
                 </a>
             </section>
-        </form>
+        </form> -->
     </div>
 </div>

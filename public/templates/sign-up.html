@@ -1,55 +1,90 @@
 <!-- Sign-Up Screen -->
-    <div id="container1">
-        <div id="login-container">
+<div id="container1">
+    <!-- <div id="login-container"> -->
+    <div id="new-profile-container">
+        <!-- <a href="#/login"><h1 class="logo"> Gentoo</h1></a> -->
 
-            <a href="#/login"><h1 class="logo"> Gentoo</h1></a>
-            <h2>Welcome!</h2>
-            <p>Give with Love. <br> Shop with Confidence.<br><br>
+        <!-- 	Main sign-up profile information  -->
+        <div class="welcome-info">
+            <h1>Welcome!</h1>
+            <p><span>Give</span> with <span>Love</span>. <span>Shop</span> with <span>Confidence</span>. Gentoo provides the information you need to <span>give</span> the perfect gift <span>every time</span>.</p>
+        </div>
 
-              Gentoo provides the information you need to give the perfect gift everytime.
-            </p>
 
+        <div id="tab-signup" class="animated slideInDown">
+            <h1 class="header"><i class="fa fa-user-plus" aria-hidden="true"></i> Create an account with us:</h1>
             <form ng-controller="RegisterCtrl" ng-submit="register()">
-            <section class="content">
-                <span class="input input--hoshi">
+                <ul>
+                    <li>
+                        <input name="login_first_name" type="text" id="first_name" ng-model="firstname.user" placeholder="first name" autocomplete="on" autofocus required>
+                    </li>
+                    <li>
+                        <input name="login_last_name" type="text" id="last_name" ng-model="lastname.user" placeholder="last name" autocomplete="on" required>
+                    </li>
+                    <li>
+                        <input name="create_username" type="text" id="username" ng-model="username.user" placeholder="choose a username" autocomplete="on" required>
+                    </li>
+                    <li>
+                        <input name="login_email" type="email" id="email" ng-model="email.user" placeholder="email" autocomplete="on" required>
+                    </li>
+                    <li>
+                        <input name="login_password" type="password" id="password" ng-model="password.user" placeholder="password" autocomplete="on" required>
+                    </li>
+                    <li>
+                        <input name="login_password" type="password" id="password" ng-model="passwordConfirmation.user" placeholder="confirm password" autocomplete="on" required>
+                    </li>
+                </ul>
+
+
+            <p><i class="fa fa-check" aria-hidden="true"></i> continue to:
+                <button ng-click="register()" type="submit" name="button"><a href="#/new-profile">profile details</a></button> or
+                <button ng-click="register()" type="submit"><a href="#/home">view profile</a></button>
+            </p>
+          </form>
+        </div>
+
+
+        <!-- <form ng-controller="RegisterCtrl" ng-submit="register()"> -->
+        <!-- <section class="content">
+            <span class="input input--hoshi">
       					<input name="login_username" class="input__field input__field--hoshi userlogin" type="text" id="input-1" / ng-model="firstname.user">
       					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
       						<span class="input__label-content input__label-content--hoshi">First Name</span>
-                </label>
-                </span>
-                <span class="input input--hoshi">
+            </label>
+            </span> -->
+            <!-- <span class="input input--hoshi">
       					<input class="input__field input__field--hoshi" type="text" id="input-2" / ng-model="lastname.user">
       					<label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-2">
       						<span class="input__label-content input__label-content--hoshi userLogin">Last Name</span>
-                </label>
-                </span>
-                <span class="input input--hoshi">
+            </label>
+            </span>
+            <span class="input input--hoshi">
       					<input name="create_username" class="input__field input__field--hoshi usercreate" type="text" id="input-1" / ng-model="username.user">
       					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
       						<span class="input__label-content input__label-content--hoshi">Username</span>
-                </label>
-                </span>
-                <span class="input input--hoshi">
+            </label>
+            </span>
+            <span class="input input--hoshi">
       					<input name="login_username" class="input__field input__field--hoshi userlogin" type="email" id="input-1" / ng-model="email.user">
       					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
       						<span class="input__label-content input__label-content--hoshi">Email</span>
-                </label>
-                </span>
-                <span class="input input--hoshi">
+            </label>
+            </span>
+            <span class="input input--hoshi">
       					<input name="login_username" class="input__field input__field--hoshi userlogin" type="password" id="input-1" / ng-model="password.user">
       					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
       						<span class="input__label-content input__label-content--hoshi">Password</span>
-                </label>
-              </span>
-              <span class="input input--hoshi">
+            </label> -->
+            <!-- </span>
+            <span class="input input--hoshi">
               <input name="login_username" class="input__field input__field--hoshi userlogin" type="password" id="input-1" / ng-model="passwordConfirmation.user">
               <label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
                 <span class="input__label-content input__label-content--hoshi">Password Confirmation</span>
-              </label>
-              </span>
-              <br>
-            <a href="#/new-profile"<button class="login-button" type="submit" name="button">sign up <i class="fa fa-chevron-right" aria-hidden="true"></i></button></a>
-          </section>
-        </form>
-        </div>
+            </label>
+            </span>
+            <br> -->
+            <!-- <a href="#/new-profile" <button class="login-button" type="submit" name="button">sign up <i class="fa fa-chevron-right" aria-hidden="true"></i></button></a> -->
+        <!-- </section> -->
+        <!-- </form> -->
     </div>
+</div>
