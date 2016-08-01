@@ -1,12 +1,11 @@
 
 gentooApp.controller('SignupCtrl', function ($scope, $http) {
     $scope.submitForm = function() {
-        console.log("posting data....");
         newUserData = $scope.newUser;
         var username = $('.usercreate[name="create_username"]').val()
         $http({
-        //  url:  "https://58a85897.ngrok.io/" + username+ "/profile",
-            url:  "https://giftbox-tiy.herokuapp.com/" + username+ "/profile",
+         url:  "https://58a85897.ngrok.io/" + username+ "/profile",
+            // url:  "https://giftbox-tiy.herokuapp.com/" + username+ "/profile",
          method: "GET",
          headers: {'Authorization': username},
          params: {newUserData}

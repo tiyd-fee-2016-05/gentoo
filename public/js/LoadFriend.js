@@ -1,8 +1,7 @@
 gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '$location', 'User', 'Friend', function($rootScope, $scope, $http, $location, User, Friend) {
     $scope.userToken = User.getToken();
     $scope.friendtoLoad = Friend.getFriend();
-console.log($scope.friendtoLoad);
-  console.log($scope.userToken);
+
 
   var usersearch = $scope.friendtoLoad
 
@@ -11,10 +10,10 @@ console.log($scope.friendtoLoad);
       $(this).scrollTop(0);
   });
 
-    // var rootUrl = "https://6e62d5d1.ngrok.io/";
-    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+    var rootUrl = "https://6e62d5d1.ngrok.io/";
+    // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
-    console.log($scope.userToken);
+
     var userToken = $scope.userToken
 
     $http({
@@ -27,7 +26,7 @@ console.log($scope.friendtoLoad);
             username: usersearch
         }
     }).success(function(data, status, headers, config) {
-        console.log(data);
+
         $rootScope.loadedprofile= data;
         // $rootScope.holidayList = data.user.holidays
         // $rootScope.interestList = data.user.interests
@@ -46,11 +45,9 @@ console.log($scope.friendtoLoad);
                username: usersearch
              }
           }).success(function (data, status, headers, config) {
-                   console.log("Wishlist Info for " + $rootScope.username);
-                   console.log(data);
+
                    $rootScope.wishlistArray = data.user
-                  console.log("List of Lists");
-                   console.log($rootScope.wishlistArray);
+
             }).error(function (data, status, headers, config) {
                 $scope.status = status;
             });//End GET request for friends
@@ -63,11 +60,6 @@ console.log($scope.friendtoLoad);
                        username: usersearch
                      }
                   }).success(function (data, status, headers, config) {
-                           console.log("Idea Box Info for " + usersearch);
-                           console.log(data);
-                          //  $rootScope.IdeaBoxArray = data.user
-                          // console.log("List of Lists");
-                          //  console.log($rootScope.wishlistArray);
                     }).error(function (data, status, headers, config) {
                         $scope.status = status;
                     });//End GET request for friends

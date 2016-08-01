@@ -5,7 +5,6 @@ gentooApp.controller('NewProfileCtrl', function ($rootScope, $scope, $http) {
 
     $scope.submitNewProfile = function() {
         ProfileData = $scope.form;
-        console.log(username);
 
 
 

@@ -18,7 +18,7 @@
 
 
 
-	<form>
+	<form ng-controller="RegisterCtrl">
 		<!--form begins-->
 		<!-- 	Dates tab -->
 		<div ng-show="isSet(1)" id="tab-dates" class="animated slideInDown">
@@ -35,7 +35,7 @@
 
 
 			<p><i class="fa fa-check" aria-hidden="true"></i> step 1 of 5
-				<button type="submit" ng-click="setTab(2)">next: holidays</button>
+				<button type="submit" ng-click="registerDates(); setTab(2)">next: holidays</button>
 			</p>
 		</div>
 
@@ -44,65 +44,65 @@
 			<h1 class="header">Select favorite holidays</h1>
 			<ul>
 				<li>
-					<!--ng-repeat this for all interests-->
-					<input type="checkbox" id="h1" name="cc" />
+					<form>
+					<input ng-model="registerData.holidays.Christmas" type="checkbox" id="h1" name="cc" />
 					<label for="h1">Christmas</label>
 				</li>
 				<li>
-					<input type="checkbox" id="h2" name="cc" />
+					<input ng-model="registerData.holidays.Birthday"  type="checkbox" id="h2" name="cc" />
 					<label for="h2">Birthday</label>
 				</li>
 				<li>
-					<input type="checkbox" id="h3" name="cc" />
+					<input ng-model="registerData.holidays.Valentines" type="checkbox" id="h3" name="cc" />
 					<label for="h3">Valentine's Day</label>
 				</li>
 				<li>
-					<input type="checkbox" id="h4" name="cc" />
+					<input ng-model="registerData.holidays.NYE"  type="checkbox" id="h4" name="cc" />
 					<label for="h4">New Year's Eve</label>
 				</li>
 				<li>
-					<input type="checkbox" id="h5" name="cc" />
+					<input ng-model="registerData.holidays.Thanksgiving" type="checkbox" id="h5" name="cc" />
 					<label for="h5">Thanksgiving</label>
 				</li>
 				<li>
-					<input type="checkbox" id="h6" name="cc" />
+					<input ng-model="registerData.holidays.MothersDay" type="checkbox" id="h6" name="cc" />
 					<label for="h6">Mother's Day</label>
 				</li>
 				<li>
-					<input type="checkbox" id="h7" name="cc" />
+					<input ng-model="registerData.holidays.Halloween" type="checkbox" id="h7" name="cc" />
 					<label for="h7">Halloween</label>
 				</li>
 				<li>
-					<input type="checkbox" id="h8" name="cc" />
+					<input ng-model="registerData.holidays.StPatricks" type="checkbox" id="h8" name="cc" />
 					<label for="h8">St. Patrick's Day</label>
 				</li>
 				<li>
-					<input type="checkbox" id="h9" name="cc" />
+					<input ng-model="registerData.holidays.Ramadan" type="checkbox" id="h9" name="cc" />
 					<label for="h9">Ramadan</label>
 				</li>
 				<li>
-					<input type="checkbox" id="h10" name="cc" />
+					<input ng-model="registerData.holidays.Easter"type="checkbox" id="h10" name="cc" />
 					<label for="h10">Easter</label>
 				</li>
 				<li>
-					<input type="checkbox" id="h11" name="cc" />
+					<input ng-model="registerData.holidays.FathersDay" type="checkbox" id="h11" name="cc" />
 					<label for="h11">Father's Day</label>
 				</li>
 				<li>
-					<input type="checkbox" id="h12" name="cc" />
+					<input ng-model="registerData.holidays.FourthofJuly" type="checkbox" id="h12" name="cc" />
 					<label for="h12">4th of July</label>
 				</li>
 				<li>
-					<input type="checkbox" id="h13" name="cc" />
+					<input ng-model="registerData.holidays.Hanukkah" type="checkbox" id="h13" name="cc" />
 					<label for="h13">Hanukkah</label>
 				</li>
 				<li>
 					<label for="h14">or add your own:</label>
-					<input type="text" id="h14" name="cc" placeholder="example: my cat's birthday" />
+					<input ng-model="registerData.holidays.Custom" type="text" id="h14" name="cc" placeholder="example: my cat's birthday" />
 				</li>
 			</ul>
 			<p><i class="fa fa-check" aria-hidden="true"></i> step 2 of 5
-				<button type="submit" ng-click="setTab(3)">next: interests</button>
+				<button type="submit" ng-click="registerHolidays(); setTab(3)">next: interests</button>
 			</p>
 		</div>
 
@@ -111,125 +111,88 @@
 			<h1 class="header">Select some interests</h1>
 			<ul>
 				<li>
-					<!--ng-repeat this for all interests-->
-					<input type="checkbox" id="i1" name="cc" />
+					<input ng-model="registerData.interests.arts" type="checkbox" id="i1" name="cc" />
 					<label for="i1">Arts & Entertainment</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i2" name="cc" />
+					<input ng-model="registerData.interests.health" type="checkbox" id="i2" name="cc" />
 					<label for="i2">Health & Fitness</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i3" name="cc" />
-					<label for="i3">Autos & Vehicles</label>
+					<input ng-model="registerData.interests.autos" type="checkbox" id="i3" name="cc" />
+					<label for="i3">Auto & Vehicles</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i4" name="cc" />
-					<label for="i4">Cats</label>
+					<input ng-model="registerData.interests.design" type="checkbox" id="i4" name="cc" />
+					<label for="i4">Design</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i5" name="cc" />
-					<label for="i5">Design</label>
+					<input ng-model="registerData.interests.beauty" type="checkbox" id="i5" name="cc" />
+					<label for="i5">Beauty</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i6" name="cc" />
-					<label for="i6">Beauty</label>
+					<input ng-model="registerData.interests.food" type="checkbox" id="i6" name="cc" />
+					<label for="i6">Food & Drink</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i7" name="cc" />
-					<label for="i7">Food & Drink</label>
+					<input ng-model="registerData.interests.games"  type="checkbox" id="i7" name="cc" />
+					<label for="i7">Games</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i8" name="cc" />
-					<label for="i8">Games</label>
+					<input ng-model="registerData.interests.computers" type="checkbox" id="i8" name="cc" />
+					<label for="i8">Computers & Electronics</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i9" name="cc" />
-					<label for="i9">Computers & Electronics</label>
+					<input ng-model="registerData.interests.magic" type="checkbox" id="i9" name="cc" />
+					<label for="i9">Magic & Illusions</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i10" name="cc" />
-					<label for="i10">Dogs</label>
+					<input ng-model="registerData.interests.hobbies" type="checkbox" id="i10" name="cc" />
+					<label for="i10">Hobbies & Leisure</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i11" name="cc" />
-					<label for="i11">Business & Industrial</label>
+					<input ng-model="registerData.interests.programming" type="checkbox" id="i11" name="cc" />
+					<label for="i11">Programming & Web Development</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i12" name="cc" />
-					<label for="i12">News</label>
+					<input ng-model="registerData.interests.movies" type="checkbox" id="i12" name="cc" />
+					<label for="i12">Movies & Film</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i13" name="cc" />
-					<label for="i13">Magic & Illusions</label>
+					<input ng-model="registerData.interests.music" type="checkbox" id="i13" name="cc" />
+					<label for="i13">Music</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i14" name="cc" />
-					<label for="i14">Hobbies & Leisure</label>
+					<input ng-model="registerData.interests.travel" type="checkbox" id="i14" name="cc" />
+					<label for="i14">Travel</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i15" name="cc" />
-					<label for="i15">Programming & Web Development</label>
+					<input ng-model="registerData.interests.sports" type="checkbox" id="i15" name="cc" />
+					<label for="i15">Sports</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i16" name="cc" />
-					<label for="i16">Finance</label>
+					<input ng-model="registerData.interests.home" type="checkbox" id="i16" name="cc" />
+					<label for="i16">Home & Garden</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i17" name="cc" />
-					<label for="i17">Movies & Film</label>
+					<input ng-model="registerData.interests.internet" type="checkbox" id="i17" name="cc" />
+					<label for="i17">Internet & Technology</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i18" name="cc" />
-					<label for="i18">Real Estate</label>
+					<input ng-model="registerData.interests.science" type="checkbox" id="i18" name="cc" />
+					<label for="i18">Science</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i19" name="cc" />
-					<label for="i19">Music</label>
+					<input ng-model="registerData.interests.pets" type="checkbox" id="i19" name="cc" />
+					<label for="i19">Pets & Animals</label>
 				</li>
 				<li>
-					<input type="checkbox" id="i20" name="cc" />
-					<label for="i20">Travel</label>
-				</li>
-				<li>
-					<input type="checkbox" id="i21" name="cc" />
-					<label for="i21">Sports</label>
-				</li>
-				<li>
-					<input type="checkbox" id="i22" name="cc" />
-					<label for="i22">Law & Government</label>
-				</li>
-				<li>
-					<input type="checkbox" id="i23" name="cc" />
-					<label for="i23">Home & Garden</label>
-				</li>
-				<li>
-					<input type="checkbox" id="i24" name="cc" />
-					<label for="i24">Internet & Technology</label>
-				</li>
-				<li>
-					<input type="checkbox" id="i25" name="cc" />
-					<label for="i25">Science</label>
-				</li>
-				<li>
-					<input type="checkbox" id="i26" name="cc" />
-					<label for="i26">Pets & Animals</label>
-				</li>
-				<li>
-					<input type="checkbox" id="i27" name="cc" />
-					<label for="i27">Shopping</label>
-				</li>
-				<li>
-					<input type="checkbox" id="i28" name="cc" />
-					<label for="i28">Jobs & Education</label>
-				</li>
-				<li>
-					<input type="checkbox" id="i29" name="cc" />
-					<label for="i29">Books & Literature</label>
+					<input ng-model="registerData.interests.books" type="checkbox" id="i20" name="cc" />
+					<label for="i20">Books & Literature</label>
 				</li>
 			</ul>
 			<p><i class="fa fa-check" aria-hidden="true"></i> step 3 of 5
-				<button type="submit" ng-click="setTab(4)">next: favorites</button>
+				<button type="submit" ng-click="registerInterests(); setTab(4)">next: favorites</button>
 			</p>
 		</div>
 
@@ -246,13 +209,13 @@
 				</li>
 				<li>
 					<h1 class="header">What is your favorite season?</h1>
-					<input type="radio" id="spring" name="cc" />
+					<input ng-model="registerData.season" ng-value="'Spring'" type="radio" id="spring" name="cc" />
 					<label for="spring">Spring</label>
-					<input type="radio" id="summer" name="cc" />
+					<input ng-model="registerData.season" ng-value="'Summer'" type="radio" id="summer" name="cc" />
 					<label for="summer">Summer</label>
-					<input type="radio" id="fall" name="cc" />
+					<input ng-model="registerData.season" ng-value="'Fall'" type="radio" id="fall" name="cc" />
 					<label for="fall">Fall</label>
-					<input type="radio" id="winter" name="cc" />
+					<input ng-model="registerData.season" ng-value="'Winter'" type="radio" id="winter" name="cc" />
 					<label for="winter">Winter</label>
 				</li>
 				<li>
@@ -265,17 +228,15 @@
 				</li>
 			</ul>
 
-			<!-- Progress bar here -->
-
 			<p><i class="fa fa-check" aria-hidden="true"></i> step 4 of 5
-				<button type="submit" ng-click="setTab(5)">next: find friends</button>
+				<button type="submit" ng-click="registerFavorites(); setTab(5)">next: find friends</button>
 			</p>
 		</div>
 	</form>
 	<!--form ends-->
 
 	<!-- 	Search tab -->
-	<div ng-show="isSet(5)" id="tab-search">
+	<div ng-show="isSet(5)" id="tab-search" ng-controller="RegisterCtrl">
 		<i class="fa fa-search fa-lg" aria-hidden="true"></i>
 		<input type="search" ng-model="searchBox" placeholder="search for friends">
 
@@ -293,13 +254,14 @@
 
 		<h6>or</h6>
 		<a href="#">invite them via email</a>
+		<i class="fa fa-envelope fa-lg" aria-hidden="true"></i> <input id="inviteEmail" type="search" placeholder="send email invite"><br>
+		<button type="submit" ng-click="sendEmail()">send email</a></button>
+		Email sent! <!--do ng-show here-->
 
 		<p><i class="fa fa-check" aria-hidden="true"></i> step 5 of 5
 			<button type="submit" ng-click=""><a href="#/home">go to profile</a></button>
 		</p>
 	</div>
-
-
 
 	<div id="bottom-button">
 		<button ng-click="" class="skip-steps"><a href="#/home">skip and go to profile</a></button>

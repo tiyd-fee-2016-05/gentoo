@@ -1638,13 +1638,13 @@ h1 {
   text-align: center; }
 
 #new-profile-container {
-  margin: 6% 5% 10% 5%;
+  margin: 6% 5% 10%;
   font: 24px/36px "Nunito", sans-serif;
   color: white;
   letter-spacing: 1px;
   -webkit-font-smoothing: antialiased; }
   #new-profile-container .upper-padding {
-    padding: 100px 0 60px 0; }
+    padding: 100px 0 60px; }
   #new-profile-container button {
     margin-top: 20px;
     opacity: 0.8;
@@ -1676,7 +1676,7 @@ h1 {
   #new-profile-container #tab {
     display: inline-block;
     border-radius: 10px;
-    margin: 0 5px 30px 5px;
+    margin: 0 5px 30px;
     padding: 20px;
     text-align: center; }
   #new-profile-container .welcome-info {
@@ -1741,7 +1741,7 @@ h1 {
     width: 100%;
     background: #611c35;
     border-radius: 5px;
-    padding: 30px 0 15px 0;
+    padding: 30px 0 15px;
     text-align: center;
     font: 40px/75px "Nunito", sans-serif; }
     #new-profile-container #tab-login input {
@@ -1871,7 +1871,7 @@ h1 {
       border: 2px solid #611c35;
       border-radius: 5px;
       margin-bottom: 0;
-      padding: 8px 15px 5px 15px;
+      padding: 8px 15px 5px;
       font: 18px/16px "Nunito", sans-serif; }
       #new-profile-container #tab-holidays input:focus {
         outline: 0; }
@@ -1968,7 +1968,7 @@ h1 {
       #new-profile-container #tab-search input:focus {
         outline: 0; }
     #new-profile-container #tab-search h6 {
-      margin: 20px 10px 10px 10px;
+      margin: 20px 10px 10px;
       font: 16px/20px "Nunito", sans-serif; }
     #new-profile-container #tab-search a:hover {
       color: #42D9C8;
@@ -1990,7 +1990,7 @@ h1 {
         color: #42D9C8; }
       #new-profile-container #tab-search ul li p {
         margin: 0;
-        padding: 0 0 10px 0;
+        padding: 0 0 10px;
         color: white;
         border-bottom: 2px solid #42D9C8;
         text-align: center; }

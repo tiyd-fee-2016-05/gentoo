@@ -1,337 +1,320 @@
 // New profile / Sign up
 #new-profile-container {
-	margin: 6% 5% 10% 5%;
+	margin: 6% 5% 10%;
 	font: 24px / 36px $menu;
 	color: $white;
 	letter-spacing: 1px;
 	-webkit-font-smoothing: antialiased;
-
-.upper-padding {
-	padding: 100px 0 60px 0;
-}
-
-button {
-	margin-top: 20px;
-	opacity: 0.8;
-	font: 16px / 20px $menu;
-	color: $white;
-	&:focus {
-		outline: 0;
+	.upper-padding {
+		padding: 100px 0 60px;
 	}
-}
-
-a {
-	color: $white;
-	text-decoration: none;
-}
-
-.logo {
-  margin: 5%;
-	font: 60px / 70px $logo;
-  color: $blue2;
-	text-align: center;
-  -webkit-text-shadow: 2px 1px 0 darken($red, 20%);
-  -moz-text-shadow: 2px 1px 0 darken($red, 20%);
-  text-shadow: 2px 1px 0 darken($red, 20%);
-}
-
-.header { // "Select some interests"
-	text-align: center;
-	margin: 10px 50px;
-	line-height: 30px;
-  color: $white;
-}
-
-p {
-	// "step # of 4"
-	margin: 20px 20px 5px 10px;
-	opacity: 0.5;
-	font: 16px / 20px $menu;
-	text-align: right;
-}
-
-#tab {
-	display: inline-block;
-	border-radius: 10px;
-	margin: 0 5px 30px 5px;
-	padding: 20px;
-	text-align: center;
-}
-
-.welcome-info {//main sign up
-	width: 100%;
-	margin: 20px 0;
-	padding: 20px;
-	text-align: center;
-	h1 {
-		display: inline-block;
-		margin: 0;
-		font: 40px / 40px $menu;
-	  color: lighten($white, 10%);
+	button {
+		margin-top: 20px;
+		opacity: 0.8;
+		font: 16px / 20px $menu;
+		color: $white;
+		&:focus {
+			outline: 0;
+		}
+	}
+	a {
+		color: $white;
+		text-decoration: none;
+	}
+	.logo {
+		margin: 5%;
+		font: 60px / 70px $logo;
+		color: $blue2;
+		text-align: center;
+		-webkit-text-shadow: 2px 1px 0 darken($red, 20%);
+		-moz-text-shadow: 2px 1px 0 darken($red, 20%);
+		text-shadow: 2px 1px 0 darken($red, 20%);
+	}
+	.header {
+		// "Select some interests"
+		text-align: center;
+		margin: 10px 50px;
+		line-height: 30px;
+		color: $white;
 	}
 	p {
-		// margin: 0 0 0 110px;
-		text-align: center;
-		opacity: 1;
-		font: 20px / 24px $font;
-	  color: lighten($white, 10%);
-		letter-spacing: 0;
+		// "step # of 4"
+		margin: 20px 20px 5px 10px;
+		opacity: 0.5;
+		font: 16px / 20px $menu;
+		text-align: right;
 	}
-	span {
-		font-weight: 700;
-	}
-
-}
-
-.tab2 {//secondary tabs
-	background: $blue2;
-	i {
-		color: $white;
-	}
-	&:hover {
-		background: lighten($blue2, 10%);
-		transition: all 0.7s ease-out;
-		cursor: pointer;
-	}
-}
-
-.tab3 {
-	background: lighten($red, 14%);
-	i {
-		color: $white;
-	}
-	&:hover {
-		background: lighten($red, 22%);
-		transition: all 0.7s ease-out;
-		cursor: pointer;
-	}
-}
-
-.tab4 {
-	background: $teal;
-	i {
-		color: $white;
-	}
-	&:hover {
-		background: lighten($teal, 10%);
-		transition: all 0.7s ease-out;
-		cursor: pointer;
-	}
-}
-
-.tab5 {
-	background: $pink;
-	i {
-		color: $white;
-	}
-	&:hover {
-		background: lighten($pink, 10%);
-		transition: all 0.7s ease-out;
-		cursor: pointer;
-	}
-}
-
-.tab6 {
-	background: $darkblue;
-	i {
-		color: $white;
-	}
-	&:hover {
-		background: lighten($darkblue, 10%);
-		transition: all 0.7s ease-out;
-		cursor: pointer;
-	}
-}
-
-// All info inside the tabs
-#tab-login {
-	width: 100%;
-	background: $red;
-	border-radius: 5px;
-	padding: 30px 0 15px 0;
-	text-align: center;
-	font: 40px / 75px $menu;
-	input {
-		width: 70%;
-		border: 2px solid $red;
-		border-radius: 5px;
-		margin: 5px;
-		padding: 8px 20px;
-		font: 20px / 16px $menu;
-		text-align: left;
-		&:focus {
-			outline: 0;
-		}
-	}
-	button {
-	background: $blue;
-	border: 2px solid $blue;
-	border-radius: 5px;
-	margin-left: 5px;
-	opacity: 1;
-	&:hover {
-		opacity: 1;
-		background: darken($blue, 10%);
-	  border: 2px solid darken($blue, 10%);
-		transition: all 0.5s ease-out;
-		cursor: pointer;
-	}
- }
-.login-button {
-	background: darken($red, 50%);
-	border: 2px solid darken($red, 50%);
-	border-radius: 5px;
-	opacity: 0.8;
-	&:hover {
-		opacity: 1;
-		background: darken($red, 15%);
-	  border: 2px solid darken($red, 15%);
-		transition: all 0.5s ease-out;
-		cursor: pointer;
-	}
- }
-}
-
-#tab-signup {
-	width: 100%;
-	background: darken($teal, 10%);
-	border-radius: 5px;
-	padding: 15px 0;
-	text-align: center;
-	input {
-		width: 60%;
-		border: 2px solid darken($teal, 10%);
-		border-radius: 5px;
-		margin: 5px;
-		padding: 8px 20px;
-		font: 20px / 16px $menu;
-		text-align: left;
-		&:focus {
-			outline: 0;
-		}
-	}
-	button {
-	background: darken($teal, 40%);
-	border: 2px solid darken($teal, 40%);
-	border-radius: 5px;
-	margin-left: 5px;
-	opacity: 0.8;
-	&:hover {
-		opacity: 1;
-		background: darken($teal, 50%);
-	  border: 2px solid darken($teal, 50%);
-		transition: all 0.5s ease-out;
-		cursor: pointer;
-	}
- }
-}
-
-#tab-dates {
-	width: 100%;
-	background: $blue2;
-	border-radius: 5px;
-	padding: 15px 0;
-	text-align: center;
-	input {
-		width: 90px;
-		border: 2px solid $blue2;
-		border-radius: 5px;
-		margin: 5px;
-		padding: 8px 5px;
-		font: 14px / 16px $menu;
-		text-align: center;
-		&:focus {
-			outline: 0;
-		}
-	}
-	button {
-	background: darken($blue2, 10%);
-	border: 2px solid darken($blue2, 10%);
-	border-radius: 5px;
-	margin-left: 5px;
-	&:hover {
-		opacity: 1;
-		transition: all 0.5s ease-out;
-		cursor: pointer;
-	}
- }
-}
-
-#tab-holidays {
-	width: 100%;
-	background: $red;
-	border-radius: 5px;
-	padding: 15px 0;
-	color: $white;
-	text-align: left;
-	ul {
-		margin: 10px;
-	}
-	li {
+	#tab {
 		display: inline-block;
+		border-radius: 10px;
+		margin: 0 5px 30px;
+		padding: 20px;
+		text-align: center;
 	}
-	li input[type="checkbox"] {
-		display: none;
-	}
-	li input[type="checkbox"] + label {
-	  display: inline-block;
-		background: darken($red, 10%);
-		border: 2px solid darken($red, 10%);
-		color: lighten($red, 10%);
-		border-radius: 5px;
-		margin: 3px 0;
-		padding: 0 10px;
-		cursor: pointer;
-	}
-	li input[type="checkbox"]:checked + label {
-		background: darken($red, 5%);
-		border: 2px solid darken($red, 5%);
-		color: $white;
-		transition: all 0.3s ease-out;
-	}
-	button {
-	background: darken($red, 20%);
-	border: 2px solid darken($red, 20%);
-	border-radius: 5px;
-	margin-left: 5px;
-	&:hover {
-		opacity: 1;
-		transition: all 0.5s ease-out;
-		cursor: pointer;
-	}
- }
-	input {
+	.welcome-info {
+		//main sign up
 		width: 100%;
-		border: 2px solid $red;
-		border-radius: 5px;
-		margin-bottom: 0;
-		padding: 8px 15px 5px 15px;
-		font: 18px / 16px $menu;
-		&:focus {
-			outline: 0;
+		margin: 20px 0;
+		padding: 20px;
+		text-align: center;
+		h1 {
+			display: inline-block;
+			margin: 0;
+			font: 40px / 40px $menu;
+			color: lighten($white, 10%);
+		}
+		p {
+			// margin: 0 0 0 110px;
+			text-align: center;
+			opacity: 1;
+			font: 20px / 24px $font;
+			color: lighten($white, 10%);
+			letter-spacing: 0;
+		}
+		span {
+			font-weight: 700;
 		}
 	}
-}
-
-#tab-interests {
-	width: 100%;
-	background: darken($teal, 15%);
-	border-radius: 5px;
-	padding: 15px 0;
-	color: $white;
-	text-align: left;
-	ul {
-		margin: 10px;
-
+	.tab2 {
+		//secondary tabs
+		background: $blue2;
+		i {
+			color: $white;
+		}
+		&:hover {
+			background: lighten($blue2, 10%);
+			transition: all 0.7s ease-out;
+			cursor: pointer;
+		}
 	}
-	li {
-		display: inline-block;
+	.tab3 {
+		background: lighten($red, 14%);
+		i {
+			color: $white;
+		}
+		&:hover {
+			background: lighten($red, 22%);
+			transition: all 0.7s ease-out;
+			cursor: pointer;
+		}
 	}
-	li input[type="checkbox"] {
-		display: none;
+	.tab4 {
+		background: $teal;
+		i {
+			color: $white;
+		}
+		&:hover {
+			background: lighten($teal, 10%);
+			transition: all 0.7s ease-out;
+			cursor: pointer;
+		}
 	}
-	li input[type="checkbox"] + label {
-		  display: inline-block;
+	.tab5 {
+		background: $pink;
+		i {
+			color: $white;
+		}
+		&:hover {
+			background: lighten($pink, 10%);
+			transition: all 0.7s ease-out;
+			cursor: pointer;
+		}
+	}
+	.tab6 {
+		background: $darkblue;
+		i {
+			color: $white;
+		}
+		&:hover {
+			background: lighten($darkblue, 10%);
+			transition: all 0.7s ease-out;
+			cursor: pointer;
+		}
+	}
+	// All info inside the tabs
+	#tab-login {
+		width: 100%;
+		background: $red;
+		border-radius: 5px;
+		padding: 30px 0 15px;
+		text-align: center;
+		font: 40px / 75px $menu;
+		input {
+			width: 70%;
+			border: 2px solid $red;
+			border-radius: 5px;
+			margin: 5px;
+			padding: 8px 20px;
+			font: 20px / 16px $menu;
+			text-align: left;
+			&:focus {
+				outline: 0;
+			}
+		}
+		button {
+			background: $blue;
+			border: 2px solid $blue;
+			border-radius: 5px;
+			margin-left: 5px;
+			opacity: 1;
+			&:hover {
+				opacity: 1;
+				background: darken($blue, 10%);
+				border: 2px solid darken($blue, 10%);
+				transition: all 0.5s ease-out;
+				cursor: pointer;
+			}
+		}
+		.login-button {
+			background: darken($red, 50%);
+			border: 2px solid darken($red, 50%);
+			border-radius: 5px;
+			opacity: 0.8;
+			&:hover {
+				opacity: 1;
+				background: darken($red, 15%);
+				border: 2px solid darken($red, 15%);
+				transition: all 0.5s ease-out;
+				cursor: pointer;
+			}
+		}
+	}
+	#tab-signup {
+		width: 100%;
+		background: darken($teal, 10%);
+		border-radius: 5px;
+		padding: 15px 0;
+		text-align: center;
+		input {
+			width: 60%;
+			border: 2px solid darken($teal, 10%);
+			border-radius: 5px;
+			margin: 5px;
+			padding: 8px 20px;
+			font: 20px / 16px $menu;
+			text-align: left;
+			&:focus {
+				outline: 0;
+			}
+		}
+		button {
+			background: darken($teal, 40%);
+			border: 2px solid darken($teal, 40%);
+			border-radius: 5px;
+			margin-left: 5px;
+			opacity: 0.8;
+			&:hover {
+				opacity: 1;
+				background: darken($teal, 50%);
+				border: 2px solid darken($teal, 50%);
+				transition: all 0.5s ease-out;
+				cursor: pointer;
+			}
+		}
+	}
+	#tab-dates {
+		width: 100%;
+		background: $blue2;
+		border-radius: 5px;
+		padding: 15px 0;
+		text-align: center;
+		input {
+			width: 90px;
+			border: 2px solid $blue2;
+			border-radius: 5px;
+			margin: 5px;
+			padding: 8px 5px;
+			font: 14px / 16px $menu;
+			text-align: center;
+			&:focus {
+				outline: 0;
+			}
+		}
+		button {
+			background: darken($blue2, 10%);
+			border: 2px solid darken($blue2, 10%);
+			border-radius: 5px;
+			margin-left: 5px;
+			&:hover {
+				opacity: 1;
+				transition: all 0.5s ease-out;
+				cursor: pointer;
+			}
+		}
+	}
+	#tab-holidays {
+		width: 100%;
+		background: $red;
+		border-radius: 5px;
+		padding: 15px 0;
+		color: $white;
+		text-align: left;
+		ul {
+			margin: 10px;
+		}
+		li {
+			display: inline-block;
+		}
+		li input[type="checkbox"] {
+			display: none;
+		}
+		li input[type="checkbox"] + label {
+			display: inline-block;
+			background: darken($red, 10%);
+			border: 2px solid darken($red, 10%);
+			color: lighten($red, 10%);
+			border-radius: 5px;
+			margin: 3px 0;
+			padding: 0 10px;
+			cursor: pointer;
+		}
+		li input[type="checkbox"]:checked + label {
+			background: darken($red, 5%);
+			border: 2px solid darken($red, 5%);
+			color: $white;
+			transition: all 0.3s ease-out;
+		}
+		button {
+			background: darken($red, 20%);
+			border: 2px solid darken($red, 20%);
+			border-radius: 5px;
+			margin-left: 5px;
+			&:hover {
+				opacity: 1;
+				transition: all 0.5s ease-out;
+				cursor: pointer;
+			}
+		}
+		input {
+			width: 100%;
+			border: 2px solid $red;
+			border-radius: 5px;
+			margin-bottom: 0;
+			padding: 8px 15px 5px;
+			font: 18px / 16px $menu;
+			&:focus {
+				outline: 0;
+			}
+		}
+	}
+	#tab-interests {
+		width: 100%;
+		background: darken($teal, 15%);
+		border-radius: 5px;
+		padding: 15px 0;
+		color: $white;
+		text-align: left;
+		ul {
+			margin: 10px;
+		}
+		li {
+			display: inline-block;
+		}
+		li input[type="checkbox"] {
+			display: none;
+		}
+		li input[type="checkbox"] + label {
+			display: inline-block;
 			background: darken($teal, 30%);
 			border: 2px solid darken($teal, 30%);
 			color: $teal;
@@ -346,152 +329,148 @@ p {
 			color: $white;
 			transition: all 0.3s ease-out;
 		}
-	button {
-	background: darken($teal, 26%);
-	border: 2px solid darken($teal, 26%);
-	border-radius: 5px;
-	margin-left: 5px;
-	&:hover {
-		opacity: 1;
-		transition: all 0.5s ease-out;
-		cursor: pointer;
-	}
- }
-}
-
-#tab-favorites {
-	width: 100%;
-	background: $pink;
-	border-radius: 5px;
-	padding: 15px 0;
-	color: $white;
-	text-align: center;
-	input {
-		width: 70%;
-		border: 2px solid $pink;
-		border-radius: 5px;
-		margin-bottom: 20px;
-		padding: 5px 0 5px 15px;
-		font: 18px / 16px $menu;
-		&:focus {
-			outline: 0;
+		button {
+			background: darken($teal, 26%);
+			border: 2px solid darken($teal, 26%);
+			border-radius: 5px;
+			margin-left: 5px;
+			&:hover {
+				opacity: 1;
+				transition: all 0.5s ease-out;
+				cursor: pointer;
+			}
 		}
 	}
-	li {
-		display: inline-block;
-	}
-	li input[type="radio"] {
-		display: none;
-	}
-	li input[type="radio"] + label {
-	  display: inline-block;
-		background: darken($pink, 5%);
-		border: 2px solid darken($pink, 5%);
+	#tab-favorites {
+		width: 100%;
+		background: $pink;
 		border-radius: 5px;
-		margin: 3px 0;
-		padding: 0 10px;
-		cursor: pointer;
-	}
-	li input[type="radio"]:checked + label {
-		background: darken($pink, 15%);
-		border: 2px solid darken($pink, 15%);
+		padding: 15px 0;
 		color: $white;
-		transition: all 0.3s ease-out;
-	}
-	button {
-	background: darken($pink, 10%);
-	border: 2px solid darken($pink, 10%);
-	border-radius: 5px;
-	margin-left: 5px;
-	&:hover {
-		opacity: 1;
-		transition: all 0.5s ease-out;
-		cursor: pointer;
-	}
- }
-}
-
-// Search bar
-#tab-search {
-	width: 100%;
-	background: darken($darkblue, 10%);
-	border-radius: 5px;
-	padding: 15px 0;
-	text-align: center;
-	input {
-		width: 50%;
-		border: 2px solid darken($darkblue, 10%);
-		border-radius: 5px;
-		padding: 5px;
-		font: 18px / 16px $menu;
-		&:focus {
-			outline: 0;
+		text-align: center;
+		input {
+			width: 70%;
+			border: 2px solid $pink;
+			border-radius: 5px;
+			margin-bottom: 20px;
+			padding: 5px 0 5px 15px;
+			font: 18px / 16px $menu;
+			&:focus {
+				outline: 0;
+			}
+		}
+		li {
+			display: inline-block;
+		}
+		li input[type="radio"] {
+			display: none;
+		}
+		li input[type="radio"] + label {
+			display: inline-block;
+			background: darken($pink, 5%);
+			border: 2px solid darken($pink, 5%);
+			border-radius: 5px;
+			margin: 3px 0;
+			padding: 0 10px;
+			cursor: pointer;
+		}
+		li input[type="radio"]:checked + label {
+			background: darken($pink, 15%);
+			border: 2px solid darken($pink, 15%);
+			color: $white;
+			transition: all 0.3s ease-out;
+		}
+		button {
+			background: darken($pink, 10%);
+			border: 2px solid darken($pink, 10%);
+			border-radius: 5px;
+			margin-left: 5px;
+			&:hover {
+				opacity: 1;
+				transition: all 0.5s ease-out;
+				cursor: pointer;
+			}
 		}
 	}
-	h6 {
-		margin: 20px 10px 10px 10px;
-		font: 16px / 20px $menu;
+	// Search bar
+	#tab-search {
+		width: 100%;
+		background: darken($darkblue, 10%);
+		border-radius: 5px;
+		padding: 15px 0;
+		text-align: center;
+		input {
+			width: 50%;
+			border: 2px solid darken($darkblue, 10%);
+			border-radius: 5px;
+			padding: 5px;
+			font: 18px / 16px $menu;
+			&:focus {
+				outline: 0;
+			}
+		}
+		h6 {
+			margin: 20px 10px 10px;
+			font: 16px / 20px $menu;
+		}
+		a:hover {
+			color: $teal;
+			transition: all 0.3s ease-out;
+		}
+		button {
+			background: darken($darkblue, 20%);
+			border: 2px solid darken($darkblue, 20%);
+			border-radius: 5px;
+			margin-left: 5px;
+			&:hover {
+				opacity: 1;
+				transition: all 0.5s ease-out;
+				cursor: pointer;
+			}
+		}
+		ul {
+			li {
+				margin: 5px 0;
+				h1 {
+					margin: 0;
+					padding: 0;
+					color: $teal;
+				}
+				p {
+					margin: 0;
+					padding: 0 0 10px;
+					color: $white;
+					border-bottom: 2px solid $teal;
+					text-align: center;
+				}
+				&:hover {
+					h1 {
+						color: lighten($darkblue, 10%);
+					}
+				}
+			}
+		}
 	}
-	a:hover {
-		color: $teal;
-		transition: all 0.3s ease-out;
+	#bottom-button {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 5%;
+		// background: $white;
+		.skip-steps {
+			position: fixed;
+			bottom: 3%;
+			left: 5%;
+			background: $darkblue;
+			border: 2px solid $darkblue;
+			border-radius: 5px;
+			&:hover {
+				background: $darkblue;
+				opacity: 1;
+				transition: all 0.7s ease-out;
+				cursor: pointer;
+			}
+		}
 	}
-	button {
-	background: darken($darkblue, 20%);
-	border: 2px solid darken($darkblue, 20%);
-	border-radius: 5px;
-	margin-left: 5px;
-	&:hover {
-		opacity: 1;
-		transition: all 0.5s ease-out;
-		cursor: pointer;
-	}
- }
- ul {
-		 li {
-				 margin: 5px 0;
-				 h1 {
-					 	 margin: 0;
-						 padding: 0;
-						 color: $teal;
-				 }
-				 p {
-						 margin: 0;
-						 padding: 0 0 10px 0;
-						 color: $white;
-						 border-bottom: 2px solid $teal;
-						 text-align: center;
-				 }
-				 &:hover {
-						 h1 {
-								 color: lighten($darkblue, 10%);
-						 }
-				 }
-		 }
- }
- }
-
-#bottom-button {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 5%;
-	// background: $white;
-
-.skip-steps {
-	position: fixed;
-	bottom: 3%;
-	left: 5%;
-	background: $darkblue;
-	border: 2px solid $darkblue;
-	border-radius: 5px;
-	&:hover {
-		background: $darkblue;
-		opacity: 1;
-		transition: all 0.7s ease-out;
-		cursor: pointer;
-	}
- }
-}
 }
