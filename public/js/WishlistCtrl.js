@@ -7,7 +7,7 @@ gentooApp.controller('newWishlistCtrl', ['$scope', '$rootScope','$http', '$locat
 
 
     $scope.loginUser = function() {
-        $http({
+        $http({ 
             method: "POST",
             url:    rootUrl + "login",
             data: {

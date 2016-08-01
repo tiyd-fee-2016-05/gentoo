@@ -4,28 +4,14 @@ header {
         height: 30px;
         position: absolute;
         top: 30px;
-        right: 8%;
+        right: 5%;
         z-index: 5;
-        // display: inline-block;
         .logo {
             font: 50px / 50px $logo;
             color: $teal;
             -webkit-text-shadow: 2px 1px 0 darken($red, 20%);
             -moz-text-shadow: 2px 1px 0 darken($red, 20%);
             text-shadow: 2px 1px 0 darken($red, 20%);
-        }
-        .fa-align-right {
-            position: relative;
-            top: 40px;
-            right: 20%;
-            color: $white;
-            opacity: 0.8;
-            &:hover {
-                opacity: 1;
-                -webkit-transition: all 0.5s ease;
-                transition: all 0.5s ease;
-                cursor: pointer;
-            }
         }
     }
     nav {  // menu that opens
@@ -110,11 +96,6 @@ header {
                 }
             }
         }
-        // #format-toolbar {
-        //         // margin-left: auto;
-        //         // margin-right: auto;
-        // }
-        // #toolbar-options { display: none; }
     }
     .photo {
         width: 100%;
@@ -135,9 +116,10 @@ header {
         top: -80px;
         left: 0;
         margin: 0 0 20px 5%;
+        font: 700 20px / 26px $font;
         color: $white;
         i {
-            color: $blue2;
+            color: $teal;
         }
     }
     .edit-profile {

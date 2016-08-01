@@ -60,7 +60,7 @@ gentooApp.controller('FriendRequestCtrl', function ($rootScope, $scope, $http, $
           // called asynchronously if an error occurs
           // or server returns response with an error status.
         });
-};
+}; 
 
 $scope.denyFriend = function(clickedfriend) {
   console.log(clickedfriend);

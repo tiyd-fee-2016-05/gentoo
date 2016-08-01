@@ -68,7 +68,10 @@ gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '
                     });//End GET request for friends
 
 
-
+$scope.getItem = function(selectedItem) {
+  $scope.clickedItem = selectedItem
+    console.log(  $scope.clickedItem)
+}
 
 
 }]);

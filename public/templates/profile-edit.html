@@ -7,18 +7,25 @@
             <section class="photo">
             </section>
 
-            <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i> <span>Edit Profile:</span> {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
+            <div class="nav">
+                <h1 class="logo animated slideInRight">Gentoo</h1>
+            </div>
 
-            <a href="#/home"><h1 class="save-profile" ng-click="vm.submit(vm.user)">Save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></h1></a>
+            <h1 class="edit-profile-name animated slideInLeft"><span>Edit Profile:</span> <input type="text" name="login_first_name" ng-model="firstname.user" placeholder="{{loadedprofile.user.first_name}}" />
+            <input type="text" name="login_last_name" ng-model="lastname.user" placeholder="{{loadedprofile.user.last_name}}" /></h1>
 
             <div id="menu" ng-controller="TabController">
-                <div ng-click="setTab(3)" id="tab2" ng-class="{ active: isSet(2) }"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
+                <a href="#/home">
+                    <div ng-click="vm.submit(vm.user)" id="tab1" ng-class=""><i class="fa fa-check fa-lg animated jello infinite" aria-hidden="true"></i></div>
+                </a>
 
-                <div ng-click="setTab(4)" id="tab3" ng-class="{ active: isSet(3) }"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
+                <div ng-click="setTab(3)" id="tab2" ng-class="{ active: isSet(2) }"><i class="fa fa-bars fa-lg animated slideInRight" aria-hidden="true"></i></div>
+
+                <div ng-click="setTab(4)" id="tab3" ng-class="{ active: isSet(3) }"><i class="fa fa-search fa-lg animated slideInRight" aria-hidden="true"></i></div>
 
 
 
-                <div ng-click="setTab(1)" id="tab4" ng-class="{ active: isSet(1) }"><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
+                <div ng-click="setTab(1)" id="tab4" ng-class="{ active: isSet(1) }"><i class="fa fa-times fa-lg animated slideInRight" aria-hidden="true"></i></div>
 
 
                 <div ng-show="isSet(1)">
@@ -29,7 +36,7 @@
                     <ul>
                         <li><a href="#/home"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
                         <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
-                        <li><a href="#/login"><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a></li>
+                        <li><a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a></li>
                         <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i> Invite</a></li>
                     </ul>
                 </div>
@@ -54,59 +61,21 @@
 
 
         <!-- <section class="content content-main"> -->
+        <form class="animated slideInRight">
+            <div class="info dates">
+                <h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
+                <ul class="info-answer">
+                    <li>
+                        <input type="number" id="e-bd1" name="cc" maxlength="2" placeholder="{{loadedprofile.user.birthday.dob_month}}" /> /
+                        <input type="number" id="e-bd2" name="cc" maxlength="2" placeholder="{{loadedprofile.user.birthday.dob_day}}" /> /
+                        <input type="number" id="e-bd3" name="cc" maxlength="4" placeholder="{{loadedprofile.user.birthday.dob_year}}" />
+                </ul>
+                <!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
+            </div>
 
-            <form>
-              <!-- <div class="info dates">
-              		<h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
-              		<ul class="info-answer">
-            	<li>{{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</li>
-
-              		</ul>
-              		<!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
-              	<!-- </div> -->
-                <div class="info dates">
-              		<h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
-              		<ul class="info-answer">
-              			<li>
-              				<input type="number" id="e-bd1" name="cc" maxlength="2" placeholder={{loadedprofile.user.birthday.dob_month}} /> /
-              				<input type="number" id="e-bd2" name="cc" maxlength="2" placeholder={{loadedprofile.user.birthday.dob_day}} /> /
-              				<input type="number" id="e-bd3" name="cc" maxlength="4" placeholder={{loadedprofile.user.birthday.dob_year}} />
-              		</ul>
-              		<!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
-              	</div>
-
-
-
-
-
-                <!-- <input type="number" id="e-bd1" name="cc" maxlength="2" placeholder={{loadedprofile.user.birthday.dob_month}} /> /
-                <input type="number" id="e-bd2" name="cc" maxlength="2" placeholder={{loadedprofile.user.birthday.dob_day}} /> /
-                <input type="number" id="e-bd3" name="cc" maxlength="4" placeholder={{loadedprofile.user.birthday.dob_year}} /> -->
-              	<div class="info holidays">
-              		<h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
-              		<ul class="info-answer">
-                    <li ng-repeat="holiday in holidayList">
-                    				<input type="checkbox" id="e-h2" name="cc" />
-                    				<label for="e-h2">{{holiday.name}} <i ng-click="deleteHoliday(holiday.id); holidayList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
-                    			</li>
-              		</ul>
-              		<!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
-              	</div>
-
-              	<div class="info interests">
-              		<h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
-              		<ul class="info-answer">
-                  <li ng-repeat="interest in interestList">
-				<input type="checkbox" id="h1" name="cc" />
-				<label for="h1">{{interest.name}} <i ng-click="deleteInterest(interest.id); interestList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
-			</li>
-              		</ul>
-              		<!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
-              	</div>
-
-              	<div class="info favorites">
-              		<h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
-              				<ul class="info-answer">
+            <div class="info favorites">
+                <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
+                <ul class="info-answer">
                     <li ng-repeat="favorite in favoriteList">
 				                  <input type="checkbox" id="e-f1" name="cc" />
 				                      <label for="e-f1">{{favorite.name}} <i ng-click="Favorite(favorite.id); favoriteList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
@@ -116,76 +85,42 @@
               	</div>
               </form>
 
-
-
-              <!--
-                <div class="form-group">
-                    <label for="profile-first-name"></label>
-                    <input type="text" class="form-control" id="profile-first-name" placeholder="{{loadedprofile.user.first_name}}" ng-model="vm.user.first_name">
-                </div>
-                <div class="form-group">
-                    <label for="profile-last-name"></label>
-                    <input type="text" class="form-control" id="profile-last-name" placeholder="{{loadedprofile.user.last_name}}" ng-model="vm.user.last_name">
-                </div>
-                <div class="form-group">
-                    <label for="email-address"></label>
-                    <input type="email" class="form-control" id="email-address" placeholder="{{loadedprofile.user.email}}" ng-model="vm.user.email">
-                </div>
-                <div class="form-group">
-                    <label for="user-password"></label>
-                    <input type="password" class="form-control" id="user-password" placeholder="Password" ng-model="vm.user.password">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputFile">Upload a new photo</label>
-                    <input type="file" id="exampleInputFile" ng-model="vm.user.file">
-                    <! <p class="help-block">Example block-level help text here.</p> -->
-                <!--</div>
-                <div class="form-group">
-                    <label for="profile-birthday"></label>
-                    <input type="text" class="form-control" id="profile-birthday" placeholder="Birthday: {{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}" ng-model="vm.user.birthdate">
-                </div>
-
-            </form>
-        </section> -->
-
-        <!-- <form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
-        Username    <br/><input type="text" ng-model="form.username">    <br/><br/>
-        Password: <br/><input type="text" ng-model="form.password"> <br/><br/>
-
-          <!-<button ng-click="save()" >Save</button> -->
-        <!-- <input type="submit" ngClick="Submit" >
-
-        </form> -->
-
-
-        <h1 class="wishlists">Wishlists</h1>
-
-
-
-        <section id="edit" ng-repeat="list in wishlistArray">
-
-
-            <div class="list-header">
-                <h1 class="list-name">{{list.name}}</h1>
-                  <h1 ng-click="deleteWishlist(list.id); wishlistArray.splice($index,1)" class="delete-list">delete wishlist <i class="fa fa-times fa-lg" aria-hidden="true"></i></h1>
+            <div class="info holidays">
+                <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
+                <ul class="info-answer">
+                    <li ng-repeat="holiday in holidayList">
+                        <input type="checkbox" id="e-h1" name="cc" />
+                        <label for="e-h1">{{holiday.name}} <i ng-click="deleteHoliday(holiday.id); holidayList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                </ul>
+                <!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
             </div>
-            <ul>
-                <li ng-repeat="item in list.items">
-                    <h1>{{item.name}}</h1>
-                    <!-- <h2>for: {{loadedprofile.user.holidays[0]}}</h2> -->
-                    <a href="#/list-item"><span class="edit">edit</span></a><span class="delete" ng-click="deleteWishlistItem(list.id, item.id); list.items.splice($index,1)">delete</span>
-                </li>
-            </ul>
-        </section>
+
+            <div class="info interests">
+                <h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
+                <ul class="info-answer">
+                    <li ng-repeat="interest in interestList">
+                        <input type="checkbox" id="h1" name="cc" />
+                        <label for="h1">{{interest.name}} <i ng-click="deleteInterest(interest.id); interestList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                </ul>
+                <!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
+            </div>
+            </form>
 
 
-        <section class="section-save-button">
-            <a href="#/home">
-                <button class="profile-submit-button" type="submit" name="button">Save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-            </a>
-        </section>
+            <div ng-controller="TabController2">
+                <h1 class="wishlists" ng-click="setTab(1)">Wishlists</h1>
 
+                <section class="lists" ng-class-odd="'lightblue'" ng-class-even="'darkblue'" ng-repeat="list in wishlistArray">
+                    <span class="delete-list" ng-click="deleteWishlist(list.id); wishlistArray.splice($index,1)" >delete wishlist</span>
+                    <h1 class="list-name">{{list.name}} <span class="edit-list">edit name</span></h1>
+                    <ul>
+                        <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+                            <h1 class="info-answer">{{item.name}}</h1>
+                            <h2><span class="edit">edit</span></a><span class="delete" ng-click="deleteWishlistItem(list.id, item.id); list.items.splice($index,1)">delete</span></h2>
+                        </li>
+                    </ul>
+                </section>
 
-    </div>
-</div>
-</div>
+            </div>
