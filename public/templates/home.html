@@ -10,7 +10,7 @@
            {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
 
             <div class="nav">
-                <h1 class="logo">Gentoo</h1>
+                <a href="#/home"><h1 class="logo">Gentoo</h1></a>
             </div>
 
             <div id="menu" ng-controller="TabController">
@@ -135,7 +135,7 @@
                 <form>
                     <ul>
                         <li>
-                            <input type="text" id="wishlist_title" placeholder="wishlist name" autocomplete="on" autofocus required>
+                            <input type="text" id="wishlist_title" placeholder="wishlist name" autocomplete="on" required>
                         </li>
                     </ul>
 
@@ -155,12 +155,9 @@
                                 <input type="text" id="item_desc" placeholder="description" autocomplete="on">
                             </li>
                             <li>
-                                <!-- <input type="text" id="item_holiday" placeholder="what holiday is this for?" autocomplete="on"> -->
-                                <select>
-                                  <option>What holiday is this for?</option>
-                                  <option ng-repeat="holiday in holidayList" id="item_holiday" value="">{{holiday.name}}</option>
-                                </select>
+                                <input type="text" id="item_url" placeholder="url" autocomplete="on">
 
+                                <!--
                                 <select data-placeholder="Choose a Country..." class="chosen-select" style="width:350px;" tabindex="2">
                                   <option value=""></option>
                                   <option value="United States">United States</option>
@@ -176,10 +173,14 @@
                                   <option value="Albania">Albania</option>
                                   <option value="Algeria">Algeria</option>
                                   <option value="American Samoa">American Samoa</option>
-                                </select>
+                                </select> -->
                             </li>
                             <li>
-                                <input type="text" id="item_interests" placeholder="tag a few interests" autocomplete="on">
+                                <!-- <input type="text" id="item_interests" placeholder="tag a few interests" autocomplete="on"> -->
+                                <select>
+                                    <option>Add an interest:</option>
+                                    <option ng-repeat="interest in interestList" id="item_holiday" value="">{{interest.name}}</option>
+                                </select>
                             </li>
                             <!-- 				<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
                         </ul>
@@ -197,20 +198,19 @@
                 <form>
                     <ul>
                         <li>
-                            <input type="text" id="item_title" placeholder="item name" autocomplete="on" autofocus required>
+                            <input type="text" id="item_title" placeholder="item name" autocomplete="on" required>
                         </li>
                         <li>
                             <input type="text" id="item_desc" placeholder="description" autocomplete="on">
                         </li>
                         <li>
-                            <!-- <input type="text" id="item_holiday" placeholder="what holiday is this for?" autocomplete="on"> -->
+                            <input type="text" id="item_url" placeholder="url" autocomplete="on">
                             <select>
-                              <option>What holiday is this for?</option>
-                              <option ng-repeat="holiday in holidayList" id="item_holiday" value="">{{holiday.name}}</option>
-                            </select>
                         </li>
                         <li>
-                            <input type="text" id="item_desc" placeholder="tag a few interests" autocomplete="on">
+                            <option>Add an interest:</option>
+                            <option ng-repeat="interest in interestList" id="item_holiday" value="">{{interest.name}}</option>
+                            </select>
                         </li>
                         <!-- 			<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
                     </ul>

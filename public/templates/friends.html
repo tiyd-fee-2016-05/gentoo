@@ -5,7 +5,11 @@
         <section class="photo">
         </section>
 
-        <h1 class="profile-name animated slideInRight"><i class="fa fa-user" aria-hidden="true"></i> Friends</h1>
+        <div class="nav">
+            <a href="#/home"><h1 class="logo">Gentoo</h1></a>
+        </div>
+
+        <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i> Friends</h1>
 
 
         <div id="menu" ng-controller="TabController">
@@ -26,7 +30,7 @@
                 <ul>
                     <li><a href="#/home"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
                     <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
-                    <li ng-click="logout()"><a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a> Logout</li>
+                    <li ng-click="logout()"><a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a></li>
                     <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i> Invite</a></li>
                 </ul>
             </div>
@@ -49,7 +53,7 @@
         </div>
     </header>
 
-    <section id="friend-content" ng-controller="FriendRequestCtrl">
+    <section id="friend-content" class="animated slideInRight" ng-controller="FriendRequestCtrl">
         <h1><i class="fa fa-user-plus" aria-hidden="true"></i> Friend requests ( {{friendDetails.user.requested_count}} ) </h1>
 
         <ul>

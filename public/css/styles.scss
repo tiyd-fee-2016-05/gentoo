@@ -51,7 +51,10 @@ button:focus {
     outline: 0;
 }
 
-
+.small-margin {
+    margin-top: -80px;
+    margin-left: 15px;
+}
 
 @import "partials/menu";
 @import "partials/menu-anim";

@@ -25,6 +25,10 @@ button:hover {
 button:focus {
   outline: 0; }
 
+.small-margin {
+  margin-top: -80px;
+  margin-left: 15px; }
+
 #menu {
   z-index: 999;
   font: 24px/36px "Nunito", sans-serif;
@@ -592,69 +596,11 @@ header .nav {
   right: 5%;
   z-index: 5; }
   header .nav .logo {
-    font: 50px/50px "Grand Hotel", cursive;
+    font: 45px/50px "Grand Hotel", cursive;
     color: #42D9C8;
     -webkit-text-shadow: 2px 1px 0 #12050a;
     -moz-text-shadow: 2px 1px 0 #12050a;
     text-shadow: 2px 1px 0 #12050a; }
-header nav {
-  width: 35%;
-  height: 50px;
-  position: absolute;
-  top: 40px;
-  left: 45%;
-  margin: 0 auto;
-  padding: 10px 0;
-  z-index: 999;
-  background: #2C8C99;
-  border: 2px solid #2C8C99;
-  border-radius: 4px;
-  text-align: center; }
-  header nav i {
-    margin-left: 16px; }
-  header nav .fa-search {
-    margin-left: 10px;
-    color: #fff;
-    font-size: 14px; }
-  header nav a {
-    font: 700 14px/12px "Work Sans", sans-serif;
-    color: #fff;
-    letter-spacing: 1px;
-    text-transform: uppercase; }
-    header nav a:hover {
-      color: #216871;
-      -webkit-transition: all 0.5s ease;
-      transition: all 0.5s ease; }
-  header nav ul {
-    margin-top: 40px; }
-    header nav ul li {
-      width: 50%;
-      margin-left: 200px;
-      margin-top: 10px;
-      padding: 5px;
-      background: #2C8C99;
-      border: 2px solid #2C8C99;
-      border-radius: 5px;
-      letter-spacing: 1px;
-      overflow: hidden;
-      text-align: left; }
-      header nav ul li h1 {
-        font: 700 15px/10px "Work Sans", sans-serif;
-        color: #fff; }
-      header nav ul li p {
-        margin-left: 16px;
-        font: 700 12px/12px "Work Sans", sans-serif;
-        color: #216871; }
-      header nav ul li a {
-        font: 15px/12px "Work Sans", sans-serif;
-        color: #fff; }
-      header nav ul li:hover {
-        background: #329ead;
-        border: 2px solid #329ead;
-        color: #1b565e;
-        -webkit-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-        cursor: pointer; }
 header .photo {
   width: 100%;
   height: 130px;
@@ -663,8 +609,8 @@ header .photo {
   left: 0;
   margin-bottom: 20px;
   overflow-y: hidden;
-  background: #611c35;
-  background-image: url("../images/profile-1.jpg");
+  background: #4d162a;
+  background-image: url("../images/gift2.jpg");
   background-position: center;
   background-size: cover;
   background-blend-mode: multiply; }
@@ -1225,7 +1171,7 @@ header .profile-name {
     background: #1d8e81;
     border: 2px solid #1d8e81; }
   .dates input {
-    width: 30px;
+    width: 50px;
     border: 2px solid #2C8C99;
     border-radius: 5px;
     margin: 0;
@@ -1235,7 +1181,7 @@ header .profile-name {
     .dates input:focus {
       outline: 0; }
   .dates #e-bd3 {
-    width: 45px; }
+    width: 60px; }
 
 .holidays {
   background: #611c35; }
@@ -1827,6 +1773,16 @@ h1 {
       #new-profile-container #tab-login input:focus {
         border: 3px solid #333;
         outline: 0; }
+    #new-profile-container #tab-login input[type=text] {
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out; }
+    #new-profile-container #tab-login input[type=text]:focus {
+      width: 80%; }
+    #new-profile-container #tab-login input[type=password] {
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out; }
+    #new-profile-container #tab-login input[type=password]:focus {
+      width: 80%; }
     #new-profile-container #tab-login button {
       background: #2e5077;
       border: 2px solid #2e5077;
@@ -1863,9 +1819,13 @@ h1 {
       margin: 5px;
       padding: 8px 20px;
       font: 20px/16px "Nunito", sans-serif;
-      text-align: left; }
+      text-align: left;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out; }
       #new-profile-container #tab-signup input:focus {
-        outline: 0; }
+        border: 3px solid #555;
+        outline: 0;
+        width: 70%; }
     #new-profile-container #tab-signup button {
       background: #0d423c;
       border: 2px solid #0d423c;
@@ -1893,7 +1853,13 @@ h1 {
       font: 14px/16px "Nunito", sans-serif;
       text-align: center; }
       #new-profile-container #tab-dates input:focus {
+        border: 3px solid #333;
         outline: 0; }
+    #new-profile-container #tab-dates input[type=number] {
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out; }
+    #new-profile-container #tab-dates input[type=number]:focus {
+      width: 100px; }
     #new-profile-container #tab-dates button {
       background: #216871;
       border: 2px solid #216871;
@@ -1940,7 +1906,7 @@ h1 {
         transition: all 0.5s ease-out;
         cursor: pointer; }
     #new-profile-container #tab-holidays input {
-      width: 100%;
+      width: 70%;
       border: 2px solid #611c35;
       border-radius: 5px;
       margin-bottom: 0;
@@ -1999,7 +1965,13 @@ h1 {
       padding: 5px 0 5px 15px;
       font: 18px/16px "Nunito", sans-serif; }
       #new-profile-container #tab-favorites input:focus {
+        border: 3px solid #333;
         outline: 0; }
+    #new-profile-container #tab-favorites input[type=text] {
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out; }
+    #new-profile-container #tab-favorites input[type=text]:focus {
+      width: 80%; }
     #new-profile-container #tab-favorites li {
       display: inline-block; }
     #new-profile-container #tab-favorites li input[type="radio"] {
@@ -2039,7 +2011,13 @@ h1 {
       padding: 5px;
       font: 18px/16px "Nunito", sans-serif; }
       #new-profile-container #tab-search input:focus {
+        border: 3px solid #333;
         outline: 0; }
+    #new-profile-container #tab-search input[type=search] {
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out; }
+    #new-profile-container #tab-search input[type=search]:focus {
+      width: 70%; }
     #new-profile-container #tab-search h6 {
       margin: 20px 10px 10px;
       font: 16px/20px "Nunito", sans-serif; }
@@ -2093,23 +2071,29 @@ h1 {
   top: -100px;
   left: 0;
   margin: 0 0 20px 5%;
-  font: 20px/30px "Work Sans", sans-serif;
+  font: 30px/30px "Work Sans", sans-serif;
   color: white; }
   .edit-profile-name span {
     font-weight: 700; }
 
 input {
   display: inline-block;
-  width: 20%;
+  width: 15%;
   border: 2px solid #611c35;
   border-radius: 5px;
-  margin: 5px;
   padding: 8px;
   font: 20px/16px "Nunito", sans-serif;
-  text-align: left; }
+  text-align: center; }
   input:focus {
     border: 3px solid #555;
     outline: 0; }
+
+input[type=text] {
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out; }
+
+input[type=text]:focus {
+  width: 30%; }
 
 .edit {
   margin: 5px;
