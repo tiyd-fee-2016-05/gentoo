@@ -93,7 +93,7 @@
         		<ul class="info-answer">
         			<li ng-repeat="color in colorList">
         				<input type="checkbox" id="f1" name="cc" />
-        				<label for="f1">{{color}}</label>
+        				<label for="f1">{{color.name}}</label>
         			</li>
         		</ul>
         		<!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
@@ -144,12 +144,8 @@
                             </li>
                         </ul>
 
-                        <p><i class="fa fa-check" aria-hidden="true"></i>
-                            <button type="submit" ng-click="">save list</button>
-                        </p>
-
                         <div id="inner" class="" ng-click="showme=true">
-                            <p>would you like to start adding items to this list?</p>
+                            <p>Click here to add the first item to your list</p>
                         </div>
                         <div ng-show="showme" id="tab-inner">
                             <ul>

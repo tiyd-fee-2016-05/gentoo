@@ -6,8 +6,8 @@ gentooApp.controller('RequestFriendCtrl', function ($rootScope, $scope, $http, $
       $location.path("/sign_up");
   }
 
-  var rootUrl= "http://6e62d5d1.ngrok.io/";
-  // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+  // var rootUrl= "http://6e62d5d1.ngrok.io/";
+  var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
   var username = $rootScope.username
   var userToken = $scope.userToken
@@ -15,8 +15,8 @@ gentooApp.controller('RequestFriendCtrl', function ($rootScope, $scope, $http, $
     $scope.requestFriendship = function(mynewfriend) {
       $http({
         method: 'POST',
-            url: 'https://58a85897.ngrok.io/friends/',
-                  //  url: 'https://giftbox-tiy.herokuapp.com/friends/',
+            // url: 'https://58a85897.ngrok.io/friends/',
+                   url: 'https://giftbox-tiy.herokuapp.com/friends/',
             headers: {'Authorization': userToken},
             params: {"requested_friend" : mynewfriend},
       }).success(function successCallback(response) {
@@ -39,8 +39,8 @@ gentooApp.controller('FriendRequestCtrl', function ($rootScope, $scope, $http, $
       $location.path("/sign_up");
   }
 
-  var rootUrl= "https://6e62d5d1.ngrok.io/";
-  // var rootUrl= "https://giftbox-tiy.herokuapp.com";
+  // var rootUrl= "https://6e62d5d1.ngrok.io/";
+  var rootUrl= "https://giftbox-tiy.herokuapp.com";
 
   var username = $rootScope.username
   var userToken = $scope.userToken

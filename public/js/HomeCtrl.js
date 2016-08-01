@@ -6,11 +6,10 @@ gentooApp.controller('HomeController', ['$rootScope', '$scope', '$http', '$locat
         $location.path("/sign_up");
     }
 
-    var rootUrl= "https://6e62d5d1.ngrok.io/";
-    // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+    // var rootUrl= "https://6e62d5d1.ngrok.io/";
+    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
 console.log($scope.userToken);
-console.log($rootScope.username);
 var username = $rootScope.username
 var userToken = $scope.userToken
 
@@ -24,7 +23,7 @@ var userToken = $scope.userToken
              $rootScope.loadedprofile= data;
              $rootScope.holidayList = data.user.holidays
              $rootScope.interestList = data.user.interests
-              $rootScope.colorList = data.user.colors
+              $rootScope.colorList = data.user.favorites
 
          window.location = "#/home";
            }).error(function (data, status, headers, config) {
@@ -33,20 +32,19 @@ var userToken = $scope.userToken
     //
     //
     $http({
-              url:  rootUrl + "wishlists",
-           method: "GET",
-           headers: {'Authorization': userToken},
-           //  params: {formData}
-          }).success(function (data, status, headers, config) {
-                   console.log("Wishlist Info for " + $rootScope.username);
-                   console.log(data);
-                   $rootScope.wishlistArray = data.user
-                  console.log("List of Lists");
-                   console.log($rootScope.wishlistArray);
-            }).error(function (data, status, headers, config) {
-                $scope.status = status;
-            });//End GET request for friends
-
+                url:  rootUrl + "wishlists",
+             method: "GET",
+             headers: {'Authorization': userToken},
+             //  params: {formData}
+            }).success(function (data, status, headers, config) {
+                     console.log("Wishlist Info for " + $rootScope.username);
+                     console.log(data);
+                     $rootScope.wishlistArray = data.user
+                    console.log("List of Lists");
+                     console.log($rootScope.wishlistArray);
+              }).error(function (data, status, headers, config) {
+                  $scope.status = status;
+              });//End GET request for wishlist
             $scope.AddList = function() {
 var newListData = $scope.newItem;
 
@@ -95,8 +93,8 @@ gentooApp.controller('EditController', ['$rootScope', '$scope', '$http', '$locat
         $location.path("/sign_up");
     }
 
-    var rootUrl= "https://6e62d5d1.ngrok.io/";
-    // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+    // var rootUrl= "https://6e62d5d1.ngrok.io/";
+    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
 var username = $rootScope.username
 var userToken = $scope.userToken
@@ -149,9 +147,14 @@ var newListData = $scope.newItem;
                   // called asynchronously if an error occurs
                   // or server returns response with an error status.
                 });
+
+
+
+
+
+
+
         };
-
-
         $scope.deleteInterest = function(id){
           console.log("This is the id of this thing "+id);
           $http({

@@ -4,14 +4,15 @@ gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '
 
 
   var usersearch = $scope.friendtoLoad
+  console.log("You are searching for " + $scope.friendtoLoad);
 
 
   $(document).ready(function(){
       $(this).scrollTop(0);
   });
 
-    var rootUrl = "https://6e62d5d1.ngrok.io/";
-    // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+    // var rootUrl = "https://6e62d5d1.ngrok.io/";
+    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
 
     var userToken = $scope.userToken
@@ -27,10 +28,12 @@ gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '
         }
     }).success(function(data, status, headers, config) {
 
-        $rootScope.loadedprofile= data;
-        // $rootScope.holidayList = data.user.holidays
-        // $rootScope.interestList = data.user.interests
-        //  $rootScope.colorList = data.user.colors
+        $rootScope.loadedfriend= data;
+        console.log("Information about your friend");
+        console.log(data);
+        $rootScope.friendholidayList = data.user.holidays
+        $rootScope.friendinterestList = data.user.interests
+         $rootScope.friendfavoriteList = data.user.favorites
 
     }).error(function(data, status, headers, config) {
         $scope.status = status;
@@ -46,7 +49,7 @@ gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '
              }
           }).success(function (data, status, headers, config) {
 
-                   $rootScope.wishlistArray = data.user
+                   $rootScope.friendwishlistArray = data.user
 
             }).error(function (data, status, headers, config) {
                 $scope.status = status;

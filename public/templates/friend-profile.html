@@ -7,9 +7,9 @@
             </section>
 
             <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i>
-           {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
+           {{loadedfriend.user.first_name}} {{loadedfriend.user.last_name}}</h1>
 
-            <a href="#/profile-edit"><h1 class="edit-profile">Edit Profile</h1></a>
+            <a href="#/profile-edit"><h1 class="edit-profile">UNFRIEND</h1></a>
 
 
             <div class="nav">
@@ -61,7 +61,7 @@
         <div class="info dates">
         		<h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
         		<ul class="info-answer">
-        			<li>{{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</li>
+        			<li>{{loadedfriend.user.birthday.dob_month}}/{{loadedfriend.user.birthday.dob_day}}/{{loadedfriend.user.birthday.dob_year}}</li>
         		</ul>
         		<!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
         	</div>
@@ -69,9 +69,9 @@
         	<div class="info holidays">
         		<h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
         		<ul class="info-answer">
-        			<li ng-repeat="holiday in holidayList">
+        			<li ng-repeat="holiday in friendholidayList">
         				<input type="checkbox" id="h1" name="cc" />
-        				<label for="h1">{{holiday}}</label>
+        				<label for="h1">{{holiday.name}}</label>
         			</li>
         		</ul>
         		<!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
@@ -80,9 +80,9 @@
         	<div class="info interests">
         		<h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
         		<ul class="info-answer">
-        			<li ng-repeat="interest in interestList">
+        			<li ng-repeat="interest in friendinterestList">
         				<input type="checkbox" id="i1" name="cc" />
-        				<label for="i1">{{interest}}</label>
+        				<label for="i1">{{interest.name}}</label>
         			</li>
         		</ul>
         		<!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
@@ -91,9 +91,9 @@
         	<div class="info favorites">
         		<h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
         		<ul class="info-answer">
-        			<li ng-repeat="color in colorList">
+        			<li ng-repeat="favorite in friendfavoriteList">
         				<input type="checkbox" id="f1" name="cc" />
-        				<label for="f1">{{color}}</label>
+        				<label for="f1">{{favorite.name}}</label>
         			</li>
         		</ul>
         		<!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
@@ -227,7 +227,7 @@
 
             <h1 class="add-list" ng-click="setTab(4)" class="" ng-class="{ active: isSet(1) }">add new wishlist <i class="fa fa-plus fa-lg" aria-hidden="true"></i></h1>
 
-            <section class="lists content-list" ng-repeat="list in wishlistArray">
+            <section class="lists content-list" ng-repeat="list in friendwishlistArray">
                 <div class="list-header">
                     <h1 class="list-name">{{list.name}}</h1>
                 </div>
