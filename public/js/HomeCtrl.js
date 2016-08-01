@@ -80,20 +80,30 @@ var newListData = $scope.newItem;
 
         $scope.addWishlistItem = function(wishlistID, itemID){
           console.log("This is the id of this list "+ wishlistID);
-          // $http({
-          //   method: 'POST',
-          //       url:  rootUrl + wishlistID + "/items",
-          //       headers: {'Authorization': userToken},
-          //       data: {
-          //   }
-          // }).success(function successCallback(response) {
-          //
-          //   }, function errorCallback(response) {
-          //     // called asynchronously if an error occurs
-          //     // or server returns response with an error status.
-          //   });
+          $http({
+            method: 'POST',
+                url:  rootUrl + wishlistID + "/items",
+                headers: {'Authorization': userToken},
+                data: {
+            }
+          }).success(function successCallback(response) {
+
+            }, function errorCallback(response) {
+              // called asynchronously if an error occurs
+              // or server returns response with an error status.
+            });
         };
 
+
+        $scope.getDetails = function(selectedItem) {
+          $scope.clickedhomeItem = selectedItem
+            console.log(  $scope.clickedhomeItem)
+        }
+
+        $scope.getList = function(selectedList) {
+          $scope.clickedhomeList = selectedList
+            console.log(  $scope.clickedhomeList)
+        }
 
 
 
