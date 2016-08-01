@@ -48,17 +48,7 @@ header {
                 transition: all 0.5s ease;
             }
         }
-        input {
-            width: 30%;
-            margin-left: 5px;
-            padding: 3px 8px;
-            border: 2px solid $blue2;
-            border-radius: 5px;
-            font: 12px / 12px $font;
-            &:focus {
-                outline: 0;
-            }
-        }
+
         ul {
             margin-top: 40px;
             li {
@@ -120,34 +110,6 @@ header {
         color: $white;
         i {
             color: $teal;
-        }
-    }
-    .edit-profile {
-        position: relative;
-        top: -105px;
-        left: 0;
-        margin: 5px 5%;
-        font: 700 12px / 22px $font;
-        color: $white;
-        text-transform: uppercase;
-        &:hover {
-            color: $blue2;
-            -webkit-transition: all 0.7s ease;
-            transition: all 0.7s ease;
-        }
-    }
-    .unfriend {
-        position: relative;
-        top: -105px;
-        left: 0;
-        margin: 5px 5%;
-        font: 700 12px / 22px $font;
-        color: $white;
-        text-transform: uppercase;
-        &:hover {
-            color: $red;
-            -webkit-transition: all 0.7s ease;
-            transition: all 0.7s ease;
         }
     }
 }

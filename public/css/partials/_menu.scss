@@ -190,7 +190,7 @@
         padding: 15px 0;
         text-align: center;
         input {
-            width: 80%;
+            width: 70%;
             border: 2px solid darken($darkblue, 10%);
             border-radius: 5px;
             margin: 20px 0;
@@ -199,6 +199,13 @@
             &:focus {
                 outline: 0;
             }
+        }
+        input[type=text] {
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+        input[type=text]:focus {
+            width: 80%;
         }
         ul {
             li {

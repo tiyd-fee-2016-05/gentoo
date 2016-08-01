@@ -148,6 +148,7 @@
 			font: 20px / 16px $menu;
 			text-align: left;
 			&:focus {
+				border: 3px solid $black;
 				outline: 0;
 			}
 		}

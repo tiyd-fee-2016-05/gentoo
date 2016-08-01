@@ -179,7 +179,7 @@ button:focus {
     padding: 15px 0;
     text-align: center; }
     #menu #tab-search input {
-      width: 80%;
+      width: 70%;
       border: 2px solid #1d2d37;
       border-radius: 5px;
       margin: 20px 0;
@@ -187,6 +187,11 @@ button:focus {
       font: 18px/16px "Nunito", sans-serif; }
       #menu #tab-search input:focus {
         outline: 0; }
+    #menu #tab-search input[type=text] {
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out; }
+    #menu #tab-search input[type=text]:focus {
+      width: 80%; }
     #menu #tab-search ul li {
       margin: 5px 0; }
       #menu #tab-search ul li h1 {
@@ -362,7 +367,13 @@ button:focus {
     font: 20px/16px "Nunito", sans-serif;
     text-align: left; }
     #tab-wishlist input:focus {
+      border: 3px solid #555;
       outline: 0; }
+  #tab-wishlist input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out; }
+  #tab-wishlist input[type=text]:focus {
+    width: 80%; }
   #tab-wishlist button {
     background: #1a8176;
     border: 2px solid #1a8176;
@@ -373,6 +384,7 @@ button:focus {
     font: 16px/20px "Nunito", sans-serif;
     color: white; }
     #tab-wishlist button:focus {
+      border: 3px solid #555;
       outline: 0; }
     #tab-wishlist button:hover {
       opacity: 1;
@@ -414,6 +426,23 @@ button:focus {
     font: 20px/16px "Nunito", sans-serif;
     text-align: left; }
     #tab-inner input:focus {
+      border: 3px solid #555;
+      outline: 0; }
+  #tab-inner input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out; }
+  #tab-inner input[type=text]:focus {
+    width: 80%; }
+  #tab-inner select {
+    width: 70%;
+    border: 2px solid #42D9C8;
+    border-radius: 5px;
+    padding: 100px;
+    font: 20px/40px "Nunito", sans-serif;
+    color: #555;
+    text-align: left; }
+    #tab-inner select:focus {
+      border: 3px solid #555;
       outline: 0; }
   #tab-inner button {
     background: #23ac9c;
@@ -425,6 +454,7 @@ button:focus {
     font: 16px/20px "Nunito", sans-serif;
     color: white; }
     #tab-inner button:focus {
+      border: 3px solid #555;
       outline: 0; }
     #tab-inner button:hover {
       opacity: 1;
@@ -463,6 +493,23 @@ button:focus {
     font: 20px/16px "Nunito", sans-serif;
     text-align: left; }
     #tab-wishlist-item input:focus {
+      border: 3px solid #555;
+      outline: 0; }
+  #tab-wishlist-item input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out; }
+  #tab-wishlist-item input[type=text]:focus {
+    width: 80%; }
+  #tab-wishlist-item select {
+    width: 70%;
+    border: 2px solid #2C8C99;
+    border-radius: 5px;
+    padding: 20px;
+    font: 20px/40px "Nunito", sans-serif;
+    color: #555;
+    text-align: left; }
+    #tab-wishlist-item select:focus {
+      border: 3px solid #555;
       outline: 0; }
   #tab-wishlist-item button {
     background: #216871;
@@ -474,6 +521,7 @@ button:focus {
     font: 16px/20px "Nunito", sans-serif;
     color: white; }
     #tab-wishlist-item button:focus {
+      border: 3px solid #555;
       outline: 0; }
     #tab-wishlist-item button:hover {
       opacity: 1;
@@ -513,7 +561,13 @@ button:focus {
     font: 20px/16px "Work Sans", sans-serif;
     text-align: left; }
     #tab-wishlist-details input:focus {
+      border: 3px solid #555;
       outline: 0; }
+  #tab-wishlist-details input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out; }
+  #tab-wishlist-details input[type=text]:focus {
+    width: 80%; }
   #tab-wishlist-details button {
     background: #216871;
     border: 2px solid #216871;
@@ -571,15 +625,6 @@ header nav {
       color: #216871;
       -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease; }
-  header nav input {
-    width: 30%;
-    margin-left: 5px;
-    padding: 3px 8px;
-    border: 2px solid #2C8C99;
-    border-radius: 5px;
-    font: 12px/12px "Work Sans", sans-serif; }
-    header nav input:focus {
-      outline: 0; }
   header nav ul {
     margin-top: 40px; }
     header nav ul li {
@@ -632,30 +677,6 @@ header .profile-name {
   color: white; }
   header .profile-name i {
     color: #42D9C8; }
-header .edit-profile {
-  position: relative;
-  top: -105px;
-  left: 0;
-  margin: 5px 5%;
-  font: 700 12px/22px "Work Sans", sans-serif;
-  color: white;
-  text-transform: uppercase; }
-  header .edit-profile:hover {
-    color: #2C8C99;
-    -webkit-transition: all 0.7s ease;
-    transition: all 0.7s ease; }
-header .unfriend {
-  position: relative;
-  top: -105px;
-  left: 0;
-  margin: 5px 5%;
-  font: 700 12px/22px "Work Sans", sans-serif;
-  color: white;
-  text-transform: uppercase; }
-  header .unfriend:hover {
-    color: #611c35;
-    -webkit-transition: all 0.7s ease;
-    transition: all 0.7s ease; }
 
 *,
 *:after,
@@ -1397,7 +1418,13 @@ header .unfriend {
     font: 20px/16px "Nunito", sans-serif;
     text-align: left; }
     #tab-wishlist input:focus {
+      border: 3px solid #555;
       outline: 0; }
+  #tab-wishlist input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out; }
+  #tab-wishlist input[type=text]:focus {
+    width: 80%; }
   #tab-wishlist button {
     background: #1a8176;
     border: 2px solid #1a8176;
@@ -1408,6 +1435,7 @@ header .unfriend {
     font: 16px/20px "Nunito", sans-serif;
     color: white; }
     #tab-wishlist button:focus {
+      border: 3px solid #555;
       outline: 0; }
     #tab-wishlist button:hover {
       opacity: 1;
@@ -1449,6 +1477,23 @@ header .unfriend {
     font: 20px/16px "Nunito", sans-serif;
     text-align: left; }
     #tab-inner input:focus {
+      border: 3px solid #555;
+      outline: 0; }
+  #tab-inner input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out; }
+  #tab-inner input[type=text]:focus {
+    width: 80%; }
+  #tab-inner select {
+    width: 70%;
+    border: 2px solid #42D9C8;
+    border-radius: 5px;
+    padding: 100px;
+    font: 20px/40px "Nunito", sans-serif;
+    color: #555;
+    text-align: left; }
+    #tab-inner select:focus {
+      border: 3px solid #555;
       outline: 0; }
   #tab-inner button {
     background: #23ac9c;
@@ -1460,6 +1505,7 @@ header .unfriend {
     font: 16px/20px "Nunito", sans-serif;
     color: white; }
     #tab-inner button:focus {
+      border: 3px solid #555;
       outline: 0; }
     #tab-inner button:hover {
       opacity: 1;
@@ -1498,6 +1544,23 @@ header .unfriend {
     font: 20px/16px "Nunito", sans-serif;
     text-align: left; }
     #tab-wishlist-item input:focus {
+      border: 3px solid #555;
+      outline: 0; }
+  #tab-wishlist-item input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out; }
+  #tab-wishlist-item input[type=text]:focus {
+    width: 80%; }
+  #tab-wishlist-item select {
+    width: 70%;
+    border: 2px solid #2C8C99;
+    border-radius: 5px;
+    padding: 20px;
+    font: 20px/40px "Nunito", sans-serif;
+    color: #555;
+    text-align: left; }
+    #tab-wishlist-item select:focus {
+      border: 3px solid #555;
       outline: 0; }
   #tab-wishlist-item button {
     background: #216871;
@@ -1509,6 +1572,7 @@ header .unfriend {
     font: 16px/20px "Nunito", sans-serif;
     color: white; }
     #tab-wishlist-item button:focus {
+      border: 3px solid #555;
       outline: 0; }
     #tab-wishlist-item button:hover {
       opacity: 1;
@@ -1548,7 +1612,13 @@ header .unfriend {
     font: 20px/16px "Work Sans", sans-serif;
     text-align: left; }
     #tab-wishlist-details input:focus {
+      border: 3px solid #555;
       outline: 0; }
+  #tab-wishlist-details input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out; }
+  #tab-wishlist-details input[type=text]:focus {
+    width: 80%; }
   #tab-wishlist-details button {
     background: #216871;
     border: 2px solid #216871;
@@ -1755,6 +1825,7 @@ h1 {
       font: 20px/16px "Nunito", sans-serif;
       text-align: left; }
       #new-profile-container #tab-login input:focus {
+        border: 3px solid #333;
         outline: 0; }
     #new-profile-container #tab-login button {
       background: #2e5077;
@@ -2037,6 +2108,7 @@ input {
   font: 20px/16px "Nunito", sans-serif;
   text-align: left; }
   input:focus {
+    border: 3px solid #555;
     outline: 0; }
 
 .edit {
@@ -2149,6 +2221,7 @@ input {
     font: 18px/22px "Work Sans", sans-serif;
     color: #2C8C99; }
     .form-group .form-control:focus {
+      border: 3px solid #555;
       outline: 0; }
     .form-group .form-control #profile-name {
       margin: 0 0 20px 20px;
