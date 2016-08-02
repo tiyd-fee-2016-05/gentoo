@@ -61,15 +61,15 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
                    headers: {
                        'Authorization': userToken
                    },
-                   data: {
+                  params: {
                        cleared_ideas: tobeDeleted
                    }
                }).success(function(data, status, headers, config) {
                        console.log(data);
                        $scope.todos = data.ideabox
                        console.log(data);
-                       console.log(response);
-                       console.log(response.data);
+
+
 
 
                        }).error(function(data, status, headers, config) {
