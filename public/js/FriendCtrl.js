@@ -56,6 +56,8 @@ console.log(friendname);
 
   }else {
     console.log("You ain't frands!");
+    $scope.searchedFriend = GetFriend.rememberNonFriend(friendname);
+        $location.path("/add-friend");
   }
 
   // $scope.searchedFriend = GetFriend.checkFriend(clickedperson);

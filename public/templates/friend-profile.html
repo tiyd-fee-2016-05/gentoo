@@ -54,23 +54,21 @@
                  </ul>
              </div>
 
-                <div ng-show="isSet(4)" id="tab-search" class="animated bounceInRight">
-                    <i class="fa fa-search fa-lg" aria-hidden="true"></i>
-                    <input type="search" ng-model="searchBox" placeholder="search users">
+             <div ng-controller="FriendController" ng-show="isSet(4)" id="tab-search" class="animated bounceInRight">
+                 <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                 <input type="search" ng-model="searchBox" placeholder="search users">
 
-                    <div ng-controller="FriendController" id="friend-search" ng-if="searchBox">
-                        <ul>
-                            <li ng-repeat="person in userList | filter: searchBox">
-                                <a href="#/friend-profile">
-                                    <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
-                                    <p class="uppercase">@{{person.username}}</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </header>
+                 <div ng-controller="FriendController" id="friend-search" ng-if="searchBox">
+                     <ul>
+                         <li  ng-click="checkFriend(person.friend_status, person.username)" ng-repeat="person in userList | filter: searchBox">
+                                 <h1 ><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+                                 <p class="uppercase">@{{person.username}}</p>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </header>
 
         <div class="info dates animated slideInLeft">
             <h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
