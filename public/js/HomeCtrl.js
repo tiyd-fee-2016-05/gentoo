@@ -23,7 +23,7 @@ var userToken = $scope.userToken
              $rootScope.loadedprofile= data;
              $rootScope.holidayList = data.user.holidays
              $rootScope.interestList = data.user.interests
-              $rootScope.colorList = data.user.favorites
+              $rootScope.favoriteList = data.user.favorites
 
          window.location = "#/home";
            }).error(function (data, status, headers, config) {

@@ -65,9 +65,9 @@
         <div class="info favorites animated slideInRight">
             <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
             <ul class="info-answer">
-                <li ng-repeat="color in colorList">
+                <li ng-repeat="favorite in favoriteList">
                     <input type="checkbox" id="f1" name="cc" />
-                    <label for="f1">{{color}}</label>
+                    <label for="f1">{{favorite}}</label>
                 </li>
             </ul>
             <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
@@ -212,7 +212,7 @@
                             <input type="text" id="item_desc" placeholder="tag a few interests" autocomplete="on">
                         </li>
 
-                        
+
                         <!-- 			<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
                     </ul>
 
