@@ -41,70 +41,41 @@ button:focus {
   #menu a {
     color: white;
     text-decoration: none; }
-  #menu #tab1 {
+  #menu #menu-tab {
     z-index: 999;
     width: 70px;
     position: fixed;
-    bottom: 28%;
     right: 0;
-    background: #27c1b0;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    padding: 15px 0;
+    padding: 5px 0;
     text-align: center; }
-    #menu #tab1 i {
+    #menu #menu-tab i {
       color: white; }
-    #menu #tab1:hover {
+  #menu .tab1 {
+    position: fixed;
+    background: #27c1b0; }
+    #menu .tab1:hover {
       background: #6ce2d4;
       transition: all 0.7s ease-out;
       cursor: pointer; }
-  #menu #tab2 {
-    z-index: 999;
-    width: 70px;
+  #menu .tab2 {
     position: fixed;
-    bottom: 18%;
-    right: 0;
-    background: #B6174B;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    padding: 15px 0;
-    text-align: center; }
-    #menu #tab2 i {
-      color: white; }
-    #menu #tab2:hover {
+    background: #B6174B; }
+    #menu .tab2:hover {
       background: #e31d5e;
       transition: all 0.7s ease-out;
       cursor: pointer; }
-  #menu #tab3 {
-    z-index: 999;
-    width: 70px;
+  #menu .tab3 {
     position: fixed;
-    bottom: 8%;
-    right: 0;
-    background: #2F4858;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    padding: 15px 0;
-    text-align: center; }
-    #menu #tab3 i {
-      color: white; }
-    #menu #tab3:hover {
+    background: #2F4858; }
+    #menu .tab3:hover {
       background: #416379;
       transition: all 0.7s ease-out;
       cursor: pointer; }
-  #menu #tab4 {
-    z-index: 999;
-    width: 70px;
+  #menu .tab4 {
     position: fixed;
-    bottom: 2%;
-    right: 0;
-    background: #fdeece;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    padding: 0;
-    text-align: center; }
-    #menu #tab4 i {
-      color: white; }
+    background: #4d4d4d; }
   #menu #tab-gift {
     z-index: 999;
     width: 90%;
@@ -222,7 +193,7 @@ button:focus {
 
 .add-list {
   float: right;
-  padding: 25px 5% 0 0;
+  padding: 15px 5% 0 0;
   font: 700 18px/22px "Nunito", sans-serif;
   color: #42D9C8;
   opacity: 0.6; }
@@ -288,9 +259,9 @@ button:focus {
       vertical-align: middle;
       overflow: hidden;
       width: 70px;
-      height: 75px;
-      margin: 10px 5px;
-      padding: 15px;
+      height: 60px;
+      margin: 10px 2px 10px 5px;
+      padding-top: 10px;
       text-align: center;
       border-radius: 5px;
       opacity: 0.7;
@@ -302,7 +273,7 @@ button:focus {
       vertical-align: middle;
       overflow: hidden;
       width: 250px;
-      height: 75px;
+      height: 60px;
       margin: 10px 5px;
       padding-top: 10px;
       text-align: center;
@@ -600,7 +571,7 @@ header .nav {
   right: 5%;
   z-index: 5; }
   header .nav .logo {
-    font: 45px/50px "Grand Hotel", cursive;
+    font: 40px/50px "Grand Hotel", cursive;
     color: #42D9C8;
     -webkit-text-shadow: 2px 1px 0 #12050a;
     -moz-text-shadow: 2px 1px 0 #12050a;
@@ -628,369 +599,88 @@ header .profile-name {
   header .profile-name i {
     color: #42D9C8; }
 
-*,
-*:after,
-*:before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+@media (max-width: 375px) {
+  body {
+    font: 20px/24px "Work Sans", sans-serif; }
 
-.clearfix:after,
-.clearfix:before {
-  content: '';
-  display: table; }
+  .friend-photo {
+    height: 350px; }
 
-.clearfix:after {
-  clear: both; }
+  #menu .tab1 {
+    bottom: 170px; }
+  #menu .tab2 {
+    bottom: 115px; }
+  #menu .tab3 {
+    bottom: 60px; }
+  #menu .tab4 {
+    bottom: 5px; }
 
-.content {
-  font-size: 150%;
-  padding-bottom: 20px; }
-
-.input {
-  position: relative;
-  z-index: 1;
-  display: inline-block;
-  margin-top: 10px;
-  max-width: 350px;
-  width: calc(100% - 2em);
-  vertical-align: top; }
-
-.input__field {
-  position: relative;
-  display: block;
-  float: right;
-  padding: 0.8em;
-  width: 60%;
-  border: none;
-  border-radius: 0;
-  background: white;
-  color: white;
-  font: 18px/22px "Work Sans", sans-serif;
-  letter-spacing: 1px;
-  -webkit-appearance: none;
-  /* for box shadows to show on iOS */ }
-
-.input__field:focus {
-  outline: none; }
-
-.input__label {
-  display: inline-block;
-  float: right;
-  padding: 0 1em;
-  width: 40%;
-  font: 18px/22px "Work Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-
-.input__label-content {
-  position: relative;
-  display: block;
-  padding: 1.6em 0;
-  width: 100%; }
-
-.graphic {
-  position: absolute;
-  top: 0;
-  left: 0;
-  fill: none; }
-
-.icon {
-  color: #ddd;
-  font-size: 150%; }
-
-#login-container .input--hoshi {
-  overflow: hidden; }
-#login-container .input__field--hoshi {
-  padding: 26px 0.15em;
-  width: 100%;
-  background: transparent;
-  color: white; }
-#login-container .input__label--hoshi {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 0 10px;
-  width: 100%;
-  height: calc(100% - 1em);
-  text-align: left;
-  pointer-events: none; }
-#login-container .input__label-content--hoshi {
-  position: absolute;
-  padding: 10px 0 40px; }
-#login-container .input__label--hoshi::after,
-#login-container .input__label--hoshi::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 10px);
-  border-bottom: 1px solid white; }
-#login-container .input__label--hoshi::after {
-  margin-top: 2px;
-  border-bottom: 4px solid red;
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s; }
-#login-container .input__label--hoshi-color-1::after {
-  border-color: #42D9C8; }
-#login-container .input__label--hoshi-color-2::after {
-  border-color: #e84855; }
-#login-container .input__label--hoshi-color-3::after {
-  border-color: #2e5077; }
-#login-container .input--filled .input__label--hoshi::after,
-#login-container .input__field--hoshi:focus + .input__label--hoshi::after {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-#login-container .input--filled .input__label-content--hoshi,
-#login-container .input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi {
-  -webkit-animation: anim-1 0.3s forwards;
-  animation: anim-1 0.3s forwards; }
-@-webkit-keyframes anim-1 {
-  50% {
-    opacity: 0;
-    -webkit-transform: translate3d(1em, 0, 0);
-    transform: translate3d(1em, 0, 0); }
-  51% {
-    opacity: 0;
-    -webkit-transform: translate3d(-1em, -40%, 0);
-    transform: translate3d(-1em, -40%, 0); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, -40%, 0);
-    transform: translate3d(0, -40%, 0); } }
-@keyframes anim-1 {
-  50% {
-    opacity: 0;
-    -webkit-transform: translate3d(1em, 0, 0);
-    transform: translate3d(1em, 0, 0); }
-  51% {
-    opacity: 0;
-    -webkit-transform: translate3d(-1em, -40%, 0);
-    transform: translate3d(-1em, -40%, 0); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, -40%, 0);
-    transform: translate3d(0, -40%, 0); } }
-#profile-container .input--hoshi {
-  overflow: hidden; }
-#profile-container .input__field--hoshi {
-  padding: 26px 0.15em;
-  width: 100%;
-  background: transparent;
-  color: #333; }
-#profile-container .input__label--hoshi {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 0 10px;
-  width: 100%;
-  height: calc(100% - 1em);
-  text-align: left;
-  pointer-events: none; }
-#profile-container .input__label-content--hoshi {
-  position: absolute;
-  padding: 10px 0 40px; }
-#profile-container .input__label--hoshi::after,
-#profile-container .input__label--hoshi::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 10px);
-  border-bottom: 1px solid #2C8C99; }
-#profile-container .input__label--hoshi::after {
-  margin-top: 2px;
-  border-bottom: 4px solid red;
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s; }
-#profile-container .input__label--hoshi-color-1::after {
-  border-color: #42D9C8; }
-#profile-container .input__label--hoshi-color-2::after {
-  border-color: #e84855; }
-#profile-container .input__label--hoshi-color-3::after {
-  border-color: #2e5077; }
-#profile-container .input--filled .input__label--hoshi::after,
-#profile-container .input__field--hoshi:focus + .input__label--hoshi::after {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-#profile-container .input--filled .input__label-content--hoshi,
-#profile-container .input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi {
-  -webkit-animation: anim-1 0.3s forwards;
-  animation: anim-1 0.3s forwards; }
-@-webkit-keyframes anim-1 {
-  50% {
-    opacity: 0;
-    -webkit-transform: translate3d(1em, 0, 0);
-    transform: translate3d(1em, 0, 0); }
-  51% {
-    opacity: 0;
-    -webkit-transform: translate3d(-1em, -40%, 0);
-    transform: translate3d(-1em, -40%, 0); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, -40%, 0);
-    transform: translate3d(0, -40%, 0); } }
-@keyframes anim-1 {
-  50% {
-    opacity: 0;
-    -webkit-transform: translate3d(1em, 0, 0);
-    transform: translate3d(1em, 0, 0); }
-  51% {
-    opacity: 0;
-    -webkit-transform: translate3d(-1em, -40%, 0);
-    transform: translate3d(-1em, -40%, 0); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, -40%, 0);
-    transform: translate3d(0, -40%, 0); } }
-.input--photo {
-  overflow: hidden; }
-
-.input__field--photo {
-  padding: 26px 0.15em;
-  width: 100%;
-  background: transparent;
-  color: #333; }
-
-.input__label--photo {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 0 10px;
-  width: 100%;
-  height: calc(100% - 1em);
-  text-align: left;
-  pointer-events: none; }
-
-.input__label-content--photo {
-  position: absolute;
-  padding: 10px 0 40px; }
-
-.input__label--photo::after,
-.input__label--photo::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 10px);
-  border-bottom: 1px solid #2C8C99; }
-
-.input__label--photo::after {
-  margin-top: 2px;
-  border-bottom: 4px solid red;
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s; }
-
-.input__label--photo-color-4::after {
-  border-color: #611c35; }
-
-.input--filled .input__label--photo::after,
-.input__field--photo:focus + .input__label--photo::after {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-.input--filled .input__label-content--photo,
-.input__field--photo:focus + .input__label--photo .input__label-content--photo {
-  -webkit-animation: anim-1 0.3s forwards;
-  animation: anim-1 0.3s forwards; }
-
-@-webkit-keyframes anim-1 {
-  50% {
-    opacity: 0;
-    -webkit-transform: translate3d(1em, 0, 0);
-    transform: translate3d(1em, 0, 0); }
-  51% {
-    opacity: 0;
-    -webkit-transform: translate3d(-1em, -40%, 0);
-    transform: translate3d(-1em, -40%, 0); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, -40%, 0);
-    transform: translate3d(0, -40%, 0); } }
-@keyframes anim-1 {
-  50% {
-    opacity: 0;
-    -webkit-transform: translate3d(1em, 0, 0);
-    transform: translate3d(1em, 0, 0); }
-  51% {
-    opacity: 0;
-    -webkit-transform: translate3d(-1em, -40%, 0);
-    transform: translate3d(-1em, -40%, 0); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, -40%, 0);
-    transform: translate3d(0, -40%, 0); } }
-.input--kaede {
-  display: block;
-  overflow: hidden;
-  margin: 30px auto 5px;
-  background: #2C8C99;
-  border: 2px solid #2C8C99;
-  border-radius: 5px; }
-
-.input__field--kaede {
-  position: absolute;
-  top: 0;
-  right: 100%;
-  width: 60%;
-  height: 100%;
-  background: #d2eef2;
-  color: #333;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1); }
-
-.input__label--kaede {
-  z-index: 10;
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  cursor: text;
-  -webkit-transform-origin: 0 50%;
-  transform-origin: 0 50%;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
-  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1); }
-
-.input__label-content--kaede {
-  padding: 10px 5px 10px 0; }
-
-.input--filled .input__field--kaede,
-.input__field--kaede:focus {
-  -webkit-transform: translate3d(100%, 0, 0);
-  transform: translate3d(100%, 0, 0);
-  -webkit-transition-delay: 0.06s;
-  transition-delay: 0.06s; }
-
-.input--filled .input__label--kaede,
-.input__field--kaede:focus + .input__label--kaede {
-  -webkit-transform: translate3d(60%, 0, 0);
-  transform: translate3d(60%, 0, 0);
-  pointer-events: none; }
-
-@media screen and (max-width: 34em) {
-  .input--filled .input__label--kaede,
-  .input__field--kaede:focus + .input__label--kaede {
-    -webkit-transform: translate3d(65%, 0, 0) scale3d(0.65, 0.65, 1);
-    transform: translate3d(65%, 0, 0) scale3d(0.65, 0.65, 1);
-    pointer-events: none; } }
+  header {
+    text-align: center; }
+    header .nav {
+      width: 150px;
+      height: 40px;
+      display: inline-block; }
+      header .nav .logo {
+        position: relative;
+        top: 0;
+        left: 10%;
+        margin: 0 auto;
+        font: 50px/50px "Grand Hotel", cursive;
+        text-align: center; }
+    header nav {
+      width: 70%;
+      height: 300px;
+      position: relative;
+      top: -160px;
+      left: 0;
+      margin: 0 auto;
+      padding: 20px;
+      border: 2px solid #2C8C99;
+      border-radius: 8px;
+      z-index: 10; }
+      header nav i {
+        margin-right: 10px; }
+      header nav .fa-search {
+        display: none; }
+      header nav a {
+        display: block;
+        font: 700 30px/55px "Work Sans", sans-serif; }
+      header nav input {
+        width: 100%;
+        margin: 10px 0;
+        padding: 6px 10px;
+        border: 2px solid #2C8C99;
+        border-radius: 5px;
+        font: 26px/26px "Work Sans", sans-serif; }
+      header nav ul {
+        margin-top: 10px; }
+        header nav ul li {
+          width: 100%;
+          margin-left: 0;
+          margin-top: 10px;
+          padding: 10px;
+          background: #37b0c1;
+          border: 2px solid #37b0c1;
+          border-radius: 8px; }
+          header nav ul li h1 {
+            font: 700 20px/20px "Work Sans", sans-serif; }
+          header nav ul li p {
+            margin-left: 16px;
+            font: 700 20px/20px "Work Sans", sans-serif; }
+          header nav ul li a {
+            font: 20px/20px "Work Sans", sans-serif; }
+    header .photo {
+      height: 150px; }
+    header .profile-name {
+      position: relative;
+      top: -70px;
+      left: 0;
+      margin: 20px 5%;
+      font: 30px/30px "Nunito", sans-serif;
+      color: white; }
+      header .profile-name i {
+        display: none; } }
 #container1 {
   width: 100%;
   height: 1350px;
@@ -1059,71 +749,69 @@ header .profile-name {
         -webkit-transition: all 0.7s ease;
         transition: all 0.7s ease; }
 
-#container {
-  width: 100%;
-  height: 100%;
+#profile-main-container {
+  width: 375px;
+  margin: 0 auto;
   position: relative;
   top: 0;
   left: 0; }
-  #container #profile-main-container {
-    margin: 0 auto; }
-    #container #profile-main-container .content {
-      width: 90%;
-      margin: 0 auto;
-      padding: 10px; }
-      #container #profile-main-container .content p {
-        padding: 10px 0;
-        color: #e84855; }
-      #container #profile-main-container .content i {
-        color: #611c35; }
-      #container #profile-main-container .content .profile-holidays {
-        display: inline-block; }
-      #container #profile-main-container .content .profile-colors {
-        display: inline-block; }
-      #container #profile-main-container .content .profile-interests {
-        display: inline-block;
-        text-align: left; }
-    #container #profile-main-container .content-main {
-      position: relative;
-      top: -60px;
-      left: 0;
-      margin-left: 5%; }
-      #container #profile-main-container .content-main .user-photo {
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        top: 10%;
-        right: 10%;
-        overflow-y: hidden;
-        background: screen(#2C8C99, 20%);
-        background-image: url("../photo.jpg");
-        background-position: center;
-        background-blend-mode: overlay;
-        border-radius: 120px; }
-      #container #profile-main-container .content-main h2 {
-        color: #333;
-        font: 700 18px/30px "Work Sans", sans-serif;
-        text-align: left; }
-      #container #profile-main-container .content-main span {
-        font: 18px/22px "Work Sans", sans-serif;
-        color: #333; }
-    #container #profile-main-container .content-details {
-      position: relative;
-      top: -50px;
-      left: 0;
-      margin-left: 5%; }
-      #container #profile-main-container .content-details h1 {
-        color: #611c35;
-        margin-bottom: 20px;
-        color: #333; }
-      #container #profile-main-container .content-details h2 {
-        color: #333;
-        font: 700 18px/20px "Work Sans", sans-serif;
-        text-align: left; }
-      #container #profile-main-container .content-details span {
-        display: inline-block;
-        font: 18px/20px "Work Sans", sans-serif;
-        color: #333; }
+  #profile-main-container .content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px; }
+    #profile-main-container .content p {
+      padding: 10px 0;
+      color: #e84855; }
+    #profile-main-container .content i {
+      color: #611c35; }
+    #profile-main-container .content .profile-holidays {
+      display: inline-block; }
+    #profile-main-container .content .profile-colors {
+      display: inline-block; }
+    #profile-main-container .content .profile-interests {
+      display: inline-block;
+      text-align: left; }
+  #profile-main-container .content-main {
+    position: relative;
+    top: -60px;
+    left: 0;
+    margin-left: 5%; }
+    #profile-main-container .content-main .user-photo {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      overflow-y: hidden;
+      background: screen(#2C8C99, 20%);
+      background-image: url("../photo.jpg");
+      background-position: center;
+      background-blend-mode: overlay;
+      border-radius: 120px; }
+    #profile-main-container .content-main h2 {
+      color: #333;
+      font: 700 18px/30px "Work Sans", sans-serif;
+      text-align: left; }
+    #profile-main-container .content-main span {
+      font: 18px/22px "Work Sans", sans-serif;
+      color: #333; }
+  #profile-main-container .content-details {
+    position: relative;
+    top: -50px;
+    left: 0;
+    margin-left: 5%; }
+    #profile-main-container .content-details h1 {
+      color: #611c35;
+      margin-bottom: 20px;
+      color: #333; }
+    #profile-main-container .content-details h2 {
+      color: #333;
+      font: 700 18px/20px "Work Sans", sans-serif;
+      text-align: left; }
+    #profile-main-container .content-details span {
+      display: inline-block;
+      font: 18px/20px "Work Sans", sans-serif;
+      color: #333; }
 
 .info-header {
   background: white;
@@ -1215,7 +903,7 @@ header .profile-name {
 
 .add-list {
   float: right;
-  padding: 25px 5% 0 0;
+  padding: 15px 5% 0 0;
   font: 700 18px/22px "Nunito", sans-serif;
   color: #42D9C8;
   opacity: 0.6; }
@@ -1281,9 +969,9 @@ header .profile-name {
       vertical-align: middle;
       overflow: hidden;
       width: 70px;
-      height: 75px;
-      margin: 10px 5px;
-      padding: 15px;
+      height: 60px;
+      margin: 10px 2px 10px 5px;
+      padding-top: 10px;
       text-align: center;
       border-radius: 5px;
       opacity: 0.7;
@@ -1295,7 +983,7 @@ header .profile-name {
       vertical-align: middle;
       overflow: hidden;
       width: 250px;
-      height: 75px;
+      height: 60px;
       margin: 10px 5px;
       padding-top: 10px;
       text-align: center;
@@ -1598,14 +1286,11 @@ header .profile-name {
   background-size: cover;
   background-blend-mode: multiply; }
 
-h1 {
-  color: #611c35; }
-
 .friend-name {
   position: relative;
-  top: -150px;
+  top: -170px;
   margin: auto;
-  font-size: 40px;
+  font: 35px/45px "Nunito", sans-serif;
   color: white;
   text-align: center; }
   .friend-name i {
@@ -1613,7 +1298,7 @@ h1 {
 
 .content-add-friend {
   position: relative;
-  top: -120px;
+  top: -135px;
   left: 0;
   text-align: center; }
   .content-add-friend .friend-button {
@@ -1623,9 +1308,8 @@ h1 {
     border-radius: 200px;
     margin: 20px auto 0;
     padding: 28px 25px;
-    font-size: 14px; }
-    .content-add-friend .friend-button .fa-user-plus {
-      color: white; }
+    font-size: 14px;
+    color: #5b0c26; }
     .content-add-friend .friend-button:hover {
       background: #720e2f;
       border: 2px solid #720e2f;
@@ -1651,7 +1335,7 @@ h1 {
 
 .content-details-remove {
   position: relative;
-  top: -100px;
+  top: -130px;
   left: 0;
   margin: 50px;
   text-align: center;
@@ -1666,7 +1350,7 @@ h1 {
   letter-spacing: 1px;
   -webkit-font-smoothing: antialiased; }
   #new-profile-container .upper-padding {
-    padding: 100px 0 60px; }
+    padding: 50px 0 60px; }
   #new-profile-container button {
     margin-top: 20px;
     opacity: 0.8;
@@ -1687,9 +1371,15 @@ h1 {
     text-shadow: 2px 1px 0 #12050a; }
   #new-profile-container .header {
     text-align: center;
-    margin: 10px 50px;
+    margin: 10px 0;
     line-height: 30px;
     color: white; }
+  #new-profile-container .header-sm {
+    text-align: center;
+    margin: 15px;
+    line-height: 30px;
+    color: white;
+    font: 24px/26px "Nunito", sans-serif; }
   #new-profile-container p {
     margin: 20px 20px 5px 10px;
     opacity: 0.5;
@@ -1698,23 +1388,22 @@ h1 {
   #new-profile-container #tab {
     display: inline-block;
     border-radius: 10px;
-    margin: 0 5px 30px;
-    padding: 20px;
+    margin: 0 3px 20px;
+    padding: 10px 12px;
     text-align: center; }
   #new-profile-container .welcome-info {
     width: 100%;
-    margin: 20px 0;
-    padding: 20px;
+    margin: 30px 0 10px 0;
+    padding: 10px 0;
     text-align: center; }
     #new-profile-container .welcome-info h1 {
       display: inline-block;
-      margin: 0;
       font: 40px/40px "Nunito", sans-serif;
       color: white; }
     #new-profile-container .welcome-info p {
       text-align: center;
       opacity: 1;
-      font: 20px/24px "Work Sans", sans-serif;
+      font: 18px/22px "Work Sans", sans-serif;
       color: white;
       letter-spacing: 0; }
     #new-profile-container .welcome-info span {
@@ -1817,7 +1506,7 @@ h1 {
     padding: 15px 0;
     text-align: center; }
     #new-profile-container #tab-signup input {
-      width: 60%;
+      width: 80%;
       border: 2px solid #27c1b0;
       border-radius: 5px;
       margin: 5px;
@@ -1829,7 +1518,7 @@ h1 {
       #new-profile-container #tab-signup input:focus {
         border: 3px solid #555;
         outline: 0;
-        width: 70%; }
+        width: 90%; }
     #new-profile-container #tab-signup button {
       background: #0d423c;
       border: 2px solid #0d423c;
@@ -1877,7 +1566,7 @@ h1 {
     width: 100%;
     background: #611c35;
     border-radius: 5px;
-    padding: 15px 0;
+    padding: 10px 0;
     color: white;
     text-align: left; }
     #new-profile-container #tab-holidays ul {
@@ -1893,11 +1582,14 @@ h1 {
       color: #89274b;
       border-radius: 5px;
       margin: 3px 0;
-      padding: 0 10px;
+      padding: 0 6px;
+      text-align: left;
+      font: 20px/28px "Nunito", sans-serif;
       cursor: pointer; }
     #new-profile-container #tab-holidays li input[type="checkbox"]:checked + label {
       background: #4d162a;
       border: 2px solid #4d162a;
+      font: 20px/28px "Nunito", sans-serif;
       color: white;
       transition: all 0.3s ease-out; }
     #new-profile-container #tab-holidays button {
@@ -1909,20 +1601,23 @@ h1 {
         opacity: 1;
         transition: all 0.5s ease-out;
         cursor: pointer; }
+    #new-profile-container #tab-holidays #h14 {
+      font-size: 20px; }
     #new-profile-container #tab-holidays input {
-      width: 70%;
+      width: 100%;
       border: 2px solid #611c35;
       border-radius: 5px;
       margin-bottom: 0;
       padding: 8px 15px 5px;
-      font: 18px/16px "Nunito", sans-serif; }
+      font: 18px/16px "Nunito", sans-serif;
+      text-align: left; }
       #new-profile-container #tab-holidays input:focus {
         outline: 0; }
   #new-profile-container #tab-interests {
     width: 100%;
     background: #23ac9c;
     border-radius: 5px;
-    padding: 15px 0;
+    padding: 10px 0;
     color: white;
     text-align: left; }
     #new-profile-container #tab-interests ul {
@@ -1938,11 +1633,14 @@ h1 {
       color: #42D9C8;
       border-radius: 5px;
       margin: 3px 0;
-      padding: 0 10px;
+      padding: 0 6px;
+      text-align: left;
+      font: 20px/28px "Nunito", sans-serif;
       cursor: pointer; }
     #new-profile-container #tab-interests li input[type="checkbox"]:checked + label {
       background: #1d8e81;
       border: 2px solid #1d8e81;
+      font: 20px/28px "Nunito", sans-serif;
       color: white;
       transition: all 0.3s ease-out; }
     #new-profile-container #tab-interests button {
@@ -1971,6 +1669,8 @@ h1 {
       #new-profile-container #tab-favorites input:focus {
         border: 3px solid #333;
         outline: 0; }
+    #new-profile-container #tab-favorites #fav_extra {
+      width: 90%; }
     #new-profile-container #tab-favorites input[type=text] {
       -webkit-transition: width 0.4s ease-in-out;
       transition: width 0.4s ease-in-out; }
@@ -1986,12 +1686,14 @@ h1 {
       border: 2px solid #e53140;
       border-radius: 5px;
       margin: 3px 0;
-      padding: 0 10px;
+      padding: 0 12px;
+      font-size: 22px;
       cursor: pointer; }
     #new-profile-container #tab-favorites li input[type="radio"]:checked + label {
       background: #ca1928;
       border: 2px solid #ca1928;
       color: white;
+      font-size: 22px;
       transition: all 0.3s ease-out; }
     #new-profile-container #tab-favorites button {
       background: #e11c2c;
@@ -2012,6 +1714,7 @@ h1 {
       width: 50%;
       border: 2px solid #1d2d37;
       border-radius: 5px;
+      margin-top: 10px;
       padding: 5px;
       font: 18px/16px "Nunito", sans-serif; }
       #new-profile-container #tab-search input:focus {
@@ -2025,7 +1728,7 @@ h1 {
     #new-profile-container #tab-search h6 {
       margin: 20px 10px 10px;
       font: 16px/20px "Nunito", sans-serif; }
-    #new-profile-container #tab-search a:hover {
+    #new-profile-container #tab-search .invite {
       color: #42D9C8;
       transition: all 0.3s ease-out; }
     #new-profile-container #tab-search button {
@@ -2034,6 +1737,15 @@ h1 {
       border-radius: 5px;
       margin-left: 5px; }
       #new-profile-container #tab-search button:hover {
+        opacity: 1;
+        transition: all 0.5s ease-out;
+        cursor: pointer; }
+    #new-profile-container #tab-search .sent {
+      background: #1e9789;
+      border: 2px solid #1e9789;
+      border-radius: 5px;
+      margin-left: 5px; }
+      #new-profile-container #tab-search .sent:hover {
         opacity: 1;
         transition: all 0.5s ease-out;
         cursor: pointer; }
@@ -2072,20 +1784,18 @@ h1 {
 
 .edit-profile-name {
   position: relative;
-  top: -100px;
+  top: -75px;
   left: 0;
   margin: 0 0 20px 5%;
-  font: 30px/30px "Work Sans", sans-serif;
+  font: 700 20px/30px "Work Sans", sans-serif;
   color: white; }
-  .edit-profile-name span {
-    font-weight: 700; }
 
 input {
   display: inline-block;
-  width: 15%;
+  width: 20%;
   border: 2px solid #611c35;
   border-radius: 5px;
-  padding: 8px;
+  padding: 5px;
   font: 20px/16px "Nunito", sans-serif;
   text-align: center; }
   input:focus {
@@ -2217,6 +1927,13 @@ input[type=text]:focus {
       .form-group .form-control #profile-name i {
         color: #2C8C99; }
 
+#friends-container {
+  width: 375px;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  left: 0; }
+
 #friend-content {
   position: relative;
   top: -50px;
@@ -2224,12 +1941,17 @@ input[type=text]:focus {
   margin: 5%; }
   #friend-content input {
     width: 40%;
-    padding: 5px 16px;
-    border: 2px solid #2C8C99;
+    padding: 5px 14px;
+    border: 3px solid #2C8C99;
     border-radius: 5px;
     font: 16px/14px "Work Sans", sans-serif; }
     #friend-content input:focus {
       outline: 0; }
+  #friend-content input[type=search] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out; }
+  #friend-content input[type=search]:focus {
+    width: 80%; }
   #friend-content h1 {
     margin-bottom: 10px;
     font: 24px/22px "Work Sans", sans-serif;
@@ -2275,11 +1997,6 @@ input[type=text]:focus {
       -webkit-transition: all 0.5s ease;
       transition: all 0.5s ease;
       cursor: pointer; }
-  #friend-content .uppercase {
-    margin-left: 20px;
-    font: 700 14px/10px "Work Sans", sans-serif;
-    text-transform: uppercase;
-    padding-bottom: 10px; }
   #friend-content ul h2 {
     padding: 10px;
     color: white;
@@ -2300,20 +2017,22 @@ input[type=text]:focus {
     width: 40%;
     margin-top: 10px;
     padding: 0 20px;
-    background: #2C8C99;
-    border: 2px solid #2C8C99;
+    background: #2F4858;
+    border: 2px solid #2F4858;
     border-radius: 5px;
     letter-spacing: 1px;
     overflow: hidden; }
     #friend-content ul .friends-list h1 {
-      font: 700 24px/10px "Work Sans", sans-serif;
-      color: white;
+      font: 700 24px/10px "Nunito", sans-serif;
+      color: #42D9C8;
       padding-top: 10px; }
     #friend-content ul .friends-list p {
-      margin-left: 20px;
-      font: 700 18px/12px "Work Sans", sans-serif;
-      color: #216871;
-      text-transform: uppercase; }
+      margin-left: 26px;
+      padding-bottom: 10px;
+      font: 700 16px/12px "Nunito", sans-serif;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px; }
     #friend-content ul .friends-list a {
       margin-left: 20px;
       font: 18px/12px "Work Sans", sans-serif;
@@ -2327,94 +2046,6 @@ input[type=text]:focus {
       cursor: pointer; }
 
 @media (max-width: 767px) {
-  body {
-    font: 20px/24px "Work Sans", sans-serif; }
-
-  .friend-photo {
-    height: 300px; }
-
-  #menu #tab1 {
-    bottom: 24%; }
-  #menu #tab2 {
-    bottom: 15%; }
-  #menu #tab3 {
-    bottom: 6%; }
-  #menu #tab4 {
-    bottom: 0.5%; }
-
-  header {
-    text-align: center; }
-    header .nav {
-      width: 150px;
-      height: 40px;
-      display: inline-block; }
-      header .nav .logo {
-        position: relative;
-        top: -10px;
-        left: -10%;
-        margin: 0 auto;
-        font: 60px/80px "Grand Hotel", cursive;
-        text-align: center; }
-    header nav {
-      width: 70%;
-      height: 300px;
-      position: relative;
-      top: -160px;
-      left: 0;
-      margin: 0 auto;
-      padding: 20px;
-      border: 2px solid #2C8C99;
-      border-radius: 8px;
-      z-index: 10; }
-      header nav i {
-        margin-right: 10px; }
-      header nav .fa-search {
-        display: none; }
-      header nav a {
-        display: block;
-        font: 700 30px/55px "Work Sans", sans-serif; }
-      header nav input {
-        width: 100%;
-        margin: 10px 0;
-        padding: 6px 10px;
-        border: 2px solid #2C8C99;
-        border-radius: 5px;
-        font: 26px/26px "Work Sans", sans-serif; }
-      header nav ul {
-        margin-top: 10px; }
-        header nav ul li {
-          width: 100%;
-          margin-left: 0;
-          margin-top: 10px;
-          padding: 10px;
-          background: #37b0c1;
-          border: 2px solid #37b0c1;
-          border-radius: 8px; }
-          header nav ul li h1 {
-            font: 700 20px/20px "Work Sans", sans-serif; }
-          header nav ul li p {
-            margin-left: 16px;
-            font: 700 20px/20px "Work Sans", sans-serif; }
-          header nav ul li a {
-            font: 20px/20px "Work Sans", sans-serif; }
-    header .photo {
-      height: 220px; }
-    header .profile-name {
-      position: relative;
-      top: -100px;
-      left: 0;
-      margin: 20px 5%;
-      font: 40px/30px "Work Sans", sans-serif;
-      color: white; }
-      header .profile-name i {
-        display: none; }
-    header .edit-profile {
-      top: -120px;
-      font: 700 20px/30px "Work Sans", sans-serif; }
-    header .unfriend {
-      top: -120px;
-      font: 700 20px/30px "Work Sans", sans-serif; } }
-@media (max-width: 767px) {
   .friend-name {
     top: -130px; }
 
@@ -2424,8 +2055,16 @@ input[type=text]:focus {
   #friend-content {
     margin: 8% 5%; }
     #friend-content input {
-      width: 100%;
+      width: 72%;
       border-radius: 4px; }
+      #friend-content input:focus {
+        border: 3px solid #333;
+        outline: 0; }
+    #friend-content input[type=search] {
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out; }
+    #friend-content input[type=search]:focus {
+      width: 100%; }
     #friend-content .accept {
       background: #37b0c1;
       border: 2px solid #37b0c1;
@@ -2437,7 +2076,7 @@ input[type=text]:focus {
       color: white;
       opacity: 1; }
     #friend-content ul .friend-request {
-      width: 100%;
+      width: 85%;
       margin-top: 10px;
       padding: 0 20px;
       background: #2F4858;
@@ -2449,7 +2088,7 @@ input[type=text]:focus {
         font: 700 22px/24px "Nunito", sans-serif;
         color: white; }
     #friend-content ul .friends-list {
-      width: 100%;
+      width: 85%;
       margin-top: 10px;
       padding: 0 20px; } }
 

@@ -1,21 +1,18 @@
 .edit-profile-name {
     position: relative;
-    top: -100px;
+    top: -75px;
     left: 0;
     margin: 0 0 20px 5%;
-    font: 30px / 30px $font;
+    font: 700 20px / 30px $font;
     color: $white;
-    span {
-        font-weight: 700;
-    }
 }
 input {
   display: inline-block;
-  width: 15%;
+  width: 20%;
   border: 2px solid $red;
   border-radius: 5px;
   // margin: 5px;
-  padding: 8px;
+  padding: 5px;
   font: 20px / 16px $menu;
   text-align: center;
   &:focus {

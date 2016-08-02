@@ -6,8 +6,8 @@ gentooApp.controller('RequestFriendCtrl', function ($rootScope, $scope, $http, $
       $location.path("/sign_up");
   }
 
-  var rootUrl= "http://6e62d5d1.ngrok.io/";
-  // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+  // var rootUrl= "http://6e62d5d1.ngrok.io/";
+  var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
   var username = $rootScope.username
   var userToken = $scope.userToken
@@ -60,7 +60,7 @@ gentooApp.controller('FriendRequestCtrl', function ($rootScope, $scope, $http, $
           // called asynchronously if an error occurs
           // or server returns response with an error status.
         });
-}; 
+};
 
 $scope.denyFriend = function(clickedfriend) {
   console.log(clickedfriend);

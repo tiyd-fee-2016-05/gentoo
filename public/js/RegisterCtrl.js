@@ -1,8 +1,8 @@
 gentooApp.controller('RegisterCtrl', ['$rootScope', '$scope', '$http', '$location', 'User', function($rootScope, $scope, $http, $location, User) {
     $scope.userToken = User.getToken();
 
-    var rootUrl= "https://6e62d5d1.ngrok.io/";
-    // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+    // var rootUrl= "https://6e62d5d1.ngrok.io/";
+    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 var username = $rootScope.username
 var userToken = $scope.userToken
 

@@ -6,7 +6,7 @@
 	letter-spacing: 1px;
 	-webkit-font-smoothing: antialiased;
 	.upper-padding {
-		padding: 100px 0 60px;
+		padding: 50px 0 60px;
 	}
 	button {
 		margin-top: 20px;
@@ -33,9 +33,17 @@
 	.header {
 		// "Select some interests"
 		text-align: center;
-		margin: 10px 50px;
+		margin: 10px 0;
 		line-height: 30px;
 		color: $white;
+	}
+	.header-sm {
+		// "Select some interests"
+		text-align: center;
+		margin: 15px;
+		line-height: 30px;
+		color: $white;
+		font: 24px / 26px $menu;
 	}
 	p {
 		// "step # of 4"
@@ -47,27 +55,25 @@
 	#tab {
 		display: inline-block;
 		border-radius: 10px;
-		margin: 0 5px 30px;
-		padding: 20px;
+		margin: 0 3px 20px;
+		padding: 10px 12px;
 		text-align: center;
 	}
 	.welcome-info {
 		//main sign up
 		width: 100%;
-		margin: 20px 0;
-		padding: 20px;
+		margin: 30px 0 10px 0;
+		padding: 10px 0;
 		text-align: center;
 		h1 {
 			display: inline-block;
-			margin: 0;
 			font: 40px / 40px $menu;
 			color: lighten($white, 10%);
 		}
 		p {
-			// margin: 0 0 0 110px;
 			text-align: center;
 			opacity: 1;
-			font: 20px / 24px $font;
+			font: 18px / 22px $font;
 			color: lighten($white, 10%);
 			letter-spacing: 0;
 		}
@@ -201,7 +207,7 @@
 		padding: 15px 0;
 		text-align: center;
 		input {
-			width: 60%;
+			width: 80%;
 			border: 2px solid darken($teal, 10%);
 			border-radius: 5px;
 			margin: 5px;
@@ -213,7 +219,7 @@
 			&:focus {
 					border: 3px solid #555;
 					outline: 0;
-					width: 70%;
+					width: 90%;
 			}
 	}
 
@@ -274,7 +280,7 @@
 		width: 100%;
 		background: $red;
 		border-radius: 5px;
-		padding: 15px 0;
+		padding: 10px 0;
 		color: $white;
 		text-align: left;
 		ul {
@@ -293,12 +299,15 @@
 			color: lighten($red, 10%);
 			border-radius: 5px;
 			margin: 3px 0;
-			padding: 0 10px;
+			padding: 0 6px;
+			text-align: left;
+			font: 20px / 28px $menu;
 			cursor: pointer;
 		}
 		li input[type="checkbox"]:checked + label {
 			background: darken($red, 5%);
 			border: 2px solid darken($red, 5%);
+			font: 20px / 28px $menu;
 			color: $white;
 			transition: all 0.3s ease-out;
 		}
@@ -313,13 +322,17 @@
 				cursor: pointer;
 			}
 		}
+		#h14 {
+			font-size: 20px;
+		}
 		input {
-			width: 70%;
+			width: 100%;
 			border: 2px solid $red;
 			border-radius: 5px;
 			margin-bottom: 0;
 			padding: 8px 15px 5px;
 			font: 18px / 16px $menu;
+			text-align: left;
 			&:focus {
 				outline: 0;
 			}
@@ -329,7 +342,7 @@
 		width: 100%;
 		background: darken($teal, 15%);
 		border-radius: 5px;
-		padding: 15px 0;
+		padding: 10px 0;
 		color: $white;
 		text-align: left;
 		ul {
@@ -348,12 +361,15 @@
 			color: $teal;
 			border-radius: 5px;
 			margin: 3px 0;
-			padding: 0 10px;
+			padding: 0 6px;
+			text-align: left;
+			font: 20px / 28px $menu;
 			cursor: pointer;
 		}
 		li input[type="checkbox"]:checked + label {
 			background: darken($teal, 22%);
 			border: 2px solid darken($teal, 22%);
+			font: 20px / 28px $menu;
 			color: $white;
 			transition: all 0.3s ease-out;
 		}
@@ -388,6 +404,9 @@
 				outline: 0;
 			}
 		}
+		#fav_extra {
+			width: 90%;
+		}
 		input[type=text] {
 				-webkit-transition: width 0.4s ease-in-out;
 				transition: width 0.4s ease-in-out;
@@ -407,13 +426,15 @@
 			border: 2px solid darken($pink, 5%);
 			border-radius: 5px;
 			margin: 3px 0;
-			padding: 0 10px;
+			padding: 0 12px;
+			font-size: 22px;
 			cursor: pointer;
 		}
 		li input[type="radio"]:checked + label {
 			background: darken($pink, 15%);
 			border: 2px solid darken($pink, 15%);
 			color: $white;
+			font-size: 22px;
 			transition: all 0.3s ease-out;
 		}
 		button {
@@ -439,6 +460,7 @@
 			width: 50%;
 			border: 2px solid darken($darkblue, 10%);
 			border-radius: 5px;
+			margin-top: 10px;
 			padding: 5px;
 			font: 18px / 16px $menu;
 			&:focus {
@@ -458,13 +480,24 @@
 			margin: 20px 10px 10px;
 			font: 16px / 20px $menu;
 		}
-		a:hover {
+		.invite {
 			color: $teal;
 			transition: all 0.3s ease-out;
 		}
 		button {
 			background: darken($darkblue, 20%);
 			border: 2px solid darken($darkblue, 20%);
+			border-radius: 5px;
+			margin-left: 5px;
+			&:hover {
+				opacity: 1;
+				transition: all 0.5s ease-out;
+				cursor: pointer;
+			}
+		}
+		.sent {
+			background: darken($teal, 20%);
+			border: 2px solid darken($teal, 20%);
 			border-radius: 5px;
 			margin-left: 5px;
 			&:hover {

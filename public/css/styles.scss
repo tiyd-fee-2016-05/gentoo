@@ -64,7 +64,8 @@ button:focus {
 @import "partials/menu-anim";
 @import "partials/wishlists";
 @import "partials/header";
-@import "partials/forms";
+@import "partials/mobile-header";
+// @import "partials/forms";
 @import "partials/login";
 @import "partials/profile";
 @import "partials/wishlists";
@@ -72,5 +73,4 @@ button:focus {
 @import "partials/new-profile";
 @import "partials/edit-profile";
 @import "partials/friends";
-@import "partials/mobile-header";
 @import "partials/mobile-friends";

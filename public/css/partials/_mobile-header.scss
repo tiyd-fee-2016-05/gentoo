@@ -1,22 +1,22 @@
-@media(max-width:767px) {
+@media(max-width: 375px) {
     body {
         font: 20px / 24px $font;
     }
     .friend-photo {
-        height: 300px;
+        height: 350px;
     }
     #menu {
-      #tab1 {
-          bottom: 24%;
+      .tab1 {
+          bottom: 170px;
       }
-      #tab2 {
-          bottom: 15%;
+      .tab2 {
+          bottom: 115px;
       }
-      #tab3 {
-          bottom: 6%;
+      .tab3 {
+          bottom: 60px;
       }
-      #tab4 {
-          bottom: 0.5%;
+      .tab4 {
+          bottom: 5px;
       }
     }
     header {
@@ -27,10 +27,10 @@
             display: inline-block;
             .logo {
                 position: relative;
-                top: -10px;
-                left: -10%;
+                top: 0;
+                left: 10%;
                 margin: 0 auto;
-                font: 60px / 80px $logo;
+                font: 50px / 50px $logo;
                 text-align: center;
             }
             // .logo {
@@ -97,26 +97,18 @@
             }
         }
         .photo {
-            height: 220px;
+            height: 150px;
         }
         .profile-name {
             position: relative;
-            top: -100px;
+            top: -70px;
             left: 0;
             margin: 20px 5%;
-            font: 40px / 30px $font;
+            font: 30px / 30px $menu;
             color: $white;
             i {
                 display: none;
             }
-        }
-        .edit-profile {
-            top: -120px;
-            font: 700 20px / 30px $font;
-        }
-        .unfriend {
-            top: -120px;
-            font: 700 20px / 30px $font;
         }
     }
 }

@@ -1,4 +1,14 @@
 // Friend View
+#friends-container {
+    width: 375px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+
+
 #friend-content {
     position: relative;
     top: -50px;
@@ -6,15 +16,21 @@
     margin: 5%;
     input {
         width: 40%;
-        padding: 5px 16px;
-        border: 2px solid $blue2;
+        padding: 5px 14px;
+        border: 3px solid $blue2;
         border-radius: 5px;
         font: 16px / 14px $font;
         &:focus {
-            outline: 0;
-            // color: $blue2;
-        }
-    }
+  				outline: 0;
+  			}
+  		}
+  		input[type=search] {
+  				-webkit-transition: width 0.4s ease-in-out;
+  				transition: width 0.4s ease-in-out;
+  		}
+  		input[type=search]:focus {
+  				width: 80%;
+  		}
     h1 {
         margin-bottom: 10px;
         font: 24px / 22px $font;
@@ -73,14 +89,7 @@
             cursor: pointer;
         }
     }
-    .uppercase {
-        margin-left: 20px;
-        font: 700 14px / 10px $font;
-        // color: lighten($black, 20%);
-        text-transform: uppercase;
-          padding-bottom: 10px;
 
-    }
     ul {
         // margin-top: 10px;
         h2 {
@@ -106,21 +115,23 @@
             width: 40%;
             margin-top: 10px;
             padding: 0 20px;
-            background: $blue2;
-            border: 2px solid $blue2;
+            background: $darkblue;
+            border: 2px solid $darkblue;
             border-radius: 5px;
             letter-spacing: 1px;
             overflow: hidden;
             h1 {
-                font: 700 24px / 10px $font;
-                color: $white;
+                font: 700 24px / 10px $menu;
+                color: $teal;
                 padding-top: 10px;
             }
             p {
-                margin-left: 20px;
-                font: 700 18px / 12px $font;
-                color: darken($blue2, 10%);
+                margin-left: 26px;
+                padding-bottom: 10px;
+                font: 700 16px / 12px $menu;
+                color: $white;
                 text-transform: uppercase;
+                letter-spacing: 1px;
             }
             a {
                 margin-left: 20px;

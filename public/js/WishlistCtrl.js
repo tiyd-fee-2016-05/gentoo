@@ -2,12 +2,12 @@ gentooApp.controller('newWishlistCtrl', ['$scope', '$rootScope','$http', '$locat
     // if (User.isLoggedIn()) {
     //     $location.path("/");
     // }
-    var rootUrl= "https://6e62d5d1.ngrok.io/";
-    // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+    // var rootUrl= "https://6e62d5d1.ngrok.io/";
+    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
 
     $scope.loginUser = function() {
-        $http({ 
+        $http({
             method: "POST",
             url:    rootUrl + "login",
             data: {

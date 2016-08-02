@@ -14,8 +14,19 @@
     #friend-content {
       margin: 8% 5%;
       input {
-        width: 100%;
+        width: 72%;
         border-radius: 4px;
+        &:focus {
+          border: 3px solid $black;
+          outline: 0;
+        }
+      }
+      input[type=search] {
+          -webkit-transition: width 0.4s ease-in-out;
+          transition: width 0.4s ease-in-out;
+      }
+      input[type=search]:focus {
+          width: 100%;
       }
       .accept {
           background: lighten($blue2, 10%);
@@ -31,7 +42,7 @@
       }
         ul {
             .friend-request {
-                width: 100%;
+                width: 85%;
                 margin-top: 10px;
                 padding: 0 20px;
                 background: $darkblue;
@@ -46,7 +57,7 @@
             }
 
             .friends-list {
-                width: 100%;
+                width: 85%;
                 margin-top: 10px;
                 padding: 0 20px;
             }

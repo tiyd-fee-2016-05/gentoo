@@ -11,21 +11,20 @@
                 <a href="#/home"><h1 class="logo">Gentoo</h1></a>
             </div>
 
-            <h1 class="edit-profile-name animated slideInLeft"><span>Edit Profile:</span> <input type="text" name="login_first_name" ng-model="firstname.user" placeholder="{{loadedprofile.user.first_name}}" />
+            <h1 class="edit-profile-name animated slideInLeft">Edit Profile: <input type="text" name="login_first_name" ng-model="firstname.user" placeholder="{{loadedprofile.user.first_name}}" />
             <input type="text" name="login_last_name" ng-model="lastname.user" placeholder="{{loadedprofile.user.last_name}}" /></h1>
 
             <div id="menu" ng-controller="TabController">
                 <a href="#/home">
-                    <div ng-click="vm.submit(vm.user)" id="tab1" ng-class=""><i class="fa fa-check fa-lg animated jello infinite" aria-hidden="true"></i></div>
+                    <div ng-click="vm.submit(vm.user)" id="menu-tab" class="tab1" ng-class=""><i class="fa fa-check fa-lg animated jello infinite" aria-hidden="true"></i></div>
                 </a>
 
-                <div ng-click="setTab(3)" id="tab2" ng-class="{ active: isSet(2) }"><i class="fa fa-bars fa-lg animated slideInRight" aria-hidden="true"></i></div>
+                <div ng-click="setTab(3)" id="menu-tab" class="tab2" ng-class="{ active: isSet(3) }"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
 
-                <div ng-click="setTab(4)" id="tab3" ng-class="{ active: isSet(3) }"><i class="fa fa-search fa-lg animated slideInRight" aria-hidden="true"></i></div>
+                <div ng-click="setTab(4)" id="menu-tab" class="tab3" ng-class="{ active: isSet(4) }"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
 
 
-
-                <div ng-click="setTab(1)" id="tab4" ng-class="{ active: isSet(1) }"><i class="fa fa-times fa-lg animated slideInRight" aria-hidden="true"></i></div>
+                <div ng-click="setTab(1)" id="menu-tab" class="tab4" ng-class="{ active: isSet(1) }"><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
 
 
                 <div ng-show="isSet(1)">
