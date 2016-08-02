@@ -19,8 +19,8 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
     // Add list items
     $scope.FindTodos = function() {
         console.log(usersearch);
-        // var rootUrl= "https://6e62d5d1.ngrok.io/";
-        var rootUrl = "https://giftbox-tiy.herokuapp.com/";
+        var rootUrl= "https://6e62d5d1.ngrok.io/";
+        // var rootUrl = "https://giftbox-tiy.herokuapp.com/";
         $http({
             url: rootUrl + usersearch + "/profile/ideabox",
             method: "GET",
@@ -31,6 +31,53 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
             console.log(data);
             $scope.todos = data.ideabox
 
+            var arr = [];
+            console.log(arr);
+
+            $scope.viewIdea = function() {
+
+                var vm = this.todo;
+                console.log(vm);
+                arr.push(vm.id);
+                console.log(arr);
+              };
+
+              $scope.clearCompleted = function() {
+
+                var tobeDeleted = arr
+
+                console.log("Delete these please:" + tobeDeleted);
+                var rootUrl= "https://6e62d5d1.ngrok.io/";
+                // var rootUrl = "https://giftbox-tiy.herokuapp.com/";
+                $scope.userToken = User.getToken();
+                var userToken = $scope.userToken
+                var usersearch = $scope.friendtoLoad
+                console.log(userToken)
+               console.log(usersearch);
+
+               $http({
+                   url: rootUrl + usersearch + "/profile/ideabox",
+                   method: "DELETE",
+                   headers: {
+                       'Authorization': userToken
+                   },
+                   data: {
+                       cleared_ideas: tobeDeleted
+                   }
+               }).success(function(data, status, headers, config) {
+                       console.log(data);
+                       $scope.todos = data.ideabox
+                       console.log(data);
+                       console.log(response);
+                       console.log(response.data);
+
+
+                       }).error(function(data, status, headers, config) {
+                       $scope.status = status;
+                   });
+
+              };
+
 
 
             console.log(data);
@@ -40,8 +87,8 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
     }
 
     $scope.AddIdea = function() {
-        // var rootUrl= "https://6e62d5d1.ngrok.io/";
-        var rootUrl = "https://giftbox-tiy.herokuapp.com/";
+        var rootUrl= "https://6e62d5d1.ngrok.io/";
+        // var rootUrl = "https://giftbox-tiy.herokuapp.com/";
         console.log("You had an idea!");
         $http({
             url: rootUrl + usersearch + "/profile/ideabox",
@@ -59,17 +106,6 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
                 console.log(response);
                 console.log(response.data);
 
-                var arr = [];
-                console.log(arr);
-
-                $scope.viewIdea = function() {
-
-                    var vm = this.todo;
-                    console.log(vm);
-                    arr.push(vm.id);
-                    console.log(arr);
-									};
-
 
                 }).error(function(data, status, headers, config) {
                 $scope.status = status;
@@ -78,8 +114,8 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
 
 
 
-        // var rootUrl= "https://6e62d5d1.ngrok.io/";
-        var rootUrl = "https://giftbox-tiy.herokuapp.com/";
+        var rootUrl= "https://6e62d5d1.ngrok.io/";
+        // var rootUrl = "https://giftbox-tiy.herokuapp.com/";
 
         // $http({
         // 					url:  rootUrl + usersearch+ "/profile/ideabox",
@@ -110,14 +146,7 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
 
 
     // Needs to clear selected items from list
-    $scope.clearCompleted = function() {
-        $scope.todos = _.filter($scope.todos, function(todo) {
-            console.log("Delete selected item from idea box");
 
-            return !todo.done;
-            console.log("Delete selected item from idea box");
-        });
-    };
 
 }]);
 

@@ -77,50 +77,62 @@
                 <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
                 <ul class="info-answer">
                     <li ng-repeat="favorite in favoriteList">
-				                  <input type="checkbox" id="e-f1" name="cc" />
-				                      <label for="e-f1">{{favorite.name}} <i ng-click="Favorite(favorite.id); favoriteList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
-			                         </li>
-              		      </ul>
-              		<!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
-              	</div>
-              </form>
-
-            <div class="info holidays">
-                <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
-                <ul class="info-answer">
-                    <li ng-repeat="holiday in holidayList">
-                        <input type="checkbox" id="e-h1" name="cc" />
-                        <label for="e-h1">{{holiday.name}} <i ng-click="deleteHoliday(holiday.id); holidayList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+                        <input type="checkbox" id="e-f1" name="cc" />
+                        <label for="e-f1">Color: {{favorite.color}} <i ng-click="deleteFavorite(favorite.color_string); favoriteList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                    <li ng-repeat="favorite in favoriteList">
+                        <input type="checkbox" id="e-f1" name="cc" />
+                        <label for="e-f1">Animal: {{animall}} <i ng-click="deleteFavorite(favorite.id); favoriteList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                    <li ng-repeat="favorite in favoriteList">
+                        <input type="checkbox" id="e-f1" name="cc" />
+                        <label for="e-f1">Restaurant: {{favorite.restaurant}} <i ng-click="deleteFavorite(favorite); favoriteList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                    <li ng-repeat="favorite in favoriteList">
+                        <input type="checkbox" id="e-f1" name="cc" />
+                        <label for="e-f1">Season: {{favorite.season}} <i ng-click="deleteFavorite(favorite.season); favoriteList.season.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
                     </li>
                 </ul>
-                <!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
+                <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
             </div>
+        </form>
 
-            <div class="info interests">
-                <h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
-                <ul class="info-answer">
-                    <li ng-repeat="interest in interestList">
-                        <input type="checkbox" id="h1" name="cc" />
-                        <label for="h1">{{interest.name}} <i ng-click="deleteInterest(interest.id); interestList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+        <div class="info holidays">
+            <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
+            <ul class="info-answer">
+                <li ng-repeat="holiday in holidayList">
+                    <input type="checkbox" id="e-h1" name="cc" />
+                    <label for="e-h1">{{holiday.name}} <i ng-click="deleteHoliday(holiday.id); holidayList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+                </li>
+            </ul>
+            <!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
+        </div>
+
+        <div class="info interests">
+            <h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
+            <ul class="info-answer">
+                <li ng-repeat="interest in interestList">
+                    <input type="checkbox" id="h1" name="cc" />
+                    <label for="h1">{{interest.name}} <i ng-click="deleteInterest(interest.id); interestList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+                </li>
+            </ul>
+            <!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
+        </div>
+        </form>
+
+
+        <div ng-controller="TabController2">
+            <h1 class="wishlists" ng-click="setTab(1)">Wishlists</h1>
+
+            <section class="lists" ng-class-odd="'lightblue'" ng-class-even="'darkblue'" ng-repeat="list in wishlistArray">
+                <span class="delete-list" ng-click="deleteWishlist(list.id); wishlistArray.splice($index,1)">delete wishlist</span>
+                <h1 class="list-name">{{list.name}} <span class="edit-list">edit name</span></h1>
+                <ul>
+                    <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+                        <h1 class="info-answer">{{item.name}}</h1>
+                        <h2><span class="edit">edit</span></a><span class="delete" ng-click="deleteWishlistItem(list.id, item.id); list.items.splice($index,1)">delete</span></h2>
                     </li>
                 </ul>
-                <!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
-            </div>
-            </form>
+            </section>
 
-
-            <div ng-controller="TabController2">
-                <h1 class="wishlists" ng-click="setTab(1)">Wishlists</h1>
-
-                <section class="lists" ng-class-odd="'lightblue'" ng-class-even="'darkblue'" ng-repeat="list in wishlistArray">
-                    <span class="delete-list" ng-click="deleteWishlist(list.id); wishlistArray.splice($index,1)" >delete wishlist</span>
-                    <h1 class="list-name">{{list.name}} <span class="edit-list">edit name</span></h1>
-                    <ul>
-                        <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
-                            <h1 class="info-answer">{{item.name}}</h1>
-                            <h2><span class="edit">edit</span></a><span class="delete" ng-click="deleteWishlistItem(list.id, item.id); list.items.splice($index,1)">delete</span></h2>
-                        </li>
-                    </ul>
-                </section>
-
-            </div>
+        </div>

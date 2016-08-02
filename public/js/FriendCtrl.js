@@ -5,8 +5,8 @@ gentooApp.controller('FriendController', ['$rootScope', '$scope', '$http', '$loc
     if (!$scope.userToken) {
         $location.path("#/login");
     }
-    // var rootUrl= "https://6e62d5d1.ngrok.io/";
-    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+    var rootUrl= "https://6e62d5d1.ngrok.io/";
+    // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
 
 var username = $rootScope.username

@@ -6,16 +6,16 @@ gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '
     }
 
 
-  var usersearch = $scope.friendtoLoad
-  console.log(usersearch);
+    var usersearch = $scope.friendtoLoad
+    console.log(usersearch);
 
 
-  $(document).ready(function(){
-      $(this).scrollTop(0);
-  });
+    $(document).ready(function() {
+        $(this).scrollTop(0);
+    });
 
-    // var rootUrl = "https://6e62d5d1.ngrok.io/";
-    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+    var rootUrl = "https://6e62d5d1.ngrok.io/";
+    // var rootUrl = "https://giftbox-tiy.herokuapp.com/";
 
 
     var userToken = $scope.userToken
@@ -30,10 +30,10 @@ gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '
         },
     }).success(function(data, status, headers, config) {
 
-        $rootScope.loadedfriend= data;
+        $rootScope.loadedfriend = data;
         $rootScope.friendholidayList = data.user.holidays
         $rootScope.friendinterestList = data.user.interests
-         $rootScope.friendfavoriteList = data.user.favorites
+        $rootScope.friendfavoriteList = data.user.favorites
 
     }).error(function(data, status, headers, config) {
         $scope.status = status;
@@ -41,35 +41,37 @@ gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '
     //
     // //
     $http({
-              url:  rootUrl +usersearch + "/wishlists",
-           method: "GET",
-           headers: {'Authorization': userToken},
-           data: {
-               username: usersearch
-             }
-          }).success(function (data, status, headers, config) {
+        url: rootUrl + usersearch + "/wishlists",
+        method: "GET",
+        headers: {
+            'Authorization': userToken
+        },
+        data: {
+            username: usersearch
+        }
+    }).success(function(data, status, headers, config) {
 
-                   $rootScope.friendwishlistArray = data.user
+        $rootScope.friendwishlistArray = data.user
 
-            }).error(function (data, status, headers, config) {
-                $scope.status = status;
-            });//End GET request for friends
+    }).error(function(data, status, headers, config) {
+        $scope.status = status;
+    }); //End GET request for friends
 
-            $scope.findFriend = function(clickedperson) {
-
-
-              $scope.searchedFriend = GetFriend.rememberFriend(clickedperson);
-
+    $scope.findFriend = function(clickedperson) {
 
 
+        $scope.searchedFriend = GetFriend.rememberFriend(clickedperson);
 
 
-            }
 
-$scope.getItem = function(selectedItem) {
-  $scope.clickedItem = selectedItem
-    console.log(  $scope.clickedItem)
-}
+
+
+    }
+
+    $scope.getItem = function(selectedItem) {
+        $scope.clickedItem = selectedItem
+        console.log($scope.clickedItem)
+    }
 
 
 }]);

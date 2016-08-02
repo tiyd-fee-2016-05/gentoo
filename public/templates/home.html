@@ -72,10 +72,12 @@
                 <li ng-repeat="favorite in favoriteList">
                     <input type="checkbox" id="f1" name="cc" />
                     <label for="f1">Animal: {{favorite.animal}}</label>
-                </li><li ng-repeat="favorite in favoriteList">
+                </li>
+                <li ng-repeat="favorite in favoriteList">
                     <input type="checkbox" id="f1" name="cc" />
                     <label for="f1">Restaurant: {{favorite.restaurant}}</label>
-                </li><li ng-repeat="favorite in favoriteList">
+                </li>
+                <li ng-repeat="favorite in favoriteList">
                     <input type="checkbox" id="f1" name="cc" />
                     <label for="f1">Season: {{favorite.season}}</label>
                 </li>
@@ -150,11 +152,11 @@
                     </ul>
 
                     <p><i class="fa fa-check" aria-hidden="true"></i>
-                        <button type="submit" ng-click="">save list</button>
+                        <button type="submit" ng-click="AddList()">save list</button>
                     </p>
 
                     <div id="inner" class="" ng-click="showme=true">
-                        <p>would you like to start adding items to this list?</p>
+                        <p>Add items to this list</p>
                     </div>
                     <div ng-show="showme" id="tab-inner">
                         <ul>
@@ -165,32 +167,11 @@
                                 <input type="text" id="item_desc" placeholder="description" autocomplete="on">
                             </li>
                             <li>
-                                <!-- <input type="text" id="item_holiday" placeholder="what holiday is this for?" autocomplete="on"> -->
-                                <select>
-                                  <option>What holiday is this for?</option>
-                                  <option ng-repeat="holiday in holidayList" id="item_holiday" value="">{{holiday.name}}</option>
-                                </select>
-
-                                <select data-placeholder="Choose a Country..." class="chosen-select" style="width:350px;" tabindex="2">
-                                  <option value=""></option>
-                                  <option value="United States">United States</option>
-                                  <option value="United Kingdom">United Kingdom</option>
-                                </select>
-
-                                <select data-placeholder="Choose a Country..." class="chosen-select" multiple style="width:350px;" tabindex="4">
-                                  <option value=""></option>
-                                  <option value="United States">United States</option>
-                                  <option value="United Kingdom">United Kingdom</option>
-                                  <option value="Afghanistan">Afghanistan</option>
-                                  <option value="Aland Islands">Aland Islands</option>
-                                  <option value="Albania">Albania</option>
-                                  <option value="Algeria">Algeria</option>
-                                  <option value="American Samoa">American Samoa</option>
-                                </select>
+                                <input type="text" id="item_url" placeholder="description" autocomplete="on">
                             </li>
-                            <li>
-                                <input type="text" id="item_interests" placeholder="tag a few interests" autocomplete="on">
-                            </li>
+
+                            <!-- <input type="text" id="item_holiday" placeholder="what holiday is this for?" autocomplete="on"> -->
+
 
 
 
@@ -210,16 +191,16 @@
                 <form>
                     <ul>
                         <li>
-                            <input type="text" id="item_title" placeholder="item name" autocomplete="on" autofocus required>
+                            <input type="text" id="item_title_add" placeholder="item name" autocomplete="on" autofocus required>
                         </li>
                         <li>
-                            <input type="text" id="item_desc" placeholder="description" autocomplete="on">
+                            <input type="text" id="item_desc_add" placeholder="description" autocomplete="on">
                         </li>
                         <li>
                             <!-- <input type="text" id="item_holiday" placeholder="what holiday is this for?" autocomplete="on"> -->
                         </li>
                         <li>
-                            <input type="text" id="item_desc" placeholder="tag a few interests" autocomplete="on">
+                            <input type="text" id="item_url_add" placeholder="link to this item" autocomplete="on">
                         </li>
 
 
@@ -227,7 +208,7 @@
                     </ul>
 
                     <p><i class="fa fa-check" aria-hidden="true"></i>
-                        <button type="submit" ng-click="">save item</button>
+                        <button type="submit" ng-click="addWishlistItem(clickedhomeList.id)">save item</button>
                     </p>
                 </form>
             </div>
@@ -236,14 +217,14 @@
                 <h1 class="header">{{clickedhomeItem.name}}</h1>
                 <!--make this changeable-->
                 <form>
-                  <ul>
-                      <li>
-                          <h1><span class="item-header">Description:</span>{{clickedhomeItem.description}}</h1></li>
-                      <li>
-                          <h1><span class="item-header">URL:</span> {{clickedhomeItem.product_url}}</h1></li>
-                      <li>
-                          <h1><span class="item-header">Interests:</span>{{clickedhomeItem.product_url}}</h1></li>
-                  </ul>
+                    <ul>
+                        <li>
+                            <h1><span class="item-header">Description:</span>{{clickedhomeItem.description}}</h1></li>
+                        <li>
+                            <h1><span class="item-header">URL:</span> {{clickedhomeItem.product_url}}</h1></li>
+                        <li>
+                            <h1><span class="item-header">Interests:</span>{{clickedhomeItem.product_url}}</h1></li>
+                    </ul>
 
                     <p>
                         <button type="submit" ng-click=""><i class="fa fa-times" aria-hidden="true"></i></button>
