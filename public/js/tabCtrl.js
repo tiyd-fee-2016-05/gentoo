@@ -49,13 +49,38 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
 							}).success(function (data, status, headers, config) {
 						console.log(data);
 								$scope.todos= data.ideabox
-
-
-
 								console.log(data);
 								}).error(function (data, status, headers, config) {
 										$scope.status = status;
 								});
+			}
+
+			$scope.getIdeaID = function(ideaID){
+				console.log("This is idea number " + ideaID);
+
+				$scope.clearedIdeas = [];
+
+
+				$scope.clearedIdeas.push(ideaID);
+console.log($scope.clearedIdeas);
+
+
+
+				// var rootUrl= "https://6e62d5d1.ngrok.io/";
+				var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+
+				// $http({
+				// 					url:  rootUrl + usersearch+ "/profile/ideabox",
+				// 			 method: "POST",
+				// 			 headers: {'Authorization': userToken},
+				// 			 data: {text: $('#ideaboxText').val(),  }
+				// 			}).success(function (data, status, headers, config) {
+				// 		console.log(data);
+				// 				$scope.todos= data.ideabox
+				// 				console.log(data);
+				// 				}).error(function (data, status, headers, config) {
+				// 						$scope.status = status;
+				// 				});
 			}
 
 
@@ -73,10 +98,9 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
 			};
 
 
-
 // Needs to clear selected items from list
 			$scope.clearCompleted = function() {
-				$scope.todos = _.filter($scope.todos, function(todo) {
+				$scope.todos = $scope.filter($scope.todos, function(todo) {
 					console.log("Delete selected item from idea box");
 
 					return !todo.done;

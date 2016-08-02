@@ -34,7 +34,7 @@
                         </li>
 
                         <li ng-repeat="todo in todos">
-                            <input type="checkbox" ng-model="todo.done" />
+                            <input type="checkbox" id={{todo.id}} ng-click="getIdeaID(todo.id)" ng-model="todo.done" />
                             <span class="done-{{todo.done}}">{{todo.text}}</span>
                         </li>
 

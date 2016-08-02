@@ -67,7 +67,17 @@
             <ul class="info-answer">
                 <li ng-repeat="favorite in favoriteList">
                     <input type="checkbox" id="f1" name="cc" />
-                    <label for="f1">{{favorite}}</label>
+                    <label for="f1">Favorite Color: {{favorite.color}}</label>
+                </li>
+                <li ng-repeat="favorite in favoriteList">
+                    <input type="checkbox" id="f1" name="cc" />
+                    <label for="f1">Favorite Animal: {{favorite.animal}}</label>
+                </li><li ng-repeat="favorite in favoriteList">
+                    <input type="checkbox" id="f1" name="cc" />
+                    <label for="f1">Favorite Restaurant: {{favorite.restaurant}}</label>
+                </li><li ng-repeat="favorite in favoriteList">
+                    <input type="checkbox" id="f1" name="cc" />
+                    <label for="f1">Favorite Season: {{favorite.season}}</label>
                 </li>
             </ul>
             <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
