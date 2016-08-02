@@ -23,6 +23,8 @@ var userToken = $scope.userToken
             }
         }).then(function(response) {
             User.logIn(response.data.token);
+                    $location.path("/new-profile");
+
         }, function() {
             alert("Something went wrong!");
         })

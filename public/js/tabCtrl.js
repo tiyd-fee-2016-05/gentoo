@@ -100,7 +100,7 @@ console.log($scope.clearedIdeas);
 
 // Needs to clear selected items from list
 			$scope.clearCompleted = function() {
-				$scope.todos = $scope.filter($scope.todos, function(todo) {
+				$scope.todos = _.filter($scope.todos, function(todo) {
 					console.log("Delete selected item from idea box");
 
 					return !todo.done;
