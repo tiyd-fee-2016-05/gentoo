@@ -247,7 +247,7 @@
                 <h1 class="list-name">{{list.name}}</h1>
             </div>
             <ul>
-                <span ng-click="setTab(2)" class="" ng-class="{ active: isSet(2) }"><i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+                <span ng-click="setTab(2)" ng-class="{ active: isSet(2) }"><i class="fa fa-plus fa-2x" aria-hidden="true"></i>
             		</span>
                 <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
                     <h1>{{item.name}}</h1>

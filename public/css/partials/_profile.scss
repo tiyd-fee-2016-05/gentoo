@@ -94,7 +94,7 @@
 }
 .info {
     display: inline-block;
-    width: 40%;
+    width: 85%;
     border-radius: 5px;
     margin: 10px;
     padding: 10px 8px;
@@ -130,7 +130,6 @@
     }
 }
 .dates {
-    width: 40%;
     background: $blue2;
     li input[type="checkbox"]:checked + label {
         background: darken($teal, 22%);

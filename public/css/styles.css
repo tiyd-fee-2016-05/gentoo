@@ -820,7 +820,7 @@ header .profile-name {
 
 .info {
   display: inline-block;
-  width: 40%;
+  width: 85%;
   border-radius: 5px;
   margin: 10px;
   padding: 10px 8px;
@@ -850,7 +850,6 @@ header .profile-name {
       outline: 0; }
 
 .dates {
-  width: 40%;
   background: #2C8C99; }
   .dates li input[type="checkbox"]:checked + label {
     background: #1d8e81;
