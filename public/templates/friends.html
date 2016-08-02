@@ -64,10 +64,10 @@
 
                 <button ng-click="showdeny=true; ; denyFriend(requestingfriend.username)" ng-hide="showaccept" ng-hide="showdeny" class="deny">deny <i class="fa fa-times" aria-hidden="true"></i></button>
 
-                <p ng-show="showaccept" class="Accept">You and {{requestingfriend.first_name}} {{requestingfriend.last_name}} are now friends!</p>
-                <a href="#/friend-profile" ng-show="showaccept" class="Accept" class="uppercase" ng-click="findFriend(requestingfriend.username)">View their profile</a>
+                <p ng-show="showaccept" class="pAccept"><i class="fa fa-check" aria-hidden="true"></i> You and {{requestingfriend.first_name}} {{requestingfriend.last_name}} are now friends!</p>
+                <a href="#/friend-profile" ng-show="showaccept" class="view" ng-click="findFriend(requestingfriend.username)"><i class="fa fa-caret-right" aria-hidden="true"></i> View their profile</a>
 
-                <p ng-show="showdeny" class="pDeny">You have denied a request from {{requestingfriend.first_name}} {{requestingfriend.last_name}}.</p>
+                <p ng-show="showdeny" class="pDeny"><i class="fa fa-times" aria-hidden="true"></i> You have denied a request from {{requestingfriend.first_name}} {{requestingfriend.last_name}}.</p>
             </li>
         </ul>
     </section>

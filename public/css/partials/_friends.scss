@@ -40,23 +40,20 @@
 
     .pAccept {
         padding-bottom: 10px;
-        font: 18px / 18px $font;
+        font: 18px / 20px $font;
         color: $white;
         letter-spacing: 0;
     }
     a {
-
-      font-size: 16px;
-        color: darken($blue, 20%);
-        &:hover {
-            color: darken($blue, 20%);
-        }
+        font-size: 16px;
+        color: $white;
     }
+
     .pDeny {
       padding-bottom: 10px;
-      font: 18px / 18px $font;
-        color: $red;
-        letter-spacing: 0;
+      font: 18px / 20px $font;
+      color: $white;
+      letter-spacing: 0;
     }
     button {
         background: transparent;
@@ -100,15 +97,22 @@
         .friend-request {
             width: 40%;
             margin-top: 10px;
-            padding: 0 20px;
+            padding: 10px 20px;
             background: none;
             border: 2px solid $blue2;
             border-radius: 5px;
             letter-spacing: 1px;
-            overflow: hidden;
             h2 {
                 font: 20px / 22px $font;
                 color: $black;
+            }
+            .view {
+              background: darken($blue2, 10%);
+              border: 2px solid darken($blue2, 10%);
+              border-radius: 5px;
+              padding: 0 10px;
+              font: 18px / 24px $menu;
+              color: $white;
             }
         }
         .friends-list {
