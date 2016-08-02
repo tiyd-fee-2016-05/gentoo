@@ -258,8 +258,9 @@
 				<div class="invite" ng-click="showinput=true">invite them via email <i class="fa fa-caret-down" aria-hidden="true"></i></div>
 
 				<div ng-show="showinput">
-					<i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
-					<input id="inviteEmail" type="search" placeholder="add friend's email">
+					<i class="fa fa-envelope fa-lg" aria-hidden="true" ng-hide="showme"></i>
+          <i class="fa fa-check fa-lg animated jello" aria-hidden="true" ng-click="showme=false" ng-show="showme"></i>
+					<input id="inviteEmail" type="text" placeholder="add friend's email">
 					<br>
 					<button type="submit" ng-click="showme=true" ng-hide="showme" ng-click="sendEmail()">send email</a>
 					</button>

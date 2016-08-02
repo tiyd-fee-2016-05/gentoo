@@ -31,7 +31,16 @@
                     <li><a href="#/home"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
                     <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
                     <li ng-click="logout()"><a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a></li>
-                    <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i> Invite</a></li>
+                    <li ng-click="showinput=true"><i class="fa fa-plus" aria-hidden="true"></i> Invite</a></li>
+                    <li ng-show="showinput">
+                        <!-- <i class="fa fa-envelope fa-lg" aria-hidden="true"></i> -->
+                        <input id="inviteEmail" type="text" placeholder="add friend's email">
+
+                        <button class="menu-email-sent" type="submit" ng-click="showme=true" ng-hide="showme" ng-click="sendEmail()"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                        <button class="menu-email-sent" type="text" ng-click="showme=false" ng-show="showme" ng-click="sendEmail()"><i class="fa fa-check animated jello" aria-hidden="true"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
 

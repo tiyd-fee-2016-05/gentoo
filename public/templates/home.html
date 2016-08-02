@@ -1,105 +1,115 @@
 <!-- Profile View -->
-    <div id="profile-main-container" ng-controller="HomeController">
+<div id="profile-main-container" ng-controller="HomeController">
 
-        <header>
-            <section class="photo">
-            </section>
-
-            <h1 class="profile-name animated slideInLeft"><i class="fa fa-user" aria-hidden="true"></i>
-           {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
-
-            <div class="nav">
-                <a href="#/home"><h1 class="logo">Gentoo</h1></a>
-            </div>
-
-            <div id="menu" ng-controller="TabController">
-                <div ng-click="setTab(3)" id="menu-tab" class="tab2" ng-class="{ active: isSet(3) }"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
-
-                <div ng-click="setTab(4)" id="menu-tab" class="tab3" ng-class="{ active: isSet(4) }"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
-
-                <div ng-click="setTab(1)" id="menu-tab" class="tab4" ng-class="{ active: isSet(1) }"><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
-
-                <div ng-show="isSet(1)">
-                </div>
-
-
-                <div ng-show="isSet(3)" id="tab-menu" class="animated bounceInRight" ng-controller="LoginCtrl">
-                    <ul>
-                        <li><a href="#/profile-edit"><i class="fa fa-user-times" aria-hidden="true"></i> Edit Profile</a></li>
-                        <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
-                        <li ng-click="logout()"><a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a></li>
-                        <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i> Invite</a></li>
-                    </ul>
-                </div>
-
-                <div ng-show="isSet(4)" id="tab-search" class="animated bounceInRight">
-                    <i class="fa fa-search fa-lg" aria-hidden="true"></i>
-                    <input type="search" ng-model="searchBox" placeholder="search users">
-
-                    <div id="friend-search" ng-if="searchBox">
-                        <ul>
-                            <li ng-repeat="person in friendList | filter: searchBox">
-                                <a href="#/friend-profile">
-                                    <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
-                                    <p class="uppercase">@{{person.username}}</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-
-        <section class="user-photo">
+    <header>
+        <section class="photo">
         </section>
 
+        <h1 class="profile-name animated slideInLeft"><i class="fa fa-user" aria-hidden="true"></i>
+           {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
 
-        <div class="smaller-margin">
-            <div class="info dates animated slideInLeft">
-                <h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
-                <ul class="info-answer">
-                    <li>{{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</li>
-                </ul>
-                <!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
-            </div>
-
-            <div class="info favorites animated slideInRight">
-                <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
-                <ul class="info-answer">
-                    <li ng-repeat="color in colorList">
-                        <input type="checkbox" id="f1" name="cc" />
-                        <label for="f1">{{color}}</label>
-                    </li>
-                </ul>
-                <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
-            </div>
-
-            <div class="info holidays animated slideInRight">
-                <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
-                <ul class="info-answer">
-                    <li ng-repeat="holiday in holidayList">
-                        <input type="checkbox" id="h1" name="cc" />
-                        <label for="h1">{{holiday.name}}</label>
-                    </li>
-                </ul>
-                <!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
-            </div>
-
-            <div class="info interests animated slideInLeft">
-                <h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
-                <ul class="info-answer">
-                    <li ng-repeat="interest in interestList">
-                        <input type="checkbox" id="i1" name="cc" />
-                        <label for="i1">{{interest.name}}</label>
-                    </li>
-                </ul>
-                <!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
-            </div>
+        <div class="nav">
+            <a href="#/home"><h1 class="logo">Gentoo</h1></a>
         </div>
 
-        <!-- old code -->
-        <!-- <section class="content content-main">
+        <div id="menu" ng-controller="TabController">
+            <div ng-click="setTab(3)" id="menu-tab" class="tab2" ng-class="{ active: isSet(3) }"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
+
+            <div ng-click="setTab(4)" id="menu-tab" class="tab3" ng-class="{ active: isSet(4) }"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
+
+            <div ng-click="setTab(1)" id="menu-tab" class="tab4" ng-class="{ active: isSet(1) }"><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
+
+            <div ng-show="isSet(1)">
+            </div>
+
+
+            <div ng-show="isSet(3)" id="tab-menu" class="animated bounceInRight" ng-controller="LoginCtrl">
+                <ul>
+                    <li><a href="#/profile-edit"><i class="fa fa-user-times" aria-hidden="true"></i> Edit Profile</a></li>
+                    <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
+                    <li ng-click="logout()"><a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a></li>
+                    <li ng-click="showinput=true"><i class="fa fa-plus" aria-hidden="true"></i> Invite</a>
+                    </li>
+                    <li ng-show="showinput">
+                        <!-- <i class="fa fa-envelope fa-lg" aria-hidden="true"></i> -->
+                        <input id="inviteEmail" type="text" placeholder="add friend's email">
+
+                        <button class="menu-email-sent" type="submit" ng-click="showme=true" ng-hide="showme" ng-click="sendEmail()"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                        <button class="menu-email-sent" type="text" ng-click="showme=false" ng-show="showme" ng-click="sendEmail()"><i class="fa fa-check animated jello" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div ng-show="isSet(4)" id="tab-search" class="animated bounceInRight">
+                <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                <input type="search" ng-model="searchBox" placeholder="search users">
+
+                <div id="friend-search" ng-if="searchBox">
+                    <ul>
+                        <li ng-repeat="person in friendList | filter: searchBox">
+                            <a href="#/friend-profile">
+                                <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+                                <p class="uppercase">@{{person.username}}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="user-photo">
+    </section>
+
+
+    <div class="smaller-margin">
+        <div class="info dates animated slideInLeft">
+            <h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
+            <ul class="info-answer">
+                <li>{{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</li>
+            </ul>
+            <!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
+        </div>
+
+        <div class="info favorites animated slideInRight">
+            <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
+            <ul class="info-answer">
+                <li ng-repeat="color in colorList">
+                    <input type="checkbox" id="f1" name="cc" />
+                    <label for="f1">{{color}}</label>
+                </li>
+            </ul>
+            <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
+        </div>
+
+        <div class="info holidays animated slideInRight">
+            <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
+            <ul class="info-answer">
+                <li ng-repeat="holiday in holidayList">
+                    <input type="checkbox" id="h1" name="cc" />
+                    <label for="h1">{{holiday.name}}</label>
+                </li>
+            </ul>
+            <!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
+        </div>
+
+        <div class="info interests animated slideInLeft">
+            <h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
+            <ul class="info-answer">
+                <li ng-repeat="interest in interestList">
+                    <input type="checkbox" id="i1" name="cc" />
+                    <label for="i1">{{interest.name}}</label>
+                </li>
+            </ul>
+            <!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
+        </div>
+    </div>
+
+    <!-- old code -->
+    <!-- <section class="content content-main">
 
             <h2 class="profile-birthday"><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</h2>
 
@@ -110,94 +120,45 @@
             <h2 class="profile-holidays" ng-repeat="holiday in holidayList">  |&nbsp; {{holiday}}  &nbsp;</h2>
         </section> -->
 
-        <!-- <section class="content content-details">
+    <!-- <section class="content content-details">
             <span>Interests</span>
             <h2 class="profile-interests" ng-repeat="interest in interestList">|&nbsp; {{interest}}  &nbsp;</h2>
         </section> -->
 
-        <!-- <section class="content content-details">
+    <!-- <section class="content content-details">
             <span>Favorite Colors</span>
             <h2 class="profile-colors" ng-repeat="color in colorList">|&nbsp; {{color}}  &nbsp;</h2>
         </section> -->
 
-        <!-- <form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
+    <!-- <form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
         Username    <br/><input type="text" ng-model="form.username">    <br/><br/>
         Password: <br/><input type="text" ng-model="form.password"> <br/><br/>
 
           <!-<button ng-click="save()" >Save</button> -->
-        <!-- <input type="submit" ngClick="Submit" >
+    <!-- <input type="submit" ngClick="Submit" >
 
         </form> -->
-        <div ng-controller="TabController2">
+    <div ng-controller="TabController2">
 
-            <!-- Wishlist tab-modal -->
-            <div ng-show="isSet(4)" id="tab-wishlist">
-                <h1 class="header">Add new wishlist:</h1>
-                <!--make this changeable-->
-                <form>
-                    <ul>
-                        <li>
-                            <input type="text" id="wishlist_title" placeholder="wishlist name" autocomplete="on" required>
-                        </li>
-                    </ul>
+        <!-- Wishlist tab-modal -->
+        <div ng-show="isSet(4)" id="tab-wishlist">
+            <h1 class="header">Add new wishlist:</h1>
+            <!--make this changeable-->
+            <form>
+                <ul>
+                    <li>
+                        <input type="text" id="wishlist_title" placeholder="wishlist name" autocomplete="on" required>
+                    </li>
+                </ul>
 
-                    <p><i class="fa fa-check" aria-hidden="true"></i>
-                        <button type="submit" ng-click="">save list</button>
-                    </p>
+                <p><i class="fa fa-check" aria-hidden="true"></i>
+                    <button type="submit" ng-click="AddList(); setTab(1)">save list</button>
+                </p>
 
-                    <div id="inner" class="" ng-click="showme=true">
-                        <p>would you like to start adding items to this list?</p>
-                    </div>
-                    <div ng-show="showme" id="tab-inner">
-                        <ul>
-                            <li>
-                                <input type="text" id="item_title" placeholder="item name" autocomplete="on" required>
-                            </li>
-                            <li>
-                                <input type="text" id="item_desc" placeholder="description" autocomplete="on">
-                            </li>
-                            <li>
-                                <input type="text" id="item_url" placeholder="url" autocomplete="on">
-
-                                <!--
-                                <select data-placeholder="Choose a Country..." class="chosen-select" style="width:350px;" tabindex="2">
-                                  <option value=""></option>
-                                  <option value="United States">United States</option>
-                                  <option value="United Kingdom">United Kingdom</option>
-                                </select>
-
-                                <select data-placeholder="Choose a Country..." class="chosen-select" multiple style="width:350px;" tabindex="4">
-                                  <option value=""></option>
-                                  <option value="United States">United States</option>
-                                  <option value="United Kingdom">United Kingdom</option>
-                                  <option value="Afghanistan">Afghanistan</option>
-                                  <option value="Aland Islands">Aland Islands</option>
-                                  <option value="Albania">Albania</option>
-                                  <option value="Algeria">Algeria</option>
-                                  <option value="American Samoa">American Samoa</option>
-                                </select> -->
-                            </li>
-                            <li>
-                                <!-- <input type="text" id="item_interests" placeholder="tag a few interests" autocomplete="on"> -->
-                                <select>
-                                    <option>Add an interest:</option>
-                                    <option ng-repeat="interest in interestList" id="item_holiday" value="">{{interest.name}}</option>
-                                </select>
-                            </li>
-                            <!-- 				<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
-                        </ul>
-                        <p><i class="fa fa-check" aria-hidden="true"></i>
-                            <button type="submit" ng-click="AddList()">save list & list item</button>
-                        </p>
-                    </div>
-                </form>
-            </div>
-
-            <!-- Wishlist add-item modal tab -->
-            <div ng-show="isSet(2)" id="tab-wishlist-item">
-                <h1 class="header">Add new item to (wishlist):</h1>
-                <!--make this changeable-->
-                <form>
+                <div id="inner" class="" ng-click="showme=true">
+                    <p>would you like to start adding items to this list?</p>
+                </div>
+                <div ng-show="showme" id="tab-inner">
                     <ul>
                         <li>
                             <input type="text" id="item_title" placeholder="item name" autocomplete="on" required>
@@ -207,77 +168,93 @@
                         </li>
                         <li>
                             <input type="text" id="item_url" placeholder="url" autocomplete="on">
-                            <select>
                         </li>
                         <li>
-                            <option>Add an interest:</option>
-                            <option ng-repeat="interest in interestList" id="item_holiday" value="">{{interest.name}}</option>
+                            <!-- <input type="text" id="item_interests" placeholder="tag a few interests" autocomplete="on"> -->
+                            <select>
+                                <option>add an interest:</option>
+                                <option ng-repeat="interest in interestList" id="item_holiday" value="">{{interest.name}}</option>
                             </select>
                         </li>
-                        <!-- 			<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
+                        <!-- 				<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
                     </ul>
-
                     <p><i class="fa fa-check" aria-hidden="true"></i>
-                        <button type="submit" ng-click="">save item</button>
+                        <button type="submit" ng-click="AddList(); setTab(1)">save list & list item</button>
                     </p>
-                </form>
-            </div>
-
-            <div ng-show="isSet(3)" id="tab-wishlist-details">
-                <h1 class="header">(item name here):</h1>
-                <!--make this changeable-->
-                <form>
-                    <ul>
-                        <li>
-                            <h1><span class="item-header">Description:</span> description here</h1></li>
-                        <li>
-                            <h1><span class="item-header">Holidays:</span> holidays here</h1></li>
-                        <li>
-                            <h1><span class="item-header">Interests:</span> interests here</h1></li>
-                    </ul>
-
-                    <p>
-                        <button type="submit" ng-click=""><i class="fa fa-times" aria-hidden="true"></i></button>
-                    </p>
-            </div>
-
-            <div class="isSet(1)">
-            </div>
-
-
-            <h1 class="add-list" ng-click="setTab(4)" class="" ng-class="{ active: isSet(1) }">add new wishlist <i class="fa fa-plus" aria-hidden="true"></i></h1>
-
-            <h1 class="wishlists" ng-click="setTab(1)">Wishlists</h1>
-
-
-            <section class="lists" ng-class-odd="'lightblue'" ng-class-even="'darkblue'" ng-repeat="list in wishlistArray">
-                <div class="list-header">
-                    <h1 class="list-name">{{list.name}}</h1>
                 </div>
-                <ul>
-                    <span ng-click="setTab(2)" class="" ng-class="{ active: isSet(2) }"><i class="fa fa-plus fa-2x" aria-hidden="true"></i>
-            		</span>
-                    <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
-                        <h1>{{item.name}}</h1>
-                        <h2>click to view details</h2>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- <section class="lists darkblue" ng-repeat="list in wishlistArray">
-                <div class="list-header">
-                    <h1 class="list-name">{{list.name}}</h1>
-                </div>
-                <ul>
-                    <span ng-click="setTab(2)" class="" ng-class="{ active: isSet(2) }"><i class="fa fa-plus fa-2x" aria-hidden="true"></i>
-            		</span>
-                    <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
-                        <h1>{{item.name}}</h1>
-                        <h2>click to view details</h2>
-                    </li>
-                </ul>
-            </section> -->
+            </form>
         </div>
+
+        <!-- Wishlist add-item modal tab -->
+        <div ng-show="isSet(2)" id="tab-wishlist-item">
+            <h1 class="header">Add new item to (wishlist):</h1>
+            <!--make this changeable-->
+            <form>
+                <ul>
+                    <li>
+                        <input type="text" id="item_title" placeholder="item name" autocomplete="on" required>
+                    </li>
+                    <li>
+                        <input type="text" id="item_desc" placeholder="description" autocomplete="on">
+                    </li>
+                    <li>
+                        <input type="text" id="item_url" placeholder="url" autocomplete="on">
+                        <select>
+                    </li>
+                    <li>
+                        <option>add an interest:</option>
+                        <option ng-repeat="interest in interestList" id="item_holiday" value="">{{interest.name}}</option>
+                        </select>
+                    </li>
+                    <!-- 			<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
+                </ul>
+
+                <p><i class="fa fa-check" aria-hidden="true"></i>
+                    <button type="submit" ng-click="AddList(); setTab(1)">save item</button>
+                </p>
+            </form>
+        </div>
+
+        <div ng-show="isSet(3)" id="tab-wishlist-details">
+            <h1 class="header">(item name here):</h1>
+                <ul>
+                    <li><h1>in <span class="item-header">(wishlist name here)</span>
+                    </li>
+                    <li>
+                        <h1><span class="item-header">Description:</span> description here</h1></li>
+                    <li>
+                        <h1><span class="item-header">Url:</span> url here</h1></li>
+                    <li>
+                        <h1><span class="item-header">Interests:</span> interests here</h1></li>
+                </ul>
+
+                <p>
+                    <button type="submit" ng-click="setTab(1)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                </p>
+        </div>
+
+        <div class="isSet(1)">
+        </div>
+
+
+        <h1 class="add-list" ng-click="setTab(4)" class="" ng-class="{ active: isSet(1) }">add new wishlist <i class="fa fa-plus" aria-hidden="true"></i></h1>
+
+        <h1 class="wishlists" ng-click="setTab(1)">Wishlists</h1>
+
+
+        <section class="lists" ng-class-odd="'lightblue'" ng-class-even="'darkblue'" ng-repeat="list in wishlistArray">
+            <div class="list-header">
+                <h1 class="list-name">{{list.name}}</h1>
+            </div>
+            <ul>
+                <span ng-click="setTab(2)" class="" ng-class="{ active: isSet(2) }"><i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+            		</span>
+                <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+                    <h1>{{item.name}}</h1>
+                    <h2>click to view details</h2>
+                </li>
+            </ul>
+        </section>
     </div>
 </div>
 

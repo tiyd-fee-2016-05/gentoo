@@ -113,15 +113,15 @@ input[type=text]:focus {
 	}
  }
 .section-save-button {
-    margin: 50px auto;
+    margin: 10px auto;
     text-align: center;
     .profile-submit-button {
       width: 150px;
-      margin: 10px auto;
+      margin: 0 auto;
       padding: 5px;
       font: 700 18px / 26px $font;
-      background: $darkblue;
-      border: 2px solid $darkblue;
+      background: darken($teal, 10%);
+      border: 2px solid darken($teal, 10%);
       border-radius: 5px;
       color: $white;
       i {
