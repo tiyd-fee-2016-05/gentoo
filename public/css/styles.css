@@ -193,7 +193,7 @@ button:focus {
 
 .add-list {
   float: right;
-  padding: 15px 20px 0 0;
+  padding: 30px 20px 0 0;
   font: 700 18px/22px "Nunito", sans-serif;
   color: #42D9C8;
   opacity: 0.6; }
@@ -903,7 +903,7 @@ header .profile-name {
 
 .add-list {
   float: right;
-  padding: 15px 20px 0 0;
+  padding: 30px 20px 0 0;
   font: 700 18px/22px "Nunito", sans-serif;
   color: #42D9C8;
   opacity: 0.6; }

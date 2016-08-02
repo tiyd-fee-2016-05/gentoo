@@ -5,14 +5,9 @@
 
 		<a href="#/home"><h1 class="logo upper-padding">Gentoo</h1></a>
 
-<<<<<<< HEAD
+
 		<!-- 	Sign up tabs -->
 		<div ng-click="setTab(1)" id="tab" class="tab2" ng-class="{ active: isSet(1) }"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i></div>
-=======
-
-	<!-- 	Sign up tabs -->
-	<div ng-click="setTab(1)" id="tab" class="tab2" ng-class="{ active: isSet(1) }"><i class="fa fa-clock-o fa-2x" aria-hidden="true"></i></div>
->>>>>>> a091831f68c60f613aacf1512c4d2052b56c464d
 
 		<div ng-click="setTab(2)" id="tab" class="tab3" ng-class="{ active: isSet(2) }"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
 
@@ -248,23 +243,9 @@
 				<i class="fa fa-search fa-lg" aria-hidden="true"></i>
 				<input type="search" ng-model="searchBox" placeholder="search for friends">
 
-<<<<<<< HEAD
-=======
-		<div id="friend-search" ng-if="searchBox" ng-controller="FriendController">
-			<ul>
-				<li ng-repeat="person in userList | filter: searchBox" ng-click="findFriend(person.username)">
-					<a href="#/friend-profile">
-						<h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
-						<p class="uppercase">@{{person.username}}</p>
-					</a>
-				</li>
-			</ul>
-		</div>
->>>>>>> a091831f68c60f613aacf1512c4d2052b56c464d
-
 				<div id="friend-search" ng-if="searchBox" ng-controller="FriendController">
 					<ul>
-						<li ng-repeat="person in friendList | filter: searchBox" ng-click="findFriend(person.username)">
+						<li ng-repeat="person in userList | filter: searchBox" ng-click="findFriend(person.username)">
 							<a href="#/friend-profile">
 								<h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
 								<p class="uppercase">@{{person.username}}</p>
@@ -273,13 +254,12 @@
 					</ul>
 				</div>
 
-<<<<<<< HEAD
 				<h6>or</h6>
 				<div class="invite" ng-click="showinput=true">invite them via email <i class="fa fa-caret-down" aria-hidden="true"></i></div>
 
 				<div ng-show="showinput">
 					<i class="fa fa-envelope fa-lg" aria-hidden="true" ng-hide="showme"></i>
-          <i class="fa fa-check fa-lg animated jello" aria-hidden="true" ng-click="showme=false" ng-show="showme"></i>
+					<i class="fa fa-check fa-lg animated jello" aria-hidden="true" ng-click="showme=false" ng-show="showme"></i>
 					<input id="inviteEmail" type="text" placeholder="add friend's email">
 					<br>
 					<button type="submit" ng-click="showme=true" ng-hide="showme" ng-click="sendEmail()">send email</a>
@@ -296,13 +276,4 @@
 			<div id="bottom-button">
 				<button ng-click="" class="skip-steps"><a href="#/home">skip and go to profile</a></button>
 			</div>
-=======
-		<p><i class="fa fa-check" aria-hidden="true"></i> step 5 of 5
-			<button type="submit" ng-click=""><a href="#/home">go to profile</a></button>
-		</p>
 	</div>
-	<div id="bottom-button">
-		<button ng-click="" class="skip-steps"><a href="#/home">skip and go to profile</a></button>
->>>>>>> a091831f68c60f613aacf1512c4d2052b56c464d
-	</div>
-</div>
