@@ -32,13 +32,13 @@
                     </ul>
                 </div>
 
-                <div ng-show="isSet(4)" id="tab-search" class="animated bounceInRight">
+                <div ng-controller="FriendController" ng-show="isSet(4)" id="tab-search" class="animated bounceInRight">
                     <i class="fa fa-search fa-lg" aria-hidden="true"></i>
                     <input type="search" ng-model="searchBox" placeholder="search users">
 
-                    <div id="friend-search" ng-if="searchBox">
+                    <div ng-controller="FriendController" id="friend-search" ng-if="searchBox">
                         <ul>
-                            <li ng-repeat="person in friendList | filter: searchBox">
+                            <li ng-repeat="person in userList | filter: searchBox">
                                 <a href="#/friend-profile">
                                     <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
                                     <p class="uppercase">@{{person.username}}</p>
@@ -227,7 +227,7 @@
                     </ul>
 
                     <p>
-                        <button type="submit" ng-click=""><i class="fa fa-times" aria-hidden="true"></i></button>
+                        <a href=#/home><button type="submit" ng-click=""><i class="fa fa-times" aria-hidden="true"></i></button></a>
                     </p>
             </div>
 

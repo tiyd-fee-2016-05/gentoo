@@ -242,7 +242,7 @@
 		<input type="search" ng-model="searchBox" placeholder="search for friends">
 
 
-		<div id="friend-search" ng-if="searchBox" ng-controller="UserController">
+		<div id="friend-search" ng-if="searchBox" ng-controller="FriendController">
 			<ul>
 				<li ng-repeat="person in userList | filter: searchBox" ng-click="findFriend(person.username)">
 					<a href="#/friend-profile">
