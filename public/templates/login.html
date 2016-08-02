@@ -12,11 +12,10 @@
       		<h1 class="header">Hello!</h1>
       		<ul>
       			<li>
-      				<input class="userlogin" type="text" id="login_username" name="login_username" placeholder="email" autocomplete="on" autofocus required>
+      				<input class="userlogin" type="text" id="login_username" name="login_username" ng-model="form.username" placeholder="email" autocomplete="on" autofocus required>
       			</li>
       			<li>
-      				<input class="userpassword" type="password" id="login_password" name="login_password" placeholder="password" autocomplete="on" required>
-      			</li>
+      				<input class="userpassword" type="password" id="login_password" name="login_password" ng-model="form.password" placeholder="password" autocomplete="on" required>
       		</ul>
       		<p>
       			<button type="submit" class="login-button" name="button">login</button> or
@@ -26,30 +25,6 @@
 
 
 
-        <!-- <form ng-controller="LoginCtrl" ng-submit="loginUser()"> -->
-            <!-- <section class="content">
-                <span class="input input--hoshi">
-              					<input name="login_username" class="input__field input__field--hoshi userlogin" type="text" id="input-1" / ng-model="form.username">
-              					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-1">
-              						<span class="input__label-content input__label-content--hoshi">Email Address</span>
-                </label>
-                </span>
-                <span class="input input--hoshi">
-              					<input name="login_password" class="input__field input__field--hoshi userpassword" type="password" id="input-2" / ng-model="form.password">
-              					<label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-2">
-              						<span class="input__label-content input__label-content--hoshi userLogin">Password</span>
-                </label>
-              </span><br>-->
-                <!-- <a href="#/home">
-                    <!--<button class="login-button" type="submit" name="button">login <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-                </a>
-                <br>
 
-                <a href="#/new-profile">
-                    <p>New user?</p>
-                    <button class="signup-button" type="submit" name="button">sign up <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-                </a>
-            </section>
-        </form> -->
     </div>
 </div>

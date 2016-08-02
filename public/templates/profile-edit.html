@@ -121,66 +121,25 @@
             <h1 class="wishlists" ng-click="setTab(1)">Wishlists</h1>
 
             <section class="lists" ng-class-odd="'lightblue'" ng-class-even="'darkblue'" ng-repeat="list in wishlistArray">
-                <span class="delete-list">delete wishlist</span>
+                <span class="delete-list" ng-click="deleteWishlist(list.id); wishlistArray.splice($index,1)">delete wishlist</span>
                 <h1 class="list-name">{{list.name}} <br>
                     <!-- <span class="edit-list">edit name</span></h1> -->
                 <ul>
                     <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
                         <h1 class="info-answer">{{item.name}}</h1>
-                        <h2><span class="edit">edit</span></a><span class="delete" ng-click="list.items.splice($index,1)">delete</span></h2>
+                        <h2><span class="edit">edit</span></a><span class="delete" ng-click="deleteWishlistItem(list.id, item.id); list.items.splice($index,1)">delete</span></h2>
                     </li>
                 </ul>
-            </section>
-
-            <!-- <section class="lists darkblue">
-                <span class="delete-list">delete wishlist</span>
-                <h1 class="list-name">Wishlist name <span class="edit-list">edit name</span></h1>
-                <ul>
-                    <li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
-                        <!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
-            <!--  <h1 class="info-answer">Item name</h1>
-                        <h2><span class="edit">edit</span></a><span class="delete">delete</span></h2>
-                    </li>
-                    <li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
-                        <!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
-            <!--  <h1 class="info-answer">Item name</h1>
-                        <h2><span class="edit">edit</span></a><span class="delete">delete</span></h2>
-                    </li>
-                    <li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
-                        <!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
-            <!--  <h1 class="info-answer">Item name</h1>
-                        <h2><span class="edit">edit</span></a><span class="delete">delete</span></h2>
-                    </li>
-                </ul>
-            </section> -->
-
-            <!-- <section class="lists lightblue">
-                <span class="delete-list">delete wishlist</span>
-                <h1 class="list-name">Wishlist name <span class="edit-list">edit name</span></h1>
-                <ul>
-                    <li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
-                        <!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
-            <!--<h1 class="info-answer">Item name</h1>
-                        <h2><span class="edit">edit</span></a><span class="delete">delete</span></h2>
-                    </li>
-                    <li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
-                        <!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
-            <!--<h1 class="info-answer">Item name</h1>
-                        <h2><span class="edit">edit</span></a><span class="delete">delete</span></h2>
-                    </li>
-                    <li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
-                        <!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
-            <!--<h1 class="info-answer">Item name</h1>
-                        <h2><span class="edit">edit</span></a><span class="delete">delete</span></h2>
-                    </li>
-                </ul>
-            </section> -->
-
-            <section class="section-save-button">
-                <a href="#/home">
-                    <button class="profile-submit-button" type="submit" name="button">save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-                </a>
             </section>
         </div>
+        </form>
+
+        <section class="section-save-button">
+            <a href="#/home">
+                <button class="profile-submit-button" type="submit" name="button">save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            </a>
+        </section>
     </div>
+</div>
+</div>
 </div>

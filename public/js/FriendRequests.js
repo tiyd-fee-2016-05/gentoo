@@ -3,7 +3,7 @@ gentooApp.controller('RequestFriendCtrl', function ($rootScope, $scope, $http, $
   $scope.domain = window.location.href;
 
   if (!$scope.userToken) {
-      $location.path("/sign_up");
+      $location.path("#/login");
   }
 
   // var rootUrl= "http://6e62d5d1.ngrok.io/";
@@ -15,8 +15,8 @@ gentooApp.controller('RequestFriendCtrl', function ($rootScope, $scope, $http, $
     $scope.requestFriendship = function(mynewfriend) {
       $http({
         method: 'POST',
-            url: 'https://58a85897.ngrok.io/friends/',
-                  //  url: 'https://giftbox-tiy.herokuapp.com/friends/',
+            // url: 'https://58a85897.ngrok.io/friends/',
+                   url: 'https://giftbox-tiy.herokuapp.com/friends/',
             headers: {'Authorization': userToken},
             params: {"requested_friend" : mynewfriend},
       }).success(function successCallback(response) {
@@ -34,9 +34,8 @@ gentooApp.controller('RequestFriendCtrl', function ($rootScope, $scope, $http, $
 gentooApp.controller('FriendRequestCtrl', function ($rootScope, $scope, $http, $location, User) {
   $scope.userToken = User.getToken();
   $scope.domain = window.location.href;
-
   if (!$scope.userToken) {
-      $location.path("/sign_up");
+      $location.path("#/login");
   }
 
   var rootUrl= "https://6e62d5d1.ngrok.io/";

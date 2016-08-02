@@ -5,15 +5,15 @@
         <section class="photo">
         </section>
 
+
         <div class="nav">
             <a href="#/home"><h1 class="logo">Gentoo</h1></a>
         </div>
 
-        <h1 class="profile-name animated slideInLeft"><i class="fa fa-user" aria-hidden="true"></i>
-         {{loadedfriend.user.first_name}} {{loadedfriend.user.last_name}}</h1>
+        <h1 class="profile-name animated slideInLeft"><i class="fa fa-user" aria-hidden="true"></i> {{loadedfriend.user.first_name}} {{loadedfriend.user.last_name}}</h1>
 
         <div id="menu" ng-controller="TabController">
-            <div ng-click="setTab(2)" id="menu-tab" class="tab1" ng-class="{ active: isSet(2) }"><i class="fa fa-gift fa-lg" aria-hidden="true"></i></div>
+            <div ng-click="setTab(2); FindTodos(loadedfriend.user.username)" id="menu-tab" class="tab1" ng-class="{ active: isSet(2) }"><i class="fa fa-gift fa-lg" aria-hidden="true"></i></div>
 
             <div ng-click="setTab(3)" id="menu-tab" class="tab2" ng-class="{ active: isSet(3) }"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
 
@@ -25,15 +25,19 @@
             <div ng-show="isSet(1)">
             </div>
 
+
+
+
+
             <div ng-show="isSet(2)" id="tab-gift" class="animated bounceInRight">
                 <ul>
                     <li>
-                        <input type="text" placeholder="add gift idea here" ng-model="formTodoText" ng-model-instant />
-                        <button ng-click="addTodo()" class="add-item"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
+                        <input id="ideaboxText" type="text" placeholder="add gift idea here" ng-model="formTodoText" ng-model-instant />
+                        <button ng-click="addTodo()" class="add-item"><i ng-click="AddIdea()" class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
                     </li>
 
                     <li ng-repeat="todo in todos">
-                        <input type="checkbox" ng-model="todo.done" />
+                        <input id={{todo.id}} type="checkbox" ng-click="viewIdea()" ng-model="todo.done" />
                         <span class="done-{{todo.done}}">{{todo.text}}</span>
                     </li>
 
@@ -45,7 +49,7 @@
 
             <div ng-show="isSet(3)" id="tab-menu" class="animated bounceInRight" ng-controller="LoginCtrl">
                 <ul>
-                    <li><a href="#/add-friend"><i class="fa fa-user-times" aria-hidden="true"></i> Unfriend</a></li>
+                    <li ng-click="findFriend(person.username)"><a href="#/add-friend"><i class="fa fa-user-times" aria-hidden="true"></i> Unfriend</a></li>
                     <li><a href="#/home"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
                     <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
                     <li ng-click="logout()"><a href=""><i class="fa fa-arrow-right" aria-hidden="true"></a></i> Logout</li>
@@ -66,9 +70,9 @@
                 <i class="fa fa-search fa-lg" aria-hidden="true"></i>
                 <input type="search" ng-model="searchBox" placeholder="search users">
 
-                <div id="friend-search" ng-if="searchBox">
+                <div ng-controller="FriendController" id="friend-search" ng-if="searchBox">
                     <ul>
-                        <li ng-repeat="person in friendList | filter: searchBox">
+                        <li ng-repeat="person in userList | filter: searchBox">
                             <a href="#/friend-profile">
                                 <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
                                 <p class="uppercase">@{{person.username}}</p>
@@ -123,7 +127,6 @@
         </div>
     </div>
 
-
     <div ng-controller="TabController2">
         <div id="wishlist-container">
 
@@ -140,16 +143,16 @@
 
                     <div ng-controller="TabController2">
                         <div ng-show="isSet(3)" id="tab-wishlist-details">
-                            <h1 class="header">(item name here):</h1>
-                            <!--make this changeable-->
                             <form>
+                                <h1 class="header">{{clickedItem.name}}:</h1>
+                                <!--make this changeable-->
                                 <ul>
                                     <li>
-                                        <h1><span class="item-header">Description:</span> description here</h1></li>
+                                        <h1><span class="item-header">Description:</span> {{clickedItem.description}}</h1></li>
                                     <li>
-                                        <h1><span class="item-header">Holidays:</span> holidays here</h1></li>
+                                        <h1><span class="item-header">Url:</span> {{clickedItem.product_url}}</h1></li>
                                     <li>
-                                        <h1><span class="item-header">Interests:</span> interests here</h1></li>
+                                        <h1><span class="item-header">Interests:</span> {{clickedItem.product_url}}</h1></li>
                                 </ul>
 
                                 <p>
@@ -163,10 +166,10 @@
 
                         <h1 class="wishlists" ng-click="setTab(1)">Wishlists</h1>
 
-                        <section class="lists" ng-class-odd="'lightblue'" ng-class-even="'darkblue'" ng-repeat="list in wishlistArray">
+                        <section class="lists" ng-class-odd="'lightblue'" ng-class-even="'darkblue'" ng-repeat="list in friendwishlistArray">
                             <h1 class="list-name">{{list.name}}</h1>
                             <ul>
-                                <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+                                <li ng-repeat="item in list.items" ng-click="setTab(3); getItem(item)" ng-class="{ active: isSet(3) }">
                                     <h1 class="info-answer">{{item.name}}</h1>
                                     <h2>click to view details</h2>
                                 </li>

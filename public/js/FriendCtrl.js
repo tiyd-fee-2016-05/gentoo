@@ -3,7 +3,7 @@ gentooApp.controller('FriendController', ['$rootScope', '$scope', '$http', '$loc
     $scope.domain = window.location.href;
 
     if (!$scope.userToken) {
-        $location.path("/sign_up");
+        $location.path("#/login");
     }
     // var rootUrl= "https://6e62d5d1.ngrok.io/";
     var rootUrl= "https://giftbox-tiy.herokuapp.com/";
@@ -27,15 +27,23 @@ var userToken = $scope.userToken
                $scope.status = status;
            });//End GET request for friends
 
+           $http({
+                     url:  rootUrl + "users",
+                  method: "GET",
+                  headers: {'Authorization': userToken},
+                }).success(function (data, status, headers, config) {
+console.log("Gentoo Users");
+console.log(data);
+
+                 $rootScope.userList = data
+
+
+                  }).error(function (data, status, headers, config) {
+                      $scope.status = status;
+                  });//End GET request for friends
+
 $scope.findFriend = function(clickedperson) {
-
-
   $scope.searchedFriend = GetFriend.rememberFriend(clickedperson);
-
-
-
-
-
 }
 
 
