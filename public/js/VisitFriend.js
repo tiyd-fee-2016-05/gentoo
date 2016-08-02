@@ -7,6 +7,13 @@ gentooApp.service('Friend', ['$http', '$location', function($location, $http) {
           storage.setItem("friendtovisit", clickedperson);
         },
 
+        checkFriend: function(clickedperson){
+          console.log(clickedperson + " is being checked!");
+
+          
+          // storage.setItem("friendtovisit", clickedperson);
+        },
+
         getFriend:   function() { return storage.getItem("friendtovisit"); },
         isLoggedIn: function() { storage.getItem("friendtovisit") ? true : false; },
 

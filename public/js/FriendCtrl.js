@@ -46,6 +46,23 @@ $scope.findFriend = function(clickedperson) {
   $scope.searchedFriend = GetFriend.rememberFriend(clickedperson);
 }
 
+$scope.checkFriend = function(arewefriends, friendname) {
+console.log(friendname);
+  if (arewefriends === true) {
+    console.log("You are totally buds");
+    $scope.findFriend = function(friendname) {
+      $scope.searchedFriend = GetFriend.rememberFriend(friendname);
+    }
+    $location.path("/friend-profile");
+
+  }else {
+    console.log("You ain't frands!");
+  }
+
+  // $scope.searchedFriend = GetFriend.checkFriend(clickedperson);
+  console.log(arewefriends);
+}
+
 
 
 }]);
