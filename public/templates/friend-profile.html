@@ -72,77 +72,50 @@
             </div>
         </header>
 
-        <div class="info dates animated slideInLeft">
-            <h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
-            <ul class="info-answer">
-                <li>{{loadedfriend.user.birthday.dob_month}}/{{loadedfriend.user.birthday.dob_day}}/{{loadedfriend.user.birthday.dob_year}}</li>
-            </ul>
-            <!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
+        <div class="smaller-margin">
+            <div class="info dates animated slideInLeft">
+                <h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
+                <ul class="info-answer">
+                    <li>{{loadedfriend.user.birthday.dob_month}}/{{loadedfriend.user.birthday.dob_day}}/{{loadedfriend.user.birthday.dob_year}}</li>
+                </ul>
+                <!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
+            </div>
+
+            <div class="info favorites animated slideInRight">
+                <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
+                <ul class="info-answer">
+                    <li ng-repeat="favorite in friendfavoriteList">
+                        <input type="checkbox" id="f1" name="cc" />
+                        <label for="f1">{{favorite.name}}</label>
+                    </li>
+                </ul>
+                <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
+            </div>
+
+            <div class="info holidays animated slideInRight">
+                <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
+                <ul class="info-answer">
+                    <li ng-repeat="holiday in friendholidayList">
+                        <input type="checkbox" id="h1" name="cc" />
+                        <label for="h1">{{holiday.name}}</label>
+                    </li>
+                </ul>
+                <!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
+            </div>
+
+            <div class="info interests animated slideInLeft">
+                <h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
+                <ul class="info-answer">
+                    <li ng-repeat="interest in friendinterestList">
+                        <input type="checkbox" id="i1" name="cc" />
+                        <label for="i1">{{interest.name}}</label>
+                    </li>
+                </ul>
+                <!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
+            </div>
         </div>
 
-        <div class="info favorites animated slideInRight">
-            <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
-            <ul class="info-answer">
-                <li ng-repeat="favorite in friendfavoriteList">
-                    <input type="checkbox" id="f1" name="cc" />
-                    <label for="f1">{{favorite.name}}</label>
-                </li>
-            </ul>
-            <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
-        </div>
 
-        <div class="info holidays animated slideInRight">
-            <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
-            <ul class="info-answer">
-                <li ng-repeat="holiday in friendholidayList">
-                    <input type="checkbox" id="h1" name="cc" />
-                    <label for="h1">{{holiday.name}}</label>
-                </li>
-            </ul>
-            <!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
-        </div>
-
-        <div class="info interests animated slideInLeft">
-            <h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
-            <ul class="info-answer">
-                <li ng-repeat="interest in friendinterestList">
-                    <input type="checkbox" id="i1" name="cc" />
-                    <label for="i1">{{interest.name}}</label>
-                </li>
-            </ul>
-            <!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
-        </div>
-
-
-        <!-- old code -->
-        <!-- <section class="content content-main">
-
-            <h2 class="profile-birthday"><i class="fa fa-birthday-cake" aria-hidden="true"></i> {{loadedfriend.user.birthday.dob_month}}/{{loadedfriend.user.birthday.dob_day}}/{{loadedfriend.user.birthday.dob_year}}</h2>
-
-        </section>
-
-        <section class="content content-details">
-            <span>Favorite Holidays</span>
-            <h2 class="profile-holidays" ng-repeat="holiday in holidayList">  |&nbsp; {{holiday}}  &nbsp;</h2>
-        </section> -->
-
-        <!-- <section class="content content-details">
-            <span>Interests</span>
-            <h2 class="profile-interests" ng-repeat="interest in interestList">|&nbsp; {{interest}}  &nbsp;</h2>
-        </section> -->
-        <!-- <section class="content content-details">
-            <span>Favorite Colors</span>
-            <h2 class="profile-colors" ng-repeat="color in colorList">|&nbsp; {{color}}  &nbsp;</h2>
-        </section> -->
-
-        <!-- <form name="saveProfileData" action="#" ng-controller="FormCtrl" ng-submit="submitForm()">
-        Username    <br/><input type="text" ng-model="form.username">    <br/><br/>
-        Password: <br/><input type="text" ng-model="form.password"> <br/><br/>
-
-          <!-<button ng-click="save()" >Save</button> -->
-        <!-- <input type="submit" ngClick="Submit" >
-
-        </form> -->
         <div ng-controller="TabController2">
             <div id="wishlist-container">
 
@@ -198,35 +171,3 @@
         </div>
     </div>
 </div>
-<!-- <section class="lists friend-list">
-            <a href="#/friends"><h1 class="friends-list">Friends</h1></a>
-            <ul>
-                <li>
-                    <a href="#/add-friend">-->
-<!-- <h2>user photo here</h2> -->
-<!-- <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-                        <h1>{{loadedfriend.user.first_name}}</h1>
-                        <h1>{{loadedfriend.user.last_name}}</h1>
-                    </a>
-                </li>
-                <li>
-                    <a href="#/add-friend"> -->
-<!-- <h2>user photo here</h2> -->
-<!-- <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-                        <h1>{{loadedfriend.user.first_name}}</h1>
-                        <h1>{{loadedfriend.user.last_name}}</h1>
-                    </a>
-                </li>
-                <li>
-                    <a href="#/add-friend"> -->
-<!-- <h2>user photo here</h2> -->
-<!-- <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-                        <h1>{{loadedfriend.user.first_name}}</h1>
-                        <h1>{{loadedfriend.user.last_name}}</h1>
-                    </a>
-                </li>
-            </ul>
-        </section> -->
-
-<!-- <section class="lists content-list-new">
-            <h1><i class="fa fa-plus" aria-hidden="true"></i> Add new list</h1> -->
