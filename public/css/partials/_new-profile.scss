@@ -207,7 +207,7 @@
 		padding: 15px 0;
 		text-align: center;
 		input {
-			width: 80%;
+			width: 70%;
 			border: 2px solid darken($teal, 10%);
 			border-radius: 5px;
 			margin: 5px;
@@ -219,7 +219,7 @@
 			&:focus {
 					border: 3px solid #555;
 					outline: 0;
-					width: 90%;
+					width: 80%;
 			}
 	}
 
@@ -245,7 +245,7 @@
 		padding: 15px 0;
 		text-align: center;
 		input {
-			width: 90px;
+			width: 70px;
 			border: 2px solid $blue2;
 			border-radius: 5px;
 			margin: 5px;
@@ -262,7 +262,7 @@
 				transition: width 0.4s ease-in-out;
 		}
 		input[type=number]:focus {
-				width: 100px;
+				width: 90px;
 		}
 		button {
 			background: darken($blue2, 10%);
@@ -326,7 +326,7 @@
 			font-size: 20px;
 		}
 		input {
-			width: 100%;
+			width: 80%;
 			border: 2px solid $red;
 			border-radius: 5px;
 			margin-bottom: 0;

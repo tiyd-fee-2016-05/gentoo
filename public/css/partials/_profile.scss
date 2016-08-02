@@ -94,9 +94,9 @@
 }
 .info {
     display: inline-block;
-    width: 85%;
+    width: 320px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 5px;
     padding: 10px 8px;
     text-align: left;
     color: $white;
@@ -137,7 +137,7 @@
     }
     input {
         // For birthday
-        width: 50px;
+        width: 60px;
         border: 2px solid $blue2;
         border-radius: 5px;
         margin: 0;
@@ -145,11 +145,22 @@
         font: 14px / 16px $menu;
         text-align: center;
         &:focus {
+            border: 3px solid #555;
             outline: 0;
         }
     }
     #e-bd3 {
-        width: 60px;
+        width: 70px;
+        &:focus {
+            width: 85px;
+        }
+    }
+    input[type=number] {
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+    input[type=number]:focus {
+        width: 75px;
     }
 }
 .holidays {

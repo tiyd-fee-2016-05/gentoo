@@ -66,23 +66,12 @@
 
 
     <div class="smaller-margin">
-        <div class="info dates animated slideInLeft">
+        <div class="info dates animated slideInRight">
             <h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
             <ul class="info-answer">
                 <li>{{loadedprofile.user.birthday.dob_month}}/{{loadedprofile.user.birthday.dob_day}}/{{loadedprofile.user.birthday.dob_year}}</li>
             </ul>
             <!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
-        </div>
-
-        <div class="info favorites animated slideInRight">
-            <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Favorites:</h1>
-            <ul class="info-answer">
-                <li ng-repeat="color in colorList">
-                    <input type="checkbox" id="f1" name="cc" />
-                    <label for="f1">{{color}}</label>
-                </li>
-            </ul>
-            <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
         </div>
 
         <div class="info holidays animated slideInRight">
@@ -105,6 +94,17 @@
                 </li>
             </ul>
             <!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
+        </div>
+
+        <div class="info favorites animated slideInLeft">
+            <h1 class="info-header"><i class="fa fa-heart" aria-hidden="true"></i> Favorites:</h1>
+            <ul class="info-answer">
+                <li ng-repeat="color in colorList">
+                    <input type="checkbox" id="f1" name="cc" />
+                    <label for="f1">{{color}}</label>
+                </li>
+            </ul>
+            <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
         </div>
     </div>
 
@@ -217,20 +217,21 @@
 
         <div ng-show="isSet(3)" id="tab-wishlist-details">
             <h1 class="header">(item name here):</h1>
-                <ul>
-                    <li><h1>in <span class="item-header">(wishlist name here)</span>
+            <ul>
+                <li>
+                    <h1>in <span class="item-header">(wishlist name here)</span>
                     </li>
                     <li>
                         <h1><span class="item-header">Description:</span> description here</h1></li>
-                    <li>
-                        <h1><span class="item-header">Url:</span> url here</h1></li>
-                    <li>
-                        <h1><span class="item-header">Interests:</span> interests here</h1></li>
-                </ul>
+                <li>
+                    <h1><span class="item-header">Url:</span> url here</h1></li>
+                <li>
+                    <h1><span class="item-header">Interests:</span> interests here</h1></li>
+            </ul>
 
-                <p>
-                    <button type="submit" ng-click="setTab(1)"><i class="fa fa-times" aria-hidden="true"></i></button>
-                </p>
+            <p>
+                <button type="submit" ng-click="setTab(1)"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </p>
         </div>
 
         <div class="isSet(1)">
