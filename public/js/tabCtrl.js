@@ -67,7 +67,7 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
 //     // Add list items
 //     $scope.FindTodos = function() {
 //         console.log(usersearch);
-//         var rootUrl= "https://6e62d5d1.ngrok.io/";
+//         var rootUrl= "https://fa02cf67.ngrok.io/";
 //         // var rootUrl = "https://giftbox-tiy.herokuapp.com/";
 //         $http({
 //             url: rootUrl + usersearch + "/profile/ideabox",
@@ -93,7 +93,7 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
 //                 var tobeDeleted = arr
 //
 //                 console.log("Delete these please:" + tobeDeleted);
-//                 var rootUrl= "https://6e62d5d1.ngrok.io/";
+//                 var rootUrl= "https://fa02cf67.ngrok.io/";
 //                 // var rootUrl = "https://giftbox-tiy.herokuapp.com/";
 //                 $scope.userToken = User.getToken();
 //                 var userToken = $scope.userToken
@@ -131,7 +131,7 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
 //     }
 //
 //     $scope.AddIdea = function() {
-//         var rootUrl= "https://6e62d5d1.ngrok.io/";
+//         var rootUrl= "https://fa02cf67.ngrok.io/";
 //         // var rootUrl = "https://giftbox-tiy.herokuapp.com/";
 //         console.log("You had an idea!");
 //         $http({
@@ -156,7 +156,7 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
 //
 //
 //
-//         var rootUrl= "https://6e62d5d1.ngrok.io/";
+//         var rootUrl= "https://fa02cf67.ngrok.io/";
 //         // var rootUrl = "https://giftbox-tiy.herokuapp.com/";
 //
 //         // $http({

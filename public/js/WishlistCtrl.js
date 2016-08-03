@@ -2,7 +2,7 @@ gentooApp.controller('newWishlistCtrl', ['$scope', '$rootScope','$http', '$locat
     // if (User.isLoggedIn()) {
     //     $location.path("/");
     // }
-    // var rootUrl= "https://6e62d5d1.ngrok.io/";
+    // var rootUrl= "https://fa02cf67.ngrok.io/";
     var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
 
