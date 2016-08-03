@@ -5,6 +5,7 @@ gentooApp.controller('LoginCtrl', ['$scope', '$rootScope','$http', '$location', 
     var rootUrl= "https://6e62d5d1.ngrok.io/";
     // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
+    // User.clearToken()
 
     $scope.loginUser = function() {
         $http({

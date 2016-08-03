@@ -7,14 +7,21 @@ gentooApp.service('User', ['$location', function($location) {
 
         logIn: function(t) {
             storage.setItem("user-token", t);
-            $location.path("/");
+            // $location.path("/");
         },
 
         logOut: function() {
             storage.removeItem("user-token");
             storage.removeItem("friendtovisit");
             $location.path("/login");
+            // storage.removeItem("nonfriendtovisit");
         },
+
+        // clearToken: function() {
+        //     storage.removeItem("user-token");
+        //     storage.removeItem("friendtovisit");
+        //       storage.removeItem("nonfriendtovisit");
+        // },
 
     }
 }])
