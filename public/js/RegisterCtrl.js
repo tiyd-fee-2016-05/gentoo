@@ -11,7 +11,7 @@ var userToken = $scope.userToken
       console.log("Register User");
         $http({
             method: "POST",
-            url:    rootUrl + "/register",
+            url:    rootUrl + "register",
             data: {
                 email:  $("#email").val(),
                 password:  $("#password").val(),
@@ -26,7 +26,7 @@ var userToken = $scope.userToken
                     $location.path("/new-profile");
 
         }, function() {
-            alert("Something went wrong!");
+
         })
     }
 
@@ -56,7 +56,7 @@ $http({
             }
         }).then(function(response) {
         }, function() {
-            alert("Something went wrong!");
+
         })
     }
 
@@ -71,7 +71,7 @@ $http({
             }
         }).then(function(response) {
         }, function() {
-            alert("Something went wrong!");
+
         })
     }
 
@@ -87,7 +87,7 @@ $http({
             }
         }).then(function(response) {
         }, function() {
-            alert("Something went wrong!");
+
         })
     }
 
@@ -109,7 +109,7 @@ $http({
    }
         }).then(function(response) {
         }, function() {
-            alert("Something went wrong!");
+
         })
     }
 
@@ -126,7 +126,6 @@ $http({
     }
         }).then(function(response) {
         }, function() {
-            alert("Something went wrong!");
         })
     }
 
