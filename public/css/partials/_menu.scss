@@ -23,6 +23,7 @@
     }
     .tab1 {
         position: fixed;
+        bottom: 170px;
         background: darken($teal, 10%);
         &:hover {
             background: lighten($teal, 10%);
@@ -32,6 +33,7 @@
     }
     .tab2 {
         position: fixed;
+        bottom: 115px;
         background: $lightred;
         &:hover {
             background: lighten($lightred, 10%);
@@ -41,6 +43,7 @@
     }
     .tab3 {
         position: fixed;
+        bottom: 60px;
         background: $darkblue;
         &:hover {
             background: lighten($darkblue, 10%);
@@ -50,19 +53,19 @@
     }
     .tab4 {
         position: fixed;
+        bottom: 5px;
         background: lighten($black, 10%);
     }
     // All info inside the tabs
     #tab-gift {
         z-index: 999;
-        width: 90%;
-        // height: 50px;
+        width: 340px;
         position: fixed;
         top: 120px;
-        // right: 0;
         background: darken($teal, 10%);
         border-radius: 5px;
-        margin: 5%;
+        margin: 6% 5% 10%;
+
         padding: 15px 0;
         color: $white;
         text-align: center;

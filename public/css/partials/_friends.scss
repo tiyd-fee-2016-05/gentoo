@@ -5,7 +5,7 @@
     position: relative;
     top: 0;
     left: 0;
-  } 
+  }
 
 
 
@@ -143,8 +143,8 @@
                 color: $white;
             }
             &:hover {
-                background: lighten($blue2, 5%);
-                border: 2px solid lighten($blue2, 5%);
+                background: lighten($darkblue, 5%);
+                border: 2px solid lighten($darkblue, 5%);
                 color: darken($blue2, 15%);
                 -webkit-transition: all 0.5s ease;
                 transition: all 0.5s ease;
