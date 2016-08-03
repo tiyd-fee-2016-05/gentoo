@@ -31,7 +31,6 @@ gentooApp.controller('RegisterCtrl', ['$rootScope', '$scope', '$http', '$locatio
   }
 
   $scope.registerDates = function() {
-    cb
     var birthday = {
       dob_month:  $("#bd_month").val(),
       dob_day: $("#bd_day").val(),
@@ -82,7 +81,7 @@ gentooApp.controller('RegisterCtrl', ['$rootScope', '$scope', '$http', '$locatio
     $http({
       url:  rootUrl + "profile",
       method: "POST",
-      headers: {'Authorization': userToken},
+    headers: {'Authorization': User.getToken()},
       data: {
         interests: $scope.registerData.interests
       }
@@ -104,7 +103,7 @@ gentooApp.controller('RegisterCtrl', ['$rootScope', '$scope', '$http', '$locatio
     $http({
       url:  rootUrl + "profile",
       method: "POST",
-      headers: {'Authorization': userToken},
+    headers: {'Authorization': User.getToken()},
       data:{
         favorites: favorites
       }
@@ -122,7 +121,7 @@ gentooApp.controller('RegisterCtrl', ['$rootScope', '$scope', '$http', '$locatio
     $http({
       url:  rootUrl + "invitation",
       method: "POST",
-      headers: {'Authorization': userToken},
+    headers: {'Authorization': User.getToken()},
       data:{email: email
       }
     }).then(function(response) {
