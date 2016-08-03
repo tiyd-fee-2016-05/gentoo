@@ -11,7 +11,7 @@ gentooApp.controller('NewProfileCtrl', function ($rootScope, $scope, $http) {
         $http({
             url:  rootUrl + "/" + username+ "/profile",
          method: "POST",
-         headers: {'Authorization': username},
+      headers: {'Authorization': User.getToken()},
          params: {ProfileData}
        }).success(function (data, status, headers, config) {
 

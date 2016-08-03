@@ -24,9 +24,7 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
         $http({
             url: rootUrl + usersearch + "/profile/ideabox",
             method: "GET",
-            headers: {
-                'Authorization': userToken
-            },
+          headers: {'Authorization': User.getToken()},
         }).success(function(data, status, headers, config) {
             console.log(data);
             $scope.todos = data.ideabox
@@ -58,9 +56,7 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
                $http({
                    url: rootUrl + usersearch + "/profile/ideabox",
                    method: "DELETE",
-                   headers: {
-                       'Authorization': userToken
-                   },
+              headers: {'Authorization': User.getToken()},
                   params: {
                        cleared_ideas: tobeDeleted
                    }
@@ -93,9 +89,7 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
         $http({
             url: rootUrl + usersearch + "/profile/ideabox",
             method: "POST",
-            headers: {
-                'Authorization': userToken
-            },
+        headers: {'Authorization': User.getToken()},
             data: {
                 text: $('#ideaboxText').val(),
             }
