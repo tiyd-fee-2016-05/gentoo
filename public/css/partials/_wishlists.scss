@@ -154,14 +154,13 @@
 // For adding wishlist + list item
 #tab-wishlist {
     z-index: 999;
-    width: 90%;
+    width: 345px;
     position: fixed;
     top: 5px;
-    margin: 6% 5% 10%;
+    margin: 15px;
     font: 24px / 36px $menu;
     color: $white;
     letter-spacing: 1px;
-    width: 370px;
     background: darken($teal, 10%);
     border-radius: 5px;
     padding: 15px 0;
@@ -310,12 +309,12 @@
 // For adding items only
 #tab-wishlist-item {
     z-index: 999;
-    width: 90%;
+    width: 345px;
     position: fixed;
     top: 50px;
     background: $blue2;
     border-radius: 5px;
-    margin: 6% 5% 10%;
+    margin: 15px;
     padding: 15px 0;
     font: 40px / 75px $menu;
     color: $white;
@@ -393,12 +392,12 @@
 }
 #tab-wishlist-details {
     z-index: 999;
-    width: 90%;
+    width: 345px;
     position: fixed;
     top: 50px;
     background: $blue2;
     border-radius: 5px;
-    margin: 6% 5% 10%;
+    margin: 15px;
     padding: 15px 0;
     text-align: center;
     .header {

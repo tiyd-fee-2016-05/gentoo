@@ -320,14 +320,13 @@ button:focus {
 
 #tab-wishlist {
   z-index: 999;
-  width: 90%;
+  width: 345px;
   position: fixed;
   top: 5px;
-  margin: 6% 5% 10%;
+  margin: 15px;
   font: 24px/36px "Nunito", sans-serif;
   color: white;
   letter-spacing: 1px;
-  width: 370px;
   background: #27c1b0;
   border-radius: 5px;
   padding: 15px 0;
@@ -451,12 +450,12 @@ button:focus {
 
 #tab-wishlist-item {
   z-index: 999;
-  width: 90%;
+  width: 345px;
   position: fixed;
   top: 50px;
   background: #2C8C99;
   border-radius: 5px;
-  margin: 6% 5% 10%;
+  margin: 15px;
   padding: 15px 0;
   font: 40px/75px "Nunito", sans-serif;
   color: white;
@@ -521,12 +520,12 @@ button:focus {
 
 #tab-wishlist-details {
   z-index: 999;
-  width: 90%;
+  width: 345px;
   position: fixed;
   top: 50px;
   background: #2C8C99;
   border-radius: 5px;
-  margin: 6% 5% 10%;
+  margin: 15px;
   padding: 15px 0;
   text-align: center; }
   #tab-wishlist-details .header {
@@ -1036,14 +1035,13 @@ header .profile-name {
 
 #tab-wishlist {
   z-index: 999;
-  width: 90%;
+  width: 345px;
   position: fixed;
   top: 5px;
-  margin: 6% 5% 10%;
+  margin: 15px;
   font: 24px/36px "Nunito", sans-serif;
   color: white;
   letter-spacing: 1px;
-  width: 370px;
   background: #27c1b0;
   border-radius: 5px;
   padding: 15px 0;
@@ -1167,12 +1165,12 @@ header .profile-name {
 
 #tab-wishlist-item {
   z-index: 999;
-  width: 90%;
+  width: 345px;
   position: fixed;
   top: 50px;
   background: #2C8C99;
   border-radius: 5px;
-  margin: 6% 5% 10%;
+  margin: 15px;
   padding: 15px 0;
   font: 40px/75px "Nunito", sans-serif;
   color: white;
@@ -1237,12 +1235,12 @@ header .profile-name {
 
 #tab-wishlist-details {
   z-index: 999;
-  width: 90%;
+  width: 345px;
   position: fixed;
   top: 50px;
   background: #2C8C99;
   border-radius: 5px;
-  margin: 6% 5% 10%;
+  margin: 15px;
   padding: 15px 0;
   text-align: center; }
   #tab-wishlist-details .header {
