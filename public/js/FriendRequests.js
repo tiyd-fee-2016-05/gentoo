@@ -50,7 +50,7 @@ gentooApp.controller('FriendRequestCtrl', function ($rootScope, $scope, $http, $
       $http({
         method: 'POST',
         url: rootUrl + '/friends/accept',
-            headers: {'Authorization': userToken},
+    headers: {'Authorization': User.getToken()},
             params: {"accepted_friend" : clickedfriend},
       }).success(function successCallback(response) {
           $location.path("/friends");
@@ -67,7 +67,7 @@ $scope.denyFriend = function(clickedfriend) {
   $http({
     method: 'POST',
     url: rootUrl + '/friends/deny',
-        headers: {'Authorization': userToken},
+    headers: {'Authorization': User.getToken()},
         params: {"denied_friend" : clickedfriend},
   }).success(function successCallback(response) {
       $location.path("/friends");

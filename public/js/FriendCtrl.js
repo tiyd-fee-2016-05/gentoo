@@ -14,7 +14,7 @@ var userToken = $scope.userToken
     $http({
               url:  rootUrl + "friends",
            method: "GET",
-           headers: {'Authorization': userToken},
+    headers: {'Authorization': User.getToken()},
           //  params: {formData}
          }).success(function (data, status, headers, config) {
 
@@ -30,7 +30,7 @@ var userToken = $scope.userToken
            $http({
                      url:  rootUrl + "users",
                   method: "GET",
-                  headers: {'Authorization': userToken},
+              headers: {'Authorization': User.getToken()},
                 }).success(function (data, status, headers, config) {
 console.log("Gentoo Users");
 console.log(data);

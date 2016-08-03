@@ -45,9 +45,7 @@ gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '
     $http({
         url: rootUrl + "users/" + nonfriendsearch,
         method: "GET",
-        headers: {
-            'Authorization': userToken
-        },
+        headers: {'Authorization': User.getToken()},
     }).success(function(data, status, headers, config) {
       console.log("Non Friend");
       console.log(data);
@@ -62,9 +60,7 @@ gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '
     $http({
         url: rootUrl + usersearch + "/wishlists",
         method: "GET",
-        headers: {
-            'Authorization': userToken
-        },
+        headers: {'Authorization': User.getToken()},
         data: {
             username: usersearch
         }

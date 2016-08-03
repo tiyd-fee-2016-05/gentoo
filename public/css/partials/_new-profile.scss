@@ -490,6 +490,7 @@
 		.invite {
 			color: $teal;
 			transition: all 0.3s ease-out;
+			cursor: pointer;
 		}
 		button {
 			background: darken($darkblue, 20%);

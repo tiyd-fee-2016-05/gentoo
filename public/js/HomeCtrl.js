@@ -55,9 +55,7 @@ gentooApp.controller('HomeController', ['$rootScope', '$scope', '$http', '$locat
         $http({
             method: 'POST',
             url: rootUrl + "wishlists",
-            headers: {
-                'Authorization': userToken
-            },
+        headers: {'Authorization': User.getToken()},
             data: {
                 name: $("#wishlist_title").val(),
                 item: {
@@ -89,9 +87,7 @@ gentooApp.controller('HomeController', ['$rootScope', '$scope', '$http', '$locat
         $http({
             method: 'POST',
             url: rootUrl + "wishlists/" + wishlistID + "/items",
-            headers: {
-                'Authorization': userToken
-            },
+          headers: {'Authorization': User.getToken()},
             data: {
                 item: {
                     name: $("#item_title_add").val(),
@@ -140,9 +136,7 @@ gentooApp.controller('EditController', ['$rootScope', '$scope', '$http', '$locat
     $http({
         url: rootUrl + "profile",
         method: "GET",
-        headers: {
-            'Authorization': userToken
-        },
+      headers: {'Authorization': User.getToken()},
     }).success(function(data, status, headers, config) {
         console.log(data);
         $rootScope.loadedprofile = data;
@@ -175,9 +169,7 @@ gentooApp.controller('EditController', ['$rootScope', '$scope', '$http', '$locat
         $http({
             method: 'POST',
             url: rootUrl + "wishlists",
-            headers: {
-                'Authorization': userToken
-            },
+          headers: {'Authorization': User.getToken()},
             data: {
                 name: $("#wishlist_title").val(),
                 description: $("#item_desc").val(),
@@ -200,9 +192,7 @@ gentooApp.controller('EditController', ['$rootScope', '$scope', '$http', '$locat
         $http({
             method: 'DELETE',
             url: rootUrl + "profile/interests/" + id,
-            headers: {
-                'Authorization': userToken
-            },
+        headers: {'Authorization': User.getToken()},
             data: {}
         }).success(function successCallback(response) {
 
@@ -217,9 +207,7 @@ gentooApp.controller('EditController', ['$rootScope', '$scope', '$http', '$locat
         $http({
             method: 'DELETE',
             url: rootUrl + "profile/holidays/" + id,
-            headers: {
-                'Authorization': userToken
-            },
+          headers: {'Authorization': User.getToken()},
             data: {}
         }).success(function successCallback(response) {
 
@@ -236,9 +224,7 @@ gentooApp.controller('EditController', ['$rootScope', '$scope', '$http', '$locat
         $http({
             method: 'DELETE',
             url: rootUrl + "profile/favorites/",
-            headers: {
-                'Authorization': userToken
-            },
+            headers: {'Authorization': User.getToken()},
             params: {
                     deleted_favorite: string}
         }).success(function successCallback(response) {
@@ -254,9 +240,7 @@ gentooApp.controller('EditController', ['$rootScope', '$scope', '$http', '$locat
         $http({
             method: 'DELETE',
             url: rootUrl + "wishlists/" + id,
-            headers: {
-                'Authorization': userToken
-            },
+          headers: {'Authorization': User.getToken()},
             data: {}
         }).success(function successCallback(response) {
 
@@ -272,9 +256,7 @@ gentooApp.controller('EditController', ['$rootScope', '$scope', '$http', '$locat
         $http({
             method: 'DELETE',
             url: rootUrl + "wishlists/" + wishlistID + "/items/" + itemID,
-            headers: {
-                'Authorization': userToken
-            },
+          headers: {'Authorization': User.getToken()},
             data: {}
         }).success(function successCallback(response) {
 
