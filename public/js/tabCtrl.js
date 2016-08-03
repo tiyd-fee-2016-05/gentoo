@@ -19,8 +19,8 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
     // Add list items
     $scope.FindTodos = function() {
         console.log(usersearch);
-        // var rootUrl = "https://6e62d5d1.ngrok.io/";
-        var rootUrl = "https://giftbox-tiy.herokuapp.com/";
+        var rootUrl= "https://6e62d5d1.ngrok.io/";
+        // var rootUrl = "https://giftbox-tiy.herokuapp.com/";
         $http({
             url: rootUrl + usersearch + "/profile/ideabox",
             method: "GET",
@@ -40,43 +40,43 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
                 console.log(vm);
                 arr.push(vm.id);
                 console.log(arr);
-            };
+              };
 
-            $scope.clearCompleted = function() {
+              $scope.clearCompleted = function() {
 
                 var tobeDeleted = arr
 
                 console.log("Delete these please:" + tobeDeleted);
-                // var rootUrl = "https://6e62d5d1.ngrok.io/";
-                var rootUrl = "https://giftbox-tiy.herokuapp.com/";
+                var rootUrl= "https://6e62d5d1.ngrok.io/";
+                // var rootUrl = "https://giftbox-tiy.herokuapp.com/";
                 $scope.userToken = User.getToken();
                 var userToken = $scope.userToken
                 var usersearch = $scope.friendtoLoad
                 console.log(userToken)
-                console.log(usersearch);
+               console.log(usersearch);
 
-                $http({
-                    url: rootUrl + usersearch + "/profile/ideabox",
-                    method: "DELETE",
-                    headers: {
-                        'Authorization': userToken
-                    },
-                    data: {
-                        cleared_ideas: tobeDeleted
-                    }
-                }).success(function(data, status, headers, config) {
-                    console.log(data);
-                    $scope.todos = data.ideabox
-                    console.log(data);
-                    console.log(response);
-                    console.log(response.data);
+               $http({
+                   url: rootUrl + usersearch + "/profile/ideabox",
+                   method: "DELETE",
+                   headers: {
+                       'Authorization': userToken
+                   },
+                  params: {
+                       cleared_ideas: tobeDeleted
+                   }
+               }).success(function(data, status, headers, config) {
+                       console.log(data);
+                       $scope.todos = data.ideabox
+                       console.log(data);
 
 
-                }).error(function(data, status, headers, config) {
-                    $scope.status = status;
-                });
 
-            };
+
+                       }).error(function(data, status, headers, config) {
+                       $scope.status = status;
+                   });
+
+              };
 
 
 
@@ -87,8 +87,8 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
     }
 
     $scope.AddIdea = function() {
-        // var rootUrl = "https://6e62d5d1.ngrok.io/";
-        var rootUrl = "https://giftbox-tiy.herokuapp.com/";
+        var rootUrl= "https://6e62d5d1.ngrok.io/";
+        // var rootUrl = "https://giftbox-tiy.herokuapp.com/";
         console.log("You had an idea!");
         $http({
             url: rootUrl + usersearch + "/profile/ideabox",
@@ -100,35 +100,35 @@ gentooApp.controller('TabController', ['$rootScope', '$scope', '$http', '$locati
                 text: $('#ideaboxText').val(),
             }
         }).success(function(data, status, headers, config) {
-            console.log(data);
-            $scope.todos = data.ideabox
-            console.log(data);
-            console.log(response);
-            console.log(response.data);
+                console.log(data);
+                $scope.todos = data.ideabox
+                console.log(data);
+                console.log(response);
+                console.log(response.data);
 
 
-        }).error(function(data, status, headers, config) {
-            $scope.status = status;
-        });
-    }
+                }).error(function(data, status, headers, config) {
+                $scope.status = status;
+            });
+        }
 
 
 
-    // var rootUrl = "https://6e62d5d1.ngrok.io/";
-    var rootUrl = "https://giftbox-tiy.herokuapp.com/";
+        var rootUrl= "https://6e62d5d1.ngrok.io/";
+        // var rootUrl = "https://giftbox-tiy.herokuapp.com/";
 
-    // $http({
-    // 					url:  rootUrl + usersearch+ "/profile/ideabox",
-    // 			 method: "POST",
-    // 			 headers: {'Authorization': userToken},
-    // 			 data: {text: $('#ideaboxText').val(),  }
-    // 			}).success(function (data, status, headers, config) {
-    // 		console.log(data);
-    // 				$scope.todos= data.ideabox
-    // 				console.log(data);
-    // 				}).error(function (data, status, headers, config) {
-    // 						$scope.status = status;
-    // 				});
+        // $http({
+        // 					url:  rootUrl + usersearch+ "/profile/ideabox",
+        // 			 method: "POST",
+        // 			 headers: {'Authorization': userToken},
+        // 			 data: {text: $('#ideaboxText').val(),  }
+        // 			}).success(function (data, status, headers, config) {
+        // 		console.log(data);
+        // 				$scope.todos= data.ideabox
+        // 				console.log(data);
+        // 				}).error(function (data, status, headers, config) {
+        // 						$scope.status = status;
+        // 				});
 
 
     $scope.getTotalTodos = function() {

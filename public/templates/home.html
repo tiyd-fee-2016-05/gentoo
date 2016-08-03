@@ -42,7 +42,7 @@
                 </ul>
             </div>
 
-            <div ng-controller="FriendController" ng-show="isSet(4)" id="tab-search" class="animated bounceInRight">
+            <!-- <div ng-controller="FriendController" ng-show="isSet(4)" id="tab-search" class="animated bounceInRight">
                 <i class="fa fa-search fa-lg" aria-hidden="true"></i>
                 <input type="search" ng-model="searchBox" placeholder="search users">
 
@@ -55,9 +55,24 @@
                             </a>
                         </li>
                     </ul>
+                </div> -->
+
+                <div ng-controller="FriendController" ng-show="isSet(4)" id="tab-search" class="animated bounceInRight">
+                    <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                    <input type="search" ng-model="searchBox" placeholder="search users">
+
+                    <div ng-controller="FriendController" id="friend-search" ng-if="searchBox">
+                        <ul>
+                            <li  ng-click="checkFriend(person.friend_status, person.username)" ng-repeat="person in userList | filter: searchBox">
+                                    <h1 ><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+                                    <p class="uppercase">@{{person.username}}</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
             </div>
-        </div>
+
     </header>
 
 
@@ -145,7 +160,7 @@
                             <input type="text" id="item_title" placeholder="item name" autocomplete="on" required>
                         </li>
                         <li>
-                            <input type="text" id="item_desc_add" placeholder="description" autocomplete="on">
+                            <input type="text" id="item_desc" placeholder="description" autocomplete="on">
                         </li>
                         <li>
                             <input type="text" id="item_url" placeholder="url" autocomplete="on">
@@ -182,18 +197,15 @@
                         <input type="text" id="item_desc_add" placeholder="description" autocomplete="on">
                     </li>
                     <li>
-                        <input type="text" id="item_url" placeholder="url" autocomplete="on">
+                        <input type="text" id="item_url_add" placeholder="url" autocomplete="on">
                     </li>
                     <li>
-                        <!-- <input type="text" id="item_interests" placeholder="tag a few interests" autocomplete="on"> -->
                         <select>
                             <option>add an interest:</option>
                             <option ng-repeat="interest in interestList" id="item_holiday" value="">{{interest.name}}</option>
                         </select>
                     </li>
 
-
-                    <!-- 			<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
                     <button type="submit" ng-click="addWishlistItem(clickedhomeList.id); setTab(1)">save item</button>
                     </p>
         </div>
@@ -245,7 +257,7 @@
         </section>
     </div>
 </div>
-</div>
+
 
 <!-- <section class="lists friend-list">
             <a href="#/friends"><h1 class="friends-list">Friends</h1></a>

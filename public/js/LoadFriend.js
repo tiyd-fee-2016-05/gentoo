@@ -1,12 +1,15 @@
 gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '$location', 'User', 'Friend', function($rootScope, $scope, $http, $location, User, Friend) {
     $scope.userToken = User.getToken();
     $scope.friendtoLoad = Friend.getFriend();
+      $scope.nonfriendtoLoad = Friend.getNonFriend();
+
     if (!$scope.userToken) {
         $location.path("#/login");
     }
 
 
     var usersearch = $scope.friendtoLoad
+    var nonfriendsearch = $scope.nonfriendtoLoad
     console.log(usersearch);
 
 
@@ -14,8 +17,8 @@ gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '
         $(this).scrollTop(0);
     });
 
-    // var rootUrl = "https://6e62d5d1.ngrok.io/";
-    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+    var rootUrl = "https://6e62d5d1.ngrok.io/";
+    // var rootUrl = "https://giftbox-tiy.herokuapp.com/";
 
 
     var userToken = $scope.userToken
@@ -34,6 +37,22 @@ gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '
         $rootScope.friendholidayList = data.user.holidays
         $rootScope.friendinterestList = data.user.interests
         $rootScope.friendfavoriteList = data.user.favorites
+
+    }).error(function(data, status, headers, config) {
+        $scope.status = status;
+    }); //End GET request for profile info
+
+    $http({
+        url: rootUrl + "users/" + nonfriendsearch,
+        method: "GET",
+        headers: {
+            'Authorization': userToken
+        },
+    }).success(function(data, status, headers, config) {
+      console.log("Non Friend");
+      console.log(data);
+
+        $rootScope.loadednonfriend = data;
 
     }).error(function(data, status, headers, config) {
         $scope.status = status;

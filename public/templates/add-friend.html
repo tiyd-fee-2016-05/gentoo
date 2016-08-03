@@ -1,5 +1,5 @@
 <!-- Non-Friend Profile View -->
-<div id="container">
+<div id="container" ng-controller= "LoadFriendController">
     <div id="profile-main-container">
 
         <header>
@@ -10,7 +10,7 @@
                 <a href="#/home"><h1 class="logo">Gentoo</h1></a>
             </div>
 
-            <h1 class="friend-name animated slideInLeft"> {{loadedprofile.user.first_name}} {{loadedprofile.user.last_name}}</h1>
+            <h1 class="friend-name animated slideInLeft"> {{loadednonfriend.first_name}} {{loadednonfriend.last_name}}</h1>
 
             <div id="menu" ng-controller="TabController">
                 <div ng-click="setTab(3)" id="menu-tab" class="tab2" ng-class="{ active: isSet(3) }"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
@@ -42,17 +42,15 @@
                     </ul>
                 </div>
 
-                <div ng-show="isSet(4)" id="tab-search" class="animated bounceInRight">
+                <div ng-controller="FriendController" ng-show="isSet(4)" id="tab-search" class="animated bounceInRight">
                     <i class="fa fa-search fa-lg" aria-hidden="true"></i>
                     <input type="search" ng-model="searchBox" placeholder="search users">
 
                     <div ng-controller="FriendController" id="friend-search" ng-if="searchBox">
                         <ul>
-                            <li ng-repeat="person in userList | filter: searchBox">
-                                <a href="#/friend-profile">
-                                    <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+                            <li  ng-click="checkFriend(person.friend_status, person.username)" ng-repeat="person in userList | filter: searchBox">
+                                    <h1 ><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
                                     <p class="uppercase">@{{person.username}}</p>
-                                </a>
                             </li>
                         </ul>
                     </div>
@@ -60,9 +58,8 @@
             </div>
         </header>
 
-
-        <section class="content-add-friend">
-            <button ng-click="showme=true" ng-hide="showme" class="friend-button" type="submit" name="button"><i class="fa fa-user-plus fa-4x" aria-hidden="true"></i></button>
+        <section class="content-add-friend" ng-controller="RequestFriendCtrl">
+            <button ng-click="showme=true" ng-hide="showme" class="friend-button" type="submit" name="button"><i class="fa fa-user-plus fa-4x" aria-hidden="true" ng-click="requestFriendship(loadednonfriend.username)"></i></button>
 
             <button ng-click="showme=false" ng-show="showme" class="pending-friend-button animated jello" type="submit" name="button">Pending</button>
         </section>

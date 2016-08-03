@@ -5,8 +5,8 @@ gentooApp.controller('FriendController', ['$rootScope', '$scope', '$http', '$loc
     if (!$scope.userToken) {
         $location.path("#/login");
     }
-    // var rootUrl= "https://6e62d5d1.ngrok.io/";
-    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+    var rootUrl= "https://6e62d5d1.ngrok.io/";
+    // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
 
 var username = $rootScope.username
@@ -44,6 +44,24 @@ console.log(data);
 
 $scope.findFriend = function(clickedperson) {
   $scope.searchedFriend = GetFriend.rememberFriend(clickedperson);
+}
+
+$scope.checkFriend = function(arewefriends, friendname) {
+  console.log(arewefriends);
+console.log(friendname);
+  if (arewefriends === true) {
+    console.log("You are totally buds");
+      $scope.searchedFriend = GetFriend.rememberFriend(friendname);
+    $location.path("/friend-profile");
+
+  }else {
+    console.log("You ain't frands!");
+    $scope.searchedFriend = GetFriend.rememberNonFriend(friendname);
+        $location.path("/add-friend");
+  }
+
+  // $scope.searchedFriend = GetFriend.checkFriend(clickedperson);
+  console.log(arewefriends);
 }
 
 
