@@ -18,7 +18,7 @@ gentooApp.controller('RequestFriendCtrl', function ($rootScope, $scope, $http, $
         method: 'POST',
             url: 'http://fa02cf67.ngrok.io/friends/',
                   //  url: 'https://giftbox-tiy.herokuapp.com/friends/',
-            headers: {'Authorization': userToken},
+    headers: {'Authorization': User.getToken()},
             params: {"requested_friend" : mynewfriend},
       }).success(function successCallback(response) {
         $location.path("/friends");

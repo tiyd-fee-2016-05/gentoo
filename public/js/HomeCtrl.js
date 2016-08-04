@@ -65,6 +65,7 @@ gentooApp.controller('HomeController', ['$rootScope', '$scope', '$http', '$locat
                 }
 
             }
+
         }).success(function successCallback(response) {
             $location.path("/home");
 

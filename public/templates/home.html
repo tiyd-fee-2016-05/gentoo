@@ -179,7 +179,7 @@
                         <!-- 				<li><input type="text" id="item_desc" placeholder="has this item been purchased? (yes/no)" maxlength="3" autocomplete="on"></li> -->
                     </ul>
                     <p><i class="fa fa-check" aria-hidden="true"></i>
-                        <button type="submit" ng-click="AddList(); setTab(1)">save list & list item</button>
+                        <a href="#/home"<button type="submit" ng-click="AddList(); setTab(1)">save list & list item</button></a>
                     </p>
                 </div>
             </form>
@@ -206,7 +206,7 @@
                         </select>
                     </li>
 
-                    <button type="submit" ng-click="addWishlistItem(clickedhomeList.id); setTab(1)">save item</button>
+                    <a href="#/home"><button type="submit" ng-click="addWishlistItem(clickedhomeList.id); setTab(1)">save item</button><a>
                     </p>
         </div>
         </form>
@@ -225,7 +225,7 @@
                     <li>
                         <h1><span class="item-header">URL:</span> {{clickedhomeItem.product_url}}</h1></li>
                     <li>
-                        <h1><span class="item-header">Interests:</span>{{clickedhomeItem.product_url}}</h1></li>
+                        <h1><span class="item-header">Interests:</span>{{clickedhomeItem.product_desc}}</h1></li>
                 </ul>
 
                 <p>
