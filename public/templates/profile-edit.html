@@ -1,0 +1,143 @@
+<!-- Profile View -->
+<div id="container">
+    <div id="profile-main-container" ng-controller="EditController">
+
+
+        <header>
+            <section class="photo">
+            </section>
+
+            <div class="nav">
+                <a href="#/home"><h1 class="logo">Gentoo</h1></a>
+            </div>
+
+            <h1 class="edit-profile-name">Edit Profile: <input type="text" name="login_first_name" ng-model="firstname.user" placeholder="{{loadedprofile.user.first_name}}" />
+            <input type="text" name="login_last_name" ng-model="lastname.user" placeholder="{{loadedprofile.user.last_name}}" /></h1>
+
+            <div id="menu" ng-controller="TabController">
+                <a href="#/home">
+                    <div ng-click="vm.submit(vm.user)" id="menu-tab" class="tab1" ng-class=""><i class="fa fa-check fa-lg animated jello infinite" aria-hidden="true"></i></div>
+                </a>
+
+                <div ng-click="setTab(3)" id="menu-tab" class="tab2" ng-class="{ active: isSet(3) }"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
+
+                <div ng-click="setTab(4)" id="menu-tab" class="tab3" ng-class="{ active: isSet(4) }"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
+
+
+                <div ng-click="setTab(1)" id="menu-tab" class="tab4" ng-class="{ active: isSet(1) }"><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
+
+
+                <div ng-show="isSet(1)">
+                </div>
+
+
+                <div ng-show="isSet(3)" id="tab-menu" class="animated bounceInRight">
+                    <ul>
+                        <li><a href="#/home"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+                        <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
+                        <li><a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a></li>
+                        <li ng-click="showinput=true"><i class="fa fa-plus" aria-hidden="true"></i> Invite</a>
+                        </li>
+                        <li ng-show="showinput">
+                            <!-- <i class="fa fa-envelope fa-lg" aria-hidden="true"></i> -->
+                            <input id="inviteEmail" type="text" placeholder="add friend's email">
+
+                            <button class="menu-email-sent" type="submit" ng-click="showme=true" ng-hide="showme" ng-click="sendEmail()"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </button>
+                            <button class="menu-email-sent" type="text" ng-click="showme=false" ng-show="showme" ng-click="sendEmail()"><i class="fa fa-check animated jello" aria-hidden="true"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div ng-controller="FriendController" ng-show="isSet(4)" id="tab-search" class="animated bounceInRight">
+                    <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                    <input type="search" ng-model="searchBox" placeholder="search users">
+
+                    <div ng-controller="FriendController" id="friend-search" ng-if="searchBox">
+                        <ul>
+                            <li  ng-click="checkFriend(person.friend_status, person.username)" ng-repeat="person in userList | filter: searchBox">
+                                    <h1 ><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+                                    <p class="uppercase">@{{person.username}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- <section class="content content-main"> -->
+        <form class="small-margin">
+            <div class="info dates">
+                <h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
+                <ul class="info-answer">
+                    <li>
+                        <input type="number" id="e-bd1" name="cc" maxlength="2" placeholder="{{loadedprofile.user.birthday.dob_month}}" /> /
+                        <input type="number" id="e-bd2" name="cc" maxlength="2" placeholder="{{loadedprofile.user.birthday.dob_day}}" /> /
+                        <input type="number" id="e-bd3" name="cc" maxlength="4" placeholder="{{loadedprofile.user.birthday.dob_year}}" />
+                </ul>
+                <!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
+            </div>
+
+            <div class="info holidays">
+                <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
+                <ul class="info-answer">
+                    <li ng-repeat="holiday in holidayList">
+                        <input type="checkbox" id="e-h1" name="cc" />
+                        <label for="e-h1">{{holiday.name}} <i ng-click="deleteHoliday(holiday.id); holidayList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                </ul>
+                <!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
+            </div>
+
+            <div class="info interests">
+                <h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
+                <ul class="info-answer">
+                    <li ng-repeat="interest in interestList">
+                        <input type="checkbox" id="h1" name="cc" />
+                        <label for="h1">{{interest.name}} <i ng-click="deleteInterest(interest.id); interestList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                </ul>
+                <!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
+            </div>
+
+            <div class="info favorites">
+                <h1 class="info-header"><i class="fa fa-heart" aria-hidden="true"></i> Favorites:</h1>
+                <ul class="info-answer">
+                    <li ng-repeat="favorite in favoriteList">
+                        <input type="checkbox" id="e-f1" name="cc" />
+                        <label for="e-f1">{{favorite.name}} <i ng-click="colorList.splice($index,1)" class="fa fa-times" aria-hidden="true"></i></label>
+                    </li>
+                </ul>
+                <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
+            </div>
+        </form>
+
+
+        <div ng-controller="TabController2">
+            <h1 class="wishlists" ng-click="setTab(1)">Wishlists</h1>
+
+            <section class="lists" ng-class-odd="'lightblue'" ng-class-even="'darkblue'" ng-repeat="list in wishlistArray">
+                <span class="delete-list" ng-click="deleteWishlist(list.id); wishlistArray.splice($index,1)">delete wishlist</span>
+                <h1 class="list-name">{{list.name}} <br>
+                    <!-- <span class="edit-list">edit name</span></h1> -->
+                <ul>
+                    <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+                        <h1 class="info-answer">{{item.name}}</h1>
+                        <h2><span class="edit">edit</span></a><span class="delete" ng-click="deleteWishlistItem(list.id, item.id); list.items.splice($index,1)">delete</span></h2>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        </form>
+
+        <section class="section-save-button">
+            <a href="#/home">
+                <button class="profile-submit-button" type="submit" name="button">save profile <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            </a>
+        </section>
+    </div>
+</div>
+</div>
+</div>

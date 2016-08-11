@@ -1,0 +1,269 @@
+<!-- Profile View -->
+<div id="profile-main-container" ng-controller="LoadFriendController">
+
+    <header>
+        <section class="photo">
+        </section>
+
+
+        <div class="nav">
+            <a href="#/home"><h1 class="logo">Gentoo</h1></a>
+        </div>
+
+        <h1 class="profile-name animated slideInLeft"><i class="fa fa-user" aria-hidden="true"></i> {{loadedfriend.user.first_name}} {{loadedfriend.user.last_name}}</h1>
+
+        <div id="menu" ng-controller="TabController">
+            <div ng-click="setTab(2); FindTodos(loadedfriend.user.username)" id="menu-tab" class="tab1" ng-class="{ active: isSet(2) }"><i class="fa fa-gift fa-lg" aria-hidden="true"></i></div>
+
+            <div ng-click="setTab(3)" id="menu-tab" class="tab2" ng-class="{ active: isSet(3) }"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
+
+            <div ng-click="setTab(4)" id="menu-tab" class="tab3" ng-class="{ active: isSet(4) }"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
+
+
+            <div ng-click="setTab(1)" id="menu-tab" class="tab4" ng-class="{ active: isSet(1) }"><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
+
+            <div ng-show="isSet(1)">
+            </div>
+
+
+
+
+
+            <div ng-show="isSet(2)" id="tab-gift" class="animated bounceInRight">
+                <ul>
+                    <li>
+                        <input id="ideaboxText" type="text" placeholder="add gift idea here" ng-model="formTodoText" ng-model-instant />
+                        <button ng-click="addTodo()" class="add-item"><i ng-click="AddIdea()" class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
+                    </li>
+
+                    <li ng-repeat="todo in todos">
+                        <input id={{todo.id}} type="checkbox" ng-click="viewIdea()" ng-model="todo.done" />
+                        <span class="done-{{todo.done}}">{{todo.text}}</span>
+                    </li>
+
+                    <li>
+                        <button ng-click="clearCompleted()" class="clear-items">clear selected items</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div ng-show="isSet(3)" id="tab-menu" class="animated bounceInRight" ng-controller="LoginCtrl">
+                <ul>
+                    <li ng-click="findFriend(person.username)"><a href="#/add-friend"><i class="fa fa-user-times" aria-hidden="true"></i> Unfriend</a></li>
+                    <li><a href="#/home"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+                    <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
+                    <li ng-click="logout()"><a href=""><i class="fa fa-arrow-right" aria-hidden="true"></a></i> Logout</li>
+                    <li ng-click="showinput=true"><i class="fa fa-plus" aria-hidden="true"></i> Invite</a>
+                    </li>
+                    <li ng-show="showinput">
+                        <!-- <i class="fa fa-envelope fa-lg" aria-hidden="true"></i> -->
+                        <input id="inviteEmail" type="text" placeholder="add friend's email">
+
+                        <button class="menu-email-sent" type="submit" ng-click="showme=true" ng-hide="showme" ng-click="sendEmail()"><i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+                        <button class="menu-email-sent" type="text" ng-click="showme=false" ng-show="showme" ng-click="sendEmail()"><i class="fa fa-check animated jello" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div ng-controller="FriendController" ng-show="isSet(4)" id="tab-search" class="animated bounceInRight">
+                <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                <input type="search" ng-model="searchBox" placeholder="search users">
+
+                <div id="friend-search" ng-if="searchBox">
+                    <ul>
+                        <li ng-click="checkFriend(person.friend_status, person.username)" ng-repeat="person in userList | filter: searchBox">
+
+                                <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+                                <p class="uppercase">@{{person.username}}</p>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="smaller-margin">
+        <div class="info dates animated slideInRight">
+            <h1 class="info-header"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birthday:</h1>
+            <ul class="info-answer">
+                <li>{{loadedfriend.user.birthday.dob_month}}/{{loadedfriend.user.birthday.dob_day}}/{{loadedfriend.user.birthday.dob_year}}</li>
+            </ul>
+            <!-- 			<button type="submit" ng-click="setTab(1)">edit birthday</button> -->
+        </div>
+
+        <div class="info holidays animated slideInLeft">
+            <h1 class="info-header"><i class="fa fa-calendar" aria-hidden="true"></i> Holidays:</h1>
+            <ul class="info-answer">
+                <li ng-repeat="holiday in friendholidayList">
+                    <input type="checkbox" id="h1" name="cc" />
+                    <label for="h1">{{holiday.name}}</label>
+                </li>
+            </ul>
+            <!-- 	<button type="submit" ng-click="setTab(2)">edit interests</button> -->
+        </div>
+
+        <div class="info interests animated slideInRight">
+            <h1 class="info-header"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Interests:</h1>
+            <ul class="info-answer">
+                <li ng-repeat="interest in friendinterestList">
+                    <input type="checkbox" id="i1" name="cc" />
+                    <label for="i1">{{interest.name}}</label>
+                </li>
+            </ul>
+            <!--   	<button type="submit" ng-click="setTab(3)">edit interests</button> -->
+        </div>
+
+        <div class="info favorites animated slideInLeft">
+            <h1 class="info-header"><i class="fa fa-heart" aria-hidden="true"></i> Favorites:</h1>
+            <ul class="info-answer">
+                <li ng-repeat="favorite in friendfavoriteList">
+                    <input type="checkbox" id="f1" name="cc" />
+                    <label for="f1">{{favorite.name}}</label>
+                </li>
+            </ul>
+            <!-- 		<button type="submit" ng-click="setTab(4)">edit favorites</button> -->
+        </div>
+    </div>
+
+    <div ng-controller="TabController2">
+        <div id="wishlist-container">
+
+            <!-- Wishlist tab-modal -->
+            <div ng-show="isSet(4)" id="tab-wishlist">
+                <h1 class="header">Add new wishlist:</h1>
+                <!--make this changeable-->
+                <form>
+                    <ul>
+                        <li>
+                            <input type="text" id="wishlist_title" placeholder="wishlist name" autocomplete="on" required>
+                        </li>
+                    </ul>
+
+                    <div ng-controller="TabController2">
+                        <div ng-show="isSet(3)" id="tab-wishlist-details">
+                            <form>
+                                <h1 class="header">{{clickedItem.name}}:</h1>
+                                <!--make this changeable-->
+                                <ul>
+                                    <li>
+                                        <h1><span class="item-header">Description:</span> {{clickedItem.description}}</h1></li>
+                                    <li>
+                                        <h1><span class="item-header">Url:</span> {{clickedItem.product_url}}</h1></li>
+                                    <li>
+                                        <h1><span class="item-header">Interests:</span> {{clickedItem.product_url}}</h1></li>
+                                </ul>
+
+                                <p>
+                                    <button type="submit" ng-click="setTab(1)"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                </p>
+                        </div>
+
+
+                        <div class="isSet(1)">
+                        </div>
+
+                        <h1 class="wishlists" ng-click="setTab(1)">Wishlists</h1>
+
+                        <section class="lists" ng-class-odd="'lightblue'" ng-class-even="'darkblue'" ng-repeat="list in friendwishlistArray">
+                            <h1 class="list-name">{{list.name}}</h1>
+                            <ul>
+                                <li ng-repeat="item in list.items" ng-click="setTab(3); getItem(item)" ng-class="{ active: isSet(3) }">
+                                    <h1 class="info-answer">{{item.name}}</h1>
+                                    <h2>click to view details</h2>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+
+
+
+
+
+
+<!-- start of codepen code -->
+<div class="isSet(1)">
+</div>
+
+<h1 class="wishlists" ng-click="setTab(1)">Wishlists</h1>
+
+<!-- <section class="lists" ng-repeat="list in wishlistArray"> -->
+<section class="lists lightblue">
+	<h1 class="list-name">Wishlist name</h1>
+	<ul>
+		<li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+			<!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+			<h1 class="info-answer">Item name</h1>
+			<h2>click to view details</h2>
+		</li>
+		<li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+			<!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+			<h1 class="info-answer">Item name</h1>
+			<h2>click to view details</h2>
+		</li>
+		<li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+			<!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+			<h1 class="info-answer">Item name</h1>
+			<h2>click to view details</h2>
+		</li>
+	</ul>
+</section>
+
+<section class="lists darkblue">
+	<h1 class="list-name">Wishlist name</h1>
+	<ul>
+		<li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+			<!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+			<h1 class="info-answer">Item name</h1>
+			<h2>click to view details</h2>
+		</li>
+		<li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+			<!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+			<h1 class="info-answer">Item name</h1>
+			<h2>click to view details</h2>
+		</li>
+		<li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+			<!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+			<h1 class="info-answer">Item name</h1>
+			<h2>click to view details</h2>
+		</li>
+	</ul>
+</section>
+
+<section class="lists lightblue">
+	<h1 class="list-name">Wishlist name</h1>
+	<ul>
+		<li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+			<!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+			<h1 class="info-answer">Item name</h1>
+			<h2>click to view details</h2>
+		</li>
+		<li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+			<!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+			<h1 class="info-answer">Item name</h1>
+			<h2>click to view details</h2>
+		</li>
+		<li ng-click="setTab(3)" ng-class="{ active: isSet(3) }">
+			<!-- <li ng-repeat="item in list.items" ng-click="setTab(3)" ng-class="{ active: isSet(3) }"> -->
+			<h1 class="info-answer">Item name</h1>
+			<h2>click to view details</h2>
+		</li>
+	</ul>
+</section>
+</div>
+<!-- end of codepen code -->
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

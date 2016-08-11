@@ -1,0 +1,155 @@
+// Friend View
+#friends-container {
+    max-width: 375px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+
+
+#friend-content {
+    position: relative;
+    top: -50px;
+    left: 0;
+    margin: 5%;
+    input {
+        width: 40%;
+        padding: 5px 14px;
+        border: 3px solid $blue2;
+        border-radius: 5px;
+        font: 16px / 14px $font;
+        &:focus {
+  				outline: 0;
+  			}
+  		}
+  		input[type=search] {
+  				-webkit-transition: width 0.4s ease-in-out;
+  				transition: width 0.4s ease-in-out;
+  		}
+  		input[type=search]:focus {
+  				width: 80%;
+  		}
+    h1 {
+        margin-bottom: 10px;
+        font: 24px / 22px $font;
+        color: $black;
+
+    }
+
+    .pAccept {
+        padding-bottom: 10px;
+        font: 18px / 20px $font;
+        color: $white;
+        letter-spacing: 0;
+    }
+    a {
+        font-size: 16px;
+        color: $white;
+    }
+
+    .pDeny {
+      padding-bottom: 10px;
+      font: 18px / 20px $font;
+      color: $white;
+      letter-spacing: 0;
+    }
+    button {
+        background: transparent;
+        margin: 10px;
+        padding: 4px 20px;
+        font: 700 18px / 20px $font;
+        color: darken($blue2, 10%);
+    }
+    .accept {
+        border: 2px solid $blue2;
+        color: $blue2;
+        &:hover {
+            background: darken($blue2, 10%);
+            border: 2px solid darken($blue2, 10%);
+            color: $white;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+    }
+    .deny {
+        border: 2px solid $red;
+        color: $red;
+        &:hover {
+            background: darken($red, 10%);
+            border: 2px solid darken($red, 10%);
+            color: $white;
+            -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+    }
+
+    ul {
+        // margin-top: 10px;
+        h2 {
+            padding: 10px;
+            color: $white;
+            letter-spacing: 0;
+        }
+        .friend-request {
+            width: 40%;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: none;
+            border: 2px solid $blue2;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            h2 {
+                font: 20px / 22px $font;
+                color: $black;
+            }
+            .view {
+              background: darken($blue2, 10%);
+              border: 2px solid darken($blue2, 10%);
+              border-radius: 5px;
+              padding: 0 10px;
+              font: 18px / 24px $menu;
+              color: $white;
+            }
+        }
+        .friends-list {
+            width: 40%;
+            margin-top: 10px;
+            padding: 0 20px;
+            background: $darkblue;
+            border: 2px solid $darkblue;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            overflow: hidden;
+            h1 {
+                font: 700 24px / 10px $menu;
+                color: $teal;
+                padding-top: 10px;
+            }
+            p {
+                margin-left: 26px;
+                padding-bottom: 10px;
+                font: 700 16px / 12px $menu;
+                color: $white;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            a {
+                margin-left: 20px;
+                font: 18px / 12px $font;
+                color: $white;
+            }
+            &:hover {
+                background: lighten($darkblue, 5%);
+                border: 2px solid lighten($darkblue, 5%);
+                color: darken($blue2, 15%);
+                -webkit-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                cursor: pointer;
+            }
+        }
+    }
+}

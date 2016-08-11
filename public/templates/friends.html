@@ -1,0 +1,119 @@
+<!-- Friends View -->
+<div id="friends-container" ng-controller="FriendController">
+
+    <header>
+        <section class="photo">
+        </section>
+
+        <div class="nav">
+            <a href="#/home"><h1 class="logo">Gentoo</h1></a>
+        </div>
+
+        <h1 class="profile-name"><i class="fa fa-user" aria-hidden="true"></i> Friends</h1>
+
+
+        <div id="menu" ng-controller="TabController">
+            <div ng-click="setTab(3)" id="menu-tab" class="tab2" ng-class="{ active: isSet(3) }"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></div>
+
+            <div ng-click="setTab(4)" id="menu-tab" class="tab3" ng-class="{ active: isSet(4) }"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
+
+
+
+            <div ng-click="setTab(1)" id="menu-tab" class="tab4" ng-class="{ active: isSet(1) }"><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
+
+
+            <div ng-show="isSet(1)">
+            </div>
+
+
+            <div ng-show="isSet(3)" id="tab-menu" class="animated bounceInRight" ng-controller="LoginCtrl">
+                <ul>
+                    <li><a href="#/home"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+                    <li><a href="#/friends"><i class="fa fa-user-plus" aria-hidden="true"></i> Friends</a></li>
+                    <li ng-click="logout()"><a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i> Logout</a></li>
+                    <li ng-click="showinput=true"><i class="fa fa-plus" aria-hidden="true"></i> Invite</a></li>
+                    <li ng-show="showinput">
+                        <!-- <i class="fa fa-envelope fa-lg" aria-hidden="true"></i> -->
+                        <input id="inviteEmail" type="text" placeholder="add friend's email">
+
+                        <button class="menu-email-sent" type="submit" ng-click="showme=true" ng-hide="showme" ng-click="sendEmail()"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                        <button class="menu-email-sent" type="text" ng-click="showme=false" ng-show="showme" ng-click="sendEmail()"><i class="fa fa-check animated jello" aria-hidden="true"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <div ng-controller="FriendController" ng-show="isSet(4)" id="tab-search" class="animated bounceInRight">
+                <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+                <input type="search" ng-model="searchBox" placeholder="search users">
+
+                <div ng-controller="FriendController" id="friend-search" ng-if="searchBox">
+                    <ul>
+                        <li  ng-click="checkFriend(person.friend_status, person.username)" ng-repeat="person in userList | filter: searchBox">
+                                <h1 ><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+                                <p class="uppercase">@{{person.username}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="friend-content" ng-controller="FriendRequestCtrl">
+        <h1><i class="fa fa-user-plus" aria-hidden="true"></i> Friend requests ( {{friendDetails.user.requested_count}} ) </h1>
+
+        <ul>
+            <!--ng-repeat, and link to their profile-->
+            <li class="friend-request" ng-repeat="requestingfriend in friendRequests">
+                <h2>{{requestingfriend.first_name}} {{requestingfriend.last_name}} has sent you a friend request!</h2>
+                <button ng-click="showaccept=true; acceptFriend(requestingfriend.username)" ng-hide="showdeny" ng-hide="showaccept" class="accept">accept <i class="fa fa-plus" aria-hidden="true"></i></button>
+
+                <button ng-click="showdeny=true; ; denyFriend(requestingfriend.username)" ng-hide="showaccept" ng-hide="showdeny" class="deny">deny <i class="fa fa-times" aria-hidden="true"></i></button>
+
+                <p ng-show="showaccept" class="pAccept"><i class="fa fa-check" aria-hidden="true"></i> You and {{requestingfriend.first_name}} {{requestingfriend.last_name}} are now friends!</p>
+                <a href="#/friend-profile" ng-show="showaccept" class="view" ng-click="findFriend(requestingfriend.username)"><i class="fa fa-caret-right" aria-hidden="true"></i> View their profile</a>
+
+                <p ng-show="showdeny" class="pDeny"><i class="fa fa-times" aria-hidden="true"></i> You have denied a request from {{requestingfriend.first_name}} {{requestingfriend.last_name}}.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="friend-content">
+        <h1><i class="fa fa-search" aria-hidden="true"></i> Search for friends</h1>
+
+        <input class="searchBar" type="search" ng-model="searchBox" placeholder="enter first/last name or username">
+    </section>
+
+
+    <section id="friend-content" ng-controller="FriendController">
+        <h1><i class="fa fa-user" aria-hidden="true"></i> All friends</h1>
+
+        <ul>
+            <!--ng-repeat, and link to their profile-->
+            <a href="#/friend-profile">
+                <li class="friends-list" ng-repeat="person in friendList  | filter: searchBox" ng-click="findFriend(person.username)">
+                    <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+                    <p>@{{person.username}}</p>
+                </li>
+            </a>
+        </ul>
+    </section>
+    <!-- Actual friends section -->
+    <!-- <section id="friend-content">
+            <h1><i class="fa fa-user" aria-hidden="true"></i> All friends</h1>
+
+            <ul>-->
+    <!--ng-repeat, and link to their profile-->
+    <!--<li class="friends-list" ng-repeat="person in friendList | filter: searchBox">
+                    <a href="#/friend-profile">
+                        <h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+                        <p class="uppercase">@{{person.username}}</p>
+                    </a>
+                </li>
+            </ul>
+        </section> -->
+
+    <section id="friend-request-content">
+    </section>
+</div>

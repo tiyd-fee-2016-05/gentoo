@@ -1,0 +1,200 @@
+#menu {
+    z-index: 999;
+    font: 24px / 36px $menu;
+    color: #fff;
+    letter-spacing: 1px;
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+    #menu-tab {
+      z-index: 999;
+      width: 70px;
+      position: fixed;
+      // bottom: 0;
+      right: 0;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      padding: 5px 0;
+      text-align: center;
+      i {
+          color: $white;
+      }
+    }
+    .tab1 {
+        position: fixed;
+        bottom: 170px;
+        background: darken($teal, 10%);
+        &:hover {
+            background: lighten($teal, 10%);
+            transition: all 0.7s ease-out;
+            cursor: pointer;
+        }
+    }
+    .tab2 {
+        position: fixed;
+        bottom: 115px;
+        background: $lightred;
+        &:hover {
+            background: lighten($lightred, 10%);
+            transition: all 0.7s ease-out;
+            cursor: pointer;
+        }
+    }
+    .tab3 {
+        position: fixed;
+        bottom: 60px;
+        background: $darkblue;
+        &:hover {
+            background: lighten($darkblue, 10%);
+            transition: all 0.7s ease-out;
+            cursor: pointer;
+        }
+    }
+    .tab4 {
+        position: fixed;
+        bottom: 5px;
+        background: lighten($black, 10%);
+    }
+    // All info inside the tabs
+    #tab-gift {
+        z-index: 999;
+        width: 340px;
+        position: fixed;
+        top: 120px;
+        background: darken($teal, 10%);
+        border-radius: 5px;
+        margin: 6% 5% 10%;
+
+        padding: 15px 0;
+        color: $white;
+        text-align: center;
+        input {
+            width: 50%;
+            border: 2px solid darken($teal, 10%);
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 5px 0 5px 15px;
+            font: 18px / 16px $menu;
+            &:focus {
+                outline: 0;
+            }
+        }
+        .add-item {
+            background: darken($teal, 10%);
+            border: none;
+            padding: 10x;
+            font-size: 20px;
+            color: $white;
+            &:hover {
+                color: darken($teal, 20%);
+                transition: all 0.5s ease-out;
+                cursor: pointer;
+            }
+            &:focus {
+                outline: 0;
+            }
+        }
+        li input[type="checkbox"] {
+            width: 25px;
+            height: 18px;
+        }
+        .done-true {
+            text-decoration: line-through;
+            color: darken($teal, 30%);
+            transition: all 0.2s ease;
+        }
+        .clear-items {
+            background: darken($teal, 10%);
+            border: none;
+            padding: 10x;
+            font: 18px / 16px $menu;
+            color: darken($teal, 30%);
+            &:hover {
+                color: darken($lightred, 10%);
+                transition: all 0.5s ease-out;
+                cursor: pointer;
+            }
+            &:focus {
+                outline: 0;
+            }
+        }
+        a:hover {
+            color: lighten($teal, 20%);
+            transition: all 0.3s ease-out;
+        }
+    }
+    #tab-menu {
+        z-index: 999;
+        width: 90%;
+        // height: 50px;
+        position: fixed;
+        top: 120px;
+        // right: 0;
+        background: darken($lightred, 10%);
+        border-radius: 5px;
+        margin: 5%;
+        padding: 15px 0;
+        text-align: center;
+        i {
+            padding-left: 10px;
+        }
+        a:hover {
+            background: darken($lightred, 5%);
+            border-radius: 5px;
+            transition: all 0.3s ease-out;
+            cursor: pointer;
+        }
+    }
+    // Search bar
+    #tab-search {
+        z-index: 999;
+        width: 90%;
+        // height: 50px;
+        position: fixed;
+        top: 120px;
+        // right: 0;
+        background: darken($darkblue, 10%);
+        border-radius: 5px;
+        margin: 5%;
+        padding: 15px 0;
+        text-align: center;
+        input {
+            width: 70%;
+            border: 2px solid darken($darkblue, 10%);
+            border-radius: 5px;
+            margin: 20px 0;
+            padding: 5px;
+            font: 18px / 16px $menu;
+            &:focus {
+                outline: 0;
+            }
+        }
+        input[type=text] {
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+        input[type=text]:focus {
+            width: 80%;
+        }
+        ul {
+            li {
+                margin: 5px 0;
+                h1 {
+                    padding: 0;
+                    color: $teal;
+                }
+                p {
+                    padding: 0 0 10px;
+                    color: $white;
+                    border-bottom: 2px solid $teal;
+                }
+                &:hover {
+                    h1 {
+                        color: lighten($darkblue, 10%);
+                    }
+                }
+            }
+        }
+    }
+}

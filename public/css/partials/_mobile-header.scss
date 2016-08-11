@@ -1,0 +1,114 @@
+@media(max-width: 375px) {
+    body {
+        font: 20px / 24px $font;
+    }
+    .friend-photo {
+        height: 350px;
+    }
+    #menu {
+      .tab1 {
+          bottom: 170px;
+      }
+      .tab2 {
+          bottom: 115px;
+      }
+      .tab3 {
+          bottom: 60px;
+      }
+      .tab4 {
+          bottom: 5px;
+      }
+    }
+    header {
+        text-align: center;
+        .nav {
+            width: 150px;
+            height: 40px;
+            display: inline-block;
+            .logo {
+                position: relative;
+                top: 0;
+                left: 10%;
+                margin: 0 auto;
+                font: 50px / 50px $logo;
+                text-align: center;
+            }
+            // .logo {
+            //   margin: 5%;
+            // 	font: 60px / 70px $logo;
+            //   color: $blue2;
+            // 	text-align: center;
+            //   -webkit-text-shadow: 2px 1px 0 darken($red, 20%);
+            //   -moz-text-shadow: 2px 1px 0 darken($red, 20%);
+            //   text-shadow: 2px 1px 0 darken($red, 20%);
+            // }
+        }
+        nav {
+            // menu that opens
+            width: 70%;
+            height: 300px;
+            position: relative;
+            top: -160px;
+            left: 0;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid $blue2;
+            border-radius: 8px;
+            z-index: 10;
+            i {
+                margin-right: 10px;
+            }
+            .fa-search {
+                display: none;
+            }
+            a {
+                display: block;
+                font: 700 30px / 55px $font;
+            }
+            input {
+                width: 100%;
+                margin: 10px 0;
+                padding: 6px 10px;
+                border: 2px solid $blue2;
+                border-radius: 5px;
+                font: 26px / 26px $font;
+            }
+            ul {
+              margin-top: 10px;
+                li {
+                    width: 100%;
+                    margin-left: 0;
+                    margin-top: 10px;
+                    padding: 10px;
+                    background: lighten($blue2, 10%);
+                    border: 2px solid lighten($blue2, 10%);
+                    border-radius: 8px;
+                    h1 {
+                        font: 700 20px / 20px $font;
+                    }
+                    p {
+                        margin-left: 16px;
+                        font: 700 20px / 20px $font;
+                    }
+                    a {
+                        font: 20px / 20px $font;
+                    }
+                }
+            }
+        }
+        .photo {
+            height: 150px;
+        }
+        .profile-name {
+            position: relative;
+            top: -70px;
+            left: 0;
+            margin: 20px 5%;
+            font: 30px / 30px $menu;
+            color: $white;
+            i {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+.edit-profile-name {
+    position: relative;
+    top: -75px;
+    left: 0;
+    margin: 0 0 20px 5%;
+    font: 700 20px / 30px $font;
+    color: $white;
+}
+input {
+  display: inline-block;
+  width: 20%;
+  border: 2px solid $red;
+  border-radius: 5px;
+  // margin: 5px;
+  padding: 5px;
+  font: 20px / 16px $menu;
+  text-align: center;
+  &:focus {
+    border: 3px solid #555;
+    outline: 0;
+  }
+}
+input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+    width: 30%;
+}
+.edit {
+	margin: 5px;
+	padding: 0 5px;
+	background: darken($teal, 20%);
+	border: 2px solid darken($teal, 20%);
+	border-radius: 5px;
+	opacity: 1;
+  font-family: $font;
+	&:hover {
+		background: darken($teal, 25%);
+	  border: 2px solid darken($teal, 25%);
+		transition: all 0.3s ease-out;
+		cursor: pointer;
+	}
+ }
+
+.edit-list {
+		margin: 10px;
+	  padding: 0 10px;
+	  background: darken($darkblue, 3%);
+	  border: 2px solid darken($darkblue, 3%);
+	  border-radius: 5px;
+	  opacity: 1;
+    font: 700 18px / 22px $font;
+    color: darken($teal, 5%);
+    i {
+      font-size: 20px;
+    }
+    &:hover {
+        opacity: 1;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+}
+.delete-list {
+    float: right;
+		margin: 10px 5%;
+	  padding: 0 10px;
+	  background: darken($darkblue, 3%);
+	  border: 2px solid darken($darkblue, 3%);
+	  border-radius: 5px;
+	  opacity: 1;
+    font: 700 18px / 22px $font;
+    color: darken($red, 5%);
+    i {
+      font-size: 20px;
+    }
+    &:hover {
+        opacity: 1;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+}
+.edit {
+	margin: 5px;
+	padding: 0 5px;
+	background: darken($teal, 20%);
+	border: 2px solid darken($teal, 20%);
+	border-radius: 5px;
+	opacity: 1;
+  font-family: $font;
+	&:hover {
+		background: darken($teal, 25%);
+	  border: 2px solid darken($teal, 25%);
+		transition: all 0.3s ease-out;
+		cursor: pointer;
+	}
+ }
+.delete {
+	margin: 5px;
+	padding: 0 5px;
+	background: $red;
+	border: 2px solid $red;
+	border-radius: 5px;
+	opacity: 1;
+  font-family: $font;
+	&:hover {
+		background: darken($red, 10%);
+	  border: 2px solid darken($red, 10%);
+		transition: all 0.3s ease-out;
+		cursor: pointer;
+	}
+ }
+.section-save-button {
+    margin: 10px auto;
+    text-align: center;
+    .profile-submit-button {
+      width: 150px;
+      margin: 0 auto;
+      padding: 5px;
+      font: 700 18px / 26px $font;
+      background: darken($teal, 10%);
+      border: 2px solid darken($teal, 10%);
+      border-radius: 5px;
+      color: $white;
+      i {
+        font-size: 12px;
+      }
+      &:hover {
+        background: darken($darkblue, 5%);
+    	  border: 2px solid darken($darkblue, 5%);
+    		transition: all 0.3s ease-out;
+    		cursor: pointer;
+      }
+  }
+}
+.form-group {
+    width: 50%;
+    margin: 10px;
+    font: 18px / 22px $font;
+    .form-control {
+        display: inline-block;
+        width: 100%;
+        background: transparentize($blue2, 1);
+        border: 0;
+        border-bottom: 3px solid $blue2;
+        font: 18px / 22px $font;
+        color: $blue2;
+        &:focus {
+            border: 3px solid #555;
+            outline: 0;
+        }
+        #profile-name {
+            margin: 0 0 20px 20px;
+            color: $white;
+            i {
+                color: $blue2;
+            }
+        }
+    }
+}

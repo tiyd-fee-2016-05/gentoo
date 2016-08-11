@@ -1,0 +1,278 @@
+<div id="container1">
+
+	<div id="new-profile-container" ng-app="gentooApp" ng-controller="TabController2">
+
+
+		<a href="#/home"><h1 class="logo upper-padding">Gentoo</h1></a>
+
+
+	<!-- 	Sign up tabs -->
+	<div ng-click="setTab(1)" id="tab" class="tab2" ng-class="{ active: isSet(1) }"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i></div>
+
+		<div ng-click="setTab(2)" id="tab" class="tab3" ng-class="{ active: isSet(2) }"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
+
+		<div ng-click="setTab(3)" id="tab" class="tab4" ng-class="{ active: isSet(3) }"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></div>
+
+		<div ng-click="setTab(4)" id="tab" class="tab5" ng-class="{ active: isSet(4) }"><i class="fa fa-heart fa-lg" aria-hidden="true"></i></div>
+
+		<div ng-click="setTab(5)" id="tab" class="tab6" ng-class="{ active: isSet(5) }"><i class="fa fa-search fa-lg" aria-hidden="true"></i></div>
+
+
+
+		<form ng-controller="RegisterCtrl">
+			<!--form begins-->
+			<!-- 	Dates tab -->
+			<div ng-show="isSet(1)" id="tab-dates" class="animated slideInDown">
+				<ul>
+					<li>
+						<h1 class="header"><label for "bd_month">When is your birthday?</label></h1>
+						<input type="number" id="bd_month" name="bd_month" placeholder="MONTH" maxlength="2" required>
+						<input type="number" id="bd_day" placeholder="DAY" maxlength="2">
+						<input type="number" id="bd_year" placeholder="YEAR" maxlength="4">
+					</li>
+				</ul>
+
+				<!-- Progress bar here -->
+
+
+				<p><i class="fa fa-check" aria-hidden="true"></i> step 1 of 5
+					<button type="submit" ng-click="registerDates(); setTab(2)">next: holidays</button>
+				</p>
+			</div>
+
+			<!-- Holidays tab	 -->
+			<div ng-show="isSet(2)" id="tab-holidays">
+				<h1 class="header">Select favorite holidays</h1>
+				<ul>
+
+					<li>
+						<input ng-model="registerData.holidays.FourthofJuly" type="checkbox" id="h12" name="cc" />
+						<label for="h12">4th of July</label>
+					</li>
+					<li>
+						<input ng-model="registerData.holidays.Birthday" type="checkbox" id="h2" name="cc" />
+						<label for="h2">Birthday</label>
+					</li>
+					<li>
+						<input ng-model="registerData.holidays.Valentines" type="checkbox" id="h3" name="cc" />
+						<label for="h3">Valentine's Day</label>
+					</li>
+					<li>
+						<form>
+							<input ng-model="registerData.holidays.Christmas" type="checkbox" id="h1" name="cc" />
+							<label for="h1">Christmas</label>
+					</li>
+					<li>
+						<input ng-model="registerData.holidays.NYE" type="checkbox" id="h4" name="cc" />
+						<label for="h4">New Year's Eve</label>
+					</li>
+					<li>
+						<input ng-model="registerData.holidays.Hanukkah" type="checkbox" id="h13" name="cc" />
+						<label for="h13">Hanukkah</label>
+					</li>
+					<li>
+						<input ng-model="registerData.holidays.Thanksgiving" type="checkbox" id="h5" name="cc" />
+						<label for="h5">Thanksgiving</label>
+					</li>
+					<li>
+						<input ng-model="registerData.holidays.MothersDay" type="checkbox" id="h6" name="cc" />
+						<label for="h6">Mother's Day</label>
+					</li>
+					<li>
+						<input ng-model="registerData.holidays.Halloween" type="checkbox" id="h7" name="cc" />
+						<label for="h7">Halloween</label>
+					</li>
+					<li>
+						<input ng-model="registerData.holidays.Easter" type="checkbox" id="h10" name="cc" />
+						<label for="h10">Easter</label>
+					</li>
+					<li>
+						<input ng-model="registerData.holidays.StPatricks" type="checkbox" id="h8" name="cc" />
+						<label for="h8">St. Patrick's Day</label>
+					</li>
+					<li>
+						<input ng-model="registerData.holidays.Ramadan" type="checkbox" id="h9" name="cc" />
+						<label for="h9">Ramadan</label>
+					</li>
+					<li>
+						<input ng-model="registerData.holidays.FathersDay" type="checkbox" id="h11" name="cc" />
+						<label for="h11">Father's Day</label>
+					</li>
+					<li>
+						<label for="h14" id="h14">or add your own:</label>
+						<input ng-model="registerData.holidays.Custom" type="text" id="h14" name="cc" placeholder="example: my cat's birthday" />
+					</li>
+				</ul>
+				<p><i class="fa fa-check" aria-hidden="true"></i> step 2 of 5
+					<button type="submit" ng-click="registerHolidays(); setTab(3)">next: interests</button>
+				</p>
+			</div>
+
+			<!-- Interests tab -->
+			<div ng-show="isSet(3)" id="tab-interests">
+				<h1 class="header">Select some interests</h1>
+				<ul>
+					<li>
+						<input ng-model="registerData.interests.arts" type="checkbox" id="i1" name="cc" />
+						<label for="i1">Arts & Entertainment</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.health" type="checkbox" id="i2" name="cc" />
+						<label for="i2">Health & Fitness</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.music" type="checkbox" id="i13" name="cc" />
+						<label for="i13">Music</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.autos" type="checkbox" id="i3" name="cc" />
+						<label for="i3">Auto & Vehicles</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.design" type="checkbox" id="i4" name="cc" />
+						<label for="i4">Design</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.beauty" type="checkbox" id="i5" name="cc" />
+						<label for="i5">Beauty</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.food" type="checkbox" id="i6" name="cc" />
+						<label for="i6">Food & Drink</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.games" type="checkbox" id="i7" name="cc" />
+						<label for="i7">Games</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.hobbies" type="checkbox" id="i10" name="cc" />
+						<label for="i10">Hobbies & Leisure</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.computers" type="checkbox" id="i8" name="cc" />
+						<label for="i8">Computers & Electronics</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.magic" type="checkbox" id="i9" name="cc" />
+						<label for="i9">Magic & Illusions</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.programming" type="checkbox" id="i11" name="cc" />
+						<label for="i11">Web Development</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.movies" type="checkbox" id="i12" name="cc" />
+						<label for="i12">Movies & Film</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.travel" type="checkbox" id="i14" name="cc" />
+						<label for="i14">Travel</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.home" type="checkbox" id="i16" name="cc" />
+						<label for="i16">Home & Garden</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.sports" type="checkbox" id="i15" name="cc" />
+						<label for="i15">Sports</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.books" type="checkbox" id="i20" name="cc" />
+						<label for="i20">Books & Literature</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.internet" type="checkbox" id="i17" name="cc" />
+						<label for="i17">Internet & Technology</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.science" type="checkbox" id="i18" name="cc" />
+						<label for="i18">Science</label>
+					</li>
+					<li>
+						<input ng-model="registerData.interests.pets" type="checkbox" id="i19" name="cc" />
+						<label for="i19">Pets & Animals</label>
+					</li>
+				</ul>
+				<p><i class="fa fa-check" aria-hidden="true"></i> step 3 of 5
+					<button type="submit" ng-click="registerInterests(); setTab(4)">next: favorites</button>
+				</p>
+			</div>
+
+			<!-- 	Favorites tab -->
+			<div ng-show="isSet(4)" id="tab-favorites">
+				<ul>
+					<li>
+						<h1 class="header-sm">What is your favorite color?</h1>
+						<input type="text" id="fav_color" placeholder="" autocomplete="on">
+					</li>
+					<li>
+						<h1 class="header-sm">What is your favorite animal?</h1>
+						<input type="text" id="fav_animal" placeholder="" autocomplete="on">
+					</li>
+					<li>
+						<h1 class="header-sm">What is your favorite season?</h1>
+						<input ng-model="registerData.season" ng-value="'Spring'" type="radio" id="spring" name="cc" />
+						<label for="spring">Spring</label>
+						<input ng-model="registerData.season" ng-value="'Summer'" type="radio" id="summer" name="cc" />
+						<label for="summer">Summer</label>
+						<br>
+						<input ng-model="registerData.season" ng-value="'Fall'" type="radio" id="fall" name="cc" />
+						<label for="fall">Fall</label>
+						<input ng-model="registerData.season" ng-value="'Winter'" type="radio" id="winter" name="cc" />
+						<label for="winter">Winter</label>
+					</li>
+					<li>
+						<h1 class="header-sm">What is your favorite restaurant?</h1>
+						<input type="text" id="fav_restaurant" placeholder="" autocomplete="on">
+					</li>
+					<li>
+						<h1 class="header-sm">Any other favorites <br>to add?</h1>
+						<input type="text" id="fav_extra" placeholder="example: sports team" autocomplete="on">
+					</li>
+				</ul>
+
+				<p><i class="fa fa-check" aria-hidden="true"></i> step 4 of 5
+					<button type="submit" ng-click="registerFavorites(); setTab(5)">next: find friends</button>
+				</p>
+			</div>
+			</form>
+			<!--form ends-->
+
+			<!-- 	Search tab -->
+			<div ng-show="isSet(5)" id="tab-search" ng-controller="RegisterCtrl">
+				<i class="fa fa-search fa-lg" aria-hidden="true"></i>
+				<input type="search" ng-model="searchBox" placeholder="search for friends">
+
+		<div id="friend-search" ng-if="searchBox" ng-controller="FriendController">
+			<ul>
+				<li ng-repeat="person in userList | filter: searchBox" ng-click="findFriend(person.username)">
+					<a href="#/friend-profile">
+						<h1><i class="fa fa-user" aria-hidden="true"></i> {{person.first_name}} {{person.last_name}}</h1>
+						<p class="uppercase">@{{person.username}}</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+				<h6>or</h6>
+				<div class="invite" ng-click="showinput=true">invite them via email <i class="fa fa-caret-down" aria-hidden="true"></i></div>
+
+				<div ng-show="showinput">
+					<i class="fa fa-envelope fa-lg" aria-hidden="true" ng-hide="showme"></i>
+          <i class="fa fa-check fa-lg animated jello" aria-hidden="true" ng-click="showme=false" ng-show="showme"></i>
+					<input id="inviteEmail" type="text" placeholder="add friend's email">
+					<br>
+					<button type="submit" ng-click="showme=true" ng-hide="showme" ng-click="sendEmail()">send email</a>
+					</button>
+					<button class="sent" type="text" ng-click="showme=false" ng-show="showme" ng-click="sendEmail()">email sent!</a>
+					</button>
+				</div>
+
+				<p><i class="fa fa-check" aria-hidden="true"></i> step 5 of 5
+					<button type="submit" ng-click=""><a href="#/home">go to profile</a></button>
+				</p>
+			</div>
+
+	<div id="bottom-button">
+		<button ng-click="" class="skip-steps"><a href="#/home">skip and go to profile</a></button>
+	</div>
+</div>

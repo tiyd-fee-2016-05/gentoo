@@ -1,0 +1,30 @@
+<!-- Login Screen -->
+<div id="container1">
+    <!-- <div id="login-container"> -->
+
+      <div id="new-profile-container" ng-app="gentooApp" ng-controller="TabController2">
+
+      	<!-- 	Login information -->
+      	<h1 class="logo upper-padding">Gentoo</h1>
+
+        <form ng-controller="LoginCtrl" ng-submit="loginUser()">
+      	<div id="tab-login" class="animated slideInDown">
+      		<h1 class="header">Hello!</h1>
+      		<ul>
+      			<li>
+      				<input class="userlogin" type="text" id="login_username" name="login_username" ng-model="form.username" placeholder="email" autocomplete="on" autofocus required>
+      			</li>
+      			<li>
+      				<input class="userpassword" type="password" id="login_password" name="login_password" ng-model="form.password" placeholder="password" autocomplete="on" required>
+      		</ul>
+      		<p>
+      			<button type="submit" class="login-button" name="button">login</button> or
+      			<a href="#/sign-up"><button type="submit" name="button">sign up</button></a></p>
+      	</div>
+      </form>
+
+
+
+
+    </div>
+</div>

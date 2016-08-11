@@ -1,0 +1,77 @@
+.friend-photo {
+    max-width: 100%;
+    height: 350px;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    background: darken($blue2, 20%);
+    background-image: url('../images/profile-2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.friend-name {
+    position: relative;
+    top: -170px;
+    margin: auto;
+    font: 35px / 45px $menu;
+    color: $white;
+    text-align: center;
+    i {
+        color: $blue2;
+    }
+}
+
+.content-add-friend {
+    position: relative;
+    top: -135px;
+    left: 0;
+    text-align: center;
+
+    .friend-button {
+        opacity: 1;
+        background: darken($lightred, 10%);
+        border: 2px solid darken($lightred, 10%);
+        border-radius: 200px;
+        margin: 20px auto 0;
+        padding: 28px 25px;
+        font-size: 14px;
+        color: darken($lightred, 20%);
+        &:hover {
+            background: darken($lightred, 15%);
+            border: 2px solid darken($lightred, 15%);
+            color: $lightred;
+            -webkit-transition: all 0.6s ease;
+            transition: all 0.6s ease;
+        }
+    }
+    .pending-friend-button {
+        background: $lightred;
+        border: 2px solid $lightred;
+        border-radius: 200px;
+        margin: 20px auto 0;
+        padding: 45px 20px;
+        font: 700 16px / 22px $menu;
+        color: darken($lightred, 15%);
+        text-transform: uppercase;
+        opacity: 1;
+        &:hover {
+            background: darken($lightred, 6%);
+            border: 2px solid darken($lightred, 6%);
+            color: darken($lightred, 20%);
+            -webkit-transition: all 0.6s ease;
+            transition: all 0.6s ease;
+        }
+    }
+}
+.content-details-remove {
+    position: relative;
+    top: -130px;
+    left: 0;
+    margin: 50px;
+    text-align: center;
+    font: 700 24px / 28px $font;
+    color: $black;
+    text-align: center;
+}
