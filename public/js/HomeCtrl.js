@@ -6,8 +6,8 @@ gentooApp.controller('HomeController', ['$rootScope', '$scope', '$http', '$locat
         $location.path("#/login");
     }
 
-    var rootUrl = "https://fa02cf67.ngrok.io/";
-    // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+    // var rootUrl = "https://fa02cf67.ngrok.io/";
+    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
     console.log($scope.userToken);
     var username = $rootScope.username
@@ -128,8 +128,8 @@ gentooApp.controller('EditController', ['$rootScope', '$scope', '$http', '$locat
         $location.path("#/login");
     }
 
-    var rootUrl = "https://fa02cf67.ngrok.io/";
-    // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+    // var rootUrl = "https://fa02cf67.ngrok.io/";
+    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
     var username = $rootScope.username
     var userToken = $scope.userToken

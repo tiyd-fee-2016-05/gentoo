@@ -6,8 +6,8 @@ gentooApp.controller('RequestFriendCtrl', function ($rootScope, $scope, $http, $
       $location.path("#/login");
   }
 
-  var rootUrl= "http://fa02cf67.ngrok.io/";
-  // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+  // var rootUrl= "http://fa02cf67.ngrok.io/";
+  var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
   var username = $rootScope.username
   var userToken = $scope.userToken
@@ -39,8 +39,8 @@ gentooApp.controller('FriendRequestCtrl', function ($rootScope, $scope, $http, $
       $location.path("#/login");
   }
 
-  var rootUrl= "https://fa02cf67.ngrok.io/";
-  // var rootUrl= "https://giftbox-tiy.herokuapp.com";
+  // var rootUrl= "https://fa02cf67.ngrok.io/";
+  var rootUrl= "https://giftbox-tiy.herokuapp.com";
 
   var username = $rootScope.username
   var userToken = $scope.userToken

@@ -2,8 +2,8 @@ gentooApp.controller('LoginCtrl', ['$scope', '$rootScope','$http', '$location', 
     // if (User.isLoggedIn()) {
     //     $location.path("/");
     // }
-    var rootUrl= "https://fa02cf67.ngrok.io/";
-    // var rootUrl= "https://giftbox-tiy.herokuapp.com/";
+    // var rootUrl= "https://fa02cf67.ngrok.io/";
+    var rootUrl= "https://giftbox-tiy.herokuapp.com/";
 
     // User.clearToken()
 

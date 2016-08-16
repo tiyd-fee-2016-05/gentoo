@@ -17,8 +17,8 @@ gentooApp.controller('LoadFriendController', ['$rootScope', '$scope', '$http', '
         $(this).scrollTop(0);
     });
 
-    var rootUrl = "https://fa02cf67.ngrok.io/";
-    // var rootUrl = "https://giftbox-tiy.herokuapp.com/";
+    // var rootUrl = "https://fa02cf67.ngrok.io/";
+    var rootUrl = "https://giftbox-tiy.herokuapp.com/";
 
 
     var userToken = $scope.userToken
